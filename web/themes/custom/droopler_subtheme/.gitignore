@@ -3,6 +3,7 @@ css/*
 !css/.gitkeep
 styleguide
 npm-debug.log
+package-lock.json
 js/min/*
 !js/min/.gitkeep
 
