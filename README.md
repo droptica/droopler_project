@@ -1,5 +1,5 @@
 # Droopler template for new project #
-[![N|Solid](http://droopler.pl/images/logo.png)](http://droopler.pl)
+[![N|Solid](https://www.droopler.pl/sites/default/files/logo_droopler.jpg)](http://droopler.pl)
 
 ## What is Droopler? ##
 Droopler is a Drupal 8 profile designed to kickstart a new webpage in a few minutes. It's based on the latest frontend technologies, including Bootstrap 4. The maintainer of Droopler is [Droptica](https://droptica.com).
@@ -110,3 +110,20 @@ What happens here?
  - You set a font size.
 
 When you save this config file, **gulp watch** will recompile all SCSS with your own config.
+
+## How to install Google Fonts? ##
+
+By default Droopler uses free [Lato](http://www.latofonts.com/) webfont. If you wish to install your own fonts from Google - put their definitions into web/themes/custom/droopler_subtheme/droopler_subtheme.libraries.yml like this:
+
+```yaml
+global-styling:
+  version: VERSION
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Rajdhani:500,600,700|Roboto:400,700&subset=latin-ext': { type: external, minified: true }
+      css/style.css: {}
+```
+
+## How to install icon fonts? ##
+
+If you wish to install FontAwesome or Glyphicons from the CDN - just grab their URLs and follow the steps described in previous chapter about Google Fonts.
