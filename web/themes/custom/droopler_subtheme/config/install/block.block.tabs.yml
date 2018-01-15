@@ -5,8 +5,8 @@ dependencies:
     - system
   theme:
     - droopler_subtheme
-id: node_tabs
-theme: doopler_subtheme
+id: tabs
+theme: droopler_subtheme
 region: admin_tabs
 weight: 0
 provider: null
