@@ -7,7 +7,7 @@ dependencies:
     - droopler_subtheme
 id: tabs
 theme: doopler_subtheme
-region: content
+region: admin_tabs
 weight: 0
 provider: null
 plugin: local_tasks_block
