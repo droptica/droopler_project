@@ -1,5 +1,7 @@
 global-styling:
   version: VERSION
+  js:
+    js/min/global.min.js: {}
   css:
     theme:
       css/print.css: { media: print }
