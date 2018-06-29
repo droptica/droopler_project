@@ -18,7 +18,7 @@
 		},
 		"droptica-droopler": {
 		    "type": "git",
-            "url":  "git@github.com:droptica/droopler.git"
+            "url":  "https://github.com/droptica/droopler.git"
 		}
 	},
 	"require": {
