@@ -10,13 +10,13 @@ function d_partners_install() {
   // Create sample Partners content.
   $partners = [
     'Abventor' => [
-      'public://abventor-logotyp.svg' => 'https://smartbees.pl',
+      'public://abventor-logotyp.svg' => 'https://www.abventor.com',
     ],
     'Famatech' => [
       'public://famatech.svg' => 'https://www.famatech.pl',
     ],
     'Smartbees' => [
-      'public://smartbees_icon.svg' => 'https://www.abventor.com',
+      'public://smartbees_icon.svg' => 'https://smartbees.pl',
     ],
   ];
 

@@ -15,5 +15,5 @@ dependencies:
   - text
   - user
   - views
-version: 8.x-1.0-beta3
+version: 8.x-1.0-beta4
 package: d
