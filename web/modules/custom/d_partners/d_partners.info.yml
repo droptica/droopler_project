@@ -14,5 +14,6 @@ dependencies:
   - svg_image
   - text
   - user
-version: 8.x-1.0-beta1
+  - views
+version: 8.x-1.0-beta2
 package: d

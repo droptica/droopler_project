@@ -19,13 +19,13 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_logo:
-    weight: 102
-    label: above
+    weight: 1
+    label: hidden
     settings:
       svg_attributes:
         width: ''
@@ -37,7 +37,7 @@ content:
     type: image
     region: content
   field_website:
-    weight: 103
+    weight: 3
     label: above
     settings:
       trim_length: 80
@@ -49,7 +49,9 @@ content:
     type: link
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true
