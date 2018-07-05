@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * 2018-07-05: Enable modules.
+ */
+function d_application_installer_update_8001() {
+  \Drupal::service('module_installer')->install(['d_application_api']);
+  \Drupal::service('module_installer')->install(['d_partners']);
+  \Drupal::service('d_application_api.features')->import(['d_partners']);
+}
