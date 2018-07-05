@@ -1,0 +1,10 @@
+langcode: pl
+status: true
+dependencies:
+  config:
+    - node.type.partners
+id: node.partners
+target_entity_type_id: node
+target_bundle: partners
+default_langcode: site_default
+language_alterable: false

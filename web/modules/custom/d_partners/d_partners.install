@@ -1,0 +1,46 @@
+<?php
+
+use \Drupal\node\Entity\Node;
+use \Drupal\file\Entity\File;
+
+/**
+ * Implements hook_install().
+ */
+function d_blog_install() {
+  // Create sample Partners content.
+  $partners = [
+    'Abventor' => [
+      'public://abventor-logotyp.svg' => 'https://smartbees.pl',
+    ],
+    'Famatech' => [
+      'public://famatech.svg' => 'https://www.famatech.pl',
+    ],
+    'Smartbees' => [
+      'public://smartbees_icon.svg' => 'https://www.abventor.com',
+    ],
+  ];
+
+  foreach ($partners as $title => $partner) {
+    foreach ($partner as $logoUri => $site) {
+      $files = \Drupal::entityTypeManager()
+        ->getStorage('file')
+        ->loadByProperties(['uri' => $logoUri]);
+      $file = reset($files);
+
+      if (!$file) {
+        $file = File::create([
+          'uri' => $logoUri,
+        ]);
+        $file->save();
+      }
+
+      $partner = Node::create(['type' => 'partners']);
+      $partner->set('title', $title);
+      $partner->set('body', 'Firma zajmująca się budową serwisów internetowych opartych o system Drupal');
+      $partner->set('field_logo', $file->id());
+      $partner->set('field_website', $site);
+      $partner->enforceIsNew();
+      $partner->save();
+    }
+  }
+}

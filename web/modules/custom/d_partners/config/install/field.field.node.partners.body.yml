@@ -1,0 +1,21 @@
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.partners
+  module:
+    - text
+id: node.partners.body
+field_name: body
+entity_type: node
+bundle: partners
+label: Descriprion
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

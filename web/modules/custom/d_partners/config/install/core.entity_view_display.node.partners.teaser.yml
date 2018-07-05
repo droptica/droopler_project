@@ -1,0 +1,32 @@
+langcode: pl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.partners.body
+    - field.field.node.partners.field_logo
+    - field.field.node.partners.field_website
+    - node.type.partners
+  module:
+    - text
+    - user
+id: node.partners.teaser
+targetEntityType: node
+bundle: partners
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_logo: true
+  field_website: true
+  langcode: true

@@ -1,0 +1,55 @@
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.node.partners.body
+    - field.field.node.partners.field_logo
+    - field.field.node.partners.field_website
+    - node.type.partners
+  module:
+    - link
+    - svg_image
+    - text
+    - user
+id: node.partners.default
+targetEntityType: node
+bundle: partners
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_logo:
+    weight: 102
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_website:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true
