@@ -1,0 +1,10 @@
+d_application_api.main_page:
+  path: 'admin/application'
+  defaults:
+    _controller: '\Drupal\d_application_api\Controller\AdminPages::applicationMainPage'
+    _title: 'Appliction settings main page'
+  requirements:
+    _permission: 'administer application'
+  options:
+    _admin_route: TRUE
+    
