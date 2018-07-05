@@ -73,6 +73,7 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
 %}
 <article{{ attributes.addClass(classes) }}>
   <header>
+    <h1 class="col-xs-12">{{ node.title.value }} </h1>
     {{ title_prefix }}
     {% if not page %}
       <h2{{ title_attributes.addClass('node__title') }}>
@@ -93,7 +94,6 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     {% endif %}
   </header>
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-    <h1 class="col-md-8 col-xs-12">{{ node.title.value }} </h1>
     {{ content }}
   </div>
 </article>
