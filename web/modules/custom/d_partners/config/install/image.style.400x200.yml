@@ -1,0 +1,13 @@
+langcode: pl
+status: true
+dependencies: {  }
+name: 400x200
+label: 400x200
+effects:
+  828007cd-530b-499f-8fb4-4656567e9ad8:
+    uuid: 828007cd-530b-499f-8fb4-4656567e9ad8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 200
