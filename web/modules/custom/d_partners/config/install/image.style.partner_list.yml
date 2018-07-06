@@ -1,0 +1,21 @@
+langcode: pl
+status: true
+dependencies: {  }
+name: partner_list
+label: partner_list
+effects:
+  03a723a6-ce9c-4a26-93f6-290481d9b890:
+    uuid: 03a723a6-ce9c-4a26-93f6-290481d9b890
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 200
+  76f10630-ddc8-4564-a733-cfcf9d8a41e1:
+    uuid: 76f10630-ddc8-4564-a733-cfcf9d8a41e1
+    id: image_crop
+    weight: 2
+    data:
+      width: 300
+      height: 200
+      anchor: center-center

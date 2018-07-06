@@ -2,7 +2,7 @@
 /drush/contrib/
 /vendor/
 /web/core/
-/web/modules
+/web/modules/contrib
 !/web/modules/custom/*
 /web/themes/*
 !/web/themes/custom
