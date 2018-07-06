@@ -5,7 +5,20 @@
   Drupal.behaviors.droopler_subtheme = {
     attach: function (context, settings) {
 
-      // Insert your code here.
+    }
+  };
+
+  Drupal.behaviors.sticky_menu = {
+    attach: function (context, settings) {
+
+      $(window).scroll(function(context) {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 1) {
+          $("header.header").addClass("header-sticky");
+        } else {
+          $("header.header").removeClass("header-sticky");
+        }
+      });
 
     }
   };
