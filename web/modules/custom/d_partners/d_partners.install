@@ -23,8 +23,8 @@ function d_partners_install() {
     ],
   ];
 
-  foreach ($partners as $title => $partner_details) {
-    foreach ($partner as $logoUri => $site) {
+  foreach ($partners as $title => $partnerDetails) {
+    foreach ($partnerDetails as $logoUri => $site) {
       $files = \Drupal::entityTypeManager()
         ->getStorage('file')
         ->loadByProperties(['uri' => $logoUri]);
