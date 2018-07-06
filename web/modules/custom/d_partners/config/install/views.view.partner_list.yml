@@ -58,6 +58,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: 'col-lg-4 col-md-6 col-xs-12'
+          default_row_class: true
       row:
         type: fields
         options:
