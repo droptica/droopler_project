@@ -9,6 +9,9 @@ use \Drupal\file\Entity\File;
 function d_partners_install() {
   // Create sample Partners content.
   $partners = [
+    'Droptica' => [
+      'public://logo-droptica.svg' => 'https://droptica.pl',
+    ],
     'Abventor' => [
       'public://abventor-logotyp.svg' => 'https://www.abventor.com',
     ],
