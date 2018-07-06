@@ -23,7 +23,7 @@ function d_partners_install() {
     ],
   ];
 
-  foreach ($partners as $title => $partner) {
+  foreach ($partners as $title => $partner_details) {
     foreach ($partner as $logoUri => $site) {
       $files = \Drupal::entityTypeManager()
         ->getStorage('file')
