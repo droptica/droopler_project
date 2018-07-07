@@ -11,6 +11,12 @@ global-js:
   version: VERSION
   js:
     js/min/global.min.js: {}
+    /libraries/popper.js/dist/umd/popper.min.js: { weight: -20 } # Required by Bootstrap 4
+    js/min/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
 
 # Libraries for the SCSS version
 dropbutton:
