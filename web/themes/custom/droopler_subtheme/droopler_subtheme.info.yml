@@ -7,23 +7,30 @@ core: '8.x'
 base theme: droopler_theme
 
 libraries:
+  - droopler_theme/global-styling
   - droopler_subtheme/global-styling
-  - droopler_subtheme/global-js
+# Uncomment this to enable Font Awesome support.
+# Look into droopler_subtheme.libraries.yml too.
+#  - droopler_subtheme/fontawesome
 
 libraries-extend:
   core/drupal.dropbutton:
-    - droopler_subtheme/dropbutton
+    - droopler_theme/dropbutton
   file/drupal.file:
-    - droopler_subtheme/file
+    - droopler_theme/file
 
-# Left for compatibility reasons.
+# Comment the following overrides if you are using pure CSS.
+# If uncommented global styling of base theme will be replaced.
+# Libraries will respect your subtheme variables.
 libraries-override:
+  droopler_theme/global-styling: droopler_subtheme/global-styling
   droopler_theme/global-js: droopler_subtheme/global-js
+  droopler_theme/dropbutton: droopler_subtheme/dropbutton
+  droopler_theme/file: droopler_subtheme/file
+  droopler_theme/maintenance_page: droopler_subtheme/maintenance_page
 
 ckeditor_stylesheets:
-  - css/base/elements.css
-  - css/components/captions.css
-  - css/components/table.css
+  - css/ckeditor.css
 
 regions:
   header: Header

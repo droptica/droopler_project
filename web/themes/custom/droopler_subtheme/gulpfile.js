@@ -36,7 +36,7 @@ var css_dir = theme_dir + '/css';
 var js_dir = theme_dir + '/js';
 var base_js_dir = base_theme_dir + '/js';
 var jsmin_dir = theme_dir + '/js/min';
-var base_jsmin_dir = base_theme_dir + '/js/min';
+var base_jsmin_dir = theme_dir + '/js/min/base';
 
 // Inputs
 var scss_input = scss_dir + '/' + scss_pattern;
@@ -67,7 +67,7 @@ var autoprefixerOptions = {
 // Default task
 gulp.task('default', ['watch' /*, possible other tasks... */]);
 
-// Watch SASS & KSS & JS
+// Watch SASS & JS
 gulp.task('watch', ['sass:compile', 'js:compile', 'js:compile-base'], function(callback) {
   watch([scss_input, base_scss_input], function(vinyl) {
     console.log('File ' + vinyl.path + ' changed, running tasks...');
@@ -142,13 +142,6 @@ gulp.task('debug', function() {
   } else {
     console.log('[WARNING] .min.js directory does not exist. Please create it and don\'t tempt gulp to fail!');
   }
-  
-  // Check for base JS MIN dir
-  if (fs.existsSync(base_jsmin_dir)) {
-    console.log('[OK] Base .min.js directory exists.');
-  } else {
-    console.log('[ERROR] Base .min.js directory does not exist. Please create it!');
-  }
 });
 
 // Clean everything
@@ -207,8 +200,7 @@ gulp.task('js:compile-base', function (cb) {
     uglify(),
     rename({ suffix: '.min' }),
     sourcemaps.write('.'),
-    gulp.dest(jsmin_dir),
-    gulp.dest(base_jsmin_dir) // Left for compatibility reasons.
+    gulp.dest(base_jsmin_dir)
   ], cb );
 });
 
