@@ -22,4 +22,14 @@
     }
   };
 
+  Drupal.behaviors.random_partners = {
+    attach: function (context, settings) {
+      var $parent = $(".view-partner-list .view-content");
+      var $divs = $parent.children();
+      while ($divs.length) {
+        $parent.append($divs.splice(Math.floor(Math.random() * $divs.length), 1)[0]);
+      }
+    }
+  };
+
 })(jQuery, Drupal);
