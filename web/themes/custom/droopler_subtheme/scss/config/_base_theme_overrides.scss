@@ -1,65 +1,69 @@
-// Colors.
+// Simple colors
+// -------------------------
+// $white: #fff;
+// $black: #000;
 
-//$white: #fff;
-//$black: #000;
-
-// -----------COLOUR NAMING CONVENTION ----------//
-
-// The above are so obvious thet thay stay as they are. There is just one total black and one total white.
-
-// A general situation on a website looks like this: There are 2-3 main sets of colours and there are accents.
+// COLOUR NAMING CONVENTION
+// ----------------------------
 //
-// There is however not a single easy way to see which colours will end up where
-// on which website or even or a particular section.
-// Any naming convention is bound to fail. To devise a mechanism in which we do not end up with contradicting
-// name and value of a color, we completely abstract variable names from colours they hold.
-// In this way we hope we can build many websites on the same codebase without making a mess and perhaps with
-// some additional fun.
+// The two above are so obvious that they stay as they are.
+// There is just one total black and one total white.
 //
-// The apporach:
-// We derive name the variables from the participants of the Troyan wors (The Greeks and the Troyans)
-// Plenty of names can be found here: https://en.wikipedia.org/wiki/Trojan_War
+// You may find our color naming convention a little weird. For example "$color-agamemnon" points
+// neither to color nor some website element. It's not easy to connect it with a particular place.
+//
+// Why do we like meaningless names? Because any naming convention is bound to fail!
+// Droopler is a base of many different sites. What if some widely used $color-blue became red?
+// We avoid such problems by completely abstracting variable names from the colors they hold.
+// This way we hope we can build many websites on the same codebase without making a mess
+// and perhaps with some additional fun.
+//
+// What is our approach?
+// A general situation on a website looks like this:
+// There are two sets of colors. One for you and one for us.
+//
+// Our team uses variable names derived from the Greek mythology. You may have already noticed
+// that we named the most important variables after participants of the Troyan Wars.
+// Occasionally we targetted a god from the Olymp.
+//
+// You are free to override any of these "Greek" colors. They are connected with many elements
+// so one small change can lead to an entirely different website layout.
+// You can name your variables however you like. Just don't use any Greek names to avoid conflicts
+// with future versions of Droopler (maybe we like the same ancient heroes).
+// We encourage you to follow our ideas and create variables based on Roman mythology.
+// Like $color-jupiter or $color-mars.
+//
+// Wikipedia is here for you:
+// https://en.wikipedia.org/wiki/List_of_Roman_deities
+//
+// Below you have a list of Droopler's built-in variables. Just uncomment and change them.
 
-// We then obviously have 2 sets of colors (one for the Troyans and one for Greeks). If you need a 3rd set,
-// use greek gods
-// Accents are named after those who stood out in the wars: Achillies, Hektor, Helen, Troyan-hors ;)
 
-// I have no idea if this is a good idea but all the other ideas  failed immediately when I wanted to theme site
-// number 2 which was brown/orange, when the first base was blue/grey. This was not even a case of dark vs bright
-// but a completely different set of colours. Hence this small experiment.
+// Colours - The Greeks
+// -------------------------
+// $color-agamemnon: #196dba;
+// $color-menelaus: #5d98ce;
+// $color-nestor: #65e2ff;
+// $color-odysseus: white;
+// $color-diomedes: #d3d7d9;
+// $color-patroclus: #979797;
 
-// The Greeks
-//Agamemnon  Menelaus Nestor Odysseus Diomedes Patroclus Thersites Achaeans Myrmidons
+// Colours - The Troyans
+// -------------------------
+// $color-priam: #7a7a7a;
+// $color-hecuba: #727272;
+// $color-troilus: #4c4c4c;
+// $color-cassandra: black;
+// $color-andromache: #d2d2d2;
+// $color-aeneas: #8e8a89;
+// $color-memnon: #1a6dbb;
+// $color-penthesilea: #969696;
 
-//$color-agamemnon: #196dba;
-//$color-menelaus: #5d98ce;
-//$color-nestor: #65e2ff;
-//$color-odysseus: white;
-//$color-diomedes: #d3d7d9;
-//$color-patroclus: #979797;
+// Colour accents - Troyan heroes
+// ---------------------------------
+// $color-hector: #d3d3d3;
+// $color-achillies: #ec6d06;
 
-// The Troyans
-// Priam Hecuba Troilus Cassandra Andromache Aeneas Memnon Penthesilea and the Amazons Sarpedon
-//$color-priam: #7a7a7a;
-//$color-hecuba: #727272;
-//$color-troilus: #4c4c4c;
-//$color-cassandra: black;
-//$color-andromache: #d2d2d2;
-//$color-aeneas: #8e8a89;
-//$color-memnon: #1a6dbb;
-//$color-penthesilea: #969696;
-
-// The accents
-// Achillies, Hector, Helen, Paris
-//$color-hector: #d3d3d3;
-//$color-achillies: #ec6d06;
-
-// The Gods
-// Caused the war: Eris Zeus
-// On the Greek side: Athena Hera Hephaestus Hermes Poseidon Thetis
-// On the Trojan side: Aphrodite Apollo Ares Artemis Leto Scamander
-
-////$colour-zeus: #ff0000; // just an example
 
 // --------------READ THIS -------------------
 // Here we can stick in only general colour applicable to the whole site
