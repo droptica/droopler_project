@@ -11,14 +11,14 @@
 !/web/profiles/custom
 /web/libraries/
 /web/.*
-/config/*
-!/config/sync
-/config/sync/*
-!/config/sync/.gitkeep
+/config
+/drupal_config/*
+!/drupal_config/sync
+/drupal_config/sync/*
+!/drupal_config/sync/.gitkeep
 /web/*.php
 /web/web.config
 /web/robots.txt
-drupal_config
 
 # Ignore sensitive information
 /web/sites/*
