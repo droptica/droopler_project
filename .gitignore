@@ -11,7 +11,10 @@
 !/web/profiles/custom
 /web/libraries/
 /web/.*
-/config
+/config/*
+!/config/sync
+/config/sync/*
+!/config/sync/.gitkeep
 /web/*.php
 /web/web.config
 /web/robots.txt
