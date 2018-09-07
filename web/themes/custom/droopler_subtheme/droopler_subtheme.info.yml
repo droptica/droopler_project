@@ -42,6 +42,10 @@ regions:
   featured_top: 'Featured top'
   breadcrumb: Breadcrumb
   admin_tabs: 'Admin tabs'
+  facets_top: 'Facets Top'
+  facets_left: 'Facetes left'
+  sidebar_left: 'Sidebar left'
+  sidebar_right: 'Sidebar right'
   content: Content
   featured_bottom_first: 'Featured bottom first'
   featured_bottom_second: 'Featured bottom second'
