@@ -12,10 +12,13 @@
 /web/libraries/
 /web/.*
 /config
+/drupal_config/*
+!/drupal_config/sync
+/drupal_config/sync/*
+!/drupal_config/sync/.gitkeep
 /web/*.php
 /web/web.config
 /web/robots.txt
-drupal_config
 
 # Ignore sensitive information
 /web/sites/*
