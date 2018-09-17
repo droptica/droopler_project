@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e74c2dfdd063502c2d6ead121f8c726",
+    "content-hash": "9839770f5f350b5704fb264e18bedd35",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1490,12 +1490,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/droptica/droopler.git",
-                "reference": "9d8c7fc6c428e5e4a9a3994068c9e015001771c9"
+                "reference": "f693bd6bee35ccfd6fea5006a29e8079cba4b35f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/droptica/droopler/zipball/9d8c7fc6c428e5e4a9a3994068c9e015001771c9",
-                "reference": "9d8c7fc6c428e5e4a9a3994068c9e015001771c9",
+                "url": "https://api.github.com/repos/droptica/droopler/zipball/f693bd6bee35ccfd6fea5006a29e8079cba4b35f",
+                "reference": "f693bd6bee35ccfd6fea5006a29e8079cba4b35f",
                 "shasum": ""
             },
             "require": {
@@ -1531,6 +1531,7 @@
                 "npm-asset/in-viewport": "^3.6",
                 "npm-asset/jquery-backstretch": "^2.1",
                 "npm-asset/popper.js": "1.12.3",
+                "npm-asset/select2": "^4.0.4",
                 "npm-asset/slick-carousel": "^1.8"
             },
             "conflict": {
@@ -1542,7 +1543,7 @@
                 "GPL-2.0+"
             ],
             "description": "Droopler installation profile for Drupal 8",
-            "time": "2018-09-05T09:04:51+00:00"
+            "time": "2018-09-17T12:11:38+00:00"
         },
         {
             "name": "drupal-composer/drupal-scaffold",
