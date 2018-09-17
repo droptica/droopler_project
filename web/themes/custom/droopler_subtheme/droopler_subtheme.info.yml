@@ -9,9 +9,7 @@ base theme: droopler_theme
 libraries:
   - droopler_theme/global-styling
   - droopler_subtheme/global-styling
-## Uncomment this to enable Font Awesome support.
-## Look into droopler_subtheme.libraries.yml too.
-#  - droopler_subtheme/font-awesome
+  - droopler_subtheme/font-awesome
 
 libraries-extend:
   core/drupal.dropbutton:
@@ -43,6 +41,7 @@ regions:
   breadcrumb: Breadcrumb
   admin_tabs: 'Admin tabs'
   facets_top: 'Facets Top'
+  facets_left_top: 'Facetes left Top'
   facets_left: 'Facetes left'
   sidebar_left: 'Sidebar left'
   sidebar_right: 'Sidebar right'
