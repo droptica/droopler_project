@@ -1490,12 +1490,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/droptica/droopler.git",
-                "reference": "5642c36cb28358319b739d3f1ba4ee62f0a4ca29"
+                "reference": "30eb18c1adf6f3337dc3a5ee5571483547b92bd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/droptica/droopler/zipball/5642c36cb28358319b739d3f1ba4ee62f0a4ca29",
-                "reference": "5642c36cb28358319b739d3f1ba4ee62f0a4ca29",
+                "url": "https://api.github.com/repos/droptica/droopler/zipball/30eb18c1adf6f3337dc3a5ee5571483547b92bd9",
+                "reference": "30eb18c1adf6f3337dc3a5ee5571483547b92bd9",
                 "shasum": ""
             },
             "require": {
@@ -1543,7 +1543,7 @@
                 "GPL-2.0+"
             ],
             "description": "Droopler installation profile for Drupal 8",
-            "time": "2018-09-21T12:48:28+00:00"
+            "time": "2018-09-24T08:29:33+00:00"
         },
         {
             "name": "drupal-composer/drupal-scaffold",
