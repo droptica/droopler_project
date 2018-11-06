@@ -15,7 +15,6 @@
 /web/web.config
 /web/robots.txt
 drupal_config
-composer.lock
 
 # Ignore sensitive information
 /web/sites/*
