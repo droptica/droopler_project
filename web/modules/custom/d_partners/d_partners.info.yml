@@ -1,0 +1,19 @@
+name: d_partners
+description: 'Provides Partners content type and related configuration.'
+type: module
+core: 8.x
+dependencies:
+  - field
+  - file
+  - image
+  - language
+  - link
+  - menu_ui
+  - node
+  - path
+  - svg_image
+  - text
+  - user
+  - views
+version: 8.x-1.0-beta9
+package: d

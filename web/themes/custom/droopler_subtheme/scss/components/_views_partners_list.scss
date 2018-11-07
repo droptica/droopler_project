@@ -1,0 +1,14 @@
+.view-partner-list {
+  .view-content {
+    .views-row {
+      float: left;
+      text-align: center;
+      background: $color-galileo;
+      border: 5px solid white;
+      margin-bottom: 5px;
+      @include media-breakpoint-down(xs) {
+        border: none;
+      }
+    }
+  }
+}

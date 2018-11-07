@@ -2,8 +2,9 @@
 /drush/contrib/
 /vendor/
 /web/core/
-/web/modules
-!/web/modules/custom/*
+/web/modules/contrib
+/web/modules/*
+!/web/modules/custom
 /web/themes/*
 !/web/themes/custom
 /web/profiles/*
@@ -11,10 +12,13 @@
 /web/libraries/
 /web/.*
 /config
+/drupal_config/*
+!/drupal_config/sync
+/drupal_config/sync/*
+!/drupal_config/sync/.gitkeep
 /web/*.php
 /web/web.config
 /web/robots.txt
-drupal_config
 
 # Ignore sensitive information
 /web/sites/*
