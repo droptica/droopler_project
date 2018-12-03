@@ -9,6 +9,20 @@ header {
     margin-top: 0;
     z-index: 100;
   }
+  &.header {
+    @include media-breakpoint-only(lg) {
+      .navbar-brand {
+        max-width: initial;
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+      }
+      a.site-logo {
+        max-width: $logo-md-width;
+      }
+    }
+  }
 }
 
 @keyframes HeaderFadeIn {
