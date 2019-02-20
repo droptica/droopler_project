@@ -15,10 +15,6 @@
 		"asset": {
 			"type": "composer",
 			"url": "https://asset-packagist.org"
-		},
-		"droptica-droopler": {
-		    "type": "git",
-            "url":  "https://github.com/droptica/droopler.git"
 		}
 	},
 	"require": {
