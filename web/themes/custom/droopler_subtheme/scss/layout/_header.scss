@@ -22,6 +22,11 @@ header {
         max-width: $logo-md-width;
       }
     }
+    @include media-breakpoint-between(sm, md) {
+      .navbar-brand {
+        margin: auto;
+      }
+    }
   }
 }
 
