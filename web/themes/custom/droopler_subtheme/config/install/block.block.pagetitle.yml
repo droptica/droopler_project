@@ -19,9 +19,7 @@ settings:
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
-    bundles:
-      blog_post: blog_post
-      content_page: content_page
-    negate: true
+    bundles: { }
+    negate: false
     context_mapping:
       node: '@node.node_route_context:node'
