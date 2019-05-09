@@ -23,7 +23,7 @@
 		"droptica/droopler": "^8.1.4",
 		"drupal-composer/drupal-scaffold": "^2.2",
 		"drupal/console": "~1.0",
-		"drupal/core": "^8.6.10",
+		"drupal/core": "~8.6.10",
 		"drupal/system_status": "^2.8",
 		"drush/drush": "~8.0",
 		"oomphinc/composer-installers-extender": "^1.1",
