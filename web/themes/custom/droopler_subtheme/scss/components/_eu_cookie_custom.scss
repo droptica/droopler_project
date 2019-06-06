@@ -1,0 +1,33 @@
+.eu-cookie-compliance-banner {
+  .find-more-button {
+    font-size: 12px;
+  }
+
+  h2{
+    margin-top: 10px;
+  }
+
+  .eu-cookie-compliance-buttons {
+    margin: 20px 0 10px 0;
+  }
+
+  .agree-button, .decline-button {
+    color: #fff;
+    margin: 0;
+  }
+
+  .agree-button {
+    background-color: #ec6d06;
+    border-color: #ec6d06;
+    font-weight: bold;
+    padding: 8px 18px;
+  }
+
+  .decline-button {
+    border: none;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
+    font-weight: normal;
+  }
+}
