@@ -3,7 +3,7 @@
     font-size: 12px;
   }
 
-  h2{
+  h2 {
     margin-top: 10px;
   }
 
@@ -12,13 +12,13 @@
   }
 
   .agree-button, .decline-button {
-    color: #fff;
+    color: $white;
     margin: 0;
   }
 
   .agree-button {
-    background-color: #ec6d06;
-    border-color: #ec6d06;
+    background-color: $primary;
+    border-color: $primary;
     font-weight: bold;
     padding: 8px 18px;
   }
