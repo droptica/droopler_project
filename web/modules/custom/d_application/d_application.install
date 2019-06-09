@@ -31,13 +31,13 @@ function d_application_update_8001() {
 
   $paragraph = Paragraph::create([
     'type' => 'd_p_text_paged',
-    'field_d_main_title' => array(
+    'field_d_main_title' => [
       "value"  =>  'Polityka prywatności',
-    ),
-    'field_d_long_text' => array(
+    ],
+    'field_d_long_text' => [
       "value"  => twig_render_template(drupal_get_path('module', 'd_application') . '/templates/privacy_policy.html.twig', []),
       "format" => "full_html"
-    ),
+    ],
   ]);
   $paragraph->save();
 
@@ -45,11 +45,11 @@ function d_application_update_8001() {
     'type' => 'content_page',
     'title' => 'Polityka prywatności'
   ]);
-  $page->field_page_section = array(
-    array(
+  $page->field_page_section = [
+    [
       'target_id' => $paragraph->id(),
       'target_revision_id' => $paragraph->getRevisionId(),
-    )
-  );
+    ]
+  ];
   $page->save();
 }
