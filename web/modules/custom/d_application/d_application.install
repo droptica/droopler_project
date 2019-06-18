@@ -8,7 +8,7 @@ use Drupal\paragraphs\Entity\Paragraph;
 /**
  * Enable eu_cookie_compliance module and add privacy policy page.
  */
-function d_application_update_8001() {
+function d_application_install() {
   \Drupal::service('module_installer')->install(['eu_cookie_compliance'], TRUE);
 
   $config_factory = \Drupal::configFactory();
