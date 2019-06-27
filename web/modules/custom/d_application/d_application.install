@@ -1,1 +1,55 @@
 <?php
+
+include_once \Drupal::root() . '/core/themes/engines/twig/twig.engine';
+
+use Drupal\node\Entity\Node;
+use Drupal\paragraphs\Entity\Paragraph;
+
+/**
+ * Enable eu_cookie_compliance module and add privacy policy page.
+ */
+function d_application_install() {
+  \Drupal::service('module_installer')->install(['eu_cookie_compliance'], TRUE);
+
+  $config_factory = \Drupal::configFactory();
+  $config_factory->getEditable('eu_cookie_compliance.settings')
+    ->set('langcode', 'pl')
+    ->set('popup_agree_button_message', 'Zgadzam się')
+    ->set('popup_disagree_button_message', 'Dowiedz się więcej')
+    ->set('disagree_button_label', 'Nie, dziękuję')
+    ->set('popup_find_more_button_message', 'Dowiedz się więcej')
+    ->set('popup_link', '/polityka-prywatnosci')
+    ->set('popup_info', [
+      'value' => '<h2>Powiadomienie o plikach cookie.</h2><p>Ta strona korzysta z plików cookie. Pozostając na tej stronie, wyrażasz zgodę na korzystanie z plików cookie.</p>',
+      'format' => 'full_html',
+    ])
+    ->set('withdraw_message', [
+      'value' => '<h2>Powiadomienie o plikach cookie.</h2><p>Ta strona korzysta z plików cookie. Pozostając na tej stronie, wyrażasz zgodę na korzystanie z plików cookie.</p>',
+      'format' => 'full_html',
+    ])
+    ->save(TRUE);
+
+  $paragraph = Paragraph::create([
+    'type' => 'd_p_text_paged',
+    'field_d_main_title' => [
+      "value"  =>  'Polityka prywatności',
+    ],
+    'field_d_long_text' => [
+      "value"  => twig_render_template(drupal_get_path('module', 'd_application') . '/templates/privacy_policy.html.twig', []),
+      "format" => "full_html"
+    ],
+  ]);
+  $paragraph->save();
+
+  $page = Node::create([
+    'type' => 'content_page',
+    'title' => 'Polityka prywatności'
+  ]);
+  $page->field_page_section = [
+    [
+      'target_id' => $paragraph->id(),
+      'target_revision_id' => $paragraph->getRevisionId(),
+    ]
+  ];
+  $page->save();
+}

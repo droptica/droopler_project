@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "46f259a2e6a2b8598eb31014ac69bfd8",
+    "content-hash": "fa0ea7a09b04239503b6877188fe540f",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -133,8 +133,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/jackmoore/colorbox/zipball/bac78120c6ca9e63370cc317ab6f400129cd6608",
-                "reference": "bac78120c6ca9e63370cc317ab6f400129cd6608",
-                "shasum": null
+                "reference": "bac78120c6ca9e63370cc317ab6f400129cd6608"
             },
             "require": {
                 "bower-asset/jquery": ">=1.3.2"
@@ -152,8 +151,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/desandro/matches-selector/zipball/42ee1cbab7469454d140bdab04d2ceed9c68b85e",
-                "reference": "42ee1cbab7469454d140bdab04d2ceed9c68b85e",
-                "shasum": null
+                "reference": "42ee1cbab7469454d140bdab04d2ceed9c68b85e"
             },
             "type": "bower-asset",
             "license": [
@@ -171,8 +169,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/metafizzy/ev-emitter/zipball/1baa3a03d8e07f665b0eb797661fcc2b0d2a5736",
-                "reference": "1baa3a03d8e07f665b0eb797661fcc2b0d2a5736",
-                "shasum": null
+                "reference": "1baa3a03d8e07f665b0eb797661fcc2b0d2a5736"
             },
             "type": "bower-asset",
             "license": [
@@ -190,8 +187,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/metafizzy/fizzy-ui-utils/zipball/72feb9fc3d6de25696291941121bb3ec2db8221e",
-                "reference": "72feb9fc3d6de25696291941121bb3ec2db8221e",
-                "shasum": null
+                "reference": "72feb9fc3d6de25696291941121bb3ec2db8221e"
             },
             "require": {
                 "bower-asset/desandro-matches-selector": ">=2.0.0,<3.0.0"
@@ -212,8 +208,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/desandro/get-size/zipball/6879e7f15b4b6e19ca392b6955edfa8d4aa6f787",
-                "reference": "6879e7f15b4b6e19ca392b6955edfa8d4aa6f787",
-                "shasum": null
+                "reference": "6879e7f15b4b6e19ca392b6955edfa8d4aa6f787"
             },
             "type": "bower-asset",
             "license": [
@@ -231,8 +226,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/jquery/jquery-dist/zipball/9e8ec3d10fad04748176144f108d7355662ae75e",
-                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e",
-                "shasum": null
+                "reference": "9e8ec3d10fad04748176144f108d7355662ae75e"
             },
             "type": "bower-asset",
             "license": [
@@ -250,8 +244,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/hakger/lato-webfont/zipball/286f38f4b5ce4678c1645a9956f22580f213f88b",
-                "reference": "286f38f4b5ce4678c1645a9956f22580f213f88b",
-                "shasum": null
+                "reference": "286f38f4b5ce4678c1645a9956f22580f213f88b"
             },
             "type": "bower-asset",
             "license": [
@@ -270,8 +263,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/desandro/masonry/zipball/3b0883cf4a4a046896719b9cf282ea74be7ffecd",
-                "reference": "3b0883cf4a4a046896719b9cf282ea74be7ffecd",
-                "shasum": null
+                "reference": "3b0883cf4a4a046896719b9cf282ea74be7ffecd"
             },
             "require": {
                 "bower-asset/get-size": ">=2.0.2,<3.0.0",
@@ -293,8 +285,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/metafizzy/outlayer/zipball/bf31c5748bf84fcc2c553d1199a6ecaf0ebd9878",
-                "reference": "bf31c5748bf84fcc2c553d1199a6ecaf0ebd9878",
-                "shasum": null
+                "reference": "bf31c5748bf84fcc2c553d1199a6ecaf0ebd9878"
             },
             "require": {
                 "bower-asset/ev-emitter": ">=1.0.0,<2.0.0",
@@ -2737,6 +2728,101 @@
             }
         },
         {
+            "name": "drupal/eu_cookie_compliance",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/eu-cookie-compliance.git",
+                "reference": "8.x-1.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "3161d3f15d634c603a065ac5d731131c2be6714a"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.5",
+                    "datestamp": "1552173780",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Pajdzik",
+                    "homepage": "https://www.drupal.org/u/marcin-pajdzik",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Sven Berg Ryen",
+                    "homepage": "https://www.drupal.org/u/svenryen",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/1538032/committers"
+                },
+                {
+                    "name": "dakku",
+                    "homepage": "https://www.drupal.org/user/97634"
+                },
+                {
+                    "name": "grzegorz.bartman",
+                    "homepage": "https://www.drupal.org/user/363120"
+                },
+                {
+                    "name": "id.tornado",
+                    "homepage": "https://www.drupal.org/user/2754049"
+                },
+                {
+                    "name": "killua99",
+                    "homepage": "https://www.drupal.org/user/699418"
+                },
+                {
+                    "name": "mibfire",
+                    "homepage": "https://www.drupal.org/user/155136"
+                },
+                {
+                    "name": "naveenvalecha",
+                    "homepage": "https://www.drupal.org/user/2665733"
+                },
+                {
+                    "name": "svenryen",
+                    "homepage": "https://www.drupal.org/user/667244"
+                }
+            ],
+            "description": "This module aims at making the website compliant with the new EU cookie regulation.",
+            "homepage": "https://drupal.org/project/eu_cookie_compliance",
+            "keywords": [
+                "Cookie",
+                "CookieCompliance",
+                "Drupal",
+                "GDPR"
+            ],
+            "support": {
+                "source": "https://cgit.drupalcode.org/eu-cookie-compliance",
+                "docs": "https://www.drupal.org/project/eu_cookie_compliance",
+                "forum": "https://drupal.stackexchange.com/search?q=eu+cookie+compliance",
+                "issues": "https://www.drupal.org/project/issues/eu_cookie_compliance?version=8.x",
+                "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
             "name": "drupal/facets",
             "version": "1.3.0",
             "source": {
@@ -3054,7 +3140,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/google_tag.git",
-                "reference": "7f8479a8c16d526558bef5e7bf597e4184296645"
+                "reference": "f1a1d0ed7ff5fcf5246d3b66e06e6a0d53679afb"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -4549,9 +4635,7 @@
             "version": "0.3.3",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/almond/-/almond-0.3.3.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/almond/-/almond-0.3.3.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4563,9 +4647,7 @@
             "version": "4.0.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.0.0.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.0.0.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4583,8 +4665,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/inorganik/countUp.js/zipball/497c3cd44a7c29480e22b1d51ff773f20a0d03b4",
-                "reference": "497c3cd44a7c29480e22b1d51ff773f20a0d03b4",
-                "shasum": null
+                "reference": "497c3cd44a7c29480e22b1d51ff773f20a0d03b4"
             },
             "type": "npm-asset",
             "license": [
@@ -4596,9 +4677,7 @@
             "version": "3.6.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/in-viewport/-/in-viewport-3.6.0.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/in-viewport/-/in-viewport-3.6.0.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4610,9 +4689,7 @@
             "version": "3.3.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/jquery/-/jquery-3.3.1.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/jquery/-/jquery-3.3.1.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4624,9 +4701,7 @@
             "version": "2.1.17",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/jquery-backstretch/-/jquery-backstretch-2.1.17.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/jquery-backstretch/-/jquery-backstretch-2.1.17.tgz"
             },
             "require": {
                 "npm-asset/jquery": ">=3.1.1,<4.0.0"
@@ -4638,9 +4713,7 @@
             "version": "3.1.13",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/jquery-mousewheel/-/jquery-mousewheel-3.1.13.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/jquery-mousewheel/-/jquery-mousewheel-3.1.13.tgz"
             },
             "type": "npm-asset"
         },
@@ -4649,9 +4722,7 @@
             "version": "1.12.3",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/popper.js/-/popper.js-1.12.3.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/popper.js/-/popper.js-1.12.3.tgz"
             },
             "type": "npm-asset",
             "license": [
@@ -4663,9 +4734,7 @@
             "version": "4.0.5",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/select2/-/select2-4.0.5.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/select2/-/select2-4.0.5.tgz"
             },
             "require": {
                 "npm-asset/almond": "~0.3.1",
@@ -4681,9 +4750,7 @@
             "version": "1.8.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/slick-carousel/-/slick-carousel-1.8.1.tgz",
-                "reference": null,
-                "shasum": null
+                "url": "https://registry.npmjs.org/slick-carousel/-/slick-carousel-1.8.1.tgz"
             },
             "type": "npm-asset",
             "license": [
