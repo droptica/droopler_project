@@ -43,28 +43,28 @@
 
 // Colours - The Greeks
 // -------------------------
-// $color-agamemnon: #196dba;
-// $color-menelaus: #5d98ce;
-// $color-nestor: #65e2ff;
-// $color-odysseus: white;
-// $color-diomedes: #d3d7d9;
-// $color-patroclus: #979797;
+$color-agamemnon: #A2A3A7;
+$color-menelaus: #BCBDC1;
+$color-nestor: #d3d7d9;//#B2B3B5;
+$color-odysseus: white;
+$color-diomedes: #d3d7d9;
+$color-patroclus: #9D9EA2;
 
 // Colours - The Troyans
 // -------------------------
-// $color-priam: #7a7a7a;
-// $color-hecuba: #727272;
-// $color-troilus: #4c4c4c;
-// $color-cassandra: black;
-// $color-andromache: #d2d2d2;
-// $color-aeneas: #8e8a89;
-// $color-memnon: #1a6dbb;
-// $color-penthesilea: #969696;
+$color-priam: #7a7a7a;
+$color-hecuba: #727272;
+$color-troilus: #4c4c4c;
+$color-cassandra: black;
+$color-andromache: #d2d2d2;
+$color-aeneas: #8e8a89;
+$color-memnon: #A2A3A7;
+$color-penthesilea: #969696;
 
 // Colour accents - Troyan heroes
 // ---------------------------------
-// $color-hector: #d3d3d3;
-// $color-achillies: #ec6d06;
+$color-hector: #d3d3d3;
+$color-achillies: #646466;
 
 
 // GENERAL VARIABLES
@@ -74,8 +74,8 @@
 
 // Links
 // -------------------------
-// $link-color: $color-agamemnon;
-// $link-hover-color: darken($link-color, 5%);
+$link-color: $color-agamemnon;
+$link-hover-color: darken($link-color, 5%);
 
 // Font variables used in Droopler
 // -------------------------

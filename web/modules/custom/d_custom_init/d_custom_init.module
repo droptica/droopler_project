@@ -1,0 +1,45 @@
+<?php
+
+
+/**
+ * Alter content structure.
+ * Implements hook_content_structure_alter()
+ *
+ * @param $structure
+ *  The array with structure.
+ *
+ * @param $context
+ *  Which structure array is this?
+ */
+function d_custom_init_content_structure_alter(&$structure, $context) {
+  if ($context == 'all') {
+    // Load all YML files from d_custom_init module subdirectory.
+    $path = drupal_get_path('module', 'd_custom_init') . '/pages';
+    $structure = [
+      'homepage' => ['file' => "$path/homepage.yml"],
+      'examples' => ['file' => "$path/examples.yml", 'link' => 'Examples', 'weight' => 20, 'children' => [
+        'business' => ['file' => "$path/business.yml", 'link' => 'Local Business Website', 'weight' => 10],
+        'event' => ['file' => "$path/event.yml", 'link' => 'Event Website', 'weight' => 20],
+        'product' => ['file' => "$path/product.yml", 'link' => 'Product Landing Page', 'weight' => 30],
+        'portfolio' => ['file' => "$path/portfolio.yml", 'link' => 'Portfolio Website', 'weight' => 40],
+        'educational' => ['file' => "$path/educational.yml", 'link' => 'Educational Website', 'weight' => 50],
+      ]],
+      'documentation' => ['file' => "$path/documentation.yml", 'link' => 'Docs', 'weight' => 30, 'children' => [
+        'shortcodes' => ['file' => "$path/shortcodes.yml", 'link' => 'Shortcodes', 'weight' => 0],
+        'd_p_banner' => ['file' => "$path/d_p_banner.yml", 'link' => 'Banner Paragraph', 'weight' => 10],
+        'd_p_form' => ['file' => "$path/d_p_form.yml", 'link' => 'Form Paragraph', 'weight' => 20],
+        'd_p_text_blocks' => ['file' => "$path/d_p_text_blocks.yml", 'link' => 'Text Blocks Paragraph', 'weight' => 30],
+        'd_p_sidebar_image' => ['file' => "$path/d_p_sidebar_image.yml", 'link' => 'Sidebar Image Paragraph', 'weight' => 40],
+        'd_p_subscribe' => ['file' => "$path/d_p_subscribe.yml", 'link' => 'Subscribe File Paragraph', 'weight' => 50],
+        'd_p_text' => ['file' => "$path/d_p_text.yml", 'link' => 'Text Paragraph', 'weight' => 60],
+        'd_p_text_bg' => ['file' => "$path/d_p_text_bg.yml", 'link' => 'Text With Background Paragraph', 'weight' => 70],
+        'd_p_counters' => ['file' => "$path/d_p_counters.yml", 'link' => 'Counters Paragraph', 'weight' => 80],
+        'd_p_gallery' => ['file' => "$path/d_p_gallery.yml", 'link' => 'Gallery Paragraph', 'weight' => 90],
+        'd_p_carousel' => ['file' => "$path/d_p_carousel.yml", 'link' => 'Carousel Paragraph', 'weight' => 90],
+        'd_p_embed' => ['file' => "$path/d_p_embed.yml", 'link' => 'Side Embed Paragraph', 'weight' => 100],
+        'd_p_tiles' => ['file' => "$path/d_p_tiles.yml", 'link' => 'Tiles Paragraphs', 'weight' => 110],
+      ]],
+      'contact' => ['file' => "$path/contact.yml", 'link' => 'Contact', 'weight' => 40],
+    ];
+  }
+}
