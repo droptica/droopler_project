@@ -12,6 +12,7 @@ global-js:
   js:
     js/min/global.min.js: {}
     js/min/base/global.min.js: {}
+    js/min/base/main-menu.min.js: {}
     /libraries/popper.js/dist/umd/popper.min.js: { weight: -20 } # Required by Bootstrap 4
     js/min/base/bootstrap.min.js: {}
   dependencies:
@@ -38,7 +39,7 @@ maintenance_page:
   dependencies:
     - system/maintenance
     - droopler_theme/global-styling
-    
+
 ## Uncomment this to enable Font Awesome support.
 ## Look into droopler_subtheme.info.yml too.
 
