@@ -2,11 +2,11 @@
  * Gulpfile.js for Droopler theme.
  *
  * Commands:
- * - (default) - watches for changes in CSS and JS, hit Ctrl-C to exit
+ * - watch (default) - watches for changes in CSS and JS, hit Ctrl-C to exit
  * - debug - check if all paths are well set
- * - clean - clean derivative CSS, JS
- * - compile - compile DEV version of CSS, JS
- * - dist - compile PROD version of CSS, JS
+ * - clean - clean derivative CSS & JS
+ * - compile - compile DEV version of CSS & JS
+ * - dist - compile PROD version of CSS & JS
  */
 
 (() => {
@@ -22,6 +22,8 @@
   const fs = require('fs');
   const rename = require("gulp-rename");
   const del = require('del');
+  const argv = require('yargs').argv;
+  const sassVars = require('gulp-sass-vars');
 
 // Patterns
   const scss_pattern = '**/*.scss';
@@ -30,15 +32,21 @@
 // Theme directory
   const theme_dir = '.';
 
+
 // Subdirectories
   const scss_dir = theme_dir + '/scss';
   const css_dir = theme_dir + '/css';
   const js_dir = theme_dir + '/js';
   const jsmin_dir = theme_dir + '/js/min';
+  const vendor_dir = theme_dir + '/vendor';
+
+
 
 // Inputs
   const scss_input = scss_dir + '/' + scss_pattern;
   const js_input = js_dir + '/' + js_pattern;
+
+
 
 // Dev SASS options
   const sassOptionsDev = {
@@ -84,6 +92,7 @@
       console.log('[ERROR] SCSS directory does not exist. Create it and get to work!');
     }
 
+
     // Check for CSS dir
     if (fs.existsSync(css_dir)) {
       console.log('[OK] CSS directory exists.');
@@ -116,8 +125,8 @@
     ], {force: true});
   }
 
-  const compile = gulp.parallel(sassCompile, jsCompile);
-  const dist = gulp.parallel(sassDist, jsCompile);
+  const compile = gulp.parallel(sassCompile, jsCopyLibs, jsCompile);
+  const dist = gulp.parallel(sassDist, jsCopyLibs, jsCompile);
 
 
 // HELPER TASKS
@@ -125,8 +134,14 @@
 
 // Compile SASS
   function sassCompile() {
+    let profileUrl = argv.profile_url;
+    let variables = {};
+    if (typeof profileUrl !== 'undefined') {
+      variables = {profile_path: profileUrl};
+    }
     return gulp
       .src(scss_input)
+      .pipe(sassVars(variables, { verbose: true }))
       .pipe(sourcemaps.init())
       .pipe(sass(sassOptionsDev).on('error', sass.logError))
       .pipe(autoprefixer(autoprefixerOptions))
@@ -136,6 +151,17 @@
       // See: http://sassdoc.com/gulp/#drain-event
       .resume();
   }
+
+  function jsCopyLibs(cb) {
+    gulp.src([
+      'node_modules/bootstrap/dist/js/bootstrap.js',
+      'node_modules/popper.js/dist/popper.js',
+      'node_modules/bootstrap/dist/js/bootstrap.min.js',
+      'node_modules/popper.js/dist/popper.min.js',
+    ])
+      .pipe(gulp.dest(vendor_dir), cb())
+  }
+
 
 // Compile JS
   function jsCompile(cb) {
@@ -149,10 +175,17 @@
     ], cb);
   }
 
+
 // Generate the production styles
   function sassDist() {
+    let profileUrl = argv.profile_url;
+    let variables = {};
+    if (typeof profileUrl !== 'undefined') {
+      variables = {profile_path: profileUrl};
+    }
     return gulp
       .src(scss_input)
+      .pipe(sassVars(variables, { verbose: true }))
       .pipe(sass(sassOptionsProd))
       .pipe(autoprefixer(autoprefixerOptions))
       .pipe(gulp.dest(css_dir));
@@ -161,6 +194,7 @@
   exports.compile = compile;
   exports.clean = clean;
   exports.debug = debug;
+  exports.jsCopyLibs = jsCopyLibs;
   exports.watch = watchFiles;
   exports.dist = dist;
   exports.sassCompile = sassCompile;
@@ -169,7 +203,7 @@
   exports.default = exports.watch;
 
 
-// For Docker - properly catch signals
+// For Docker - properly catch signalscb
 // Without this CTRL-C won't stop the app, it will send it to background
   process.on('SIGINT', function () {
     console.log('Caught Ctrl+C...');
