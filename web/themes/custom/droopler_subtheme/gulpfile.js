@@ -42,7 +42,6 @@
 
 // Inputs
   const scss_input = scss_dir + '/' + scss_pattern;
-  const base_scss_input = base_scss_dir + '/' + scss_pattern;
   const js_input = js_dir + '/' + js_pattern;
   const base_js_input = base_js_dir + '/' + js_pattern;
 
