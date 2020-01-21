@@ -116,8 +116,8 @@
     ], {force: true});
   }
 
-  const compile = gulp.parallel(sassCompile, jsCompile, jsCompileBase);
-  const dist = gulp.parallel(sassDist, jsCompile, jsCompileBase);
+  const compile = gulp.parallel(sassCompile, jsCompile);
+  const dist = gulp.parallel(sassDist, jsCompile);
 
 
 // HELPER TASKS
