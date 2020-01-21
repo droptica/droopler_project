@@ -29,21 +29,16 @@
 
 // Theme directory
   const theme_dir = '.';
-  const base_theme_dir = '../../../profiles/contrib/droopler/themes/custom/droopler_theme';
 
 // Subdirectories
   const scss_dir = theme_dir + '/scss';
-  const base_scss_dir = base_theme_dir + '/scss';
   const css_dir = theme_dir + '/css';
   const js_dir = theme_dir + '/js';
-  const base_js_dir = base_theme_dir + '/js';
   const jsmin_dir = theme_dir + '/js/min';
-  const base_jsmin_dir = theme_dir + '/js/min/base';
 
 // Inputs
   const scss_input = scss_dir + '/' + scss_pattern;
   const js_input = js_dir + '/' + js_pattern;
-  const base_js_input = base_js_dir + '/' + js_pattern;
 
 // Dev SASS options
   const sassOptionsDev = {
@@ -68,8 +63,7 @@
 // Watch SASS & JS
   function watchFiles() {
     gulp.watch(scss_input, gulp.series(sassCompile));
-    gulp.watch(js_input, gulp.series(jsCompile, jsCompileBase));
-    gulp.watch(base_js_input, gulp.series(jsCompile, jsCompileBase));
+    gulp.watch(js_input, gulp.series(jsCompile));
   }
 
   function debug(cb) {
@@ -82,25 +76,12 @@
       console.log('[ERROR] Working directory does not exist. Maybe it is not mounted by docker? Or there is a misspell?');
     }
 
-    // Check of base theme dir is mounted
-    if (fs.existsSync(base_theme_dir)) {
-      console.log('[OK] Base theme directory exists.');
-    } else {
-      console.log('[ERROR] Base theme directory does not exist. Maybe it is not mounted by docker? Or there is a misspell?');
-    }
 
     // Check for SCSS dir
     if (fs.existsSync(scss_dir)) {
       console.log('[OK] SCSS directory exists.');
     } else {
       console.log('[ERROR] SCSS directory does not exist. Create it and get to work!');
-    }
-
-    // Check for base SCSS dir
-    if (fs.existsSync(base_scss_dir)) {
-      console.log('[OK] Base SCSS directory exists.');
-    } else {
-      console.log('[ERROR] Base SCSS directory does not exist. Create it and get to work!');
     }
 
     // Check for CSS dir
@@ -115,13 +96,6 @@
       console.log('[OK] JS directory exists.');
     } else {
       console.log('[ERROR] JS directory does not exist. Please create it!');
-    }
-
-    // Check for base JS dir
-    if (fs.existsSync(base_js_dir)) {
-      console.log('[OK] Base JS directory exists.');
-    } else {
-      console.log('[ERROR] Base JS directory does not exist. Please create it!');
     }
 
     // Check for JS MIN dir
@@ -163,7 +137,6 @@
       .resume();
   }
 
-
 // Compile JS
   function jsCompile(cb) {
     pump([
@@ -175,19 +148,6 @@
       gulp.dest(jsmin_dir)
     ], cb);
   }
-
-// Compile Base JS
-  function jsCompileBase(cb) {
-    pump([
-      gulp.src(base_js_input),
-      sourcemaps.init(),
-      uglify(),
-      rename({suffix: '.min'}),
-      sourcemaps.write('.'),
-      gulp.dest(base_jsmin_dir)
-    ], cb);
-  }
-
 
 // Generate the production styles
   function sassDist() {
@@ -205,7 +165,6 @@
   exports.dist = dist;
   exports.sassCompile = sassCompile;
   exports.jsCompile = jsCompile;
-  exports.jsCompileBase = jsCompileBase;
   exports.sassDist = sassDist;
   exports.default = exports.watch;
 
