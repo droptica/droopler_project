@@ -38,9 +38,13 @@
   const css_dir = theme_dir + '/css';
   const js_dir = theme_dir + '/js';
   const jsmin_dir = theme_dir + '/js/min';
-  const vendor_dir = theme_dir + '/vendor';
 
-
+  const base_theme_dir = '../../../profiles/contrib/droopler/themes/custom/droopler_theme';
+  const base_scss_dir = base_theme_dir + '/scss';
+  const base_js_dir = base_theme_dir + '/js';
+  const base_jsmin_dir = theme_dir + '/js/min/base';
+  const base_scss_input = base_scss_dir + '/' + scss_pattern;
+  const base_js_input = base_js_dir + '/' + js_pattern;
 
 // Inputs
   const scss_input = scss_dir + '/' + scss_pattern;
@@ -125,8 +129,8 @@
     ], {force: true});
   }
 
-  const compile = gulp.parallel(sassCompile, jsCopyLibs, jsCompile);
-  const dist = gulp.parallel(sassDist, jsCopyLibs, jsCompile);
+  const compile = gulp.parallel(sassCompile, jsBaseCompile, jsCompile);
+  const dist = gulp.parallel(sassDist, sassBaseCompile, jsCompile);
 
 
 // HELPER TASKS
@@ -152,16 +156,6 @@
       .resume();
   }
 
-  function jsCopyLibs(cb) {
-    gulp.src([
-      'node_modules/bootstrap/dist/js/bootstrap.js',
-      'node_modules/popper.js/dist/popper.js',
-      'node_modules/bootstrap/dist/js/bootstrap.min.js',
-      'node_modules/popper.js/dist/popper.min.js',
-    ])
-      .pipe(gulp.dest(vendor_dir), cb())
-  }
-
 
 // Compile JS
   function jsCompile(cb) {
@@ -173,6 +167,36 @@
       sourcemaps.write('.'),
       gulp.dest(jsmin_dir)
     ], cb);
+  }
+
+  function jsBaseCompile(cb) {
+    pump([
+      gulp.src(base_js_input),
+      sourcemaps.init(),
+      uglify(),
+      rename({suffix: '.min'}),
+      sourcemaps.write('.'),
+      gulp.dest(base_jsmin_dir)
+    ], cb);
+  }
+
+  function sassBaseCompile() {
+    let profileUrl = argv.profile_url;
+    let variables = {};
+    if (typeof profileUrl !== 'undefined') {
+      variables = {profile_path: profileUrl};
+    }
+    return gulp
+      .src(base_scss_input)
+      .pipe(sassVars(variables, { verbose: true }))
+      .pipe(sourcemaps.init())
+      .pipe(sass(sassOptionsDev).on('error', sass.logError))
+      .pipe(autoprefixer(autoprefixerOptions))
+      .pipe(sourcemaps.write('./maps'))
+      .pipe(gulp.dest(css_dir))
+      // Release the pressure back and trigger flowing mode (drain)
+      // See: http://sassdoc.com/gulp/#drain-event
+      .resume();
   }
 
 
@@ -194,16 +218,17 @@
   exports.compile = compile;
   exports.clean = clean;
   exports.debug = debug;
-  exports.jsCopyLibs = jsCopyLibs;
   exports.watch = watchFiles;
   exports.dist = dist;
   exports.sassCompile = sassCompile;
   exports.jsCompile = jsCompile;
   exports.sassDist = sassDist;
+  exports.jsBaseCompile = jsBaseCompile;
+  exports.sassBaseCompile = sassBaseCompile;
   exports.default = exports.watch;
 
 
-// For Docker - properly catch signalscb
+// For Docker - properly catch signals
 // Without this CTRL-C won't stop the app, it will send it to background
   process.on('SIGINT', function () {
     console.log('Caught Ctrl+C...');
