@@ -22,8 +22,6 @@
   const fs = require('fs');
   const rename = require("gulp-rename");
   const del = require('del');
-  const argv = require('yargs').argv;
-  const sassVars = require('gulp-sass-vars');
 
 // Patterns
   const scss_pattern = '**/*.scss';
@@ -138,14 +136,8 @@
 
 // Compile SASS
   function sassCompile() {
-    let profileUrl = argv.profile_url;
-    let variables = {};
-    if (typeof profileUrl !== 'undefined') {
-      variables = {profile_path: profileUrl};
-    }
     return gulp
       .src(scss_input)
-      .pipe(sassVars(variables, { verbose: true }))
       .pipe(sourcemaps.init())
       .pipe(sass(sassOptionsDev).on('error', sass.logError))
       .pipe(autoprefixer(autoprefixerOptions))
@@ -181,14 +173,8 @@
   }
 
   function sassBaseCompile() {
-    let profileUrl = argv.profile_url;
-    let variables = {};
-    if (typeof profileUrl !== 'undefined') {
-      variables = {profile_path: profileUrl};
-    }
     return gulp
       .src(base_scss_input)
-      .pipe(sassVars(variables, { verbose: true }))
       .pipe(sourcemaps.init())
       .pipe(sass(sassOptionsDev).on('error', sass.logError))
       .pipe(autoprefixer(autoprefixerOptions))
@@ -202,14 +188,8 @@
 
 // Generate the production styles
   function sassDist() {
-    let profileUrl = argv.profile_url;
-    let variables = {};
-    if (typeof profileUrl !== 'undefined') {
-      variables = {profile_path: profileUrl};
-    }
     return gulp
       .src(scss_input)
-      .pipe(sassVars(variables, { verbose: true }))
       .pipe(sass(sassOptionsProd))
       .pipe(autoprefixer(autoprefixerOptions))
       .pipe(gulp.dest(css_dir));
