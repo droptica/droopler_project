@@ -23,54 +23,46 @@
   const rename = require("gulp-rename");
   const del = require('del');
 
-// Patterns
+  // Patterns
   const scss_pattern = '**/*.scss';
   const js_pattern = '*.js';
 
-// Theme directory
+  // Theme directory
   const theme_dir = '.';
 
 
-// Subdirectories
+  // Subdirectories
   const scss_dir = theme_dir + '/scss';
   const css_dir = theme_dir + '/css';
   const js_dir = theme_dir + '/js';
   const jsmin_dir = theme_dir + '/js/min';
 
-  const base_theme_dir = '../../../profiles/contrib/droopler/themes/custom/droopler_theme';
-  const base_scss_dir = base_theme_dir + '/scss';
-  const base_js_dir = base_theme_dir + '/js';
-  const base_jsmin_dir = theme_dir + '/js/min/base';
-  const base_scss_input = base_scss_dir + '/' + scss_pattern;
-  const base_js_input = base_js_dir + '/' + js_pattern;
-
-// Inputs
+  // Inputs
   const scss_input = scss_dir + '/' + scss_pattern;
   const js_input = js_dir + '/' + js_pattern;
 
 
-
-// Dev SASS options
+  // Dev SASS options
   const sassOptionsDev = {
     errLogToConsole: true,
     outputStyle: 'expanded'
   };
 
-// Prod SASS options
+  // Prod SASS options
   const sassOptionsProd = {
     outputStyle: 'compressed'
   };
 
-// Autoprefixer options
+  // Autoprefixer options
   const autoprefixerOptions = {
     overrideBrowserslist: ['last 2 versions', '> 5%', 'Firefox ESR']
   };
 
 
-// MAIN TASKS
-// ----------------------------------------------------
+  // MAIN TASKS
+  // ----------------------------------------------------
 
-// Watch SASS & JS
+  // Watch SASS & JS
   function watchFiles() {
     gulp.watch(scss_input, gulp.series(sassCompile));
     gulp.watch(js_input, gulp.series(jsCompile));
@@ -79,13 +71,12 @@
   function debug(cb) {
     console.log('[OK] Working directory set: ' + theme_dir);
 
-    // Check of theme dir is mounted
+    // Check if theme dir is mounted
     if (fs.existsSync(theme_dir)) {
       console.log('[OK] Working directory exists.');
     } else {
       console.log('[ERROR] Working directory does not exist. Maybe it is not mounted by docker? Or there is a misspell?');
     }
-
 
     // Check for SCSS dir
     if (fs.existsSync(scss_dir)) {
@@ -115,11 +106,12 @@
     } else {
       console.log('[WARNING] .min.js directory does not exist. Please create it and don\'t tempt gulp to fail!');
     }
+
     cb()
   }
 
 
-// Clean everything
+  // Clean everything
   function clean(cb) {
     return del([
       css_dir + '/*',
@@ -127,14 +119,14 @@
     ], {force: true});
   }
 
-  const compile = gulp.parallel(sassCompile, jsBaseCompile, jsCompile);
-  const dist = gulp.parallel(sassDist, sassBaseCompile, jsCompile);
+  const compile = gulp.parallel(sassCompile, jsCompile);
+  const dist = gulp.parallel(sassDist, jsCompile);
 
 
-// HELPER TASKS
-// ----------------------------------------------------
+  // HELPER TASKS
+  // ----------------------------------------------------
 
-// Compile SASS
+  // Compile SASS
   function sassCompile() {
     return gulp
       .src(scss_input)
@@ -149,7 +141,7 @@
   }
 
 
-// Compile JS
+  // Compile JS
   function jsCompile(cb) {
     pump([
       gulp.src(js_input),
@@ -161,32 +153,7 @@
     ], cb);
   }
 
-  function jsBaseCompile(cb) {
-    pump([
-      gulp.src(base_js_input),
-      sourcemaps.init(),
-      uglify(),
-      rename({suffix: '.min'}),
-      sourcemaps.write('.'),
-      gulp.dest(base_jsmin_dir)
-    ], cb);
-  }
-
-  function sassBaseCompile() {
-    return gulp
-      .src(base_scss_input)
-      .pipe(sourcemaps.init())
-      .pipe(sass(sassOptionsDev).on('error', sass.logError))
-      .pipe(autoprefixer(autoprefixerOptions))
-      .pipe(sourcemaps.write('./maps'))
-      .pipe(gulp.dest(css_dir))
-      // Release the pressure back and trigger flowing mode (drain)
-      // See: http://sassdoc.com/gulp/#drain-event
-      .resume();
-  }
-
-
-// Generate the production styles
+  // Generate the production styles
   function sassDist() {
     return gulp
       .src(scss_input)
@@ -203,13 +170,10 @@
   exports.sassCompile = sassCompile;
   exports.jsCompile = jsCompile;
   exports.sassDist = sassDist;
-  exports.jsBaseCompile = jsBaseCompile;
-  exports.sassBaseCompile = sassBaseCompile;
   exports.default = exports.watch;
 
-
-// For Docker - properly catch signals
-// Without this CTRL-C won't stop the app, it will send it to background
+  // For Docker - properly catch signals
+  // Without this CTRL-C won't stop the app, it will send it to background
   process.on('SIGINT', function () {
     console.log('Caught Ctrl+C...');
     process.exit();
