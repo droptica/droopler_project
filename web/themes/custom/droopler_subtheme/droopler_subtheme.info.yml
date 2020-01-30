@@ -1,6 +1,6 @@
 name: Droopler Subtheme
 type: theme
-description: 'A subtheme for Droopler.'
+description: 'A SCSS subtheme for Droopler.'
 version: 8.x-2.0
 core: '8.x'
 
@@ -18,6 +18,9 @@ libraries:
 # Libraries will respect your subtheme variables.
 libraries-override:
   droopler_theme/global-styling: droopler_subtheme/child-styling
+  droopler_theme/dropbutton: droopler_subtheme/dropbutton
+  droopler_theme/file: droopler_subtheme/file
+  droopler_theme/maintenance_page: droopler_subtheme/maintenance_page
 
 ckeditor_stylesheets:
   - css/ckeditor.css

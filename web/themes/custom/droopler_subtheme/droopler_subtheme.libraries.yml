@@ -14,6 +14,26 @@ child-scripts:
     - core/jquery.once
     - core/drupal
 
+# Libraries for the SCSS version
+dropbutton:
+  version: VERSION
+  css:
+    component:
+      css/libraries/dropbutton.css: { weight: -10 }
+file:
+  version: VERSION
+  css:
+    component:
+      css/libraries/file.css: { weight: -10 }
+maintenance_page:
+  version: VERSION
+  css:
+    theme:
+      css/libraries/maintenance.css: {}
+  dependencies:
+    - system/maintenance
+    - droopler_theme/global-styling
+
 ## Uncomment this to enable Font Awesome support.
 ## Look into droopler_subtheme.info.yml too.
 
