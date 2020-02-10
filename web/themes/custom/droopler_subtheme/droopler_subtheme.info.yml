@@ -1,30 +1,23 @@
 name: Droopler Subtheme
 type: theme
-description: 'A subtheme for Droopler.'
-version: 8.x-1.4
+description: 'A SCSS subtheme for Droopler.'
+version: 8.x-2.0
 core: '8.x'
 
 base theme: droopler_theme
 
 libraries:
-  - droopler_theme/global-styling
-  - droopler_subtheme/global-styling
+  - droopler_subtheme/child-styling
+  - droopler_subtheme/child-scripts
 ## Uncomment this to enable Font Awesome support.
 ## Look into droopler_subtheme.libraries.yml too.
 #  - droopler_subtheme/font-awesome
-
-libraries-extend:
-  core/drupal.dropbutton:
-    - droopler_theme/dropbutton
-  file/drupal.file:
-    - droopler_theme/file
 
 # Comment the following overrides if you are using pure CSS.
 # If uncommented global styling of base theme will be replaced.
 # Libraries will respect your subtheme variables.
 libraries-override:
-  droopler_theme/global-styling: droopler_subtheme/global-styling
-  droopler_theme/global-js: droopler_subtheme/global-js
+  droopler_theme/global-styling: droopler_subtheme/child-styling
   droopler_theme/dropbutton: droopler_subtheme/dropbutton
   droopler_theme/file: droopler_subtheme/file
   droopler_theme/maintenance_page: droopler_subtheme/maintenance_page
