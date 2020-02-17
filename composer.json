@@ -30,7 +30,7 @@
 	},
     "require-dev": {
         "drupal/core-dev": "^8.8",
-        "drupal/devel": "^1.2"
+        "drupal/devel": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
