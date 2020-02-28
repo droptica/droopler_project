@@ -20,7 +20,7 @@
 	},
     "require": {
 		"composer/installers": "^1.2",
-		"droptica/droopler": "^8.2.0-beta1",
+		"droptica/droopler": "dev-develop",
 		"drupal/console": "~1.0",
 		"drupal/core-composer-scaffold": "^8.8",
 		"drupal/core-recommended": "^8.8",
@@ -30,7 +30,7 @@
 	},
     "require-dev": {
         "drupal/core-dev": "^8.8",
-        "drupal/devel": "^1.2"
+        "drupal/devel": "^2.1"
     },
     "conflict": {
         "drupal/drupal": "*"
