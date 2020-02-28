@@ -2,12 +2,13 @@
 	"name": "droptica/droopler-project",
 	"description": "Project template for Droopler with Composer",
 	"type": "project",
-	"license": "GPL-2.0+",
-	"authors": [{
-		"name": "",
-		"role": ""
-	}],
-	"repositories": {
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.droopler.com",
+    "support": {
+        "docs": "https://www.droopler.com/developers",
+        "issues": "https://www.drupal.org/project/issues/droopler?categories=All"
+    },
+    "repositories": {
 	    "drupal": {
 			"type": "composer",
 			"url": "https://packages.drupal.org/8"
@@ -17,67 +18,44 @@
 			"url": "https://asset-packagist.org"
 		}
 	},
-	"require": {
+    "require": {
 		"composer/installers": "^1.2",
-		"oomphinc/composer-installers-extender": "^1.1",
-		"cweagans/composer-patches": "^1.6",
-		"droptica/droopler": "^8.2.0-beta1",
-		"drupal-composer/drupal-scaffold": "^2.2",
+		"droptica/droopler": "^8.2.0-beta2",
 		"drupal/console": "~1.0",
-		"drupal/core": "^8.6.3",
-		"drush/drush": "~8.0",
-		"webflo/drupal-finder": "^1.0.0",
-		"webmozart/path-util": "^2.3",
+		"drupal/core-composer-scaffold": "^8.8",
+		"drupal/core-recommended": "^8.8",
+		"drush/drush": "~9.0",
+		"oomphinc/composer-installers-extender": "^1.1",
 		"zaporylie/composer-drupal-optimizations": "^1.1"
 	},
-	"require-dev": {
-		"behat/mink": "~1.7",
-		"behat/mink-goutte-driver": "~1.2",
-		"jcalderonzumba/gastonjs": "~1.0.2",
-		"jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
-		"mikey179/vfsstream": "~1.2",
-		"phpunit/phpunit": ">=4.8.28 <5",
-		"symfony/css-selector": "~2.8|~3.0",
-		"drupal/devel": "^1.2",
-		"drupal/coder": "^3.1"
-	},
-	"conflict": {
-		"drupal/drupal": "*"
-	},
-	"minimum-stability": "dev",
-	"prefer-stable": true,
-	"config": {
-		"sort-packages": true
-	},
-	"autoload": {
-		"classmap": [
-			"scripts/composer/ScriptHandler.php"
-		]
-	},
-	"scripts": {
-		"drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-		"pre-install-cmd": [
-			"DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-		],
-		"pre-update-cmd": [
-			"DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-		],
-		"post-install-cmd": [
-			"DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-		],
-		"post-update-cmd": [
-			"DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-		]
-	},
-	"extra": {
-		"installer-types": ["library", "bower-asset", "npm-asset"],
-		"installer-paths": {
-			"web/core": ["type:drupal-core"],
-			"web/libraries/{$name}": ["type:drupal-library", "type:git", "type:bower-asset", "type:npm-asset"],
-			"web/modules/contrib/{$name}": ["type:drupal-module"],
-			"web/profiles/contrib/{$name}": ["type:drupal-profile"],
-			"web/themes/contrib/{$name}": ["type:drupal-theme"],
-			"drush/contrib/{$name}": ["type:drupal-drush"]
-		}
-	}
+    "require-dev": {
+        "drupal/core-dev": "^8.8",
+        "drupal/devel": "^2.1"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-types": ["library", "bower-asset", "npm-asset"],
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library", "type:git", "type:bower-asset", "type:npm-asset"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
+            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        }
+    }
 }

@@ -1,20 +1,14 @@
-global-styling:
+child-styling:
   version: VERSION
-  js:
-    js/min/global.min.js: {}
   css:
     theme:
       css/print.css: { media: print }
       css/style.css: {}
 
-global-js:
+child-scripts:
   version: VERSION
   js:
     js/min/global.min.js: {}
-    js/min/base/global.min.js: {}
-    js/min/base/main-menu.min.js: {}
-    /libraries/popper.js/dist/umd/popper.min.js: { weight: -20 } # Required by Bootstrap 4
-    js/min/base/bootstrap.min.js: {}
   dependencies:
     - core/jquery
     - core/jquery.once
