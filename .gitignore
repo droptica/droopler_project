@@ -22,7 +22,6 @@
 
 # Ignore sensitive information
 /web/sites/*
-!/web/sites/default/files/config_FTq1ryugQ9dTcRcA0w_y3K-08BPGou_u9RQMXJ2a0xvC03LgU4F44AEStEeu_HhVwdF46gqplg/sync
 
 # Ignore SimpleTest multi-site environment.
 /web/sites/simpletest
