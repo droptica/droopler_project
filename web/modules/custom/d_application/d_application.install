@@ -74,3 +74,10 @@ function d_application_update_8002() {
   }
   \Drupal::service('d_application_api.features')->import($modules);
 }
+
+/**
+* Restore permissions for anonymous user.
+*/
+function d_application_update_8003() {
+  \Drupal::service('d_application_api.features')->import(['d_application']);
+}
