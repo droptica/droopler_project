@@ -76,9 +76,16 @@ function d_application_update_8002() {
 }
 
 /**
- * Mark Droopler updates as complete.
- */
-function d_epic_init_update_8003() {
+* Restore permissions for anonymous user.
+*/
+function d_application_update_8003() {
+  \Drupal::service('d_application_api.features')->import(['d_application']);
+}
+
+/**
+* Mark Droopler updates as complete.
+*/
+function d_application_update_8004() {
   $updater = \Drupal::service('d_update');
   $updater->checklist()->markAllUpdates();
 }
