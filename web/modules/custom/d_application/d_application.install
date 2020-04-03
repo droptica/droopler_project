@@ -74,3 +74,11 @@ function d_application_update_8002() {
   }
   \Drupal::service('d_application_api.features')->import($modules);
 }
+
+/**
+ * Mark Droopler updates as complete.
+ */
+function d_epic_init_update_8003() {
+  $updater = \Drupal::service('d_update');
+  $updater->checklist()->markAllUpdates();
+}

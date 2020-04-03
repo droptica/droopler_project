@@ -1,3 +1,14 @@
 body {
   word-wrap: break-word;
 }
+
+// Ensure text formatting is right until CK Editor is fixed in Droopler core.
+.field--name-field-d-long-text {
+  text-align: left !important;
+  .text-align-center {
+    text-align: center !important;
+  }
+  .text-align-right {
+    text-align: right !important;
+  }
+}
