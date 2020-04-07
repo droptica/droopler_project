@@ -20,7 +20,8 @@
 	"require": {
 		"composer/installers": "^1.2",
 		"cweagans/composer-patches": "^1.6",
-		"droptica/droopler": "^8.1.4",
+		"droptica/d_application_api": "^1.0",
+		"droptica/droopler": "dev-2.0-migration",
 		"drupal-composer/drupal-scaffold": "^2.2",
 		"drupal/console": "~1.0",
 		"drupal/core": "~8.8.1",

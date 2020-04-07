@@ -1,0 +1,14 @@
+langcode: pl
+status: true
+dependencies: {  }
+id: anonymous
+label: 'Użytkownik anonimowy'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'display eu cookie compliance popup'
+  - 'search content'
+  - 'view media'
