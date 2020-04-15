@@ -20,10 +20,11 @@
 	},
     "require": {
 		"composer/installers": "^1.2",
-		"droptica/droopler": "dev-develop",
+		"droptica/droopler": "dev-commerce",
 		"drupal/console": "~1.0",
 		"drupal/core-composer-scaffold": "^8.8",
 		"drupal/core-recommended": "^8.8",
+        "drupal/commerce": "^2.17",
 		"drush/drush": "~9.0",
 		"oomphinc/composer-installers-extender": "^1.1",
 		"zaporylie/composer-drupal-optimizations": "^1.1"

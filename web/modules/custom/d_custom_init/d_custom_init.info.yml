@@ -1,0 +1,9 @@
+name: d custom init
+core: 8.x
+description: 'D custom init.'
+type: module
+dependencies:
+  - d_commerce
+package: Droopler
+version: 8.x-2.0
+core_incompatible: false
