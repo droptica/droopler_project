@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b890b3eb6b29315f8c8a57ef501f141",
+    "content-hash": "816b92c00bf9c022826a39fa4bc58907",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1889,16 +1889,16 @@
         },
         {
             "name": "droptica/droopler",
-            "version": "dev-develop",
+            "version": "dev-commerce",
             "source": {
                 "type": "git",
                 "url": "https://github.com/droptica/droopler.git",
-                "reference": "7a89f38e442ecdc34b9d8ff478ac1aae660402ba"
+                "reference": "02e834579e14c43512d084820d8c02118b52c18f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/droptica/droopler/zipball/7a89f38e442ecdc34b9d8ff478ac1aae660402ba",
-                "reference": "7a89f38e442ecdc34b9d8ff478ac1aae660402ba",
+                "url": "https://api.github.com/repos/droptica/droopler/zipball/02e834579e14c43512d084820d8c02118b52c18f",
+                "reference": "02e834579e14c43512d084820d8c02118b52c18f",
                 "shasum": ""
             },
             "require": {
@@ -1963,7 +1963,7 @@
                 []
             ],
             "description": "Droopler installation profile for Drupal 8",
-            "time": "2020-04-10T08:54:30+00:00"
+            "time": "2020-04-15T09:43:14+00:00"
         },
         {
             "name": "drupal/address",
@@ -2319,29 +2319,37 @@
         },
         {
             "name": "drupal/colorbox",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/colorbox.git",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/colorbox-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "bf163fd2d28450c1324512ad7e6a72fc48d274e3"
+                "url": "https://ftp.drupal.org/files/projects/colorbox-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "4e8d833fc96ee15e7ff2a03b89c081a6f68acbaf"
             },
             "require": {
-                "drupal/core": "*"
+                "drupal/core": "^8.8 || ^9"
+            },
+            "suggest": {
+                "jackmoore/colorbox": "The Colorbox library is required to use the drupal/colorbox module."
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1493051344",
+                    "version": "8.x-1.5",
+                    "datestamp": "1586777974",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^9"
                     }
                 }
             },
@@ -2352,34 +2360,24 @@
             "authors": [
                 {
                     "name": "Neslee Canil Pinto",
-                    "homepage": "https://www.drupal.org/user/3580850"
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
                 },
                 {
-                    "name": "RenatoG",
-                    "homepage": "https://www.drupal.org/user/3326031"
-                },
-                {
-                    "name": "Sam152",
-                    "homepage": "https://www.drupal.org/user/1485048"
-                },
-                {
-                    "name": "frjo",
-                    "homepage": "https://www.drupal.org/user/5546"
+                    "name": "Fredrik Jonsson",
+                    "homepage": "https://www.drupal.org/u/frjo",
+                    "role": "Maintainer"
                 },
                 {
                     "name": "jdwfly",
                     "homepage": "https://www.drupal.org/user/298179"
-                },
-                {
-                    "name": "rsmylski",
-                    "homepage": "https://www.drupal.org/user/1324348"
                 }
             ],
             "description": "A light-weight, customizable lightbox plugin for jQuery.",
             "homepage": "https://www.drupal.org/project/colorbox",
             "support": {
-                "source": "https://cgit.drupalcode.org/colorbox",
-                "issues": "https://www.drupal.org/project/colorbox"
+                "source": "https://git.drupalcode.org/project/colorbox",
+                "issues": "https://www.drupal.org/project/issues/colorbox"
             }
         },
         {
@@ -5845,10 +5843,10 @@
         },
         {
             "name": "npm-asset/jquery",
-            "version": "3.4.1",
+            "version": "3.5.0",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/jquery/-/jquery-3.4.1.tgz"
+                "url": "https://registry.npmjs.org/jquery/-/jquery-3.5.0.tgz"
             },
             "type": "npm-asset",
             "license": [
