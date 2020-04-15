@@ -27,7 +27,7 @@ This code includes:
 **1) Run Composer**
 
 ```sh
-$ composer create-project droptica/droopler-project <path> "^8.2.0@beta"
+$ composer create-project droptica/droopler-project <path> "^8.2.0@rc"
 $ cd droopler
 $ composer install
 ```
@@ -78,7 +78,7 @@ There are also other Gulp commands for theme developers, here's the full referen
 
 You can use any SCSS structure you like. We recommend dividing files into **layout/** and **components/** directories. Just remember to include your files in **style.scss**.
 
-# SCSS Configuration ##
+## SCSS Configuration ##
 
 Droopler is designed to make your work easier. You don't have to override SCSS or CSS code to make your own adjustments. In most cases it is enough to modify the configuration. Just look into variable definitions in the subtheme's **scss/config/_base_theme_overrides.scss** file.
 
@@ -96,6 +96,10 @@ Droopler is designed to make your work easier. You don't have to override SCSS o
 To alter this - uncomment the line and change the value. A you can see - there are many levels of variables, see the comments in _base_theme_overrides.scss to get some more information.
 
 When you save this config file, **gulp watch** will recompile all SCSS with your own config.
+
+## Updating Droopler ##
+
+See the [UPDATE.md](https://github.com/droptica/droopler/blob/master/UPDATE.md) file from the Droopler profile.
 
 ## How to install Google Fonts? ##
 
