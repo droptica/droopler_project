@@ -2344,16 +2344,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.8.5",
+            "version": "8.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "e22cfc3adf1dac7a92452287a7d8602f3c27b68f"
+                "reference": "a5daf2aa45bbc72da72e1e64d5261f746ffb508c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/e22cfc3adf1dac7a92452287a7d8602f3c27b68f",
-                "reference": "e22cfc3adf1dac7a92452287a7d8602f3c27b68f",
+                "url": "https://api.github.com/repos/drupal/core/zipball/a5daf2aa45bbc72da72e1e64d5261f746ffb508c",
+                "reference": "a5daf2aa45bbc72da72e1e64d5261f746ffb508c",
                 "shasum": ""
             },
             "require": {
@@ -2570,7 +2570,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-04-02T19:01:19+00:00"
+            "time": "2020-05-20T08:22:02+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -4798,7 +4798,7 @@
             "version": "v1.9.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/inorganik/countUp.js.git",
+                "url": "git@github.com:inorganik/countUp.js.git",
                 "reference": "497c3cd44a7c29480e22b1d51ff773f20a0d03b4"
             },
             "dist": {
