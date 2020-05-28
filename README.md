@@ -27,7 +27,7 @@ This code includes:
 **1) Run Composer**
 
 ```sh
-$ composer create-project droptica/droopler-project <path> "^8.2.0@rc"
+$ composer create-project droptica/droopler-project <path> "^8.2.0"
 $ cd droopler
 $ composer install
 ```
