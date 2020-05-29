@@ -20,7 +20,6 @@
     },
     "require": {
         "composer/installers": "^1.2",
-        "cweagans/composer-patches": "^1.6",
         "droptica/droopler": "dev-develop",
         "drupal/console": "~1.0",
         "drupal/core-composer-scaffold": "^8.8",
@@ -42,7 +41,6 @@
         "sort-packages": true
     },
     "extra": {
-        "enable-patching": true,
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
