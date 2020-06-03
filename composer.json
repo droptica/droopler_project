@@ -1,7 +1,7 @@
 {
-	"name": "droptica/droopler-project",
-	"description": "Project template for Droopler with Composer",
-	"type": "project",
+    "name": "droptica/droopler-project",
+    "description": "Project template for Droopler with Composer",
+    "type": "project",
     "license": "GPL-2.0-or-later",
     "homepage": "https://www.droopler.com",
     "support": {
@@ -9,25 +9,25 @@
         "issues": "https://www.drupal.org/project/issues/droopler?categories=All"
     },
     "repositories": {
-	    "drupal": {
-			"type": "composer",
-			"url": "https://packages.drupal.org/8"
-		},
-		"asset": {
-			"type": "composer",
-			"url": "https://asset-packagist.org"
-		}
-	},
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "asset": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    },
     "require": {
-		"composer/installers": "^1.2",
-		"droptica/droopler": "^8.2.0",
-		"drupal/console": "~1.0",
-		"drupal/core-composer-scaffold": "^8.8",
-		"drupal/core-recommended": "^8.8",
-		"drush/drush": "~9.0",
-		"oomphinc/composer-installers-extender": "^1.1",
-		"zaporylie/composer-drupal-optimizations": "^1.1"
-	},
+        "composer/installers": "^1.2",
+        "droptica/droopler": "^8.2.0",
+        "drupal/console": "~1.0",
+        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-recommended": "^8.8",
+        "drush/drush": "~9.0",
+        "oomphinc/composer-installers-extender": "^1.1",
+        "zaporylie/composer-drupal-optimizations": "^1.1"
+    },
     "require-dev": {
         "drupal/core-dev": "^8.8",
         "drupal/devel": "^2.1"
