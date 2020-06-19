@@ -21,7 +21,6 @@
     "require": {
         "composer/installers": "^1.2",
         "droptica/droopler": "dev-DROOP-484-d9-test",
-        "drupal/console": "~1.0",
         "drupal/core-composer-scaffold": "^9.0.0",
         "drupal/core-project-message": "^9.0.0",
         "drupal/core-recommended": "^9.0.0",
@@ -31,7 +30,7 @@
     },
     "require-dev": {
         "drupal/core-dev": "^9.0.0",
-        "drupal/devel": "^2.1"
+        "drupal/devel": "^4.0.0-rc1"
     },
     "conflict": {
         "drupal/drupal": "*"
