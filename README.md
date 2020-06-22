@@ -1,12 +1,12 @@
 # Droopler template for new project #
-<img src="https://demo.droopler.com/themes/custom/droopler_subtheme/logo.svg" width=300 alt="Droopler Logo" />
+<img src="https://droopler-demo.droptica.com/themes/custom/droopler_subtheme/logo.svg" width=300 alt="Droopler Logo" />
 
 ## What is Droopler? ##
 Droopler is a Drupal 8 profile designed to kickstart a new webpage in a few minutes. It's based on the latest frontend technologies, including Bootstrap 4. The maintainer of Droopler is [Droptica](https://droptica.com).
 
-* **Official website**: [droopler.com](https://droopler.com)
-* **Documentation**: [droopler.com/developers](https://droopler.com/developers)
-* **Demo**: [demo.droopler.com](https://demo.droopler.com)
+* **Official website**: [droptica.com/droopler](https://www.droptica.com/droopler)
+* **Documentation**: [droptica.com/droopler/for-developers](https://www.droptica.com/droopler/for-developers/)
+* **Demo**: [droopler-demo.droptica.com](https://droopler-demo.droptica.com)
 * **Profile repository**: [github.com/droptica/droopler](https://github.com/droptica/droopler)
 * **Drupal.org project**: [drupal.org/project/droopler](https://www.drupal.org/project/droopler)
 * **Issue queue**: [drupal.org/project/issues/droopler](https://www.drupal.org/project/issues/droopler)
