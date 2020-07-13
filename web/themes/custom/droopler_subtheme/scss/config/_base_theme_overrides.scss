@@ -617,20 +617,20 @@
 
 
 // Paragraph themes definitions.
-// if "setFieldsColor" is set to "true" it will add CSS rules to style color of all .fields tags.
+// if "set-fields-color" is set to "true" it will add CSS rules to style color of all .fields tags.
 // -------------------------
 //$d-p-themes: (
 //  // A new Theme
 //  pigy: (
 //    background: pink,
 //    text: yellow,
-//    setFieldsColor: true,
+//    set-fields-color: true,
 //  ),
 //
 //  // Override Droopler Theme.
 //  secondary: (
 //    background: purple,
 //    text: green,
-//    setFieldsColor: false,
+//    set-fields-color: false,
 //  ),
 //);
