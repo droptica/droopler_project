@@ -619,14 +619,18 @@
 // Paragraph themes definitions.
 // if "setFieldsColor" is set to "true" it will add CSS rules to style color of all .fields tags.
 // -------------------------
-//$d-p-themes: () !default;
-//$d-p-themes: map-merge(
-//    (
-//      pigy: (
-//        background: pink,
-//        text: yellow,
-//        setFieldsColor: true,
-//      ),
-//    ),
-//    $d-p-themes
+//$d-p-themes: (
+//  // A new Theme
+//  pigy: (
+//    background: pink,
+//    text: yellow,
+//    setFieldsColor: true,
+//  ),
+//
+//  // Override Droopler Theme.
+//  secondary: (
+//    background: purple,
+//    text: green,
+//    setFieldsColor: false,
+//  ),
 //);
