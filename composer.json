@@ -20,7 +20,7 @@
     },
     "require": {
         "composer/installers": "^1.2",
-        "droptica/droopler": "dev-DROOP-484-d9-test",
+        "droptica/droopler": "dev-dev/d9",
         "drupal/core-composer-scaffold": "^9.0.0",
         "drupal/core-project-message": "^9.0.0",
         "drupal/core-recommended": "^9.0.0",
