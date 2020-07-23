@@ -19,6 +19,11 @@
         }
     },
     "require": {
+    	"drupal/commerce": "^2.0",
+        "drupal/facets_pretty_paths":  "^1.0",
+        "drupal/commerce_dotpay":"1.x-dev",
+        "drupal/commerce_baselinker":"1.x-dev",
+        "drupal/commerce_inpost":"1.x-dev",
         "composer/installers": "^1.2",
         "droptica/droopler": "^8.2.0",
         "drupal/console": "~1.0",
