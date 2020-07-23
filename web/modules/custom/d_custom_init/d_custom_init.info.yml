@@ -1,5 +1,0 @@
-name: 'Custom Init'
-type: module
-description: 'Custom init content for Droopler.'
-package: Droopler
-core: 8.x
