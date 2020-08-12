@@ -32,9 +32,6 @@
         "drupal/core-dev": "^9.0.0",
         "drupal/devel": "^4.0.0-rc1"
     },
-    "replace": {
-        "drupal/tvi": "*"
-    },
     "conflict": {
         "drupal/drupal": "*"
     },
