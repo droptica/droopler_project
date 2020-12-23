@@ -29,7 +29,7 @@
         "zaporylie/composer-drupal-optimizations": "^1.1"
     },
     "require-dev": {
-        "drupal/core-dev": "^9.0.0",
+        "drupal/core-dev": "^8.8",
         "drupal/devel": "^4.0.0-rc1"
     },
     "conflict": {
