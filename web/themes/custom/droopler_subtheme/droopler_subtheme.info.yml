@@ -3,6 +3,7 @@ type: theme
 description: 'A SCSS subtheme for Droopler.'
 version: 8.x-2.0
 core: '8.x'
+core_version_requirement: ^8 || ^9
 
 base theme: droopler_theme
 
