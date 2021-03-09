@@ -1,0 +1,7 @@
+name: droopler
+recipe: drupal8
+config:
+  # Droopler project webroot.
+  webroot: ./web
+  # In case it doesn't work run `lando ssh` and then in lando container execute `composer global require drush/drush:^9`.
+  drush: 9
