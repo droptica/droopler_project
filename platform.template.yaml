@@ -50,7 +50,7 @@ info:
 # this key also gets mapped to the appropriate location in project.settings so
 # that the current UI can have its own workflow overridden as well.
 initialize:
-  repository: git://github.com/droptica/droopler_project.git@platformsh
+  repository: git://github.com/droptica/droopler_project.git@dev/platformsh
   config: null
   files: []
   profile: droopler_project
