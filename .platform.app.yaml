@@ -73,7 +73,6 @@ build:
 # Project dependencies, read more https://docs.platform.sh/configuration/app/build.html#specifying-dependencies
 dependencies:
     nodejs:
-        # node-sass: "*" # there is an error with Node 5 during build
         node-sass: "^4.14.1"
         gulp-cli: "*"
 
