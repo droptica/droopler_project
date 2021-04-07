@@ -4,7 +4,7 @@
 ## Deploy with one click
 
 <p align="center">
-<a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/droptica/droopler_project/platformsh/platform.template.yaml">
+<a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/droptica/droopler_project/release/platformsh/platform.template.yaml">
     <img src="https://platform.sh/images/deploy/lg-blue.svg" alt="Deploy on Platform.sh" width="180px" />
 </a>
 </p>
@@ -16,17 +16,17 @@
 ![GIT_REMOTE_URL](git-remote-url.png)
 - deploy using one of methods below.
 
-### Deploy from droopler-project platformsh branch
+### Deploy from droopler-project release/platformsh branch
 #### using GIT
 ```
-git clone https://github.com/droptica/droopler_project.git -b platformsh
+git clone https://github.com/droptica/droopler_project.git -b release/platformsh
 git remote remove origin
 git remote add platform GIT_REMOTE_URL
-git push -u platform platformsh:master
+git push -u platform release/platformsh:master
 ```
 #### using composer
 ```
-composer create-project droptica/droopler-project:dev-platformsh droopler
+composer create-project droptica/droopler-project:dev-release/platformsh droopler
 cd droopler
 git init
 git add .
@@ -37,7 +37,7 @@ git push -u platform master
 
 ### Deploy from scratch using droopler-project master
 Download platformsh integration folders and file from
-https://github.com/droptica/droopler_project/tree/platformsh
+https://github.com/droptica/droopler_project/tree/release/platformsh
 ```
 .platform/
 platform-integrations/

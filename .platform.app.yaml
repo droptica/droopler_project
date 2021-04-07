@@ -7,7 +7,7 @@
 name: 'app'
 
 # The runtime the application uses.
-type: 'php:7.2'
+type: 'php:7.4'
 
 # The relationships of the application with services or other applications.
 #
@@ -73,7 +73,7 @@ build:
 # Project dependencies, read more https://docs.platform.sh/configuration/app/build.html#specifying-dependencies
 dependencies:
     nodejs:
-        node-sass: "*"
+        node-sass: "^4.14.1"
         gulp-cli: "*"
 
 # The hooks executed at various points in the lifecycle of the application.
