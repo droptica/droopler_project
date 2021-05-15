@@ -24,7 +24,7 @@
         "drupal/console": "~1.0",
         "drupal/core-composer-scaffold": "^8.9 || ^9.0",
         "drupal/core-recommended": "^8.9 || ^9.0",
-        "drush/drush": "~10.0",
+        "drush/drush": "^9.0 || ^10.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "zaporylie/composer-drupal-optimizations": "^1.1"
     },
