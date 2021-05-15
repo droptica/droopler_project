@@ -22,15 +22,15 @@
         "composer/installers": "^1.2",
         "droptica/droopler": "dev-develop",
         "drupal/console": "~1.0",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-recommended": "^8.8",
-        "drush/drush": "~9.0",
+        "drupal/core-composer-scaffold": "^8.9 || ^9.0",
+        "drupal/core-recommended": "^8.9 || ^9.0",
+        "drush/drush": "^9.0 || ^10.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "zaporylie/composer-drupal-optimizations": "^1.1"
     },
     "require-dev": {
-        "drupal/core-dev": "^8.8",
-        "drupal/devel": "^4.0.0-rc1"
+        "drupal/core-dev": "^8.9 || ^9.0",
+        "drupal/devel": "^4.0"
     },
     "conflict": {
         "drupal/drupal": "*"
