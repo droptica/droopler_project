@@ -2,10 +2,10 @@
 <img src="https://droopler-demo.droptica.com/themes/custom/droopler_subtheme/logo.svg" width=300 alt="Droopler Logo" />
 
 ## What is Droopler? ##
-Droopler is a Drupal 8 profile designed to kickstart a new webpage in a few minutes. It's based on the latest frontend technologies, including Bootstrap 4. The maintainer of Droopler is [Droptica](https://droptica.com).
+Droopler is a Drupal 8/9 profile designed to kickstart a new webpage in a few minutes. It's based on the latest frontend technologies, including Bootstrap 4. The maintainer of Droopler is [Droptica](https://droptica.com).
 
 * **Official website**: [droptica.com/droopler](https://www.droptica.com/droopler)
-* **Documentation**: [droptica.com/droopler/for-developers](https://www.droptica.com/droopler/for-developers/)
+* **Tutorials**: [droptica.com/droopler/tutorials](https://www.droptica.com/droopler/tutorials/)
 * **Demo**: [droopler-demo.droptica.com](https://droopler-demo.droptica.com)
 * **Profile repository**: [github.com/droptica/droopler](https://github.com/droptica/droopler)
 * **Drupal.org project**: [drupal.org/project/droopler](https://www.drupal.org/project/droopler)
@@ -27,22 +27,21 @@ This code includes:
 **1) Run Composer**
 
 ```sh
-$ composer create-project droptica/droopler-project <path> "^8.2.0"
+$ composer create-project droptica/droopler-project <path> "^8.3.0"
 $ cd droopler
 $ composer install
 ```
 
-The *composer install* must be run here to put some external assets into proper directories. The scaffold command makes sure that all files like *index.php* are on their place.
-
 **2) Run npm**
 
-Droopler is using Gulp stack to speed up development of new sites. It compiles SCSS to CSS, enables Autoprefixer to deal with browser compatibility and minimizes all JavaScript files. [Install latest node.js and npm](https://nodejs.org/en/download/) on your computer and in the root directory of your project run the following commands:
+Droopler is using Gulp stack to speed up development of new sites. It compiles SCSS to CSS, enables Autoprefixer to deal with browser compatibility and minimizes all JavaScript files. [Install Node v13 and npm](https://nodejs.org/en/download/) on your computer and in the root directory of your project run the following commands:
 
 ```sh
 $ npm install --global gulp-cli
 $ cd web/profiles/contrib/droopler/themes/custom/droopler_theme
 $ npm install
 $ gulp compile
+$ cd -
 $ cd web/themes/custom/droopler_subtheme
 $ npm install
 $ gulp compile
