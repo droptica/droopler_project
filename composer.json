@@ -20,17 +20,17 @@
     },
     "require": {
         "composer/installers": "^1.2",
-        "droptica/droopler": "^8.2.0",
+        "droptica/droopler": "^8.3.0.0",
         "drupal/console": "~1.0",
-        "drupal/core-composer-scaffold": "^8.8",
-        "drupal/core-recommended": "^8.8",
-        "drush/drush": "~9.0",
-        "oomphinc/composer-installers-extender": "^1.1",
+        "drupal/core-composer-scaffold": "^8.9 || ^9.0",
+        "drupal/core-recommended": "^8.9 || ^9.0",
+        "drush/drush": "^9.0 || ^10.0",
+        "oomphinc/composer-installers-extender": "^2.0",
         "zaporylie/composer-drupal-optimizations": "^1.1"
     },
     "require-dev": {
-        "drupal/core-dev": "^8.8",
-        "drupal/devel": "^2.1"
+        "drupal/core-dev": "^8.9 || ^9.0",
+        "drupal/devel": "^4.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -46,7 +46,7 @@
                 "web-root": "web/"
             }
         },
-        "installer-types": ["library", "bower-asset", "npm-asset"],
+        "installer-types": ["bower-asset", "npm-asset"],
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library", "type:git", "type:bower-asset", "type:npm-asset"],
