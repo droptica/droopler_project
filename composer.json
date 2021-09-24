@@ -49,11 +49,6 @@
 	"config": {
 		"sort-packages": true
 	},
-	"autoload": {
-		"classmap": [
-			"scripts/composer/ScriptHandler.php"
-		]
-	},
 	"scripts": {
 		"drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
 	},
