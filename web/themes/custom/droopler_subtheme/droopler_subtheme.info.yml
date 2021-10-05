@@ -2,7 +2,7 @@ name: droopler_subtheme
 type: theme
 description: 'Droopler subtheme'
 version: '8.x-1.2'
-core: '8.x'
+core_version_requirement: ^8.8 || ^9
 
 base theme: droopler_theme
 
