@@ -1834,16 +1834,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "9.2.6",
+            "version": "9.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "c51e9d9e28c08e284ff57ca42504cfe0ec9522db"
+                "reference": "2e2f015e881abccc32efcd264128e8a8444b2ec1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/c51e9d9e28c08e284ff57ca42504cfe0ec9522db",
-                "reference": "c51e9d9e28c08e284ff57ca42504cfe0ec9522db",
+                "url": "https://api.github.com/repos/drupal/core/zipball/2e2f015e881abccc32efcd264128e8a8444b2ec1",
+                "reference": "2e2f015e881abccc32efcd264128e8a8444b2ec1",
                 "shasum": ""
             },
             "require": {
@@ -2081,11 +2081,11 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2021-09-14T22:07:47+00:00"
+            "time": "2021-11-17T21:05:58+00:00"
         },
         {
             "name": "drupal/core-composer-scaffold",
-            "version": "9.2.6",
+            "version": "9.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-composer-scaffold.git",
@@ -2132,16 +2132,16 @@
         },
         {
             "name": "drupal/core-recommended",
-            "version": "9.2.6",
+            "version": "9.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "e9bbd6d45dddc02157ea675b557c604feb31c80d"
+                "reference": "a052e6f47864bb6597e6f449b9cfdb1aa4eea400"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/e9bbd6d45dddc02157ea675b557c604feb31c80d",
-                "reference": "e9bbd6d45dddc02157ea675b557c604feb31c80d",
+                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/a052e6f47864bb6597e6f449b9cfdb1aa4eea400",
+                "reference": "a052e6f47864bb6597e6f449b9cfdb1aa4eea400",
                 "shasum": ""
             },
             "require": {
@@ -2150,7 +2150,7 @@
                 "doctrine/annotations": "1.13.1",
                 "doctrine/lexer": "1.2.1",
                 "doctrine/reflection": "1.2.2",
-                "drupal/core": "9.2.6",
+                "drupal/core": "9.2.9",
                 "egulias/email-validator": "2.1.25",
                 "guzzlehttp/guzzle": "6.5.5",
                 "guzzlehttp/promises": "1.4.1",
@@ -2212,7 +2212,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Locked core dependencies; require this project INSTEAD OF drupal/core.",
-            "time": "2021-09-14T22:07:47+00:00"
+            "time": "2021-11-17T21:05:58+00:00"
         },
         {
             "name": "drupal/ctools",
@@ -8291,6 +8291,7 @@
                 }
             ],
             "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
+            "abandoned": "symfony/filesystem",
             "time": "2015-12-17T08:42:14+00:00"
         }
     ],
