@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7a46728cfcc8385df3d356516b21383",
+    "content-hash": "e8623d994a0d0ef23db5a357d8f58a83",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1355,6 +1355,11 @@
                 "bower-asset/outlayer": "*"
             },
             "type": "drupal-profile",
+            "extra": {
+                "patches_applied": {
+                    "Temporary fix - entity.manager": "./patches/d_media.patch"
+                }
+            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"

@@ -66,6 +66,11 @@
 			"locations": {
 				"web-root": "web/"
 			}
-		}
+		},
+        "patches": {
+            "droptica/droopler": {
+                "Temporary fix - entity.manager": "./patches/d_media.patch"
+            }
+        }
 	}
 }
