@@ -21,9 +21,12 @@
     "require": {
         "composer/installers": "^1.2",
         "droptica/droopler": "dev-develop",
+        "drupal/commerce": "^2.30",
+        "drupal/commerce_inpost": "1.x-dev",
         "drupal/console": "~1.0",
         "drupal/core-composer-scaffold": "^8.9 || ^9.0",
         "drupal/core-recommended": "^8.9 || ^9.0",
+        "drupal/facets_pretty_paths": "^1.2",
         "drush/drush": "^9.0 || ^10.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "zaporylie/composer-drupal-optimizations": "^1.1"
