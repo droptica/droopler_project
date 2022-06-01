@@ -69,7 +69,8 @@
 		},
         "patches": {
             "droptica/droopler": {
-                "Temporary fix - entity.manager": "./patches/d_media.patch"
+                "Temporary fix - entity.manager": "./patches/d_media.patch",
+                "Temporary fix - invalid render array key": "https://www.drupal.org/files/issues/2022-05-31/droopler-n3283414.patch"
             }
         }
 	}
