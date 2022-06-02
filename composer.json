@@ -18,7 +18,7 @@
 		}
 	},
 	"require": {
-		"composer/installers": "^1.2",
+		"composer/installers": "^2.0",
 		"cweagans/composer-patches": "^1.6",
 		"droptica/d_application_api": "^1.0",
 		"droptica/droopler": "^8.3.0",
@@ -27,7 +27,7 @@
 		"drupal/eu_cookie_compliance": "^1.5",
 		"drupal/system_status": "^2.8",
 		"drush/drush": "^10.6",
-		"oomphinc/composer-installers-extender": "^1.1",
+		"oomphinc/composer-installers-extender": "^2.0",
 		"webflo/drupal-finder": "^1.0.0",
 		"webmozart/path-util": "^2.3"
 	},
@@ -53,7 +53,7 @@
 		"drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
 	},
 	"extra": {
-		"installer-types": ["library", "bower-asset", "npm-asset"],
+		"installer-types": ["bower-asset", "npm-asset"],
 		"installer-paths": {
 			"web/core": ["type:drupal-core"],
 			"web/libraries/{$name}": ["type:drupal-library", "type:git", "type:bower-asset", "type:npm-asset"],
@@ -69,7 +69,8 @@
 		},
         "patches": {
             "droptica/droopler": {
-                "Temporary fix - entity.manager": "./patches/d_media.patch"
+                "Temporary fix - entity.manager": "./patches/d_media.patch",
+                "Temporary fix - invalid render array key": "https://www.drupal.org/files/issues/2022-05-31/droopler-n3283414.patch"
             }
         }
 	}
