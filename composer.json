@@ -34,6 +34,7 @@
 	"require-dev": {
 		"behat/mink": "~1.7",
 		"behat/mink-goutte-driver": "~1.2",
+		"droptica/codeception-package": "9.7.4.*",
 		"drupal/devel": "^4.1",
 		"jcalderonzumba/gastonjs": "~1.0.2",
 		"jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
