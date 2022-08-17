@@ -48,6 +48,10 @@
             "drupal/core-composer-scaffold": true,
             "oomphinc/composer-installers-extender": true,
             "zaporylie/composer-drupal-optimizations": true
+        },
+        "preferred-install": {
+            "droptica/droopler": "source",
+            "*": "dist"
         }
     },
     "extra": {
