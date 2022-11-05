@@ -1,0 +1,12 @@
+uuid: c47eed2e-561a-4b5d-a838-cd58531434ab
+langcode: pl
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: C4Rkx4Enx5tkxR8G7CL4004C93USgCrlALWJqRB-L5I
+id: media.d_blog_image
+label: 'Blog image'
+targetEntityType: media
+cache: true

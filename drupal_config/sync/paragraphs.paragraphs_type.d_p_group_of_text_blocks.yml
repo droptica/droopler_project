@@ -1,0 +1,12 @@
+uuid: d118d5d6-5c42-4031-a8f7-667cb506470f
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Yip-xUxcJ7J6N3VHqGokasUVrZiJzMc3_fa2JJT8Zyg
+id: d_p_group_of_text_blocks
+label: 'Group of text blocks'
+icon_uuid: null
+icon_default: null
+description: 'Group of text blocks or nodes.'
+behavior_plugins: {  }

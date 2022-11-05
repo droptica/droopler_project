@@ -1,0 +1,24 @@
+uuid: ea265e4c-de39-49d1-b380-dc2a66881f66
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_block
+    - paragraphs.paragraphs_type.d_p_block
+  module:
+    - d_block_field
+_core:
+  default_config_hash: 9x_TZQx6N8nqsM2lOZnnvy6uu3yl2R3sSQh6SRKxVT8
+id: paragraph.d_p_block.field_block
+field_name: field_block
+entity_type: paragraph
+bundle: d_p_block
+label: Blok
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  plugin_ids: {  }
+field_type: d_block_field

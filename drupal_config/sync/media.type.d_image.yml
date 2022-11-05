@@ -1,0 +1,16 @@
+uuid: 1769657e-0825-42d4-9056-31797c7a32a5
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fwlCA2QxPCZEMTrGL_OgarR2eWFXIds1afP4kyiCisE
+id: d_image
+label: Image
+description: 'A simple image added from a file.'
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name

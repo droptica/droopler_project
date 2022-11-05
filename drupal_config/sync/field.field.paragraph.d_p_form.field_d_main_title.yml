@@ -1,0 +1,21 @@
+uuid: cfa62aa5-18d1-40d0-aadf-609124c35ba2
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_main_title
+    - paragraphs.paragraphs_type.d_p_form
+_core:
+  default_config_hash: XPNX5ORHJaF7-26fFDBMqhNmvGiYElvnHBkbEKdkZFk
+id: paragraph.d_p_form.field_d_main_title
+field_name: field_d_main_title
+entity_type: paragraph
+bundle: d_p_form
+label: 'Main title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

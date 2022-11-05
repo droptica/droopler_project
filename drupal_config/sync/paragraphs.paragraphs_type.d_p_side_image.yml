@@ -1,0 +1,12 @@
+uuid: 6a84e37f-7af6-4ea1-9903-e68809f4f308
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vQHKjwjA3TKwz2ivVBmvypDImO4l60A4bmV7hbxtheE
+id: d_p_side_image
+label: 'Sidebar image'
+icon_uuid: null
+icon_default: null
+description: 'Background image on one side, text on the other side.'
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: 9c81d9c4-03ca-4af1-baf3-3e8186a0cbac
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_main_title
+    - paragraphs.paragraphs_type.d_p_banner
+_core:
+  default_config_hash: HrymVZJjBgNi_9uizRSGCusBiYY07pRPk3IENPukcvM
+id: paragraph.d_p_banner.field_d_main_title
+field_name: field_d_main_title
+entity_type: paragraph
+bundle: d_p_banner
+label: 'Main title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

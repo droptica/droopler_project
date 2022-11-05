@@ -1,0 +1,20 @@
+uuid: 819f1746-1c8a-4779-88cd-d1d65374e80e
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: GYokt_Bs_zNLtrVZqILF5PfV33jVGusZcF1wwOBz8zw
+id: d_video
+label: Video
+description: 'A video added from YouTube or Vimeo.'
+source: 'oembed:video'
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_oembed_video
+  thumbnails_directory: 'public://media/video/thumbnails'
+  providers:
+    - YouTube
+    - Vimeo
+field_map:
+  title: name

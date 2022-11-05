@@ -1,0 +1,23 @@
+uuid: f61dd8eb-72e4-4e02-b2f6-a8a1f8db905d
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_long_text
+    - paragraphs.paragraphs_type.d_p_tiles
+  module:
+    - text
+_core:
+  default_config_hash: o6U7RSug7n7sHQPpHdV-As5OLeG6slGLCNzJREP8Ftg
+id: paragraph.d_p_tiles.field_d_long_text
+field_name: field_d_long_text
+entity_type: paragraph
+bundle: d_p_tiles
+label: 'Tiles gallery description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

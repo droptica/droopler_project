@@ -1,0 +1,138 @@
+uuid: 8242b0b9-d00a-40fc-92a1-0672abc03e40
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.d_p_side_image.field_d_cta_link
+    - field.field.paragraph.d_p_side_image.field_d_long_text
+    - field.field.paragraph.d_p_side_image.field_d_main_title
+    - field.field.paragraph.d_p_side_image.field_d_media_background
+    - field.field.paragraph.d_p_side_image.field_d_media_icon
+    - field.field.paragraph.d_p_side_image.field_d_settings
+    - paragraphs.paragraphs_type.d_p_side_image
+  module:
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_d_side_image_background:
+      children:
+        - field_d_media_background
+      label: 'Side image background'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: '<none>'
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_d_side_image_content:
+      children:
+        - field_d_media_icon
+        - field_d_main_title
+        - field_d_long_text
+      label: 'Side image content'
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: '<none>'
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_d_side_image_cta:
+      children:
+        - field_d_cta_link
+      label: 'Call To Action'
+      parent_name: ''
+      region: content
+      weight: 2
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: '<none>'
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: mIgeL3XFdUeBdxVHG0IcmYVT1soEIgSdSXwYOAt7ZlM
+id: paragraph.d_p_side_image.default
+targetEntityType: paragraph
+bundle: d_p_side_image
+mode: default
+content:
+  field_d_cta_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_d_long_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_d_main_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_d_media_background:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: d_banner
+      link: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_d_media_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: d_icon
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_d_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_d_background_color: true
+  field_d_settings: true
+  search_api_excerpt: true

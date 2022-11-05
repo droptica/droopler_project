@@ -1,0 +1,12 @@
+uuid: 9d23dd90-ee68-4d69-90a2-2828ffa5a61c
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ifq_2Xoo_TLUcsdb0FaTGI627apQVqR4p_IoGscOBIE
+id: d_p_node
+label: Node
+icon_uuid: null
+icon_default: null
+description: 'A node reference paragraph to use with "List of text blocks" and "Side by side".'
+behavior_plugins: {  }

@@ -1,0 +1,31 @@
+uuid: 4ad9e7e3-b167-4816-917b-1bd8a194a057
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_media_icon
+    - media.type.d_image
+    - paragraphs.paragraphs_type.d_p_side_tiles
+_core:
+  default_config_hash: tJH9Bz58B5LpQIwBxXcUfa4JQ_i2s3F7krCMc19PpFw
+id: paragraph.d_p_side_tiles.field_d_media_icon
+field_name: field_d_media_icon
+entity_type: paragraph
+bundle: d_p_side_tiles
+label: Ikona
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      d_image: d_image
+    sort:
+      field: revision_created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

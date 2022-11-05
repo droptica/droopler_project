@@ -1,0 +1,20 @@
+label: 'Nowi użytkownicy'
+description: 'Prezentuje listę najnowszych użytkowników na stronie.'
+display:
+  default:
+    display_title: Główny
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Zastosuj
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+      title: 'Nowi użytkownicy'
+  block_1:
+    display_title: 'Nowi użytkownicy'
+    display_options:
+      display_description: 'Lista nowych użytkowników'
+      block_description: 'Nowi użytkownicy'
+      block_category: Użytkownik

@@ -1,0 +1,20 @@
+uuid: 47300780-49e2-4ba6-bce9-f082799a8fb7
+langcode: pl
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: Cbm64y3Mo314F8j7J_6hJD8_DM8qnYIEm4c6eG-W6W8
+name: Partners
+type: partners
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

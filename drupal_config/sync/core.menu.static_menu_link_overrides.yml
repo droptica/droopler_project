@@ -1,0 +1,16 @@
+_core:
+  default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM
+langcode: pl
+definitions:
+  contact__site_page:
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+    enabled: true
+  d__blog__d__blog:
+    menu_name: main
+    parent: ''
+    weight: -49
+    expanded: false
+    enabled: true

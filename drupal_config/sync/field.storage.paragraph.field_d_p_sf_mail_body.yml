@@ -1,0 +1,21 @@
+uuid: 5332b440-ae11-43e9-9916-482c1e62b744
+langcode: pl
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: z3R-Rja_dSoZC9LyV9HGwY4yoP3wKacOF1UhR0T90_w
+id: paragraph.field_d_p_sf_mail_body
+field_name: field_d_p_sf_mail_body
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

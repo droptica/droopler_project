@@ -1,0 +1,29 @@
+uuid: 2c09c9ba-30a4-492c-b9d3-028072409b74
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_cta_link
+    - paragraphs.paragraphs_type.d_p_text_paged
+  module:
+    - link
+_core:
+  default_config_hash: Ikis-CoVOWXZ0zoaLyxKweC49FNogX5IH4VcLLEeYNc
+id: paragraph.d_p_text_paged.field_d_cta_link
+field_name: field_d_cta_link
+entity_type: paragraph
+bundle: d_p_text_paged
+label: 'Call To Action'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    options:
+      attributes:
+        class: 'btn btn-secondary'
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

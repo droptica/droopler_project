@@ -1,0 +1,42 @@
+uuid: da769310-5f0c-428a-8df4-b84a33b404a3
+langcode: pl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.counter
+    - field.field.media.d_image.field_media_image
+    - media.type.d_image
+  module:
+    - lazy
+    - svg_image
+_core:
+  default_config_hash: mk17fJ1pWpXckLEVrQa2m05QnknULBdaqKNxMok99Og
+id: media.d_image.counter
+targetEntityType: media
+bundle: d_image
+mode: counter
+content:
+  field_media_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      lazy:
+        lazy_image: '1'
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

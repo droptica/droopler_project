@@ -1,0 +1,25 @@
+uuid: f71fb3f2-35ef-48a0-9dc7-8484a447bebd
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - droopler_subtheme
+id: mainnavigation_droopler_subtheme
+theme: droopler_subtheme
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

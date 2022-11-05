@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: 9nRDOclwSlz2Os9mJXM1LXNbV2q-bADV0zipiWPXymk
+langcode: pl
+attributes:
+  class:
+    label: ''
+    description: ''
+  target:
+    label: ''
+    description: ''
+    options:
+      _blank: 'New window (_blank)'
+      _self: 'Same window (_self)'

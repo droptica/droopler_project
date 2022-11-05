@@ -1,0 +1,17 @@
+uuid: 71efc7c2-7954-4c2c-bc7e-6a85e4e31f3e
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Dp00IP9ioJSuEpe9IUsV03ma-L-mM0xLt7_DdODaib4
+name: d_p_carousel_image
+label: 'Carousel image'
+effects:
+  dea76dec-2009-4fa2-821c-2c2dab5754ea:
+    uuid: dea76dec-2009-4fa2-821c-2c2dab5754ea
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 200
+      upscale: false

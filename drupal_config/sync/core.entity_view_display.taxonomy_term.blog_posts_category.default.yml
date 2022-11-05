@@ -1,0 +1,26 @@
+uuid: 05ebc846-31f9-4c58-b163-52bd0d725523
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.blog_posts_category.field_d_blog_category
+    - taxonomy.vocabulary.blog_posts_category
+  module:
+    - text
+_core:
+  default_config_hash: wMotg201nXlednTkhcynNuojXzIfSeVOlVEGc8RBG9Y
+id: taxonomy_term.blog_posts_category.default
+targetEntityType: taxonomy_term
+bundle: blog_posts_category
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_d_blog_category: true
+  langcode: true

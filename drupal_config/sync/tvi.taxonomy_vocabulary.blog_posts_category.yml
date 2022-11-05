@@ -1,0 +1,8 @@
+_core:
+  default_config_hash: g5ws3wzCR1EN5ewX9TH54BvzOvdVxPx_3YjUZkKUjII
+langcode: pl
+enable_override: true
+view: blog_listing
+view_display: page_1
+inherit_settings: true
+pass_arguments: true

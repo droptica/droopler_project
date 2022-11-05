@@ -1,0 +1,20 @@
+uuid: d048b880-e281-4c35-b0f2-5f2bc4505162
+langcode: pl
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: 2DJC5AxW03bP9qW9q8LzEG8XYuY7k1s5wLPRPc5VDTA
+id: paragraph.field_d_p_blog_image_full_width
+field_name: field_d_p_blog_image_full_width
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

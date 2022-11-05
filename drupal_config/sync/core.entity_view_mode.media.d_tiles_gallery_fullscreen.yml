@@ -1,0 +1,12 @@
+uuid: e10c4ebf-0357-49c0-8cd3-f519862101a0
+langcode: pl
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: Sz6oczOko84-iD3u6mzR4yfx42rlVWMDybdLeBZtxxY
+id: media.d_tiles_gallery_fullscreen
+label: 'Tiles gallery fullscreen'
+targetEntityType: media
+cache: true

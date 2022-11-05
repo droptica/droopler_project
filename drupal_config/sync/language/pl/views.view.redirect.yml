@@ -1,0 +1,62 @@
+label: Przekierowanie
+display:
+  default:
+    display_title: Główny
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Zastosuj
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+      pager:
+        options:
+          tags:
+            previous: '‹ poprzednia'
+            next: 'następna ›'
+            first: '« pierwsza'
+            last: 'ostatnia »'
+          expose:
+            items_per_page_label: 'Elementów na stronę'
+            items_per_page_options_all_label: '- Wszystko -'
+            offset_label: Przesunięcie
+      fields:
+        redirect_source__path:
+          label: Od
+          separator: ', '
+        created:
+          label: Utworzono
+      filters:
+        redirect_source__path:
+          expose:
+            label: Od
+        redirect_redirect__uri:
+          expose:
+            label: Do
+        status_code:
+          expose:
+            label: 'Kod statusu'
+          group_info:
+            label: 'Kod statusu'
+            group_items:
+              1:
+                title: '300 Wiele możliwości'
+              2:
+                title: '301 Przekierowanie stałe'
+              3:
+                title: '302 Znaleziono'
+              4:
+                title: '303 Zobacz inne'
+              5:
+                title: '304 Nie zmodyfikowane'
+              6:
+                title: '305 Używaj Proxy'
+              7:
+                title: '307 Przekierowanie tymczasowe'
+        language:
+          expose:
+            label: 'Język oryginalny'
+      title: Przekierowanie
+  page_1:
+    display_title: Strona

@@ -1,0 +1,21 @@
+uuid: 0dba50ae-9abb-461a-a63a-1d17f9decb4b
+langcode: pl
+status: true
+dependencies:
+  module:
+    - entity_reference_display
+    - paragraphs
+_core:
+  default_config_hash: lsRxpOp0QlXYFn3ib5twvedEPcJeSfsyK_AAMeZ4-7U
+id: paragraph.field_d_display_mode
+field_name: field_d_display_mode
+entity_type: paragraph
+type: entity_reference_display
+settings: {  }
+module: entity_reference_display
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

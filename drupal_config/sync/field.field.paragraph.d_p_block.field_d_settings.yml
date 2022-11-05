@@ -1,0 +1,25 @@
+uuid: 33e467ca-3772-4dbe-92d5-8e80cd8fc422
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_settings
+    - paragraphs.paragraphs_type.d_p_block
+  module:
+    - d_p
+_core:
+  default_config_hash: f-NCfRQvlysEhJADMsBOyj9pZGydspbwWER3ELHkhqI
+id: paragraph.d_p_block.field_d_settings
+field_name: field_d_settings
+entity_type: paragraph
+bundle: d_p_block
+label: 'Paragraph settings'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '{"custom_class":""}'
+default_value_callback: ''
+settings: {  }
+field_type: field_p_configuration_storage

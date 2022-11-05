@@ -1,0 +1,13 @@
+uuid: afec81fc-472d-4112-9f7d-10e9056f8e19
+langcode: pl
+status: true
+dependencies:
+  config:
+    - media.type.d_video
+_core:
+  default_config_hash: zlAp03Ywz6WY2yznuIRPPaAz2k6NQKYwF1ISNYz-OAk
+id: media.d_video
+target_entity_type_id: media
+target_bundle: d_video
+default_langcode: site_default
+language_alterable: false

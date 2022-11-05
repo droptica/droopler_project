@@ -1,0 +1,76 @@
+label: Ludzie
+description: 'Wyszukiwanie i zarządzanie ludźmi korzystającymi z serwisu.'
+display:
+  default:
+    display_title: Główny
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtr
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+      pager:
+        options:
+          tags:
+            previous: '‹ Poprzednia'
+            next: 'Następna ›'
+            first: '« Pierwsza'
+            last: 'Ostatnia »'
+          expose:
+            items_per_page_label: 'Elementów na stronę'
+            items_per_page_options_all_label: '- Wszystko -'
+            offset_label: Przesunięcie
+      fields:
+        user_bulk_form:
+          label: 'Aktualizacja masowa'
+        name:
+          label: 'Nazwa użytkownika'
+        status:
+          label: Status
+          settings:
+            format_custom_true: Aktywne
+            format_custom_false: Zablokowany
+        roles_target_id:
+          label: Role
+        created:
+          label: 'Posiada konto przez'
+        access:
+          label: 'Ostatni dostęp'
+        operations:
+          label: Operacje
+        mail:
+          separator: ', '
+      filters:
+        combine:
+          expose:
+            label: 'Nazwa lub email zawiera'
+        status:
+          group_info:
+            label: Status
+            group_items:
+              1:
+                title: Aktywne
+              2:
+                title: Zablokowany
+        roles_target_id:
+          expose:
+            label: Rola
+        permission:
+          expose:
+            label: Uprawnienie
+      title: Ludzie
+      empty:
+        area_text_custom:
+          content: 'Brak dostępnych osób.'
+      use_more_text: więcej
+  page_1:
+    display_title: Strona
+    display_options:
+      menu:
+        title: Lista
+        description: 'Wyszukiwanie i zarządzanie ludźmi korzystającymi z serwisu.'
+      tab_options:
+        title: Ludzie
+        description: 'Zarządzanie kontami użytkowników, rolami i uprawnieniami.'

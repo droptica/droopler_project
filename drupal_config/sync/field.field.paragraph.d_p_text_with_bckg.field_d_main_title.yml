@@ -1,0 +1,21 @@
+uuid: a2b3a582-f8d7-4b9d-b11f-6a4bc55e45f2
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_main_title
+    - paragraphs.paragraphs_type.d_p_text_with_bckg
+_core:
+  default_config_hash: e_PNmqFHuFKrJnKhbHPxAXNJiWrjew3jgQP_hRdD0i0
+id: paragraph.d_p_text_with_bckg.field_d_main_title
+field_name: field_d_main_title
+entity_type: paragraph
+bundle: d_p_text_with_bckg
+label: 'Main title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

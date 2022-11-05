@@ -1,0 +1,23 @@
+uuid: 1b292b66-743f-43d0-bc30-b97f4c7c33ee
+langcode: pl
+status: true
+dependencies:
+  theme:
+    - droopler_subtheme
+_core:
+  default_config_hash: 8VdaWvpp7R7mXCCaYdM7Pxu5cPcCUCMi5_gNOgaBQ4g
+id: footer
+theme: droopler_subtheme
+region: footer_main
+weight: 0
+provider: null
+plugin: 'block_content:092dd69e-c6c4-4f0a-9780-ec15b89ec5b5'
+settings:
+  id: 'block_content:092dd69e-c6c4-4f0a-9780-ec15b89ec5b5'
+  label: Footer
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,30 @@
+label: 'Blok <em>Kto jest online</em>'
+description: 'Prezentuje nazwy użytkowników którzy byli ostatnio aktywni, jak również liczbę wszystkich aktywnych użytkowników.'
+display:
+  default:
+    display_title: Główny
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Zastosuj
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+      filters:
+        access:
+          expose:
+            label: 'Ostatni dostęp'
+            description: 'Tak długo od ostatniego odświeżenia strony użytkownik jest uważany za będącego online.'
+      title: 'Kto przegląda'
+      header:
+        result:
+          content: '@total użytkowników jest aktywnych w tej chwili.'
+      empty:
+        area_text_custom:
+          content: 'Żaden z użytkowników nie jest w tym momencie zalogowany.'
+  who_s_online_block:
+    display_title: 'Kto przegląda'
+    display_options:
+      block_description: 'Kto przegląda'
+      display_description: 'Lista użytkowników, którzy są aktualnie zalogowani.'

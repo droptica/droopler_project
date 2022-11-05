@@ -1,0 +1,34 @@
+uuid: f21b70d6-24ef-4e32-8a69-0a487a1e1610
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.d_p_block.field_block
+    - field.field.paragraph.d_p_block.field_d_settings
+    - paragraphs.paragraphs_type.d_p_block
+  module:
+    - d_block_field
+_core:
+  default_config_hash: FoQGHGqCxbYTTrXwcmQ2f29-NE6nljjK54IXv1MHRKg
+id: paragraph.d_p_block.default
+targetEntityType: paragraph
+bundle: d_p_block
+mode: default
+content:
+  field_block:
+    type: d_block_field
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_d_settings:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

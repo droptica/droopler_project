@@ -1,0 +1,118 @@
+uuid: 46a0b6cf-ea44-42ff-8c9c-960198b6ed8d
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.d_p_text_paged.field_d_cta_link
+    - field.field.paragraph.d_p_text_paged.field_d_long_text
+    - field.field.paragraph.d_p_text_paged.field_d_main_title
+    - field.field.paragraph.d_p_text_paged.field_d_media_icon
+    - field.field.paragraph.d_p_text_paged.field_d_settings
+    - field.field.paragraph.d_p_text_paged.field_d_subtitle
+    - paragraphs.paragraphs_type.d_p_text_paged
+  module:
+    - d_p
+    - link
+    - text
+    - field_group
+third_party_settings:
+  field_group:
+    group_d_text_paged_content:
+      children:
+        - field_d_media_icon
+        - field_d_main_title
+        - field_d_subtitle
+        - field_d_long_text
+      label: 'Text paged content'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: '<none>'
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_d_text_paged_cta:
+      children:
+        - field_d_cta_link
+      label: 'Call To Action'
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: '<none>'
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: nQfDzaeN2iuR4j7m3ceO6QbiRMS1iaLkUJTtQhTx8zg
+id: paragraph.d_p_text_paged.default
+targetEntityType: paragraph
+bundle: d_p_text_paged
+mode: default
+content:
+  field_d_cta_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_d_long_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_d_main_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_d_media_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: d_icon
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_d_settings:
+    type: field_configuration_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_d_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

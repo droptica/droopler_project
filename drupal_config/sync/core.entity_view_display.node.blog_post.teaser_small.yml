@@ -1,0 +1,53 @@
+uuid: 83fc14eb-d539-4a4a-853c-87ade6b7a4b2
+langcode: pl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_small
+    - field.field.node.blog_post.field_blog_category
+    - field.field.node.blog_post.field_blog_media_main_image
+    - field.field.node.blog_post.field_blog_sections
+    - field.field.node.blog_post.field_blog_teaser
+    - field.field.node.blog_post.field_meta_tags
+    - node.type.blog_post
+    - field.field.node.blog_post.field_meta_tags
+    - image.style.large_gallery_thumbnail
+  module:
+    - lazy
+    - media
+    - text
+    - user
+    - lazy
+_core:
+  default_config_hash: mzJDY_6vuEV206g3l9cwGL9rBGJcqQ76Zppds0zrhyM
+id: node.blog_post.teaser_small
+targetEntityType: node
+bundle: blog_post
+mode: teaser_small
+content:
+  field_blog_media_main_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: large_gallery_thumbnail
+    third_party_settings:
+      lazy:
+        lazy_image: '1'
+    weight: 1
+    region: content
+  field_blog_teaser:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 160
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_blog_category: true
+  field_blog_sections: true
+  field_meta_tags: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

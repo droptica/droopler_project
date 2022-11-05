@@ -1,0 +1,2 @@
+label: 'Domyślna data długa'
+pattern: 'l, F j, Y - H:i'

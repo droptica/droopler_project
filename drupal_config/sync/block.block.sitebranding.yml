@@ -1,0 +1,25 @@
+uuid: 7404d24d-f8ed-4b14-a9fe-360535db77d2
+langcode: pl
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - droopler_subtheme
+_core:
+  default_config_hash: Ao-bsWMvrSushC_E1tEVYeSWktmH08hP7pM-jdPHIXk
+id: sitebranding
+theme: droopler_subtheme
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

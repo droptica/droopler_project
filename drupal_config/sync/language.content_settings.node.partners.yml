@@ -1,0 +1,13 @@
+uuid: 2f9a7ebd-dcb9-4b45-bc8e-788becf2a0a0
+langcode: pl
+status: true
+dependencies:
+  config:
+    - node.type.partners
+_core:
+  default_config_hash: dbgzQkcKfFU5kIpl-TWcVJWiEoriRsNBu7-2-ANuEBc
+id: node.partners
+target_entity_type_id: node
+target_bundle: partners
+default_langcode: site_default
+language_alterable: false
