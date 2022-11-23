@@ -75,6 +75,7 @@ module:
   history: 0
   image: 0
   language: 0
+  lazy: 0
   link: 0
   link_attributes: 0
   linkit: 0
