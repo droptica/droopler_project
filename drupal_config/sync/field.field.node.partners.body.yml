@@ -1,0 +1,25 @@
+uuid: d81ffc52-17d9-41b6-ab9f-209391cf7039
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.partners
+  module:
+    - text
+_core:
+  default_config_hash: RW9zPwlosVm50S37EsdD0xo4iS7D0JK3A2SuzQ5yceI
+id: node.partners.body
+field_name: body
+entity_type: node
+bundle: partners
+label: Descriprion
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

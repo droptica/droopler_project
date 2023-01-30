@@ -1,0 +1,11 @@
+uuid: e46c4bae-e540-4060-9cc2-f00f0afa39e5
+langcode: pl
+status: true
+dependencies:
+  config:
+    - simple_sitemap.type.default_hreflang
+id: default
+label: Default
+description: null
+type: default_hreflang
+weight: 0

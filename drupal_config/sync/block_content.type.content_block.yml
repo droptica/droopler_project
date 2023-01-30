@@ -1,0 +1,10 @@
+uuid: f354927e-2f3b-4fac-86a5-06142f4bf9d0
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: w25z3U6xSCpW5WgeT9B_6_rtaNeDj4P9ggbvWQrnPOQ
+id: content_block
+label: 'Content block'
+revision: 0
+description: ''

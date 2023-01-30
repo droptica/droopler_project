@@ -1,0 +1,21 @@
+uuid: e0acb3ba-10c7-48a1-b07d-173331d55423
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_long_text
+    - paragraphs.paragraphs_type.d_p_group_of_counters
+  module:
+    - text
+id: paragraph.d_p_group_of_counters.field_d_long_text
+field_name: field_d_long_text
+entity_type: paragraph
+bundle: d_p_group_of_counters
+label: 'Long text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

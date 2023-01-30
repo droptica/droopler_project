@@ -1,0 +1,12 @@
+uuid: 877f13a7-df35-4c51-ab08-315a57380ec2
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: z4wqEU_C3wB9Mc2mggXc37NU1hTkfztY3sm9wf0UDtM
+id: d_p_side_embed
+label: 'Sidebar embed'
+icon_uuid: null
+icon_default: null
+description: 'Embed on one side, text on the other side.'
+behavior_plugins: {  }

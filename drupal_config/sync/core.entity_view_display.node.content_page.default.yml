@@ -1,0 +1,41 @@
+uuid: 15e3ee5b-170e-4c23-9cda-5dbda99fba4c
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.node.content_page.field_header_cta
+    - field.field.node.content_page.field_header_layout
+    - field.field.node.content_page.field_meta_tags
+    - field.field.node.content_page.field_page_section
+    - field.field.node.content_page.field_teaser_media_image
+    - field.field.node.content_page.field_teaser_text
+    - node.type.content_page
+    - field.field.node.content_page.field_meta_tags
+  module:
+    - entity_reference_revisions
+    - user
+_core:
+  default_config_hash: WvPOM504OSyaCp7ScLpzFpTT8CiM3_bnmbcshDFCrtE
+id: node.content_page.default
+targetEntityType: node
+bundle: content_page
+mode: default
+content:
+  field_page_section:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_header_cta: true
+  field_header_layout: true
+  field_meta_tags: true
+  field_teaser_media_image: true
+  field_teaser_text: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

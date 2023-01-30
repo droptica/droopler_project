@@ -1,0 +1,2 @@
+label: 'Domyślna data krótka'
+pattern: 'm/d/Y - H:i'

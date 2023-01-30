@@ -1,0 +1,6 @@
+logo:
+  path: themes/custom/droopler_subtheme/logo.png
+  use_default: false
+_core:
+  default_config_hash: gu-i2WT9mK2kAIJAamjpzIVLWREkpjV4e4wn8sH4Mgs
+langcode: pl

@@ -1,0 +1,10 @@
+uuid: 6861932b-b648-4bc2-a26e-9f7d1f3fdf44
+langcode: pl
+status: true
+dependencies:
+  module:
+    - media
+id: media.tiles_gallery_fullscreen_featured
+label: 'Tiles gallery fullscreen featured'
+targetEntityType: media
+cache: true

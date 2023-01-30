@@ -1,0 +1,177 @@
+uuid: e0717434-de6c-405a-811f-c26a8420dc95
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.d_p_side_tiles.field_d_cta_link
+    - field.field.paragraph.d_p_side_tiles.field_d_long_text
+    - field.field.paragraph.d_p_side_tiles.field_d_main_title
+    - field.field.paragraph.d_p_side_tiles.field_d_media_icon
+    - field.field.paragraph.d_p_side_tiles.field_d_media_image
+    - field.field.paragraph.d_p_side_tiles.field_d_settings
+    - paragraphs.paragraphs_type.d_p_side_tiles
+  module:
+    - link
+    - text
+    - field_group
+    - field_group
+third_party_settings:
+  field_group:
+    group_d_tiles_content:
+      children:
+        - field_d_media_icon
+        - field_d_main_title
+        - field_d_long_text
+        - field_d_media_image
+      label: 'Tiles content'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: '<none>'
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_d_tiles_cta:
+      children:
+        - field_d_cta_link
+      label: 'Call To Action'
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: '<none>'
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_d_side_tiles_content:
+      children:
+        - field_d_media_icon
+        - field_d_main_title
+        - field_d_long_text
+      label: 'Text content of paragraph'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: '<none>'
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_d_side_tiles_cta:
+      children:
+        - field_d_cta_link
+      label: 'CTA button'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: '<none>'
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_d_side_tiles_gallery:
+      children:
+        - field_d_media_image
+      label: 'Tiles gallery for masonry'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: ''
+        id: ''
+        element: '<none>'
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: wrqHAIpoHeK9yTTyHiCw9SY4ntv4x3GIgqmjdJaJggs
+id: paragraph.d_p_side_tiles.default
+targetEntityType: paragraph
+bundle: d_p_side_tiles
+mode: default
+content:
+  field_d_cta_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_d_long_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_d_main_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_d_media_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: d_icon
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_d_media_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: d_tiles_gallery_fullscreen
+      link: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_d_subtitle:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_d_settings: true
+  search_api_excerpt: true

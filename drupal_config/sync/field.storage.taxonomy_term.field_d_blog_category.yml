@@ -1,0 +1,23 @@
+uuid: 878ac529-f57c-475c-a8f6-b729872d4f1f
+langcode: pl
+status: true
+dependencies:
+  module:
+    - taxonomy
+_core:
+  default_config_hash: sJ0U6rxzKjcj-EIayOSHKKorx3DOl8VHxcZCpU0oTMo
+id: taxonomy_term.field_d_blog_category
+field_name: field_d_blog_category
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

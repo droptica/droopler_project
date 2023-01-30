@@ -1,0 +1,12 @@
+uuid: 4ef66c2c-d7c6-4ad7-ab6c-3aac29b4b1a3
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Ov8n_ScWh4gCxePAIAmByG3lxeheXE5TZTc-ig9MmlY
+id: d_p_single_text_block
+label: 'Single block text'
+icon_uuid: null
+icon_default: null
+description: 'A paragraph to use with "List of text blocks" and "Side by side".'
+behavior_plugins: {  }

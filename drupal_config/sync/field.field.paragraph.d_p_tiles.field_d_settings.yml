@@ -1,0 +1,25 @@
+uuid: c4f9171b-13b4-41f8-903d-b5fb05b259f0
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_settings
+    - paragraphs.paragraphs_type.d_p_tiles
+  module:
+    - d_p
+_core:
+  default_config_hash: vYVKkoe50dmHOTLYdNsUQ3Wt-CxxpnQcCPhsZyKsinc
+id: paragraph.d_p_tiles.field_d_settings
+field_name: field_d_settings
+entity_type: paragraph
+bundle: d_p_tiles
+label: 'Paragraph settings'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '{"custom_class":"","heading_type":"h2"}'
+default_value_callback: ''
+settings: {  }
+field_type: field_p_configuration_storage

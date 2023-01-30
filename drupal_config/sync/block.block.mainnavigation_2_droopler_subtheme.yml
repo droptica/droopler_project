@@ -1,0 +1,20 @@
+uuid: e6b0a238-1be8-4662-9213-c914fbd7d795
+langcode: en
+status: true
+dependencies:
+  module:
+    - we_megamenu
+  theme:
+    - droopler_subtheme
+id: mainnavigation_2_droopler_subtheme
+theme: droopler_subtheme
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'we_megamenu_block:main'
+settings:
+  id: 'we_megamenu_block:main'
+  label: 'MegaMenu Main navigation'
+  label_display: '0'
+  provider: we_megamenu
+visibility: {  }

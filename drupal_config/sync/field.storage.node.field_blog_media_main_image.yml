@@ -1,0 +1,22 @@
+uuid: bfb054d7-ac5a-4522-a780-4493af7fa7ce
+langcode: pl
+status: true
+dependencies:
+  module:
+    - media
+    - node
+_core:
+  default_config_hash: _fRXFn6HIxPh_UDIYcxCuEfh72IJ2Nz3vJSNkw_Ed_I
+id: node.field_blog_media_main_image
+field_name: field_blog_media_main_image
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

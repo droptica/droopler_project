@@ -1,0 +1,23 @@
+uuid: fa0269b0-3255-4b05-89cc-4da7673d4f3c
+langcode: pl
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: YHUmsEW4iZ8uJ5ks1h6AziSmP2FThccwbGPj9lD0wfQ
+id: paragraph.field_d_p_sf_download_button
+field_name: field_d_p_sf_download_button
+entity_type: paragraph
+type: string
+settings:
+  max_length: 50
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

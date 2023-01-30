@@ -1,0 +1,22 @@
+uuid: 5173d432-ced6-4718-99fe-5c940416056f
+langcode: pl
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+_core:
+  default_config_hash: dH5dyTfOKC0IjGk-cvbF9EaRARNwauNLYP2Hpb9bga8
+id: paragraph.field_d_p_tb_block_reference
+field_name: field_d_p_tb_block_reference
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

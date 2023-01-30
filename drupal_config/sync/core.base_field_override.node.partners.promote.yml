@@ -1,0 +1,24 @@
+uuid: c0769437-e561-4492-a017-82a00dcd96a1
+langcode: pl
+status: true
+dependencies:
+  config:
+    - node.type.partners
+_core:
+  default_config_hash: 5was679vtswMg3AOd96ctDWftwL3dyaj2vv6mObIhzc
+id: node.partners.promote
+field_name: promote
+entity_type: node
+bundle: partners
+label: 'Promowany na stronie głównej'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Włączony
+  off_label: Wyłączony
+field_type: boolean

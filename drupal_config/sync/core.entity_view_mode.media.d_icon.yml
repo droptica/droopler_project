@@ -1,0 +1,12 @@
+uuid: ab8dfbeb-02c1-4541-9ca2-3589a9d1115e
+langcode: pl
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: VBqZGW4EtxYklZNwH1auE6svc9Du7EUaDe4Kv3Xp7QQ
+id: media.d_icon
+label: Ikona
+targetEntityType: media
+cache: true

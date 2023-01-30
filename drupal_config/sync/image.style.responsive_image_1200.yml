@@ -1,0 +1,17 @@
+uuid: f0a2d295-83c2-4669-a11b-1bad0a63df99
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6mAemXTTmaL7gb-Dbgxlgm2Cq-HfNgjtqHi1xagttEg
+name: responsive_image_1200
+label: 'Responsive image 1200'
+effects:
+  b45525bc-d613-4935-8bb2-d35ca332a003:
+    uuid: b45525bc-d613-4935-8bb2-d35ca332a003
+    id: image_scale
+    weight: 1
+    data:
+      width: 1200
+      height: null
+      upscale: false

@@ -1,0 +1,27 @@
+uuid: 4c14506f-9a17-45c7-a4eb-876953c5cc91
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_cta_link
+    - paragraphs.paragraphs_type.d_p_side_by_side
+  module:
+    - link
+id: paragraph.d_p_side_by_side.field_d_cta_link
+field_name: field_d_cta_link
+entity_type: paragraph
+bundle: d_p_side_by_side
+label: 'Call To Action'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    options:
+      attributes:
+        class: 'btn btn-primary'
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

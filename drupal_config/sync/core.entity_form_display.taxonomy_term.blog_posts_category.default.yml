@@ -1,0 +1,60 @@
+uuid: 4d4476d6-83b5-4c85-a0b8-e1e59bc84cec
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.blog_posts_category.field_d_blog_category
+    - taxonomy.vocabulary.blog_posts_category
+  module:
+    - path
+    - text
+_core:
+  default_config_hash: BSuyCUaWPrW2TOMKEpl2jh2EoW4av10_LaSrr2TjlxE
+id: taxonomy_term.blog_posts_category.default
+targetEntityType: taxonomy_term
+bundle: blog_posts_category
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_d_blog_category: true

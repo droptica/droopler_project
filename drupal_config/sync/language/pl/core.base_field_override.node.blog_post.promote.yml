@@ -1,0 +1,4 @@
+label: 'Promowany na stronie głównej'
+settings:
+  on_label: Włączony
+  off_label: Wyłączony

@@ -1,0 +1,18 @@
+uuid: 186c9877-9366-4c96-a86b-f67cd1d1e33e
+langcode: pl
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.d_p_side_image
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: Gl_mh91lFHbVCR6mEhhZ6vEOalBoc4lDw9q9BTk86uY
+id: paragraph.d_p_side_image
+target_entity_type_id: paragraph
+target_bundle: d_p_side_image
+default_langcode: site_default
+language_alterable: true

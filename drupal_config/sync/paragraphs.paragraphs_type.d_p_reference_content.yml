@@ -1,0 +1,12 @@
+uuid: 99463e95-fc1d-484d-9829-d2f8f1398aa0
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JYjOiSQrnqEP51lkxxiq1XaQ0o1JhYqM6jnMKM8_Pd4
+id: d_p_reference_content
+label: 'Reference content'
+icon_uuid: null
+icon_default: null
+description: 'A list of nodes, like latest blog posts.'
+behavior_plugins: {  }

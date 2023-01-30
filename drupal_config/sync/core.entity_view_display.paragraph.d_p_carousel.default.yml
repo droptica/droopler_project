@@ -1,0 +1,82 @@
+uuid: 7e905696-0ca4-4e9b-8d85-3017c344e0dd
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.d_p_carousel.field_d_cta_link
+    - field.field.paragraph.d_p_carousel.field_d_icon
+    - field.field.paragraph.d_p_carousel.field_d_long_text
+    - field.field.paragraph.d_p_carousel.field_d_main_title
+    - field.field.paragraph.d_p_carousel.field_d_media_icon
+    - field.field.paragraph.d_p_carousel.field_d_p_cs_item_reference
+    - field.field.paragraph.d_p_carousel.field_d_settings
+    - paragraphs.paragraphs_type.d_p_carousel
+    - field.field.paragraph.d_p_carousel.field_d_cta_link
+  module:
+    - d_p
+    - entity_reference_revisions
+    - text
+    - link
+_core:
+  default_config_hash: p7EXIODAkcYZz_fbiz_hTe5HeGGYqFPX1GUz2Lx3LAM
+id: paragraph.d_p_carousel.default
+targetEntityType: paragraph
+bundle: d_p_carousel
+mode: default
+content:
+  field_d_long_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_d_main_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_d_media_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: d_icon
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_d_p_cs_item_reference:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_d_settings:
+    type: field_configuration_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_d_cta_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  field_d_cta_link: true
+  field_d_icon: true
+  search_api_excerpt: true

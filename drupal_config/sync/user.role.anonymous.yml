@@ -1,0 +1,22 @@
+uuid: f233b60d-5a4f-465c-9e1f-be7c8df90d6f
+langcode: pl
+status: true
+dependencies:
+  module:
+    - contact
+    - eu_cookie_compliance
+    - media
+    - search
+    - system
+_core:
+  default_config_hash: ErvXUKk4pKuwL_SkRohsKD7v570r3kHceTYIBEFg1sM
+id: anonymous
+label: 'Użytkownik anonimowy'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'display eu cookie compliance popup'
+  - 'search content'
+  - 'view media'

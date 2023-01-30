@@ -1,0 +1,35 @@
+uuid: a2084e91-31bc-47ff-900a-89def6525d40
+langcode: pl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.partners.body
+    - field.field.node.partners.field_logo
+    - field.field.node.partners.field_website
+    - node.type.partners
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: dbyGJig90mCOlYGDdsvqbkDhpCvRHm2m7mT58nws6_c
+id: node.partners.teaser
+targetEntityType: node
+bundle: partners
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_logo: true
+  field_website: true
+  langcode: true

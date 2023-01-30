@@ -1,0 +1,25 @@
+uuid: 7fb62745-1f9d-4fb2-b223-05003eb8fedc
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.partners
+  module:
+    - link
+_core:
+  default_config_hash: QMlxP__ZyMZVtB_8Fydgo-rbDYuF4n4h1hWu8-9schI
+id: node.partners.field_website
+field_name: field_website
+entity_type: node
+bundle: partners
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

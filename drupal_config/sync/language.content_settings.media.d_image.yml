@@ -1,0 +1,13 @@
+uuid: 31a49bc9-5733-4c33-a61f-0233f1f233f2
+langcode: pl
+status: true
+dependencies:
+  config:
+    - media.type.d_image
+_core:
+  default_config_hash: 5Yw8G4pM5Aas6f4pfh0eoYtwyLpEtSDn9g3xqZBRV1A
+id: media.d_image
+target_entity_type_id: media
+target_bundle: d_image
+default_langcode: site_default
+language_alterable: false

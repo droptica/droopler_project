@@ -1,0 +1,12 @@
+uuid: cc238417-b744-439f-9bfa-2152cf2b517e
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jKxZDAOmgndtQxR8plD0fgggBWDL_PgAWsxqM5VCtX8
+id: d_p_group_of_counters
+label: 'Group of counters'
+icon_uuid: null
+icon_default: null
+description: 'Group of single counters.'
+behavior_plugins: {  }

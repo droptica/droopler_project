@@ -1,0 +1,34 @@
+uuid: 7eb2fdb9-d2e6-4d6e-9149-794d3437cd2c
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.d_p_blog_image.field_d_media_image
+    - field.field.paragraph.d_p_blog_image.field_d_p_blog_image_full_width
+    - paragraphs.paragraphs_type.d_p_blog_image
+  module:
+    - media_library
+_core:
+  default_config_hash: djVqSkO2UFjuyGI_I3EO9ujNLYJGpNNE_QNYm2Hyy2g
+id: paragraph.d_p_blog_image.default
+targetEntityType: paragraph
+bundle: d_p_blog_image
+mode: default
+content:
+  field_d_media_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_d_p_blog_image_full_width:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

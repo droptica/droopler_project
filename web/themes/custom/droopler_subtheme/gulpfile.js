@@ -1,3 +1,4 @@
+
 /**
  * Gulpfile.js for Droopler theme.
  *
@@ -14,7 +15,7 @@
   'use strict';
 
   const gulp = require('gulp');
-  const sass = require('gulp-sass');
+  const sass = require('gulp-dart-sass');
   const sourcemaps = require('gulp-sourcemaps');
   const autoprefixer = require('gulp-autoprefixer');
   const uglify = require('gulp-uglify');
