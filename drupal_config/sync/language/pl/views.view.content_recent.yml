@@ -1,0 +1,23 @@
+label: 'Ostatnio dodana zawartość'
+description: 'Ostatnio dodana zawartość.'
+display:
+  default:
+    display_title: Główny
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Zastosuj
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+      fields:
+        changed:
+          separator: ', '
+      title: 'Ostatnio dodana zawartość'
+      empty:
+        area_text_custom:
+          content: 'Brak zawartości.'
+      use_more_text: Więcej
+  block_1:
+    display_title: Blok

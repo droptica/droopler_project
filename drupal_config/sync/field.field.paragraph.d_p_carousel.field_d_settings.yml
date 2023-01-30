@@ -1,0 +1,25 @@
+uuid: ad1090b2-adc3-4aca-b2fa-69d51f6a36d7
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_settings
+    - paragraphs.paragraphs_type.d_p_carousel
+  module:
+    - d_p
+_core:
+  default_config_hash: 3yg5zI4Xk64bCo4r5W24OrpdhvCPiAg4uZpUK4_it0o
+id: paragraph.d_p_carousel.field_d_settings
+field_name: field_d_settings
+entity_type: paragraph
+bundle: d_p_carousel
+label: 'Paragraph settings'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '{"custom_class":"","heading_type":"h2"}'
+default_value_callback: ''
+settings: {  }
+field_type: field_p_configuration_storage

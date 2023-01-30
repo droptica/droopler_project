@@ -1,0 +1,22 @@
+uuid: 1ab086bf-8cf1-4980-8f59-be1281a03345
+langcode: pl
+status: true
+dependencies:
+  module:
+    - contact
+    - paragraphs
+_core:
+  default_config_hash: SGoXpUdq7b4-ievIhzSxIKpusnmgsOXrAJQDvAf0iyE
+id: paragraph.field_d_forms
+field_name: field_d_forms
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: contact_form
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

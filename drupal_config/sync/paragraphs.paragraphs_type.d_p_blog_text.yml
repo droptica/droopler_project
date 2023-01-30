@@ -1,0 +1,12 @@
+uuid: d636914a-0479-4ebd-a220-bd4f1b6f0606
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: SbLmvMjs1cL_Bu2M7LQq9fTcA0wJ5-g24kfN5NiXgBU
+id: d_p_blog_text
+label: 'Blog text'
+icon_uuid: null
+icon_default: null
+description: 'A text inside a blog post.'
+behavior_plugins: {  }

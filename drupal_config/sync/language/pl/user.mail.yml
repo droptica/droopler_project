@@ -1,0 +1,26 @@
+cancel_confirm:
+  body: "[user:display-name],\r\n\r\nZostała uruchomiona procedura anulowania Twojego konta na stronie  [site:name].\r\n\r\nMożesz anulować swoje konto na stronie [site:url-brief] klikając poniższy odnośnik bądź kopiując go w pole adresu przeglądarki:\r\n\r\n[user:cancel-url]\r\n\r\nUWAGA: anulowanie konta jest operacją nieodwracalną.\r\n\r\nOdnośnik straci ważność po jednym dniu.\r\n\r\n-- redakcja strony [site:name]"
+  subject: 'Zgłoszenie anulowania konta [user:display-name] na [site:name]'
+password_reset:
+  body: "[user:display-name],\r\n\r\nW serwisie [site:name] została uruchomiona procedura resetowania twojego hasła.\r\n\r\nMożesz się zalogować klikając poniższy odnośnik bądź kopiując go w pole adresu przeglądarki:\r\n\r\n[user:one-time-login-url]\r\n\r\nOdnośnik może zostać użyty tylko raz a jego użycie umożliwi wpisanie własnego hasła. Odnośnik straci ważność po jednym dniu.\r\n\r\n--  redakcja strony [site:name]"
+  subject: 'Zastępcze dane do logowania dla [user:display-name] na [site:name]'
+register_admin_created:
+  body: "[user:display-name],\r\n\r\nAdministrator strony [site:name] stworzył dla Ciebie konto. Możesz się teraz zalogować klikając w poniższy odnośnik lub kopiując i wklejając go do przeglądarki:\r\n\r\n[user:one-time-login-url]\r\n\r\nTen odnośnik możesz zostać użyty tylko raz i kieruję na stronę, gdzie będzie można ustawić własne hasło.\r\n\r\nPo ustawieniu własnego hasło, będzie można logować się w przyszłości poprzez odnośnik [site:login-url] używając:\r\n\r\nnazwa użytkownika: [user:account-name]\r\nhasło: Twoje hasło\r\n\r\n--  Zespół [site:name]"
+  subject: 'Administrator utworzył dla ciebie konto na stronie [site:name]'
+register_no_approval_required:
+  body: "[user:display-name],\r\n\r\nDziękujemy za rejestrację na stronie [site:name]. \r\nMożesz się teraz zalogować klikając w poniższy odnośnik lub kopiując i wklejając go do przeglądarki:\r\n\r\n[user:one-time-login-url]\r\n\r\nTen odnośnik możesz zostać użyty tylko raz i kieruję na stronę, gdzie będzie można ustawić własne hasło.\r\n\r\nPo ustawieniu własnego hasło, będzie można logować się w przyszłości poprzez odnośnik [site:login-url] używając:\r\n\r\nnazwa użytkownika: [user:account-name]\r\nhasło: Twoje hasło\r\n\r\n--  \r\nZespół [site:name]"
+register_pending_approval:
+  body: "[user:display-name],\r\n\r\nDziękujemy za rejestrację na [site:name]. Twoje zgłoszenie czeka na zatwierdzenie. \r\n\r\nPo zatwierdzeniu otrzymasz kolejny e-mail zawierający informacje o tym jak się zalogować, jak ustawić własne hasło oraz inne szczegóły.\r\n\r\n-- \r\nZespół [site:name]"
+  subject: 'Szczegóły konta dla [user:display-name] na [site:name] (w trakcie weryfikacji)'
+register_pending_approval_admin:
+  body: "[user:display-name] wypełnił formularz założenia konta.\r\n\r\n[user:edit-url]"
+  subject: 'Szczegóły konta dla [user:display-name] na [site:name] (w trakcie weryfikacji)'
+status_activated:
+  body: "[user:display-name],\r\n\r\nTwoje konto na stronie [site:name] zostało aktywowane.\r\n\r\nMożesz się teraz zalogować klikając w poniższy odnośnik lub kopiując i wklejając go do przeglądarki:\r\n\r\n[user:one-time-login-url]\r\n\r\nTen odnośnik możesz zostać użyty tylko raz i kieruję na stronę, gdzie będzie można ustawić własne hasło.\r\n\r\nPo ustawieniu własnego hasło, będzie można logować się w przyszłości poprzez odnośnik [site:login-url] używając:\r\n\r\nnazwa użytkownika: [user:account-name]\r\nhasło: Twoje hasło\r\n\r\n--  Zespół [site:name]"
+  subject: 'Informacje dotyczące konta  [user:display-name] na [site:name] (konto zatwierdzone)'
+status_blocked:
+  body: "[user:display-name],\r\n\r\nTwoje konto na [site:name] zostało zablokowane.\r\n\r\n--  Zespół [site:name]"
+  subject: 'Informacje dotyczące konta [user:display-name] na [site:name] (zablokowane)'
+status_canceled:
+  body: "[user:display-name],\r\n\r\nTwoje konto na stronie [site:name] zostało anulowane.\r\n\r\n-- Zespół [site:name]"
+  subject: 'Szczegóły konta użytkownika [user:display-name] na [site:name] (anulowane)'

@@ -1,0 +1,17 @@
+uuid: eb795b9a-e05a-4ebe-bd2a-f1a132c80c30
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: M_h2nvttTuvC1Sg0QZEGhJyxoxfsweWzxzYBWf1OA0Y
+name: tiles_thumbnail
+label: 'Tiles gallery thumbnail 1x1'
+effects:
+  9e46c060-1027-4c9d-9a6e-43ac0db85220:
+    uuid: 9e46c060-1027-4c9d-9a6e-43ac0db85220
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 466
+      height: 307
+      anchor: center-center

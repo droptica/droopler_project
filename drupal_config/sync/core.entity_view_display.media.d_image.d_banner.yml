@@ -1,0 +1,38 @@
+uuid: eb64f96e-7ca6-4e2a-a946-e2e2517a5fc5
+langcode: pl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.d_banner
+    - field.field.media.d_image.field_media_image
+    - media.type.d_image
+    - responsive_image.styles.banner
+  module:
+    - lazy
+    - responsive_image
+    - lazy
+_core:
+  default_config_hash: Wld0v0Pz8sxXg0E3GgmUNrCFI1bTUchcxzz2lzdr6D4
+id: media.d_image.d_banner
+targetEntityType: media
+bundle: d_image
+mode: d_banner
+content:
+  field_media_image:
+    type: responsive_image
+    label: hidden
+    settings:
+      responsive_image_style: banner
+      image_link: ''
+    third_party_settings:
+      lazy:
+        lazy_image: '1'
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

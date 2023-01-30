@@ -1,0 +1,22 @@
+uuid: 02f4c0c1-5c6a-43fa-948b-ccbaa51aec62
+langcode: pl
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: 2AJDeA_CYvG-o13bB9oInDJmRvWef4BNCUoUY-bnUbc
+id: paragraph.field_d_p_sf_consent
+field_name: field_d_p_sf_consent
+entity_type: paragraph
+type: text
+settings:
+  max_length: 512
+module: text
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

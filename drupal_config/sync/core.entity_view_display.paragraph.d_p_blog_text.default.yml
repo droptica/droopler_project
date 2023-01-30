@@ -1,0 +1,24 @@
+uuid: cd929bcd-97d7-47c2-afcd-628c95d25639
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.d_p_blog_text.field_d_long_text
+    - paragraphs.paragraphs_type.d_p_blog_text
+  module:
+    - text
+_core:
+  default_config_hash: dclLgXv4QeZ3va3WHdftoZRRpjYJygETh9eph2Nxq0o
+id: paragraph.d_p_blog_text.default
+targetEntityType: paragraph
+bundle: d_p_blog_text
+mode: default
+content:
+  field_d_long_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

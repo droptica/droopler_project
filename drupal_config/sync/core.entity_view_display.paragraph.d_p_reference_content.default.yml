@@ -1,0 +1,74 @@
+uuid: e2904683-632d-43cb-a82b-32eeefd52cf0
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.d_p_reference_content.field_d_cta_link
+    - field.field.paragraph.d_p_reference_content.field_d_long_text
+    - field.field.paragraph.d_p_reference_content.field_d_main_title
+    - field.field.paragraph.d_p_reference_content.field_d_media_icon
+    - field.field.paragraph.d_p_reference_content.field_d_p_reference_content
+    - field.field.paragraph.d_p_reference_content.field_d_settings
+    - paragraphs.paragraphs_type.d_p_reference_content
+    - field.field.paragraph.d_p_reference_content.field_d_long_text
+    - field.field.paragraph.d_p_reference_content.field_d_media_icon
+  module:
+    - link
+    - text
+_core:
+  default_config_hash: FxAI5n3R17qkAjJnTgM8hm0VH60kCLrBRn44W6h7e5M
+id: paragraph.d_p_reference_content.default
+targetEntityType: paragraph
+bundle: d_p_reference_content
+mode: default
+content:
+  field_d_cta_link:
+    type: link
+    label: visually_hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_d_main_title:
+    type: string
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_d_p_reference_content:
+    type: entity_reference_entity_view
+    label: visually_hidden
+    settings:
+      view_mode: teaser_small
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_d_long_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_d_media_icon:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: d_icon
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_d_long_text: true
+  field_d_media_icon: true
+  field_d_settings: true
+  search_api_excerpt: true

@@ -1,0 +1,12 @@
+uuid: d3094686-713e-4f40-b922-27305d56ff69
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: phwwfA_EAh0L63dIlM5rJ3CI216dgKz4NfpqUxRtl_g
+id: d_p_form
+label: Form
+icon_uuid: null
+icon_default: null
+description: 'A Drupal form embedded in a paragraph.'
+behavior_plugins: {  }

@@ -1,0 +1,28 @@
+uuid: 185fdf14-e391-47d1-a2b8-308cc359fd3e
+langcode: pl
+status: true
+dependencies:
+  config:
+    - block_content.type.d_paragraph_block
+    - field.field.block_content.d_paragraph_block.field_paragraphs
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: VqifFHaZ7s1t2ubhDot2v0iYkPv-gP8h8WWjmyNHtys
+id: block_content.d_paragraph_block.default
+targetEntityType: block_content
+bundle: d_paragraph_block
+mode: default
+content:
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

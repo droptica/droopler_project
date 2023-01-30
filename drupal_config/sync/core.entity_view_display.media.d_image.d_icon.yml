@@ -1,0 +1,42 @@
+uuid: b88cf1b2-e985-467c-9482-a3c6deb81289
+langcode: pl
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.d_icon
+    - field.field.media.d_image.field_media_image
+    - media.type.d_image
+  module:
+    - lazy
+    - svg_image
+_core:
+  default_config_hash: SEQRTJi8MUTvEi_0ZAz9EvdtodGkkJxKPUbilV8TLQI
+id: media.d_image.d_icon
+targetEntityType: media
+bundle: d_image
+mode: d_icon
+content:
+  field_media_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      lazy:
+        lazy_image: '1'
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

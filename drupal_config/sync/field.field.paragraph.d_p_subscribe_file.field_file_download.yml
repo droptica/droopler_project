@@ -1,0 +1,29 @@
+uuid: 9c04f3eb-5a47-4e26-9e35-8c32aca25db5
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_file_download
+    - paragraphs.paragraphs_type.d_p_subscribe_file
+  module:
+    - file
+_core:
+  default_config_hash: LpGG-2X-q4cuINvANTgMUc_Xb6_PMJQcUwWZoKGuuRE
+id: paragraph.d_p_subscribe_file.field_file_download
+field_name: field_file_download
+entity_type: paragraph
+bundle: d_p_subscribe_file
+label: 'File download'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt zip pdf doc'
+  max_filesize: ''
+  description_field: false
+field_type: file

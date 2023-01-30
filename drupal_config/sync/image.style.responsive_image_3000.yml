@@ -1,0 +1,17 @@
+uuid: 51b51dea-8472-4703-ad78-5934cabbe3ce
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: irzHOIQYBk2d54FjodeLGap3W55SxVL-kONjPP5_7JM
+name: responsive_image_3000
+label: 'Responsive image 3000'
+effects:
+  09b9b41f-0c65-4094-9ab0-d25882da46c4:
+    uuid: 09b9b41f-0c65-4094-9ab0-d25882da46c4
+    id: image_scale
+    weight: 1
+    data:
+      width: 3000
+      height: null
+      upscale: false

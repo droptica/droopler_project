@@ -1,0 +1,31 @@
+label: 'Strona główna'
+description: 'Wszystkie treści promowane na stronie głównej.'
+display:
+  default:
+    display_options:
+      empty:
+        title:
+          title: 'Witaj na [site:name]'
+      exposed_form:
+        options:
+          submit_button: Zastosuj
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortuj po'
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementów na stronę'
+            items_per_page_options_all_label: '- Wszystko -'
+            offset_label: Przesunięcie
+          tags:
+            previous: '‹ Poprzednia'
+            next: 'Następna ›'
+            first: '« Pierwsza'
+            last: 'Ostatnia »'
+    display_title: Główny
+  feed_1:
+    display_title: Zasób
+  page_1:
+    display_title: Strona

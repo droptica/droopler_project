@@ -1,0 +1,17 @@
+uuid: 616fbdf9-6fd0-47e9-9050-2a97551d9328
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: oTvrBiyxDos_Bnh4qKv5-erPub4b3s5hNCyNmRmAm0E
+name: 400x200
+label: 400x200
+effects:
+  828007cd-530b-499f-8fb4-4656567e9ad8:
+    uuid: 828007cd-530b-499f-8fb4-4656567e9ad8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 200
+      anchor: center-center

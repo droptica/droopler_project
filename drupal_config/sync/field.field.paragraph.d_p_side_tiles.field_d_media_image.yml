@@ -1,0 +1,33 @@
+uuid: 62b5f2b6-fb88-4386-98fe-8e6ef82fa4fb
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_media_image
+    - media.type.d_image
+    - media.type.d_video
+    - paragraphs.paragraphs_type.d_p_side_tiles
+_core:
+  default_config_hash: 0MPP8Vc-RMGI2N0_3thJPirwgIwarcm8POIFNNlgjms
+id: paragraph.d_p_side_tiles.field_d_media_image
+field_name: field_d_media_image
+entity_type: paragraph
+bundle: d_p_side_tiles
+label: 'Gallery tiles'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      d_image: d_image
+      d_video: d_video
+    sort:
+      field: revision_created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: d_image
+field_type: entity_reference

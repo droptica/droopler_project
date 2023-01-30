@@ -1,0 +1,86 @@
+_core:
+  default_config_hash: 9RpVluEdsYtiE1Ity_X-P_3WmflzyJFit3v3u5k_w8c
+langcode: pl
+uuid: f851ba15-57de-49bb-af81-5c68c118b86e
+popup_enabled: true
+popup_clicking_confirmation: true
+popup_scrolling_confirmation: false
+eu_only: false
+eu_only_js: false
+popup_position: false
+fixed_top_position: true
+popup_info:
+  value: '<h2>Powiadomienie o plikach cookie.</h2><p>Ta strona korzysta z plików cookie. Pozostając na tej stronie, wyrażasz zgodę na korzystanie z plików cookie.</p>'
+  format: full_html
+mobile_popup_info:
+  value: '<h2>We use cookies on this site to enhance your user experience</h2><p>By tapping any link on this page you are giving your consent for us to set cookies.</p>'
+  format: restricted_html
+popup_info_template: new
+popup_agree_button_message: 'Zgadzam się'
+popup_more_info_button_message: 'Dowiedz się więcej'
+mobile_breakpoint: 768
+popup_agreed_enabled: false
+popup_hide_agreed: false
+disagree_button_label: 'Nie, dziękuję'
+popup_agreed:
+  value: '<h2>Dziękujemy za akceptację ciasteczek</h2><p>Możesz teraz ukryć tą wiadomość lub dowiedzieć się więcej na temat ciasteczek.</p>'
+  format: restricted_html
+popup_find_more_button_message: 'Dowiedz się więcej'
+popup_hide_button_message: Hide
+popup_link: /polityka-prywatnosci
+popup_link_new_window: true
+popup_height: 0
+popup_width: 100%
+popup_delay: 1000
+show_more_info: true
+popup_bg_hex: 0779bf
+popup_text_hex: ffffff
+domain: ''
+domains_option: 1
+domains_list: ''
+exclude_paths: |-
+  /admin
+  /admin/*
+  /batch
+  /node/add*
+  /node/*/*
+  /user/*/*
+exclude_admin_theme: false
+set_cookie_session_zero_on_disagree: 0
+cookie_lifetime: 100
+use_mobile_message: false
+use_bare_css: false
+disagree_do_not_show_popup: false
+reload_page: false
+reload_options: 0
+reload_routes_list: ''
+cookie_name: ''
+exclude_uid_1: false
+better_support_for_screen_readers: false
+method: opt_in
+disabled_javascripts: ''
+automatic_cookies_removal: true
+allowed_cookies: ''
+consent_storage_method: do_not_store
+withdraw_message:
+  value: '<h2>Powiadomienie o plikach cookie.</h2><p>Ta strona korzysta z plików cookie. Pozostając na tej stronie, wyrażasz zgodę na korzystanie z plików cookie.</p>'
+  format: full_html
+withdraw_tab_button_label: 'Privacy settings'
+withdraw_action_button_label: 'Withdraw consent'
+withdraw_enabled: false
+withdraw_button_on_info_popup: false
+save_preferences_button_label: 'Save preferences'
+accept_all_categories_button_label: 'Accept all cookies'
+enable_save_preferences_button: true
+domain_all_sites: false
+settings_tab_enabled: false
+containing_element: body
+cookie_policy_version: 1.0.0
+cookie_value_disagreed: '0'
+cookie_value_agreed_show_thank_you: '1'
+cookie_value_agreed: '2'
+accessibility_focus: false
+close_button_action: close_banner
+reject_button_label: ''
+reject_button_enabled: false
+close_button_enabled: false

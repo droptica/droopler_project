@@ -1,0 +1,63 @@
+uuid: 0caee6ea-c3bb-4898-bfb6-98b9fa200505
+langcode: pl
+status: true
+dependencies:
+  config:
+    - field.field.node.partners.body
+    - field.field.node.partners.field_logo
+    - field.field.node.partners.field_website
+    - image.style.400x200
+    - node.type.partners
+  module:
+    - link
+    - svg_image
+    - text
+    - user
+_core:
+  default_config_hash: br9QRYunDjllA5-qBhTbQZmUIzx8Ymr51tH0v63kx10
+id: node.partners.default
+targetEntityType: node
+bundle: partners
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_logo:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: 400x200
+      svg_attributes:
+        width: 400
+        height: 200
+      svg_render_as_image: true
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_website:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

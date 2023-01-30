@@ -1,0 +1,18 @@
+uuid: 8e2845e8-2adf-4868-8379-0e749ac03573
+langcode: pl
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.d_p_text_with_bckg
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: wuw4VXd8EekBqjEVX1GaXGdhP0dMlya6hXiWqe3zqfI
+id: paragraph.d_p_text_with_bckg
+target_entity_type_id: paragraph
+target_bundle: d_p_text_with_bckg
+default_langcode: site_default
+language_alterable: true

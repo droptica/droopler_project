@@ -1,0 +1,12 @@
+uuid: 950a3a84-5052-4c58-98b7-3230e7700e11
+langcode: pl
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ufRU5PWsXWY0zgklIXdc4qf5gCWdJZOdg-Yw6de32ww
+id: d_p_carousel
+label: Carousel
+icon_uuid: null
+icon_default: null
+description: 'Items scrolled by Slick library.'
+behavior_plugins: {  }

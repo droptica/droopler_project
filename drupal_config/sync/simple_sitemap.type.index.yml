@@ -1,0 +1,10 @@
+uuid: 41bd4cf6-48c9-4e49-b730-6c73b290cec9
+langcode: pl
+status: true
+dependencies: {  }
+id: index
+label: 'Sitemap Index'
+description: 'The sitemap index sitemap type. A sitemap of this type lists sitemaps of all other types.'
+sitemap_generator: index
+url_generators:
+  - index

@@ -1,0 +1,13 @@
+uuid: 6233475e-b175-4177-87e9-46f0f89f85d1
+langcode: pl
+status: true
+dependencies:
+  config:
+    - media.type.d_document
+_core:
+  default_config_hash: BH113OYbR7Zn-zMgmAKr848hIjCExDkA3WgEs4qlsbk
+id: media.d_document
+target_entity_type_id: media
+target_bundle: d_document
+default_langcode: site_default
+language_alterable: false
