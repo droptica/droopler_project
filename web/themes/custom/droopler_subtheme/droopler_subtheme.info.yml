@@ -2,8 +2,7 @@ name: Droopler Subtheme
 type: theme
 description: 'A SCSS subtheme for Droopler.'
 version: 8.x-2.0
-core: '8.x'
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^9 || ^10
 
 base theme: droopler_theme
 
@@ -23,8 +22,9 @@ libraries-override:
   droopler_theme/file: droopler_subtheme/file
   droopler_theme/maintenance_page: droopler_subtheme/maintenance_page
 
-ckeditor_stylesheets:
-  - css/ckeditor.css
+# @todo Adjust to Ckeditor5
+# ckeditor_stylesheets:
+#  - css/ckeditor.css
 
 regions:
   header: Header

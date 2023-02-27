@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * theme-settings.php
@@ -9,7 +10,6 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Url;
 
 /**
  * Implements hook_form_FORM_ID_alter().
