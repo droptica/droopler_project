@@ -69,6 +69,11 @@
 			"locations": {
 				"web-root": "web/"
 			}
-		}
-	}
+		},
+        "patches": {
+            "drupal/advagg": {
+                "Deprecated function rtrim fix": "https://www.drupal.org/files/issues/2022-12-13/3258389-57.patch"
+            }
+        }
+    }
 }
