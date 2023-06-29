@@ -20,7 +20,7 @@
     },
     "require": {
         "composer/installers": "^1.2",
-        "droptica/droopler": "dev-DROOP-792-strip-megamenu",
+        "droptica/droopler": "dev-drupal10",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-recommended": "^10.0",
         "drush/drush": "^11.0",
