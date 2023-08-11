@@ -22,9 +22,8 @@ libraries-override:
   droopler_theme/file: droopler_subtheme/file
   droopler_theme/maintenance_page: droopler_subtheme/maintenance_page
 
-# @todo Adjust to Ckeditor5
-# ckeditor_stylesheets:
-#  - css/ckeditor.css
+ckeditor5-stylesheets:
+  - css/ckeditor.css
 
 regions:
   header: Header
