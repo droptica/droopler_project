@@ -23,7 +23,7 @@
         "droptica/droopler": "dev-drupal10",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-recommended": "^10.0",
-        "drush/drush": "^11.0",
+        "drush/drush": "^12.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "zaporylie/composer-drupal-optimizations": "^1.1"
     },
