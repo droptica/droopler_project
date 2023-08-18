@@ -2,7 +2,7 @@ name: Droopler Subtheme
 type: theme
 description: 'A SCSS subtheme for Droopler.'
 version: 8.x-2.0
-core_version_requirement: ^9 || ^10
+core_version_requirement: ^10
 
 base theme: droopler_theme
 
