@@ -21,7 +21,7 @@
     "require": {
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
-        "droptica/droopler": "dev-develop",
+        "droptica/droopler": "8.3.2.0-rc1",
         "drupal/console": "~1.0",
         "drupal/core-composer-scaffold": "^9.5",
         "drupal/core-recommended": "^9.5",
