@@ -55,9 +55,6 @@
     },
     "extra": {
         "enable-patching": true,
-        "patchLevel": {
-            "drupal/core": "-p2"
-        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
