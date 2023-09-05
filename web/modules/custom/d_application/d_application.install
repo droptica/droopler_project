@@ -10,6 +10,7 @@ use Drupal\paragraphs\Entity\Paragraph;
  */
 function d_application_install() {
   \Drupal::service('module_installer')->install(['eu_cookie_compliance'], TRUE);
+  $extensionPathResolver = \Drupal::service('extension.path.resolver');
 
   $config_factory = \Drupal::configFactory();
   $config_factory->getEditable('eu_cookie_compliance.settings')
@@ -35,7 +36,7 @@ function d_application_install() {
       "value" => 'Polityka prywatności',
     ],
     'field_d_long_text' => [
-      "value" => twig_render_template(drupal_get_path('module', 'd_application') . '/templates/privacy_policy.html.twig', []),
+      "value" => twig_render_template($extensionPathResolver->getPath('module', 'd_application') . '/templates/privacy_policy_pl.html.twig', []),
       "format" => "full_html",
     ],
   ]);
