@@ -1,3 +1,4 @@
+langcode: pl
 skipClass: no-lazy
 disable_admin: true
 visibility:
