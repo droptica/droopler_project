@@ -7,7 +7,7 @@ dependencies:
     - media
 _core:
   default_config_hash: 2_y_WJyyQ60xX5GfjJ1lZwYWEdkasuafe2zlkWDpI40
-name: 'Full HTML'
+name: 'Pełny HTML'
 format: full_html
 weight: 1
 filters:
@@ -54,3 +54,9 @@ filters:
       allowed_view_modes: {  }
       allowed_media_types:
         d_document: d_document
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: 12
+    settings: {  }

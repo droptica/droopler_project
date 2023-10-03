@@ -11,6 +11,7 @@ dependencies:
   module:
     - content_translation
     - contextual
+    - file
     - filter
     - geysir
     - node
@@ -44,6 +45,7 @@ permissions:
   - 'delete content_page revisions'
   - 'delete own blog_post content'
   - 'delete own content_page content'
+  - 'delete own files'
   - 'delete terms in blog_posts_category'
   - 'delete terms in tags'
   - 'edit any blog_post content'

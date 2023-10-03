@@ -3,6 +3,7 @@ langcode: pl
 status: true
 dependencies:
   module:
+    - file
     - media
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
@@ -11,4 +12,5 @@ label: 'Użytkownik uwierzytelniony'
 weight: 1
 is_admin: false
 permissions:
+  - 'delete own files'
   - 'view media'

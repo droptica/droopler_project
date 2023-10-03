@@ -8,7 +8,7 @@ dependencies:
 _core:
   default_config_hash: gkRJCqHr3uSO8ALHLatX-7YKfX0lWEgkC5qMBtCf_Sg
 id: block_content
-label: 'Biblioteka własnych bloków'
+label: 'Content blocks'
 module: views
 description: 'Znajdź i zarządzaj własnymi blokami.'
 tag: default
@@ -17,7 +17,7 @@ base_field: id
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Główny
     display_plugin: default
     position: 0
     display_options:
@@ -163,7 +163,7 @@ display:
           entity_type: block_content
           entity_field: changed
           plugin_id: field
-          label: Updated
+          label: Uaktualniono
           exclude: false
           alter:
             alter_text: false
@@ -209,6 +209,15 @@ display:
             date_format: short
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
         operations:
           id: operations
           table: block_content
@@ -218,7 +227,7 @@ display:
           admin_label: ''
           entity_type: block_content
           plugin_id: entity_operations
-          label: Operations
+          label: Operacje
           exclude: false
           alter:
             alter_text: false
@@ -268,30 +277,30 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
+            next: 'Następna ›'
+            previous: '‹ Poprzednia'
           expose:
             items_per_page: false
-            items_per_page_label: 'Items per page'
+            items_per_page_label: 'Elementów na stronę'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Wszystko -'
             offset: false
-            offset_label: Offset
+            offset_label: Przesunięcie
       exposed_form:
         type: basic
         options:
           submit_button: Zastosuj
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Resetuj
+          exposed_sorts_label: 'Sortuj po'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Rosnąco
+          sort_desc_label: Malejąco
       access:
         type: perm
         options:
-          perm: 'administer blocks'
+          perm: 'access block library'
       cache:
         type: tag
         options: {  }
@@ -516,19 +525,20 @@ display:
       tags: {  }
   page_1:
     id: page_1
-    display_title: Page
+    display_title: Strona
     display_plugin: page
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/structure/block/block-content
+      path: admin/content/block
       menu:
         type: tab
-        title: 'Biblioteka własnych bloków'
-        description: ''
+        title: Blocks
+        description: 'Create and edit block content.'
         weight: 0
+        expanded: false
         menu_name: admin
-        parent: block.admin_display
+        parent: system.admin_content
         context: '0'
     cache_metadata:
       max-age: -1

@@ -2,6 +2,6 @@ langcode: pl
 _core:
   default_config_hash: k7-AYL8Wmk2amLGnCXfc-tTxZGCaduwh8RFMUPW8Tq0
 add_license: true
-minifier: 0
+minifier: 1
 ratio_max: 0.9
 ratio_min: 0.1

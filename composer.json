@@ -10,31 +10,53 @@
 	"repositories": {
 	    "drupal": {
 			"type": "composer",
-			"url": "https://packages.drupal.org/8"
+			"url": "https://packages.drupal.org/8",
+            "exclude": [
+                "drupal/system_status"
+            ]
 		},
 		"asset": {
 			"type": "composer",
 			"url": "https://asset-packagist.org"
-		}
+		},
+        "system_status": {
+            "type": "package",
+            "package": {
+                "name": "drupal/system_status",
+                "version": "2.8.0",
+                "type": "drupal-module",
+                "source": {
+                    "type": "git",
+                    "url": "https://git.drupalcode.org/issue/system_status-3299281",
+                    "reference": "3299281-automated-drupal-10"
+                }
+            }
+        }
 	},
 	"require": {
-		"composer/installers": "^2.0",
-		"cweagans/composer-patches": "^1.6",
+        "php": ">=8.1",
+		"composer/installers": "^2.2",
+		"cweagans/composer-patches": "^1.7",
 		"droptica/d_application_api": "^1.0",
-		"droptica/droopler": "^3.2.0",
-		"drupal/core-composer-scaffold": "^9.4",
-		"drupal/core-recommended": "^9.4",
-		"drupal/eu_cookie_compliance": "^1.5",
-		"drupal/system_status": "^2.8",
+        "droptica/droopler": "8.3.3.0-rc1",
+		"drupal/core-composer-scaffold": "^10.0",
+		"drupal/core-recommended": "^10.0",
+		"drupal/eu_cookie_compliance": "^1.24",
 		"drupal/upgrade_status": "^4.0",
-		"drush/drush": "^11.3",
+        "drupal/system_status": "^2.8",
+        "drupal/devel": "^5.0",
+        "drush/drush": "^12.0",
+        "drupal/lazy": "^3.12",
 		"oomphinc/composer-installers-extender": "^2.0",
-		"webflo/drupal-finder": "^1.0.0",
-		"webmozart/path-util": "^2.3"
+		"webflo/drupal-finder": "^1.2.0",
+		"webmozart/path-util": "^2.3",
+        "drupal/advagg": "^6.0@alpha",
+        "drupal/we_megamenu": "^1.16",
+        "drupal/rdf": "^2.1"
 	},
 	"require-dev": {
-        "drupal/core-dev": "^9.4",
-        "droptica/codeception-package": "9.8.0"
+        "drupal/core-dev": "^10.0",
+        "droptica/codeception-package": "10.8.0"
 	},
 	"conflict": {
 		"drupal/drupal": "*"
@@ -50,7 +72,8 @@
             "drupal/console-extend-plugin": true,
             "drupal/core-composer-scaffold": true,
             "oomphinc/composer-installers-extender": true,
-            "zaporylie/composer-drupal-optimizations": true
+            "zaporylie/composer-drupal-optimizations": true,
+            "phpstan/extension-installer": true
         }
 	},
 	"scripts": {

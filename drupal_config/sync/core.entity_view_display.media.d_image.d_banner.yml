@@ -9,8 +9,7 @@ dependencies:
     - responsive_image.styles.banner
   module:
     - lazy
-    - responsive_image
-    - lazy
+    - svg_image_responsive
 _core:
   default_config_hash: Wld0v0Pz8sxXg0E3GgmUNrCFI1bTUchcxzz2lzdr6D4
 id: media.d_image.d_banner
@@ -24,6 +23,12 @@ content:
     settings:
       responsive_image_style: banner
       image_link: ''
+      image_loading:
+        attribute: eager
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
     third_party_settings:
       lazy:
         lazy_image: '1'
