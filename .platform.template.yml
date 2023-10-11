@@ -2,9 +2,9 @@ version: 1
 
 info:
   id: platformsh/droptica-droopler
-  name: Droopler for Drupal
+  name: Droopler 3 for Drupal
   description: |
-    <p>This is Droopler template for Drupal.  It is pre-configured to use MariaDB and Redis for caching.  The Drupal installer will skip asking for database credentials as they are already provided.</p>
+    <p>This is Droopler 3 template for Drupal. It is pre-configured to use MariaDB and Redis for caching. The Drupal installer will skip asking for database credentials as they are already provided.</p>
     <p>Droopler is a flexible and extensible profile for Drupal PHP-based CMS framework.</p>
 
   class: starter

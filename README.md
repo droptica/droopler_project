@@ -10,7 +10,7 @@ Droopler template for new project
 
 <h4 align="center">
 Deploy with one click
-<h4>
+</h4>
 
 <p align="center">
 <a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/droptica/droopler_project/dev/platformsh/.platform.template.yaml">

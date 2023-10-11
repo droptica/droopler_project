@@ -5,7 +5,7 @@
 
 # The name of this app. Must be unique within a project.
 # Must be lowercase alphanumeric characters. Changing the name destroys data associated with the app.
-name: 'droptica-droopler'
+name: 'app'
 
 # The runtime the application uses.
 type: 'php:8.1'
@@ -13,7 +13,7 @@ type: 'php:8.1'
 dependencies:
   php:
     composer/composer: '^2.1'
-    drush/drush: '^11'
+    drush/drush: '^12'
   nodejs:
     n: "*"
     gulp: "^4.0.2"
@@ -29,7 +29,7 @@ dependencies:
     pump: "^3.0.0"
     yargs: "^17.0.1"
 
-runtime:                                                                                                                                                                                                                                                    b
+runtime:
   # Enable the redis extension so Drupal can communicate with the Redis cache.
   extensions:
     - redis
