@@ -23,7 +23,7 @@ info:
       content: |
         PHP 8.1<br />
         MariaDB 10.4<br />
-        Redis 6<br />
+        Redis 7<br />
         Drush included<br />
         Automatic TLS certificates<br />
         Composer-based build<br />
