@@ -29,7 +29,7 @@ info:
         Composer-based build<br />
 
 initialize:
-  repository: https://github.com/droptica/droopler_project.git
+  repository: https://github.com/droptica/droopler_project/tree/release/3.3.x
   config: null
   files: []
   profile: Droopler
