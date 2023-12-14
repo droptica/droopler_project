@@ -1,0 +1,76 @@
+name: droopler
+recipe: drupal10
+config:
+  # Droopler project webroot.
+  webroot: ./web
+  drush: 12
+
+services:
+  node:
+    type: node:18
+
+tooling:
+  # Theme.
+  theme-production:
+    service: node
+    description: Compiles the theme in PROD mode.
+    cmd:
+      - npm install
+      - npm run production
+    dir: /app/web/profiles/contrib/droopler/themes/custom/droopler_theme
+  theme-dev:
+    service: node
+    description: Compiles the theme in DEV mode.
+    cmd:
+      - npm install
+      - npm run dev
+    dir: /app/web/profiles/contrib/droopler/themes/custom/droopler_theme
+  theme-watch:
+    service: node
+    description: Watches the theme for changes.
+    cmd:
+      - npm install
+      - npm run watch
+    dir: /app/web/profiles/contrib/droopler/themes/custom/droopler_theme
+
+  # Subtheme.
+  subtheme-production:
+    service: node
+    description: Compiles the subtheme in PROD mode.
+    cmd:
+       - npm install
+       - npm run production
+    dir: /app/web/themes/custom/droopler_subtheme
+  subtheme-dev:
+    service: node
+    description: Compiles the subtheme in DEV mode.
+    cmd:
+      - npm install
+      - npm run dev
+    dir: /app/web/themes/custom/droopler_subtheme
+  subtheme-watch:
+    service: node
+    description: Watches the subtheme for changes.
+    cmd:
+      - npm install
+      - npm run watch
+    dir: /app/web/themes/custom/droopler_subtheme
+
+  # Build profile.
+  build-full-profile:
+    description: Builds the full profile (all modules + demo content) from the scratch.
+    cmd:
+      - appserver: drush site-install droopler install_configure_form.enable_update_status_module=TRUE install_configure_form.enable_update_status_emails=NULL --db-url='mysql://drupal10:drupal10@database/drupal10' --account-name=admin --account-pass=123 --site-name=droopler -y --locale=en droopler_additional_modules_form.module_d_blog=1 droopler_additional_modules_form.module_d_product=1 droopler_additional_modules_form.init_content=1 droopler_additional_modules_form.documentation=1
+  build-bare-profile:
+    description: Builds the bare profile (without demo content) from the scratch.
+    cmd:
+      - appserver: drush site-install droopler install_configure_form.enable_update_status_module=TRUE install_configure_form.enable_update_status_emails=NULL --db-url='mysql://drupal10:drupal10@database/drupal10' --account-name=admin --account-pass=123 --site-name=droopler -y --locale=en
+  prepare:
+    description: Prepares the codebase by downloading all vendors and compiling assets.
+    cmd:
+      - appserver: composer install
+      - node: cd /app/web/profiles/contrib/droopler/themes/custom/droopler_theme && npm install
+      - node: cd /app/web/themes/custom/droopler_subtheme && npm install
+      - node: cd /app/web/profiles/contrib/droopler/themes/custom/droopler_theme && npm run production
+      - node: cd /app/web/themes/custom/droopler_subtheme && npm run production
+

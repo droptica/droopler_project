@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+PHPCS_CONFIG_PATH="./phpcs.xml"
+
+if [[ "$#" -gt 0 && "$1" == "--droopler" ]]; then
+  PHPCS_DIRECTORIES="/app/web/profiles/contrib/droopler/modules/custom /app/web/profiles/contrib/droopler/themes/custom"
+  docker run --rm -t -v `pwd`:/app droptica/phpcs:latest phpcs  --standard=${PHPCS_CONFIG_PATH} ${PHPCS_DIRECTORIES}
+else
+  docker run --rm -t -v `pwd`:/app droptica/phpcs:latest phpcs  --standard=${PHPCS_CONFIG_PATH}
+fi

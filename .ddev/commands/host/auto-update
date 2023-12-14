@@ -1,0 +1,214 @@
+#!/usr/bin/env bash
+
+# Disable commands dynamic path.
+# shellcheck disable=SC2154
+
+# Prepare some colors.
+red=$(tput -T xterm-256color setaf 1)
+aqua=$(tput -T xterm-256color setaf 14)
+lime=$(tput -T xterm-256color setaf 10)
+yellow=$(tput -T xterm-256color setaf 11)
+no_color=$(tput -T xterm-256color sgr0)
+
+# Declare composer update function.
+composer_update() {
+  # Print debug command
+  echo "${aqua}[Auto update] ${no_color}Running: ${yellow}ddev composer update $1${no_color}"
+
+  # Run ddev composer update on all available updates.
+  (ddev composer update $1 | tee composer_update_result.txt) > /dev/null 2>&1
+
+  # Get update result.
+  composer_update_result=$(cat composer_update_result.txt) && rm composer_update_result.txt
+
+  # Check if we see problem string inside our logs.
+  if [[ ${composer_update_result} == *"Problem"* ]]; then
+    # Print message about errors.
+    echo "${aqua}[Auto update] ${red}Composer update failed due to dependencies problems. Fix all listed problems and try again.${no_color}"
+    exit
+  fi
+
+  # Check if we see permission denied string inside our logs.
+  if [[ ${composer_update_result} == *"Permission denied (publickey)"* ]]; then
+    # Print message about errors.
+    echo "${aqua}[Auto update] ${red}Composer update failed due to permission denied. Fix all listed problems and try again.${no_color}"
+    exit
+  fi
+}
+
+# Declare auto update function.
+auto_update() {
+  # Prepare declaration.
+  declare -A packages_to_update=()
+
+  # Prepare some variables.
+  app_path="web"
+  updates_check_script_path=".ddev/commands/host/auto_update/updates_check.php"
+
+  # Check if target script does actually exists.
+  if [[ ! -f ${updates_check_script_path} ]]; then
+    # If not print proper message.
+    echo "${aqua}[Auto update] ${red}Updates check failed. File 'updates_check.php' not found.${no_color}"
+    exit 1;
+  fi
+
+  # Loop through each given site.
+  for site in "$@"; do
+    # Print what we are doing on which site.
+    echo "${aqua}[Auto update] ${no_color}Running auto-update on site \"${yellow}${site}${no_color}\"."
+    echo "${aqua}[Auto update] ${no_color}Enabling update module on target site..."
+    echo "${aqua}[Auto update] ${no_color}Running: ${yellow}ddev drush en update -y -l \"${site}\"${no_color}"
+
+    # Enable update module.
+    ddev drush en update -y -l "${site}" > /dev/null 2>&1
+
+    # Print what we gonna do.
+    echo "${aqua}[Auto update] ${no_color}Clearing cache after enabling module..."
+    echo "${aqua}[Auto update] ${no_color}Running: ${yellow}ddev drush cr -y -l \"${site}\"${no_color}"
+
+    # Clear cache after those actions
+    ddev drush cr -y -l "${site}" > /dev/null 2>&1
+
+    # Print what we gonna do.
+    echo "${aqua}[Auto update] ${no_color}Gather info about packages that need to be updated..."
+    echo "${aqua}[Auto update] ${no_color}Running: ${yellow}ddev php \"${updates_check_script_path}\" \"${site}\" \"${app_path}\"${no_color}"
+
+    # Run update test on given site.
+    updates_check_result=$(ddev php "${updates_check_script_path}" "${site}" "${app_path}" | tail -n1)
+
+    # Check if results does actually contain anything.
+    if [[ ${updates_check_result} =~ (<<)(.*)(>>) ]]; then
+      # Get our packages which need to be updates.
+      if [[ -n ${BASH_REMATCH[2]} ]]; then
+        # Loop through each package to update.
+        for package in ${BASH_REMATCH[2]}; do
+          # Save that package to array.
+          packages_to_update[${package}]=${package}
+        done
+      fi
+    else
+      # In case of any other case, print error.
+      echo "${aqua}[Auto update] ${red}Updates check failed. Reason: ${no_color}${updates_check_result}"
+      exit 1;
+    fi
+  done
+
+  # Check if we successfully get some requirements.
+  if [[ -n "${packages_to_update[*]}" ]]; then
+    # Print them.
+    echo "${aqua}[Auto update] ${no_color}Required update for following packages: ${lime}${packages_to_update[*]}${no_color}"
+
+    # If drupal/core needs to be updated, we need to check if drupal/core-recommended is used.
+    if [[ "${packages_to_update[*]}" == *"drupal/core"* ]]; then
+      # Print debug command.
+      echo "${aqua}[Auto update] ${no_color}Running: ${yellow}ddev composer show drupal/core-recommended${no_color}"
+
+      # Show all core-recommended packages.
+      ddev composer show drupal/core-recommended | tee drupal_core_recommended.txt > /dev/null 2>&1
+
+      # Save them to variable.
+      drupal_core_recommended=$(cat drupal_core_recommended.txt) && rm drupal_core_recommended.txt
+
+      # Check if core-recommend was found.
+      if [[ ${drupal_core_recommended} != *"Package drupal/core-recommended not found"* ]]; then
+        # If so then run all core-* updates.
+        composer_update "drupal/core-* --with-all-dependencies --no-interaction --no-dev"
+
+        # Remove drupal/core from the list, since the update for it was already executed.
+        unset packages_to_update["drupal/core"]
+      fi
+    fi
+
+    # Update all other packages for which update is needed.
+    if [[ -n "${packages_to_update[*]}" ]]; then
+      # Run the same command as for drupal/core.
+      composer_update "${packages_to_update[*]} --with-dependencies --no-interaction"
+    fi
+
+    # Print debug command.
+    echo "${aqua}[Auto update] ${no_color}Running: ${yellow}git status${no_color}"
+
+    # Check if composer.lock was changed and grab full path to it from git status output.
+    git status | tee git_status_result.txt > /dev/null 2>&1
+    git_status_result=$(cat git_status_result.txt) && rm git_status_result.txt
+
+    # Check if we have changes inside composer.lock
+    if [[ ${git_status_result} =~ ([ ]+)(([a-zA-Z0-9_ \/\.\-]+\/)*composer\.lock) ]]; then
+      # Get lock file changes for variables.
+      composer_lock_file=${BASH_REMATCH[2]}
+      date=$(date '+%Y-%m-%d_%H-%M-%S')
+      update_branch_name="update/${date}"
+
+      # Try to run extra commands after update.
+      for site in ${1//,/ }; do
+        # Print debug command.
+        echo "${aqua}[Auto update] ${no_color}Running: ${yellow}ddev drush updb -y -l \"${site}\"${no_color}"
+
+        # Run database update on current site.
+        (ddev drush updb -y -l "${site}" 2>&1 | tee drush_update_db_result.txt) > /dev/null 2>&1
+        drush_update_db_result=$(cat drush_update_db_result.txt)
+
+        # Check if we have success.
+        if
+          [[ ${drush_update_db_result} != *"[success] No pending updates."* ]] &&
+          [[ ${drush_update_db_result} != *"[success] Finished performing updates."* ]] &&
+          [ "${#drush_update_db_result}" -gt 0 ]
+        then
+          # If not print that and quit.
+          echo "${aqua}[Auto update] ${red}Database updates failed.${no_color}"
+          exit 1;
+        fi
+
+        # Remove logs from drush update db.
+        rm drush_update_db_result.txt
+
+        # Print debug command.
+        echo "${aqua}[Auto update] ${no_color}Running: ${yellow}ddev drush cr -y -l \"${site}\"${no_color}"
+
+        # Final step, clear cache.
+        ddev drush cr -y -l "${site}" > /dev/null 2>&1
+
+        # Print debug command.
+        echo "${aqua}[Auto update] ${no_color}Running: ${yellow}ddev drush cex -y -l \"${site}\"${no_color}"
+
+        # Final step, clear cache.
+        ddev drush cex -y -l "${site}" > /dev/null 2>&1
+      done
+
+      # Print debug command.
+      echo "${aqua}[Auto update] ${no_color}Running: ${yellow}git checkout && git add && git commit${no_color}"
+
+      # Create new branch, add updates files and commit them.
+      git checkout -B "${update_branch_name}" > /dev/null 2>&1
+      git add "*.yml" > /dev/null 2>&1
+      git add "composer.json" > /dev/null 2>&1
+      git add "${composer_lock_file}" > /dev/null 2>&1
+      git commit -m "${DDEV_SITENAME^}: Update ${date}" > /dev/null 2>&1
+      git push --set-upstream origin "${update_branch_name}"
+
+      # Print success message.
+      echo "${aqua}[Auto update] ${lime}Auto update finished successfully.${no_color}"
+    else
+      # If we do not have any changes inside composer.lock print message.
+      echo "${aqua}[Auto update] ${red}Branch not created, because composer.lock file was not modified.${no_color}"
+    fi
+  else
+    # Print proper message if we do not have security updates.
+    echo "${aqua}[Auto update] ${lime}No security updates available.${no_color}"
+  fi
+}
+
+# Get all sites that user requested.
+sites_to_update=${@:1}
+
+# Check if we actually have any site.
+if [[ -z ${sites_to_update+x} || -z ${sites_to_update} ]]; then
+  # If not make default one as required.
+  sites_to_update="default"
+fi
+
+# Print proper message if we do not have security updates.
+echo "${aqua}[Auto update] ${lime}Running auto-update${no_color} script on those sites: ${yellow}${sites_to_update}${no_color}."
+
+# Run auto_update function with all given sites.
+auto_update ${sites_to_update}

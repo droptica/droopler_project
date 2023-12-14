@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Run the quality tools and make sure they pass before allowing a commit.
+./.githooks/precommit/phpcs.sh &&
+./.githooks/precommit/phpstan.sh &&
+./.githooks/precommit/build-css.sh

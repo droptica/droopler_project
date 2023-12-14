@@ -1,8 +1,12 @@
-# Droopler template for new project #
-<img src="https://droopler-demo.droptica.com/themes/custom/droopler_subtheme/logo.svg" width=300 alt="Droopler Logo" />
+[![Droopler](https://droopler-demo.droptica.com/themes/custom/droopler_subtheme/logo.svg 'Droopler')](https://droopler-demo.droptica.com)
 
-## What is Droopler? ##
-Droopler is a Drupal 10 profile designed to kickstart a new webpage in a few minutes. It's based on the latest frontend technologies, including Bootstrap 4. The maintainer of Droopler is [Droptica](https://droptica.com).
+# Droopler template for new project
+
+---
+
+## About
+
+Droopler is a Drupal 10 profile designed to kickstart a new webpage in a few minutes. It's based on the latest frontend technologies, including Bootstrap 5. The maintainer of Droopler is [Droptica](https://droptica.com).
 
 * **Official website**: [droptica.com/droopler](https://www.droptica.com/droopler)
 * **Tutorials**: [droptica.com/droopler/tutorials](https://www.droptica.com/droopler/tutorials/)
@@ -11,98 +15,195 @@ Droopler is a Drupal 10 profile designed to kickstart a new webpage in a few min
 * **Drupal.org project**: [drupal.org/project/droopler](https://www.drupal.org/project/droopler)
 * **Issue queue**: [drupal.org/project/issues/droopler](https://www.drupal.org/project/issues/droopler)
 
-For the latest news please subscribe to our [Facebook](https://www.facebook.com/Droopler/) and [Twitter](https://twitter.com/DrooplerCMS).
+For the latest news, follow us on [Facebook](https://www.facebook.com/Droopler/) and [Twitter](https://twitter.com/DrooplerCMS).
 
-## What is this Droopler template? ##
-It's a skeleton, a boilerplate for new projects based on Droopler. If you wish to use Droopler - fork (or download) this repository. It contains a minimum set of code to start your new website. Threat it the same as [drupal/recommended-project](https://github.com/drupal/recommended-project) or [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project).
+### What is this Droopler template? ##
+It's a skeleton, a boilerplate for new projects based on Droopler. If you wish to use Droopler - fork (or download) this repository. It contains a minimal set of code to start your new site. Threat it the same way as [drupal/recommended-project](https://github.com/drupal/recommended-project) or [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project).
 
-This code includes:
+This repository includes:
 
 - **composer.json** with all dependencies required to run Droopler.
 - **.gitignore** adjusted to use GIT with Drupal.
 - Boilerplate subtheme with minimal required CSS/SCSS and Javascript. It contains gulpfile.js to speed up development of Drupal's frontend.
 
-## How to build the website? ##
+## Deploy on Platform.sh
 
-**1) Run Composer**
+You can deploy and host your Droopler installation on [Platform.sh](https://platform.sh/).
+
+<a href="https://console.platform.sh/projects/create-project?template=https://bitbucket.org/droptica/droopler_b5_project/src/master/.platform.template.yml">
+    <img src="https://platform.sh/images/deploy/lg-blue.svg" alt="Deploy Droopler on Platform.sh" width="180px" />
+</a>
+
+## Quick start
+
+Fork this repository and clone the newly created to your local machine.
+
+## Local development
+
+This section provides instructions for running the `Droopler` distribution locally.
+
+### Using custom development environment
+
+1. Run `composer create-project droptica/droopler-project <path> "^8.4"` to install the project and its dependencies.
+2. Run npm to download the theme dependencies and compile assets.<br /><br />
+Droopler uses the npm stack to speed up the development of new sites. It compiles SCSS to CSS, allows Autoprefixer to handle browser compatibility, and minimizes all JavaScript files. [Install Node v18 and npm](https://nodejs.org/en/download/) on your computer and run the following commands in the root directory of your project:
 
 ```sh
-$ composer create-project droptica/droopler-project <path> "^8.3.1"
-$ cd droopler
-$ composer install
-```
-
-**2) Run npm**
-
-Droopler is using Gulp stack to speed up development of new sites. It compiles SCSS to CSS, enables Autoprefixer to deal with browser compatibility and minimizes all JavaScript files. [Install Node v13 and npm](https://nodejs.org/en/download/) on your computer and in the root directory of your project run the following commands:
-
-```sh
-$ npm install --global gulp-cli
 $ cd web/profiles/contrib/droopler/themes/custom/droopler_theme
 $ npm install
-$ gulp compile
-$ cd -
+
 $ cd web/themes/custom/droopler_subtheme
 $ npm install
-$ gulp compile
+$ npm run dev
 ```
-
-**3) Run Drupal installation**
-
+3. Run Drupal installation.<br />
 Go to http://yourserver.local/install.php and follow the steps of configuration.
 
-## How to work with the subtheme? ##
+### Using DDEV
 
-First run **gulp watch** in your subtheme's directory (remember to compile `droopler_theme` first). It will track all the changes in theme source files and compile assets in the fly.
+1. [Install ddev](https://ddev.readthedocs.io/en/stable/#installation).
+2. Run `ddev config` to configure the project.
+3. Run `ddev start` to start the project.
+4. Run `ddev composer install` to download the project dependencies.
+5. If you notice problems with accessing to the repository, run `ddev auth ssh` to add the keys from your `~/.ssh` directory to the web container and run `ddev composer install` command once again.
+6. Run `ddev theme` to install the theme dependencies and compile assets. By default, production assets are compiled. You can run `ddev theme dev` to compile assets for development. You can also run `ddev theme watch` to watch for changes in SCSS and JS and process them on the fly.
+7. Go to the URL provided by ddev and finish installing the website. You can also run `ddev build-profile` to build the Droopler profile from the CLI (you will get a fully featured version, with blog, products and demo content).
+
+### Using Lando
+1. [Install lando](https://docs.lando.dev/getting-started/installation.html).
+2. Run `lando start` to start the project.
+3. Run `lando prepare` to build the project's code. Alternatively, you can run `lando composer install` to download the project dependencies, and then `lando theme-production` and `lando subtheme-production` to compile assets.
+4. Go to the URL provided by `lando info` and finish installing the website. You can also build the Droopler profile from the CLI. Run `lando build-full-profile` for the fully-featured version, or `lando build-full-profile` for the minimal one.
+
+### Using DDEV connected to a database instance on an active Platform.sh environment
+This is instructions for running the template locally, connected to a live database instance on an active Platform.sh environment.
+
+In all cases for developing with Platform.sh, it's important to develop on an isolated environment - do not connect to data on your production environment when developing locally.
+Each of the options below assume that you have already deployed this template to Platform.sh, as well as the following starting commands:
+
+```bash
+platform get PROJECT_ID
+cd project-name
+platform environment:branch updates
+```
+
+DDEV provides an integration with Platform.sh that makes it simple to develop Drupal locally. Check the [providers documentation](https://ddev.readthedocs.io/en/latest/users/providers/platform/) for the most up-to-date information.
+
+In general, the steps are as follows:
+
+1. [Install ddev](https://ddev.readthedocs.io/en/stable/#installation).
+1. A configuration file has already been provided at `.ddev/providers/platform.yaml`, so you should not need to run `ddev config`.
+1. [Retrieve an API token](https://docs.platform.sh/development/cli/api-tokens.html#get-a-token) for your organization via the management console.
+1. Update your ddev global configuration file to use the token you've just retrieved:
+    ```yaml
+    web_environment:
+    - PLATFORMSH_CLI_TOKEN=abcdeyourtoken
+    ```
+1. Run `ddev restart`.
+1. Get your project ID with `platform project:info`. If you have not already connected your local repo with the project (as is the case with a source integration, by default), you can run `platform project:list` to locate the project ID, and `platform project:set-remote PROJECT_ID` to configure Platform.sh locally.
+1. Update the `.ddev/providers/platform.yaml` file for your current setup:
+    ```yaml
+    environment_variables:
+    project_id: PROJECT_ID
+    environment: CURRENT_ENVIRONMENT
+    application: drupal
+    ```
+1. Get the current environment's data with `ddev pull platform`.
+1. When you have finished with your work, run `ddev stop` and `ddev poweroff`.
+
+> **Note:**
+>
+> For many of the steps above, you may need to include the CLI flags `-p PROJECT_ID` and `-e ENVIRONMENT_ID` if you are not in the project directory or if the environment is associated with an existing pull request.
+
+## How to work with the subtheme?
+
+### Using DDEV
+There are several comands that help you to work with the subtheme. You can run them from the root directory of your project.
+
+- `ddev theme watch` - watches for changes in SCSS and JS and processes them on the fly
+- `ddev theme dev` - cleans derivative files and compiles all SCSS/JS in the subtheme for DEV environment
+- `ddev theme production` - cleans derivative files and compiles all SCSS/JS in the subtheme for PROD environment
+
+### Using lando
+There are several comands that help you to work with the subtheme. You can run them from the root directory of your project.
+
+- `lando theme-watch` or `lando subtheme-watch` - watches for changes in SCSS and JS and processes them on the fly
+- `lando theme-dev` or `lando subtheme-dev` - cleans derivative files and compiles all SCSS/JS in the theme for DEV environment
+- `lando theme-production` or `lando subtheme-production` - cleans derivative files and compiles all SCSS/JS in the theme for PROD environment
+
+### Running npm on your own
+First run <strong>npm run watch</strong> in your subtheme's directory. It will track all the changes in theme source files and compile assets in the fly.
 
 ```sh
 $ cd web/themes/custom/droopler_subtheme
-$ gulp watch
+$ npm run watch
 ```
 
-There are also other Gulp commands for theme developers, here's the full reference:
+There are also other npm commands for theme developers, here's the full reference:
 
- - **gulp watch** - watches for changes in SCSS and JS and proceses them on the fly
- - **gulp compile** - cleans derivative files and compiles all SCSS/JS in the subtheme for DEV environment
- - **gulp dist** - cleans derivative files and compiles all SCSS/JS in the subtheme for PROD environment
- - **gulp clean** - cleans derivative files
- - **gulp debug** - prints Gulp debug information, this comes in handy when something's not working
+- `npm run watch` - watches for changes in SCSS and JS and processes them on the fly
+- `npm run dev` - cleans derivative files and compiles all SCSS/JS in the subtheme for DEV environment
+- `npm run production` - cleans derivative files and compiles all SCSS/JS in the subtheme for PROD environment
+- `npm run stylint` - run stylint
+- `npm run stylint-fix` - run stylint and fix errors automatically
 
-## SCSS structure ##
+## SCSS structure
 
- - **style.scss** - combines all SCSS code from base theme and subtheme
- - **print.scss** - combines all SCSS code for printing from base theme and subtheme
- - **config/** - the most important directory that contains the subtheme configuration - you can add your own config files like _foobar.scss, just refer to them in _all.scss.
- - **libraries/** - additional files needed by Drupal
+- **src/scss/main.style.scss** - combines all SCSS code from base theme and subtheme
+- **src/components** - directory where you can keep all your components, see [components/README.md](web/themes/custom/droopler_subtheme/src/components/README.md)
 
-You can use any SCSS structure you like. We recommend dividing files into **layout/** and **components/** directories. Just remember to include your files in **style.scss**.
+You can use any SCSS structure you like. We recommend dividing files into **layout/** and **components/** directories. Just remember to include your files in **main.style.scss**.
 
-## SCSS Configuration ##
+## SCSS Configuration
 
-Droopler is designed to make your work easier. You don't have to override SCSS or CSS code to make your own adjustments. In most cases it is enough to modify the configuration. Just look into variable definitions in the subtheme's **scss/config/_base_theme_overrides.scss** file.
+Droopler is designed to make your work easier. You don't have to override SCSS or CSS code to make your own adjustments. In most cases it is enough to modify the configuration.
 
+Just look into variables definitions in the subtheme.
+
+Use **src/scss/bootstrap/_variables.scss** file to overwrite base bootstrap variables.
 ```scss
-// Colours - The Greeks
-// -------------------------
-// $color-odysseus: white;
-
-// Paragraph d_p_banner
-// -------------------------
-// $d-p-banner-header-color: $color-odysseus;
-// $d-p-banner-subheader-color: $color-odysseus;
+// Colors.
+// $red: #ac0000 !default;
+// $orange: #ff9475 !default;
+// $primary: $red !default;
 ```
 
-To alter this - uncomment the line and change the value. A you can see - there are many levels of variables, see the comments in _base_theme_overrides.scss to get some more information.
+Use **src/scss/base/_themes.scss** file to overwrite project specific colors in each theme.
+```scss
+// *[data-theme="theme-light"] {
+//   --section-background-color: #fff;
+//   --overlay-background-color: #fff;
+//   --divider-background-color: #{$red};
+//   ...
+// }
+```
 
-When you save this config file, **gulp watch** will recompile all SCSS with your own config.
+Use **src/scss/base/_variables.scss** file to overwrite components/paragraphs variables.
+```scss
+// :root {
+//   // Base component: CTA.
+//   --cta-width: 100%;
+//   --cta-max-width: 18rem;
+//   --cta-margin-top-bottom: 0.25rem;
+//   ...
+// }
+```
 
-## Updating Droopler ##
+When you save this config file, **npm run dev** will recompile all SCSS with your own config.
+
+> **Extending and overwriting components**
+>
+> Instead of overwriting the particular component through the CSS variables in the `_variables.scss` file, you can extend or overwrite it in the `src/components` directory.
+>
+> See: [components/README.md](web/themes/custom/droopler_subtheme/src/components/README.md)
+
+## Updating Droopler
 
 See the [UPDATE.md](https://github.com/droptica/droopler/blob/master/UPDATE.md) file from the Droopler profile.
 
-## How to install Google Fonts? ##
+## How to install Google Fonts?
 
-By default Droopler uses free [Lato](http://www.latofonts.com/) webfont. If you wish to install your own fonts from Google - put their definitions into **droopler_subtheme.libraries.yml** like this:
+By default Droopler uses free [Inter](https://fonts.google.com/specimen/Inter) webfont. If you wish to install your own fonts from Google - put their definitions into **droopler_subtheme.libraries.yml** like this:
 
 ```yaml
 global-styling:
@@ -113,6 +214,20 @@ global-styling:
       css/style.css: {}
 ```
 
-## How to install icon fonts? ##
+## How to install icon fonts?
 
 If you wish to install FontAwesome or Glyphicons from the CDN - just grab their URLs and follow the steps described in previous chapter about Google Fonts. You'll find a FontAwesome example in **droopler_subtheme.libraries.yml** and **droopler_subtheme.info.yml**.
+
+## Setup git hooks
+​
+In the `.githooks` directory you can find the pre-commit hooks to run the quality tools and to make sure that the front-end has been compiled in the `production` mode.
+
+To set-up git hooks run:
+```shell
+git config --local core.hooksPath .githooks/
+```
+​
+For the first time or when you get no permission error add `+x` to those scripts.
+```shell
+chmod -R +x .githooks/
+```

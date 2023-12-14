@@ -1,0 +1,81 @@
+tests:
+  'The homepage should be fast':
+    path:
+      - '/'
+    assertions:
+      - 'main.wall_time <= 250ms'
+  'Some Composer dependencies have known security issues and should be upgraded':
+    path:
+      - '/.*'
+    assertions:
+      - { expression: 'not has_vulnerable_dependencies()' }
+  '"assert.active" is a dev_only feature and should be disabled in production':
+    path:
+      - '/.*'
+    assertions:
+      - { expression: 'runtime.configuration.assert_active === false' }
+  '"display_errors" should be disabled':
+    path:
+      - '/.*'
+    assertions:
+      - { expression: 'not is_configuration_enabled("display_errors")' }
+  '"display_startup_errors" should not be enabled':
+    path:
+      - '/.*'
+    assertions:
+      - { expression: 'not is_configuration_enabled("display_startup_errors")' }
+  '"max_execution_time" should be less than 30 seconds for Web requests':
+    path:
+      - '/.*'
+    assertions:
+      - { expression: 'runtime.configuration.max_execution_time <= 30' }
+  '"session.use_strict_mode" should be enabled':
+    path:
+      - '/.*'
+    assertions:
+      - { expression: 'runtime.configuration.session_use_strict_mode === true' }
+  '"zend.detect_unicode" should be disabled as BOMs are not portable':
+    path:
+      - '/.*'
+    assertions:
+      - { expression: 'runtime.configuration.zend_detect_unicode === false' }
+  'The realpath cache ttl should be more than one hour in production':
+    path:
+      - '/.*'
+    assertions:
+      - { expression: 'runtime.configuration.realpath_cache_ttl >= 3600' }
+  'The session garbage collector should be disabled in production':
+    path:
+      - '/.*'
+    assertions:
+      - { expression: 'runtime.configuration.session_gc_probability === 0' }
+
+scenarios: |
+  #!blackfire-player
+
+  name "Drupal Scenarios"
+
+  group homepages
+    visit url("/")
+      name "Homepage (English)"
+      expect status_code() == 200
+    visit url("/es")
+      name "Homepage (Español)"
+      expect status_code() == 200
+
+  group articles
+    visit url("/en/articles")
+      name "Articles"
+      expect status_code() == 200
+
+  group admin_anonymous
+    visit url("/en/admin/content")
+      expect status_code() == 403
+    visit url("/en/admin/structure")
+      expect status_code() == 403
+
+  scenario
+    name "Anonymous Visit"
+    include homepages
+    include articles
+    include admin_anonymous

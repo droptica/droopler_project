@@ -19,13 +19,18 @@
         }
     },
     "require": {
-        "composer/installers": "^1.2",
-        "droptica/droopler": "dev-develop",
+        "composer/installers": "^2.2",
+        "droptica/droopler": "^4.0",
+        "drupal/better_exposed_filters": "^6.0",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-recommended": "^10.0",
-        "drush/drush": "^12.0",
+        "drupal/facets": "^2.0",
+        "drupal/redis": "^1.7",
+        "drupal/search_api": "^1.29",
+        "drupal/tvi": "2.0.x-dev@dev",
+        "drush/drush": "^12",
         "oomphinc/composer-installers-extender": "^2.0",
-        "zaporylie/composer-drupal-optimizations": "^1.1"
+        "platformsh/config-reader": "^2.4"
     },
     "require-dev": {
         "drupal/core-dev": "^10.0",
@@ -65,7 +70,7 @@
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library", "type:git", "type:bower-asset", "type:npm-asset"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/profiles/contrib/droopler": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],

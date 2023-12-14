@@ -1,0 +1,12 @@
+# Schema for the configuration files of the droopler_subtheme theme.
+
+droopler_subtheme.settings:
+  type: theme_settings
+  label: 'droopler_subtheme settings'
+  mapping:
+    mobile_breakpoint:
+      type: integer
+      label: 'Mobile breakpoint'
+    tablet_breakpoint:
+      type: integer
+      label: 'Tablet breakpoint'
