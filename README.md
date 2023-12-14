@@ -30,7 +30,7 @@ This repository includes:
 
 You can deploy and host your Droopler installation on [Platform.sh](https://platform.sh/).
 
-<a href="https://console.platform.sh/projects/create-project?template=https://bitbucket.org/droptica/droopler_b5_project/src/master/.platform.template.yml">
+<a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/droptica/droopler_project/4.0.x/.platform.template.yml">
     <img src="https://platform.sh/images/deploy/lg-blue.svg" alt="Deploy Droopler on Platform.sh" width="180px" />
 </a>
 
