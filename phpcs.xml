@@ -2,7 +2,8 @@
 <ruleset name="droopler">
     <description>PHP CodeSniffer configuration for a Drupal module.</description>
 
-    <arg name="extensions" value="php,inc,install,module,yaml,twig,theme,test,profile,info,txt,twig,scss"/>
+    <arg name="extensions" value="php,inc,install,module,info,test,profile,theme,yaml,txt,twig,scss"/>
+
     <arg name="report" value="full,gitblame"/>
 
     <config name="installed_paths" value="../../drupal/coder/coder_sniffer/Drupal,../../drupal/coder/coder_sniffer/DrupalPractice,../../slevomat/coding-standard" />
@@ -11,6 +12,8 @@
     <file>/app/web/themes/custom</file>
 
     <!-- Exclude third party libraries. -->
+    <exclude-pattern>/.ddev</exclude-pattern>
+    <exclude-pattern>/.lando</exclude-pattern>
     <exclude-pattern>*/vendor/*</exclude-pattern>
     <exclude-pattern>*/node_modules/*</exclude-pattern>
     <exclude-pattern>*/themes/custom/*/build/*</exclude-pattern>
