@@ -59,9 +59,5 @@
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing"/>
 
     <!-- Use statements should be ordered alphabetically. -->
-    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses">
-        <properties>
-            <property name="caseSensitive" value="true"/>
-        </properties>
-    </rule>
+    <rule ref="SlevomatCodingStandard.Namespaces.AlphabeticallySortedUses" />
 </ruleset>
