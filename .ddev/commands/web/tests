@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ $# -eq 0 ]]
+then
+  codecept run acceptance,js_capable
+else
+  codecept run $@
+fi
