@@ -22,7 +22,8 @@ class JSTestCest
     public function jsThemes(AcceptanceTester $I)
     {
         $I->wantTo('See js themes files');
-        $I->amOnPage('/profiles/contrib/droopler/themes/custom/droopler_theme/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js');
+        $I->amOnPage('/profiles/contrib/droopler/themes/custom/droopler_theme/node_modules/bootstrap/dist/js/' .
+          'bootstrap.bundle.min.js');
         $I->seeResponseCodeIs(200);
         $I->amOnPage('/profiles/contrib/droopler/themes/custom/droopler_theme/build/js/main.script.js');
         $I->seeResponseCodeIs(200);
