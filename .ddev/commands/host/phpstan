@@ -2,7 +2,10 @@
 
 PHPSTAN_CONFIG_PATH="/opt/project/phpstan.neon"
 
-if [[ "$#" -gt 0 && "$1" == "--droopler" ]]; then
+if [[ "$#" -gt 0 && "$1" == "--tests" ]]; then
+  PHPSTAN_DIRECTORIES="/opt/project/tests"
+  docker run --rm -t -v `pwd`:/opt/project droptica/phpstan:latest analyse -c ${PHPSTAN_CONFIG_PATH} ${PHPSTAN_DIRECTORIES}
+elif [[ "$#" -gt 0 && "$1" == "--droopler" ]]; then
   PHPSTAN_DIRECTORIES="/opt/project/web/profiles/contrib/droopler"
   docker run --rm -t -v `pwd`:/opt/project droptica/phpstan:latest analyse -c ${PHPSTAN_CONFIG_PATH} ${PHPSTAN_DIRECTORIES}
 else
