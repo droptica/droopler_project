@@ -20,7 +20,7 @@
     },
     "require": {
         "composer/installers": "^2.2",
-        "droptica/droopler": "^4.0",
+        "droptica/droopler": "^4.0.x-dev",
         "drupal/better_exposed_filters": "^6.0",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-recommended": "^10.0",
