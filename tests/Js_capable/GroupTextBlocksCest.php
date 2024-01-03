@@ -69,7 +69,7 @@ class GroupTextBlocksCest
         $I->click(MTOFormField::field_d_media_icon($page_item)->__get('open-button'));
         $I->attachImage($I, 'mask.png');
         $I->fillCk5WysiwygEditor(FormField::field_d_long_text($page_item), 'LoremLorem');
-        $I->fillSingleLinkField(FormField::field_d_cta_link($page_item), 'http://en.droptica.localhost/blog');
+        $I->fillLinkField(FormField::field_d_cta_link($page_item), 'http://example.com', 'Example');
         $I->clickOn(FormField::submit());
         $I->waitPageLoad(30);
         $url = $I->grabFromCurrentUrl();

@@ -58,7 +58,7 @@ class CarouselParagraphCest
         $I->fillCk5WysiwygEditor(FormField::field_d_long_text($page_elements), 'LoremLorem');
         $I->fillLinkField(FormField::field_d_cta_link($page_elements), 'http://example.com', 'Example');
         $I->click(
-            "//*[contains(@data-drupal-selector, 'edit-field-page-section-0')] 
+            "//*[contains(@data-drupal-selector, 'edit-field-page-section-0')]
              //*[contains(@class, 'horizontal-tab-button-1')] //a[contains(@href, '#edit-group-items')]"
         );
         $page_item = ParagraphFormField::field_d_p_cs_item_reference($page_elements);
@@ -67,7 +67,7 @@ class CarouselParagraphCest
         $I->click(MTOFormField::field_d_media_icon($page_item)->__get('open-button'));
         $I->attachImage($I, 'mask.png');
         $I->fillCk5WysiwygEditor(FormField::field_d_long_text($page_item), 'LoremLorem');
-        $I->fillSingleLinkField(FormField::field_d_cta_link($page_item), 'http://en.droptica.localhost/blog');
+        $I->fillSingleLinkField(FormField::field_d_cta_single_link($page_item), 'http://en.droptica.localhost/blog');
         $page_item = ParagraphFormField::field_d_p_cs_item_reference($page_elements)->next();
         $I->seeVar($page_item);
         $I->click('.dropbutton-toggle button');
@@ -76,7 +76,7 @@ class CarouselParagraphCest
         $I->click(MTOFormField::field_d_media_icon($page_item)->__get('open-button'));
         $I->attachImage($I, 'mask.png');
         $I->fillCk5WysiwygEditor(FormField::field_d_long_text($page_item), 'LoremLorem');
-        $I->fillSingleLinkField(FormField::field_d_cta_link($page_item), 'http://en.droptica.localhost/blog');
+        $I->fillSingleLinkField(FormField::field_d_cta_single_link($page_item), 'http://en.droptica.localhost/blog');
         $I->clickOn(FormField::submit());
         $I->waitPageLoad(30);
         $url = $I->grabFromCurrentUrl();

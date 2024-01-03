@@ -80,8 +80,8 @@ class SubscribeForFileParagraphCest
         $I->fillTextField(FormField::field_d_p_sf_download_button($page_elements), 'Get download link!');
         $I->fillCk5WysiwygEditor(
             FormField::field_d_p_sf_download_page($page_elements),
-            'Text on the download page like: Lorem ipsum dolor sit amet,
-             consectetur adipiscing elit. [download-button]'
+            'Text on the download page like: Lorem ipsum dolor sit amet,'
+            . 'consectetur adipiscing elit. [download-button]'
         );
         $I->fillCk5WysiwygEditor(
             FormField::field_d_p_sf_mail_body($page_elements),
