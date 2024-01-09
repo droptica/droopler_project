@@ -33,13 +33,13 @@ To execute all or selected tests:
 
 ```bash
 ddev tests
-ddev tests acceptance
-ddev tests js_capable
+ddev tests Acceptance
+ddev tests Js_capable
 ```
 
 You can select the test to run by:
 
 ```bash
-ddev tests acceptance ResponseCodeTestCest
-ddev tests tests/js_capable/BannerParagraphCest.php
+ddev tests Acceptance ResponseCodeTestCest
+ddev tests Js_capable BannerParagraphCest
 ```
