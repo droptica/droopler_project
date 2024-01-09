@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Banner Paragraph tests.
- */
-
 namespace Tests\Js_capable;
 
 use Codeception\Util\Drupal\FormField;
@@ -22,6 +17,10 @@ use Tests\Support\JSCapableTester;
  */
 class ReferenceContentCest
 {
+    protected const TITLE_CONTENT_PAGE = 'Reference content test page';
+    protected const TITLE_REFERENCE_CONTENT_PAGE = 'Page to be referenced';
+    protected const TITLE_REFERENCE_CONTENT_COMPONENT = 'Reference content component';
+
     /**
      * Setup environment before each test.
      *
@@ -46,7 +45,7 @@ class ReferenceContentCest
         $I->wantTo('Create content.');
         $I->amOnPage('/node/add/content_page/');
         $I->seeVar(MTOFormField::title());
-        $I->fillTextField(FormField::title(), 'Et netus');
+        $I->fillTextField(FormField::title(), self::TITLE_CONTENT_PAGE);
         $I->clickOn(FormField::submit());
         $I->waitPageLoad(30);
         $url = $I->grabFromCurrentUrl();
@@ -65,13 +64,13 @@ class ReferenceContentCest
         $I->wantTo('Add reference content to new content page.');
         $I->amOnPage('/node/add/content_page/');
         $I->seeVar(MTOFormField::title());
-        $I->fillTextField(FormField::title(), 'Mans nosukums');
+        $I->fillTextField(FormField::title(), self::TITLE_REFERENCE_CONTENT_PAGE);
         $I->click(Locator::contains('strong', 'Page Sections'));
         $page_elements = ParagraphFormField::field_page_section();
         $I->seeVar($page_elements);
         $I->click('.dropbutton-toggle button');
         $I->addNewParagraph('d_p_reference_content', $page_elements);
-        $I->fillTextField(FormField::field_d_main_title($page_elements), 'Tytulik');
+        $I->fillTextField(FormField::field_d_main_title($page_elements), self::TITLE_REFERENCE_CONTENT_COMPONENT);
         $I->click(MTOFormField::field_d_media_icon($page_elements)->__get('open-button'));
         $I->attachImage($I, 'mask.png');
         $I->click(
@@ -82,7 +81,7 @@ class ReferenceContentCest
         $I->seeVar($page_item);
         $selector = "//*[contains(@data-drupal-selector, " .
                     "'edit-field-page-section-0-subform-field-d-p-reference-content-0')]";
-        $I->fillField($selector, 'Et netus');
+        $I->fillField($selector, self::TITLE_CONTENT_PAGE);
         $I->clickOn(FormField::submit());
         $I->waitPageLoad(30);
         $url = $I->grabFromCurrentUrl();
@@ -99,11 +98,11 @@ class ReferenceContentCest
     {
         $I->wantTo('see if the reference content is created');
         $I->amOnPage(Fixtures::get('reference_content_url'));
-        $I->see('Tytulik');
+        $I->see(self::TITLE_REFERENCE_CONTENT_COMPONENT);
         $src_icon = $I->grabAttributeFrom('.d-p-reference-content__content .media-icon img', 'src');
         $I->seeVar($src_icon);
         $I->assertStringContainsString('mask', $src_icon);
-        $I->see('Et netus');
+        $I->see(self::TITLE_CONTENT_PAGE);
         $I->see('LEARN MORE');
         $I->click('Learn more');
         $I->moveBack();
@@ -119,7 +118,7 @@ class ReferenceContentCest
     {
         $I->wantTo('clear up after the test');
         $I->amOnPage(Fixtures::get('reference_content_url'));
-        $node_nr = $I->grabNodeOfTypeAndTitleNoUser('content_page', 'Mans nosukums');
+        $node_nr = $I->grabNodeOfTypeAndTitleNoUser('content_page', self::TITLE_REFERENCE_CONTENT_PAGE);
         $str = "/node/{$node_nr}/delete";
         $I->seeVar($str);
         $I->click("//a[contains(@href,'$str')]");
@@ -127,7 +126,7 @@ class ReferenceContentCest
         $I->seeElement("//*[contains(@class, 'alert-success')]");
 
         $I->amOnPage(Fixtures::get('test_content_url'));
-        $node_nr = $I->grabNodeOfTypeAndTitleNoUser('content_page', 'Et netus');
+        $node_nr = $I->grabNodeOfTypeAndTitleNoUser('content_page', self::TITLE_CONTENT_PAGE);
         $str = "/node/{$node_nr}/delete";
         $I->seeVar($str);
         $I->click("//a[contains(@href,'$str')]");
