@@ -41,5 +41,5 @@ You can select the test to run by:
 
 ```bash
 ddev tests Acceptance ResponseCodeTestCest
-ddev tests tests/Js_capable/BannerParagraphCest.php
+ddev tests Js_capable BannerParagraphCest
 ```
