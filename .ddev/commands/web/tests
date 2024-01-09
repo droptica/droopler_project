@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# dodał bym tutaj flagi --html i --xml tak żeby po testach nawet jak zakończą się sukcesem w katalogu output pojawił się raport
+
+if [[ $# -eq 0 ]]
+then
+  codecept run Acceptance,Js_capable --html --xml
+else
+  codecept run $@ --html --xml
+fi

@@ -20,7 +20,7 @@
     },
     "require": {
         "composer/installers": "^2.2",
-        "droptica/droopler": "^4.0",
+        "droptica/droopler": "^4.0.x-dev",
         "drupal/better_exposed_filters": "^6.0",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-recommended": "^10.0",
@@ -34,7 +34,14 @@
     },
     "require-dev": {
         "drupal/core-dev": "^10.0",
-        "drupal/devel": "^5.0"
+        "drupal/devel": "^5.0",
+        "ericmartel/codeception-email": "^1.0",
+        "droptica/codeception-package": "^10.8"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -51,7 +58,8 @@
             "drupal/core-composer-scaffold": true,
             "oomphinc/composer-installers-extender": true,
             "zaporylie/composer-drupal-optimizations": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
         },
         "preferred-install": {
             "droptica/droopler": "source",
