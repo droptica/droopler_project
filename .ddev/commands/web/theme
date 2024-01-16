@@ -10,4 +10,14 @@ npm install
 # Install droopler_subtheme npm packages.
 cd  ${SUBTHEME_DIR}
 npm install
-gulp compile
+
+# Check if user wants instant-update.
+if [ "$1" == "watch" ]; then
+  gulp watch
+elif [ "$1" == "dev" ]; then
+  echo "Compiling DEV version."
+  gulp compile
+else
+  echo "Compiling PRODUCTION, minified version."
+  gulp dist
+fi
