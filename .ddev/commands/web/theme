@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+THEME_DIR="/var/www/html/web/profiles/contrib/droopler/themes/custom/droopler_theme"
+SUBTHEME_DIR="/var/www/html/web/themes/custom/droopler_subtheme"
+
+# Install droopler_theme npm packages.
+cd  ${THEME_DIR}
+npm install
+
+# Install droopler_subtheme npm packages.
+cd  ${SUBTHEME_DIR}
+npm install
+gulp compile

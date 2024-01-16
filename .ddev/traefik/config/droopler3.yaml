@@ -1,0 +1,86 @@
+#ddev-generated
+
+http:
+  routers:
+    
+    
+    droopler3-web-80-http:
+      
+      rule: HostRegexp(`droopler3.ddev.site`)
+      
+      service: "droopler3-web-80-http"
+      tls: false
+      entrypoints:
+        - http-80
+    
+    
+    droopler3-web-8025-http:
+      
+      rule: HostRegexp(`droopler3.ddev.site`)
+      
+      service: "droopler3-web-8025-http"
+      tls: false
+      entrypoints:
+        - http-8025
+    
+    
+    
+    
+    
+    
+    droopler3-web-80-https:
+      
+      rule: HostRegexp(`droopler3.ddev.site`)
+      
+      service: "droopler3-web-80-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-443
+    
+    
+    droopler3-web-8025-https:
+      
+      rule: HostRegexp(`droopler3.ddev.site`)
+      
+      service: "droopler3-web-8025-https"
+      
+      tls: true
+      
+      entrypoints:
+        - http-8026
+    
+    
+
+  services:
+    
+    droopler3-web-80-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-droopler3-web:80
+    
+    droopler3-web-8025-http:
+      loadbalancer:
+        servers:
+          - url: http://ddev-droopler3-web:8025
+    
+    droopler3-web-80-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-droopler3-web:80
+    
+    droopler3-web-8025-https:
+    
+      loadbalancer:
+        servers:
+          - url: http://ddev-droopler3-web:8025
+    
+
+
+tls:
+  certificates:
+    - certFile: /mnt/ddev-global-cache/traefik/certs/droopler3.crt
+      keyFile: /mnt/ddev-global-cache/traefik/certs/droopler3.key
+
