@@ -46,7 +46,8 @@
             "drupal/core-composer-scaffold": true,
             "oomphinc/composer-installers-extender": true,
             "zaporylie/composer-drupal-optimizations": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
         },
         "preferred-install": {
             "droptica/droopler": "source",
