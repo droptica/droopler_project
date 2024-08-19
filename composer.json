@@ -21,7 +21,7 @@
     "require": {
         "composer/installers": "^2.2",
         "droptica/droopler": "4.0.0-alpha3",
-        "drupal/better_exposed_filters": "^6.0",
+        "drupal/better_exposed_filters": "^7.0",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-recommended": "^10.0",
         "drupal/facets": "^2.0",
