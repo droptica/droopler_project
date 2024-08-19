@@ -15,6 +15,7 @@ use_dns_when_possible: true
 composer_version: "2.6"
 web_environment: []
 corepack_enable: false
+nodejs_version: "20"
 
 # Key features of DDEV's config.yaml:
 
