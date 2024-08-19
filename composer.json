@@ -28,7 +28,7 @@
         "drupal/redis": "^1.7",
         "drupal/search_api": "^1.29",
         "drupal/tvi": "2.0.x-dev@dev",
-        "drush/drush": "^12",
+        "drush/drush": "^13",
         "oomphinc/composer-installers-extender": "^2.0",
         "platformsh/config-reader": "^2.4"
     },
@@ -76,6 +76,11 @@
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+        },
+        "patches": {
+            "drupal/features": {
+                "[3375425] Deprecated function: Creation of dynamic property": "https://www.drupal.org/files/issues/2023-07-19/3375425-3.patch"
+            }
         }
     }
 }
