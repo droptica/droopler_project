@@ -34,7 +34,14 @@
     },
     "require-dev": {
         "drupal/core-dev": "^10.0",
-        "drupal/devel": "^5.0"
+        "drupal/devel": "^5.0",
+        "ericmartel/codeception-email": "^1.0",
+        "droptica/codeception-package": "^10.8"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
     },
     "conflict": {
         "drupal/drupal": "*"
