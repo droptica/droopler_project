@@ -51,7 +51,7 @@ class BannerParagraphCest
         $page_elements = ParagraphFormField::field_page_section();
         $I->seeVar($page_elements);
         $I->addNewParagraph('d_p_banner', $page_elements);
-        $I->fillTextField(FormField::field_d_main_title($page_elements), 'Tytulik');
+        $I->fillTextField(FormField::field_d_main_title($page_elements), 'title');
         $I->fillTextField(FormField::field_d_subtitle($page_elements), 'Loremlorem');
         $I->click(MTOFormField::field_d_media_background($page_elements)->__get('open-button'));
         $I->attachImage($I, 'test.jpeg');
@@ -75,7 +75,7 @@ class BannerParagraphCest
     {
         $I->wantTo('see if the banner is created');
         $I->amOnPage(Fixtures::get('banner_url'));
-        $I->see('Tytulik');
+        $I->see('title');
         $I->see('Loremlorem');
         $src_icon = $I->grabAttributeFrom('.media-icon img', 'src');
         $I->seeVar($src_icon);

@@ -52,8 +52,8 @@ class TextPagedParagraphCest
         $page_elements = ParagraphFormField::field_page_section();
         $I->seeVar($page_elements);
         $I->addNewParagraph('d_p_text_paged', $page_elements);
-        $I->fillTextField(FormField::field_d_main_title($page_elements), 'Tytulik');
-        $I->fillTextField(FormField::field_d_subtitle($page_elements), 'SubTytulik');
+        $I->fillTextField(FormField::field_d_main_title($page_elements), 'title');
+        $I->fillTextField(FormField::field_d_subtitle($page_elements), 'Subtitle');
         $I->click(MTOFormField::field_d_media_icon($page_elements)->__get('open-button'));
         $I->attachImage($I, 'mask.png');
         $I->fillCk5WysiwygEditor(FormField::field_d_long_text($page_elements), 'Loremlorem');
@@ -74,8 +74,8 @@ class TextPagedParagraphCest
     {
         $I->wantTo('See if the Text Paged is created');
         $I->amOnPage(Fixtures::get('text_url'));
-        $I->see('Tytulik');
-        $I->see('SubTytulik');
+        $I->see('title');
+        $I->see('Subtitle');
         $src_icon = $I->grabAttributeFrom('.d-p-text-paged__content-column .media-icon img', 'src');
         $I->seeVar($src_icon);
         $I->assertStringContainsString('mask', $src_icon);
@@ -83,7 +83,7 @@ class TextPagedParagraphCest
         $I->click('Example');
         $I->see('Example Domain');
         $I->moveBack();
-        $I->see('Tytulik');
+        $I->see('title');
     }
 
     /**

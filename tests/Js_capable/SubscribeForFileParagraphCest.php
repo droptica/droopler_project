@@ -52,7 +52,7 @@ class SubscribeForFileParagraphCest
         $I->seeVar($page_elements);
         $I->click('.dropbutton-toggle button');
         $I->addNewParagraph('d_p_subscribe_file', $page_elements);
-        $I->fillTextField(FormField::field_d_main_title($page_elements), 'Tytulik');
+        $I->fillTextField(FormField::field_d_main_title($page_elements), 'title');
         $I->click(MTOFormField::field_d_media_background($page_elements)->__get('open-button'));
         $I->attachImage($I, 'test.jpeg');
         $I->click(MTOFormField::field_d_media_icon($page_elements)->__get('open-button'));
@@ -103,7 +103,7 @@ class SubscribeForFileParagraphCest
     {
         $I->wantTo('see if the subscribe for file paragraph is created');
         $I->amOnPage(Fixtures::get('subscribe_url'));
-        $I->see('Tytulik');
+        $I->see('title');
         $I->see('Lorem');
         $src_icon = $I->grabAttributeFrom(
             '.d-p-subscribe-file__content-column .media-icon img',

@@ -52,7 +52,7 @@ class GroupTextBlocksCest
         $I->seeVar($page_elements);
         $I->click('.dropbutton-toggle button');
         $I->addNewParagraph('d_p_group_of_text_blocks', $page_elements);
-        $I->fillTextField(FormField::field_d_main_title($page_elements), 'Tytulik');
+        $I->fillTextField(FormField::field_d_main_title($page_elements), 'title');
         $I->click(MTOFormField::field_d_media_icon($page_elements)->__get('open-button'));
         $I->attachImage($I, 'mask.png');
         $I->fillCk5WysiwygEditor(FormField::field_d_long_text($page_elements), 'LoremLorem');
@@ -63,7 +63,7 @@ class GroupTextBlocksCest
         $I->seeVar($page_item);
         $I->click('.dropbutton-toggle button');
         $I->addParagraph('d_p_single_text_block', $page_item);
-        $I->fillTextField(FormField::field_d_main_title($page_item), 'Tytulik');
+        $I->fillTextField(FormField::field_d_main_title($page_item), 'title');
         $I->click(MTOFormField::field_d_media_background($page_item)->__get('open-button'));
         $I->attachImage($I, 'test.jpeg');
         $I->click(MTOFormField::field_d_media_icon($page_item)->__get('open-button'));
@@ -86,7 +86,7 @@ class GroupTextBlocksCest
     {
         $I->wantTo('see if the group text blocks is created');
         $I->amOnPage(Fixtures::get('group_text_blocks_url'));
-        $I->see('Tytulik');
+        $I->see('title');
         $src_background = $I->grabAttributeFrom('.d-p-single-text-block__background img', 'src');
         $I->seeVar($src_background);
         $I->assertStringContainsString('test', $src_background);
@@ -97,7 +97,7 @@ class GroupTextBlocksCest
         $I->click('Example');
         $I->see('Example Domain');
         $I->moveBack();
-        $I->see('Tytulik');
+        $I->see('title');
     }
 
     /**

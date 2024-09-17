@@ -53,7 +53,7 @@ class GalleryParagraphCest
         $page_elements = ParagraphFormField::field_page_section();
         $I->seeVar($page_elements);
         $I->addNewParagraph('d_p_gallery', $page_elements);
-        $I->fillTextField(FormField::field_d_main_title($page_elements), 'Tytulik');
+        $I->fillTextField(FormField::field_d_main_title($page_elements), 'title');
         $I->click(MTOFormField::field_d_media_icon($page_elements)->__get('open-button'));
         $I->attachImage($I, 'mask.png');
         $I->fillCk5WysiwygEditor(FormField::field_d_long_text($page_elements), 'Loremlorem');
@@ -85,14 +85,14 @@ class GalleryParagraphCest
     {
         $I->wantTo('See if the Text Paged is created');
         $I->amOnPage(Fixtures::get('text_url'));
-        $I->see('Tytulik');
+        $I->see('title');
         $src_icon = $I->grabAttributeFrom('.d-p-gallery__content-column .media-icon img', 'src');
         $I->seeVar($src_icon);
         $I->assertStringContainsString('mask', $src_icon);
         $I->see('Example');
         $I->click('Example');
         $I->moveBack();
-        $I->see('Tytulik');
+        $I->see('title');
     }
 
     /**

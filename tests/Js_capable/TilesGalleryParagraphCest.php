@@ -52,7 +52,7 @@ class TilesGalleryParagraphCest
         $I->seeVar($page_elements);
         $I->click('.dropbutton-toggle button');
         $I->addNewParagraph('d_p_tiles', $page_elements);
-        $I->fillTextField(FormField::field_d_main_title($page_elements), 'Tytulik');
+        $I->fillTextField(FormField::field_d_main_title($page_elements), 'title');
         $I->click(MTOFormField::field_d_media_icon($page_elements)->__get('open-button'));
         $I->attachImage($I, 'mask.png');
         try {
@@ -87,7 +87,7 @@ class TilesGalleryParagraphCest
         $I->wantTo('see if the tiles gallery paragraph is created');
         $I->amOnPage(Fixtures::get('tilesgallery_url'));
         $I->waitPageLoad(30);
-        $I->see('Tytulik');
+        $I->see('title');
         $I->see('Lorem');
         $src_icon = $I->grabAttributeFrom('.d-p-tiles__header-column .media-icon img', 'src');
         $I->seeVar($src_icon);
@@ -124,6 +124,6 @@ class TilesGalleryParagraphCest
         $I->seeVar($str);
         $I->click("//a[contains(@href,'$str')]");
         $I->click('#edit-submit');
-        $I->dontSee('Tytulik');
+        $I->dontSee('title');
     }
 }

@@ -53,7 +53,7 @@ class SidebarimageTestCest
         $page_elements = ParagraphFormField::field_page_section();
         $I->seeVar($page_elements);
         $I->addNewParagraph('d_p_side_image', $page_elements);
-        $I->fillTextField(FormField::field_d_main_title($page_elements), 'Tytulik');
+        $I->fillTextField(FormField::field_d_main_title($page_elements), 'title');
         $I->click(MTOFormField::field_d_media_background($page_elements)->__get('open-button'));
         $I->attachImage($I, 'test.jpeg');
         $I->fillWysiwygEditor(FormField::field_d_long_text($page_elements), 'Lorem ipsum');
@@ -74,7 +74,7 @@ class SidebarimageTestCest
     {
         $I->wantTo('see if the tekst is created');
         $I->amOnPage(Fixtures::get('text_url'));
-        $I->see('Tytulik');
+        $I->see('title');
         $src_background = $I->grabAttributeFrom('.d-p-side-image__background .media img', 'src');
         $I->seeVar($src_background);
         $I->assertStringContainsString('test', $src_background);
@@ -82,7 +82,7 @@ class SidebarimageTestCest
         $I->click('Example');
         $I->see('Example Domain');
         $I->moveBack();
-        $I->see('Tytulik');
+        $I->see('title');
     }
 
     /**
