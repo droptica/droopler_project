@@ -44,7 +44,7 @@ This section provides instructions for running the `Droopler` distribution local
 
 ### Using custom development environment
 
-1. Run `composer create-project droptica/droopler-project <path> "^8.4"` to install the project and its dependencies.
+1. Run `composer create-project droptica/droopler-project:^4.0-alpha <path>` to install the project and its dependencies.
 2. Run npm to download the theme dependencies and compile assets.<br /><br />
 Droopler uses the npm stack to speed up the development of new sites. It compiles SCSS to CSS, allows Autoprefixer to handle browser compatibility, and minimizes all JavaScript files. [Install Node v18 and npm](https://nodejs.org/en/download/) on your computer and run the following commands in the root directory of your project:
 

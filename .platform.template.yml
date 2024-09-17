@@ -24,7 +24,7 @@ info:
         Composer-based build<br />
 
 initialize:
-  repository: https://github.com/droptica/droopler_project.git@4.0.0-alpha1
+  repository: https://github.com/droptica/droopler_project.git@4.0.0-alpha3
   config: null
   files: []
   profile: Droopler
