@@ -1,0 +1,20 @@
+uuid: ee36468f-b680-4dcd-945a-40431509e25c
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.product_thumbnail_pc
+  theme:
+    - droopler_theme
+_core:
+  default_config_hash: Qbsyca-yCl7IXdI9LQ-WyHhf91TkzbypK1-UbXK48z4
+id: product_thumbnail
+label: 'Product thumbnail'
+image_style_mappings:
+  -
+    breakpoint_id: droopler_theme.extra
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: product_thumbnail_pc
+breakpoint_group: droopler_theme
+fallback_image_style: product_thumbnail_pc

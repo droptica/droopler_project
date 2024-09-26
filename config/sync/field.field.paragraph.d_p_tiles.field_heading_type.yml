@@ -1,0 +1,23 @@
+uuid: 7fd6fb4f-5d29-41bf-8758-f89f387b22fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_type
+    - paragraphs.paragraphs_type.d_p_tiles
+  module:
+    - options
+id: paragraph.d_p_tiles.field_heading_type
+field_name: field_heading_type
+entity_type: paragraph
+bundle: d_p_tiles
+label: 'Heading type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: h2
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,20 @@
+uuid: 57c69f85-54c4-45a1-9192-0063438cd10a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: VDdt2QNFyDYIluH99hrMyFUGW3Q3m4-O18xzUGYupSk
+id: node.field_d_ask_for_product
+field_name: field_d_ask_for_product
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

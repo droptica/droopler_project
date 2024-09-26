@@ -1,0 +1,13 @@
+uuid: 098cd117-be6a-49cb-a9ca-a59aa92886a7
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: JqAPZHEa9m6Cqy0vdpV5Jjdk07YLKkE_EE9ivvB2xhQ
+id: block_content.token
+label: Token
+description: ''
+targetEntityType: block_content
+cache: true

@@ -1,0 +1,13 @@
+uuid: 1d1f6c65-6bd6-4d57-ac87-0083ee48484a
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: '-6_3aGY2y61EtAPhAGGOI-sOkCTBe3LeKVxqcT2hKSA'
+id: media.reference_content
+label: 'Reference Content'
+description: ''
+targetEntityType: media
+cache: true

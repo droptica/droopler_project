@@ -1,0 +1,21 @@
+uuid: 256ac5bf-d11d-4068-81f3-85733ca4796f
+langcode: en
+status: true
+dependencies:
+  module:
+    - d_search
+  theme:
+    - droopler_subtheme
+id: droopler_subtheme_block_plugin_8bb88519_f7ea_4bcf_a9c5_f47ab3b40c4d
+theme: droopler_subtheme
+region: header_secondary
+weight: 1
+provider: null
+plugin: search_page_link
+settings:
+  id: search_page_link
+  label: 'Search page link'
+  label_display: '0'
+  provider: d_search
+  status: true
+visibility: {  }

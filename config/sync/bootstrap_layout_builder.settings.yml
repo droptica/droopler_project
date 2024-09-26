@@ -1,0 +1,12 @@
+_core:
+  default_config_hash: rsqc85n6sNpWuKFjqvR8toy2E-RCNNAUGEjwNuqcVKA
+hide_section_settings: false
+live_preview: true
+one_col_layout_class: col-12
+background_colors: ''
+background_image:
+  bundle: image
+  field: field_media_image
+background_local_video:
+  bundle: video
+  field: field_media_video_file

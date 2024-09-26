@@ -1,0 +1,18 @@
+uuid: ad67195f-4b36-4302-8d0f-cf33d52c1e1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.d_p_subscribe_file
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: QaA2OBsv4KCpCWCzlGCSZ43mKzx8TGGRhP4TprkfwnY
+id: paragraph.d_p_subscribe_file
+target_entity_type_id: paragraph
+target_bundle: d_p_subscribe_file
+default_langcode: site_default
+language_alterable: true

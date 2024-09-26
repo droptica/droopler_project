@@ -1,0 +1,21 @@
+uuid: 72c7d214-58e8-4983-a82c-da8f01a078fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+_core:
+  default_config_hash: W6niF-MvloI0Xj06OdUyhJQRq_6-9bcR74gxw89hQuo
+id: block_content.field_d_long_text
+field_name: field_d_long_text
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

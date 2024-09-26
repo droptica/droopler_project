@@ -9,6 +9,10 @@
         "issues": "https://www.drupal.org/project/issues/droopler?categories=All"
     },
     "repositories": {
+        "droptica": {
+            "type": "vcs",
+            "url": "https://github.com/droptica/droopler.git"
+        },
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
@@ -20,14 +24,17 @@
     },
     "require": {
         "composer/installers": "^2.2",
-        "droptica/droopler": "4.0.0-alpha3",
+        "droptica/droopler": "dev-layout_builder-fields-paragraph-settings",
         "drupal/better_exposed_filters": "^7.0",
+        "drupal/color_field": "^3.0",
+        "drupal/conditional_fields": "^4.0@alpha",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-recommended": "^10.0",
         "drupal/facets": "^2.0",
         "drupal/redis": "^1.7",
         "drupal/search_api": "^1.29",
         "drupal/tvi": "2.0.x-dev@dev",
+        "drupal/twig_tweak": "^3.4",
         "drush/drush": "^13",
         "oomphinc/composer-installers-extender": "^2.0",
         "platformsh/config-reader": "^2.4"

@@ -1,0 +1,39 @@
+uuid: 3c91a8b6-3dd0-493a-a0e4-861f993d60b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.tiles_gallery_fullscreen_featured
+    - field.field.media.d_video.field_media_oembed_video
+    - media.type.d_video
+  module:
+    - d_media
+_core:
+  default_config_hash: 8VvJnMRw4Gt_mUO3aUyKpG4D0vd4pwIZt1Z9G13QjQM
+id: media.d_video.tiles_gallery_fullscreen_featured
+targetEntityType: media
+bundle: d_video
+mode: tiles_gallery_fullscreen_featured
+content:
+  field_media_oembed_video:
+    type: d_video_embed
+    label: hidden
+    settings:
+      player_settings:
+        controls: '1'
+        autoplay: 0
+        loop: 0
+        muted: 0
+      video_settings:
+        image_style: ''
+        cover: 0
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

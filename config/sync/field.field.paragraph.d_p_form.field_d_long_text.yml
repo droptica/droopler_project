@@ -1,0 +1,24 @@
+uuid: 6052e122-f691-4fdd-9b3f-43b03c30c985
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_long_text
+    - paragraphs.paragraphs_type.d_p_form
+  module:
+    - text
+_core:
+  default_config_hash: fTyphVRl2zl6XKMHr7X9xWIq81Jha-084O3X_R35ugg
+id: paragraph.d_p_form.field_d_long_text
+field_name: field_d_long_text
+entity_type: paragraph
+bundle: d_p_form
+label: 'Long text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

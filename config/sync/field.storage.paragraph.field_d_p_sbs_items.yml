@@ -1,0 +1,22 @@
+uuid: 1c46f6df-7194-495a-a673-32483e85215d
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+_core:
+  default_config_hash: T6bdW0cVwEfwCR5WV41rswukCdZp1ll7VGyY_-J_tsE
+id: paragraph.field_d_p_sbs_items
+field_name: field_d_p_sbs_items
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 2
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

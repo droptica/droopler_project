@@ -1,0 +1,31 @@
+uuid: 9df1fed2-fd7a-4e93-9c38-86300cbe1b2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.product_categories_taxonomy_term_name
+  module:
+    - facets
+    - system
+  theme:
+    - droopler_theme
+_core:
+  default_config_hash: 7dy6eI-vCSgrrSdngp5_KgNSCNGrtLnTug9lB5ubL8I
+id: droopler_theme_product_categories_taxonomy_term_name
+theme: droopler_theme
+region: aside
+weight: -10
+provider: null
+plugin: 'facet_block:product_categories_taxonomy_term_name'
+settings:
+  id: 'facet_block:product_categories_taxonomy_term_name'
+  label: Categories
+  label_display: visible
+  provider: facets
+  block_id: droopler_theme_product_categories_taxonomy_term_name
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /products

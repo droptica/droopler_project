@@ -1,0 +1,21 @@
+uuid: 8991a843-ce2d-4426-81e6-fb2b4a7cdb80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_main_title
+    - paragraphs.paragraphs_type.d_p_side_image
+_core:
+  default_config_hash: fzQmiGg_aAShfCjiaBty3uFDMtWTPFGdL75tc05aUtQ
+id: paragraph.d_p_side_image.field_d_main_title
+field_name: field_d_main_title
+entity_type: paragraph
+bundle: d_p_side_image
+label: 'Main title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

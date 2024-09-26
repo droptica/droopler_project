@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: OcuKeb5QrDDhK3dNqjQfy6-Tc-Q7-3ZFY6JO0ls4kXI
+logo:
+  path: profiles/contrib/droopler/modules/custom/d_demo/assets/demo-logo.svg
+  use_default: false
+mobile_breakpoint: 540
+tablet_breakpoint: 992

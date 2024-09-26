@@ -1,0 +1,23 @@
+uuid: 7884fd62-c923-43aa-aabf-f412d2f76f09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_p_sf_download_type
+    - paragraphs.paragraphs_type.d_p_subscribe_file
+  module:
+    - d_p
+_core:
+  default_config_hash: jO3-XnazLQer-HJC5TRXxJ1kfZ1zcLxfYzw4v_aw-4Y
+id: paragraph.d_p_subscribe_file.field_d_p_sf_download_type
+field_name: field_d_p_sf_download_type
+entity_type: paragraph
+bundle: d_p_subscribe_file
+label: 'Download button type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: button_type

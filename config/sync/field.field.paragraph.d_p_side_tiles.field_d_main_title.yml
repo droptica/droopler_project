@@ -1,0 +1,21 @@
+uuid: ad0df232-7a1e-4db5-b697-0bb2a9b5b504
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_main_title
+    - paragraphs.paragraphs_type.d_p_side_tiles
+_core:
+  default_config_hash: msM09dkUYtSsX_YEjEXCuJv1q29S5wF3UYmiB20bkmw
+id: paragraph.d_p_side_tiles.field_d_main_title
+field_name: field_d_main_title
+entity_type: paragraph
+bundle: d_p_side_tiles
+label: 'Main title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

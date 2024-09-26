@@ -1,0 +1,19 @@
+uuid: a0dc9b71-b3d8-4b47-9e46-51b1b6fc44f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_additional_classes
+    - paragraphs.paragraphs_type.d_p_subscribe_file
+id: paragraph.d_p_subscribe_file.field_additional_classes
+field_name: field_additional_classes
+entity_type: paragraph
+bundle: d_p_subscribe_file
+label: 'Additional classes'
+description: 'Please separate multiple classes by spaces.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

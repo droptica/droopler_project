@@ -1,0 +1,23 @@
+uuid: 8197d6e2-4e37-47e3-a978-8436738fe99b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_type
+    - paragraphs.paragraphs_type.d_p_banner
+  module:
+    - options
+id: paragraph.d_p_banner.field_heading_type
+field_name: field_heading_type
+entity_type: paragraph
+bundle: d_p_banner
+label: 'Heading type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: h2
+default_value_callback: ''
+settings: {  }
+field_type: list_string

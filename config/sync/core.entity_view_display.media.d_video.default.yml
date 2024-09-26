@@ -1,0 +1,38 @@
+uuid: e0d99d34-c6ea-45ae-b57a-b6d80869a9e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.d_video.field_media_oembed_video
+    - media.type.d_video
+  module:
+    - d_media
+_core:
+  default_config_hash: l3Vy3pI3EFko77sf39CkDif5fF-zcajSdIJb2JLSHmE
+id: media.d_video.default
+targetEntityType: media
+bundle: d_video
+mode: default
+content:
+  field_media_oembed_video:
+    type: d_video_embed
+    label: hidden
+    settings:
+      player_settings:
+        controls: '1'
+        autoplay: 0
+        loop: 0
+        muted: 0
+      video_settings:
+        cover: '1'
+        image_style: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,31 @@
+uuid: 744cca1d-07c9-44c8-9120-10334673e69b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_media_icon
+    - media.type.d_image
+    - paragraphs.paragraphs_type.d_p_side_tiles
+_core:
+  default_config_hash: tJH9Bz58B5LpQIwBxXcUfa4JQ_i2s3F7krCMc19PpFw
+id: paragraph.d_p_side_tiles.field_d_media_icon
+field_name: field_d_media_icon
+entity_type: paragraph
+bundle: d_p_side_tiles
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      d_image: d_image
+    sort:
+      field: revision_created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

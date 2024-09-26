@@ -1,0 +1,14 @@
+uuid: 9d81e9dd-68af-4e54-ae9e-4faa23cddf95
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.d_editor
+  module:
+    - user
+id: user_add_role_action.d_editor
+label: 'Add the Editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: d_editor

@@ -1,0 +1,40 @@
+uuid: 7cfa442b-70ec-473a-bde1-f86e23284c4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.d_product_image
+    - field.field.media.d_image.field_media_image
+    - image.style.product_thumbnail_pc
+    - media.type.d_image
+  module:
+    - svg_image
+_core:
+  default_config_hash: R5GWjsNVI37ICdrgORLDNfOhqNjcEz3FOtaNPzLA7MA
+id: media.d_image.d_product_image
+targetEntityType: media
+bundle: d_image
+mode: d_product_image
+content:
+  field_media_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: product_thumbnail_pc
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,21 @@
+uuid: 0fe6da13-dbc1-45d0-b3d6-f6a4ed3d2984
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_main_title
+    - paragraphs.paragraphs_type.d_p_gallery
+_core:
+  default_config_hash: HrFTcdW4eQUa5DGLSzhgUKuROr2q1bahB8U4WWgpd6k
+id: paragraph.d_p_gallery.field_d_main_title
+field_name: field_d_main_title
+entity_type: paragraph
+bundle: d_p_gallery
+label: 'Main title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

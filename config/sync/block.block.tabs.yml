@@ -1,0 +1,22 @@
+uuid: edc2bf1c-af22-4fb4-9e76-bb559ae7ce85
+langcode: en
+status: true
+dependencies:
+  theme:
+    - droopler_theme
+_core:
+  default_config_hash: GvzD97rZ73rxmKcG4XH6khzox_rRUpf8L0WBJAIrtk8
+id: tabs
+theme: droopler_theme
+region: admin_tabs
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

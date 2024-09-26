@@ -1,0 +1,24 @@
+uuid: 454b51d5-41f6-454f-b22f-da9f714b99cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_blog_teaser
+    - node.type.blog_post
+  module:
+    - text
+_core:
+  default_config_hash: 3-0TLP_clOJBb0xPF-TFyMHergK4NNEiN3HUT14wJcs
+id: node.blog_post.field_blog_teaser
+field_name: field_blog_teaser
+entity_type: node
+bundle: blog_post
+label: 'Blog teaser'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long
