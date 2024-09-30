@@ -31,6 +31,7 @@
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-recommended": "^10.0",
         "drupal/facets": "^2.0",
+        "drupal/field_validation": "^1.1",
         "drupal/redis": "^1.7",
         "drupal/search_api": "^1.29",
         "drupal/tvi": "2.0.x-dev@dev",

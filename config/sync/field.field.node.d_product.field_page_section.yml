@@ -16,7 +16,6 @@ dependencies:
     - paragraphs.paragraphs_type.d_p_side_embed
     - paragraphs.paragraphs_type.d_p_side_image
     - paragraphs.paragraphs_type.d_p_side_tiles
-    - paragraphs.paragraphs_type.d_p_subscribe_file
     - paragraphs.paragraphs_type.d_p_text_paged
     - paragraphs.paragraphs_type.d_p_tiles
   module:
@@ -48,7 +47,6 @@ settings:
       d_p_side_embed: d_p_side_embed
       d_p_side_image: d_p_side_image
       d_p_side_tiles: d_p_side_tiles
-      d_p_subscribe_file: d_p_subscribe_file
       d_p_text_paged: d_p_text_paged
       d_p_tiles: d_p_tiles
     negate: 0

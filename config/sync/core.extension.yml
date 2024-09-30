@@ -21,7 +21,6 @@ module:
   contact_formatter: 0
   contextual: 0
   ctools: 0
-  d_block: 0
   d_block_field: 0
   d_blog: 0
   d_blog_init: 0
@@ -36,23 +35,7 @@ module:
   d_lang_dropdown: 0
   d_media: 0
   d_p: 0
-  d_p_banner: 0
-  d_p_carousel: 0
-  d_p_counters: 0
-  d_p_form: 0
-  d_p_gallery: 0
-  d_p_help: 0
-  d_p_media: 0
   d_p_node: 0
-  d_p_reference_content: 0
-  d_p_side_by_side: 0
-  d_p_side_embed: 0
-  d_p_side_image: 0
-  d_p_side_tiles: 0
-  d_p_subscribe_file: 0
-  d_p_text_blocks: 0
-  d_p_text_paged: 0
-  d_p_tiles: 0
   d_product: 0
   d_product_init: 0
   d_search: 0
@@ -70,6 +53,7 @@ module:
   field: 0
   field_group: 0
   field_ui: 0
+  field_validation: 0
   file: 0
   filter: 0
   frontend_editing: 0
