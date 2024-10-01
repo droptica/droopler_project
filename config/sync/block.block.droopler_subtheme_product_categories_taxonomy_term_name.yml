@@ -14,7 +14,7 @@ _core:
 id: droopler_subtheme_product_categories_taxonomy_term_name
 theme: droopler_subtheme
 region: aside
-weight: -10
+weight: -12
 provider: null
 plugin: 'facet_block:product_categories_taxonomy_term_name'
 settings:
@@ -22,10 +22,11 @@ settings:
   label: Categories
   label_display: visible
   provider: facets
-  block_id: droopler_theme_product_categories_taxonomy_term_name
+  context_mapping: {  }
+  block_id: droopler_subtheme_product_categories_taxonomy_term_name
 visibility:
   request_path:
     id: request_path
     negate: false
     context_mapping: {  }
-    pages: /products
+    pages: "/products\r\n/products-0"

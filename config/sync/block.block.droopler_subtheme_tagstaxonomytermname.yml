@@ -1,0 +1,29 @@
+uuid: 877cfd6c-869a-4f80-8325-f1b5fb26ac2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.tags_taxonomy_term_name_block
+  module:
+    - facets
+    - system
+  theme:
+    - droopler_subtheme
+id: droopler_subtheme_tagstaxonomytermname
+theme: droopler_subtheme
+region: aside
+weight: -7
+provider: null
+plugin: 'facet_block:tags_taxonomy_term_name_block'
+settings:
+  id: 'facet_block:tags_taxonomy_term_name_block'
+  label: Tags
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: droopler_subtheme_tagstaxonomytermname
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /products-0

@@ -11,7 +11,7 @@ dependencies:
 id: droopler_subtheme_block_content_2484f3f1_13a6_42c0_ab85_c1115b1f21b7
 theme: droopler_subtheme
 region: header_branding
-weight: null
+weight: -14
 provider: null
 plugin: 'block_content:2484f3f1-13a6-42c0-ab85-c1115b1f21b7'
 settings:

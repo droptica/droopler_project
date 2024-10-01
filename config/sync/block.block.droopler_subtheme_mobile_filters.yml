@@ -27,4 +27,4 @@ visibility:
     id: request_path
     negate: false
     context_mapping: {  }
-    pages: /products
+    pages: "/products\r\n/products-0"

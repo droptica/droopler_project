@@ -1,4 +1,4 @@
-uuid: 97b88591-356c-4beb-b174-aff4329d33a1
+uuid: f2d7aad8-8c66-498a-b154-c5f9ac61cbfc
 langcode: en
 status: true
 dependencies:
@@ -7,18 +7,16 @@ dependencies:
     - system
   theme:
     - droopler_subtheme
-_core:
-  default_config_hash: qF3fcwLPlL0KJ8OEEY6g-_nRb6e9gswhFJWbZCrwQEQ
-id: droopler_subtheme_mobile_filters_submit
+id: droopler_subtheme_mobilefilterssubmit
 theme: droopler_subtheme
 region: aside
-weight: -10
+weight: -6
 provider: null
 plugin: mobile_filters_submit
 settings:
   id: mobile_filters_submit
   label: 'Mobile filters submit'
-  label_display: '0'
+  label_display: visible
   provider: d_product
   button_text: 'Close Filters'
   button_class: 'btn btn-primary'
@@ -26,5 +24,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    context_mapping: {  }
-    pages: /products
+    pages: /products-0

@@ -80,6 +80,7 @@ display:
         type: full
         options:
           offset: 0
+          pagination_heading_level: h4
           items_per_page: 10
           total_pages: null
           id: 0
@@ -97,7 +98,6 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-          pagination_heading_level: h4
       exposed_form:
         type: basic
         options:
@@ -282,6 +282,69 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  block_1:
+    id: block_1
+    display_title: 'Blog posts'
+    display_plugin: block
+    position: 1
+    display_options:
+      title: Blog
+      arguments:
+        tid:
+          id: tid
+          table: taxonomy_index
+          field: tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          default_action: ignore
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: true
+          title: '{{ arguments.tid }}'
+          default_argument_type: fixed
+          default_argument_options:
+            argument: ''
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          add_table: false
+          require_value: false
+          reduce_duplicates: false
+      defaults:
+        title: false
+        css_class: false
+        arguments: false
+      css_class: text-align-left
+      display_description: ''
+      rendering_language: '***LANGUAGE_language_interface***'
+      exposed_block: true
+      display_extenders: {  }
+      block_description: 'Blog posts'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   page_1:
     id: page_1
     display_title: Page
@@ -336,7 +399,8 @@ display:
         type: normal
         title: Blog
         description: 'List of blog posts'
-        weight: 35
+        weight: -43
+        enabled: false
         expanded: false
         menu_name: main
         parent: ''

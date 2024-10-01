@@ -1,0 +1,29 @@
+uuid: cf7705b9-6a80-44d1-bca0-f06cc16abacb
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.product_categories_taxonomy_term_name_block
+  module:
+    - facets
+    - system
+  theme:
+    - droopler_subtheme
+id: droopler_subtheme_productcategoriestaxonomytermname
+theme: droopler_subtheme
+region: aside
+weight: -8
+provider: null
+plugin: 'facet_block:product_categories_taxonomy_term_name_block'
+settings:
+  id: 'facet_block:product_categories_taxonomy_term_name_block'
+  label: Categories
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: droopler_subtheme_productcategoriestaxonomytermname
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /products-0

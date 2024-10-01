@@ -237,6 +237,77 @@ display:
       tags:
         - 'config:search_api.index.product_index'
         - 'search_api_list:product_index'
+  product_list_block:
+    id: product_list_block
+    display_title: Products
+    display_plugin: block
+    position: 1
+    display_options:
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          input_required: false
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: full_html
+          bef:
+            general:
+              autosubmit: true
+              autosubmit_exclude_textfield: false
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: true
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+              reset_button_always_show: false
+            sort:
+              plugin_id: default
+              advanced:
+                combine: false
+                combine_rewrite: ''
+                reset: false
+                reset_label: ''
+                collapsible: false
+                collapsible_label: 'Sort options'
+                is_secondary: false
+            aggregated_field:
+              bef_format: default
+              slider_options:
+                bef_slider_min: null
+                bef_slider_max: null
+                bef_slider_step: null
+                bef_slider_animate: ''
+                bef_slider_orientation: horizontal
+              more_options:
+                is_secondary: false
+      cache:
+        type: search_api_none
+      defaults:
+        cache: false
+        exposed_form: false
+      display_description: 'Products list with teasers'
+      exposed_block: true
+      display_extenders: {  }
+      block_description: Products
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:search_api.index.product_index'
+        - 'search_api_list:product_index'
   products_list:
     id: products_list
     display_title: Products
@@ -254,8 +325,9 @@ display:
       menu:
         type: normal
         title: Products
-        description: 'List of products'
-        weight: 0
+        description: null
+        weight: -47
+        enabled: false
         expanded: false
         menu_name: main
         parent: ''

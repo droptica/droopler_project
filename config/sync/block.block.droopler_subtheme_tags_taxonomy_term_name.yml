@@ -14,7 +14,7 @@ _core:
 id: droopler_subtheme_tags_taxonomy_term_name
 theme: droopler_subtheme
 region: aside
-weight: -9
+weight: -11
 provider: null
 plugin: 'facet_block:tags_taxonomy_term_name'
 settings:
