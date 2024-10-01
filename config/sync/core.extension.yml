@@ -98,7 +98,13 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  webform: 0
+  webform_node: 0
+  webform_options_limit: 0
+  webform_schema: 0
+  webform_ui: 0
   pathauto: 1
+  webform_bootstrap: 1
   content_translation: 10
   views: 10
   paragraphs: 11
