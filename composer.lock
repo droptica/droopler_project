@@ -1235,12 +1235,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/droptica/droopler.git",
-                "reference": "48b98349d8162bb6da95f6b8ba8cfa79f20b0e89"
+                "reference": "c14b74fdab48b29428b8ecfe7e75420ed32f9460"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/droptica/droopler/zipball/48b98349d8162bb6da95f6b8ba8cfa79f20b0e89",
-                "reference": "48b98349d8162bb6da95f6b8ba8cfa79f20b0e89",
+                "url": "https://api.github.com/repos/droptica/droopler/zipball/c14b74fdab48b29428b8ecfe7e75420ed32f9460",
+                "reference": "c14b74fdab48b29428b8ecfe7e75420ed32f9460",
                 "shasum": ""
             },
             "require": {
@@ -1313,7 +1313,7 @@
                 "issues": "https://github.com/droptica/droopler/issues",
                 "source": "https://github.com/droptica/droopler/tree/layout_builder-fields-paragraph-settings"
             },
-            "time": "2024-10-01T10:32:59+00:00"
+            "time": "2024-10-01T11:24:52+00:00"
         },
         {
             "name": "drupal/admin_toolbar",
