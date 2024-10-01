@@ -105,9 +105,6 @@ settings:
       d_p_single_text_block:
         weight: -25
         enabled: false
-      d_p_subscribe_file:
-        weight: -36
-        enabled: true
       d_p_text_paged:
         weight: -35
         enabled: true

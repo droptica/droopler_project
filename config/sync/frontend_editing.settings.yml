@@ -16,7 +16,6 @@ entity_types:
     - d_p_side_embed
     - d_p_side_image
     - d_p_side_tiles
-    - d_p_subscribe_file
     - d_p_text_paged
     - d_p_tiles
 sidebar_width: 30
