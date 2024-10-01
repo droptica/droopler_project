@@ -52,7 +52,6 @@ module:
   field: 0
   field_group: 0
   field_ui: 0
-  field_validation: 0
   file: 0
   filter: 0
   frontend_editing: 0
