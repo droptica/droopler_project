@@ -17,7 +17,6 @@ dependencies:
   module:
     - bootstrap_layout_builder
     - d_entity_reference_formatter
-    - d_p
     - d_product
     - entity_reference_revisions
     - field_group
@@ -479,16 +478,16 @@ content:
     weight: 6
     region: content
   field_d_product_link:
-    type: button_link_formatter
-    label: hidden
+    type: link
+    label: above
     settings:
-      trim_length: '80'
+      trim_length: 80
       url_only: false
       url_plain: false
-      rel: 0
-      target: 0
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    weight: 6
+    weight: 5
     region: content
   field_d_product_media:
     type: d_product_gallery_formatter

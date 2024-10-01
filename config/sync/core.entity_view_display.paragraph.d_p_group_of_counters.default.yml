@@ -23,7 +23,7 @@ dependencies:
     - field.field.paragraph.d_p_group_of_counters.field_theme
     - paragraphs.paragraphs_type.d_p_group_of_counters
   module:
-    - d_p
+    - ala
     - entity_reference_revisions
     - field_group
     - text
@@ -122,7 +122,7 @@ content:
     weight: 8
     region: content
   field_d_cta_link:
-    type: button_link_formatter
+    type: ala
     label: hidden
     settings:
       trim_length: 80
@@ -130,6 +130,10 @@ content:
       url_plain: false
       rel: ''
       target: ''
+      ala_link_view_class: element
+      ala_link_view_icon: inside
+      ala_link_view_icon_position: left
+      ala_link_view_roles: hide
     third_party_settings: {  }
     weight: 9
     region: content

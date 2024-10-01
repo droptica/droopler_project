@@ -20,7 +20,7 @@ dependencies:
     - field.field.paragraph.d_p_side_embed.field_theme
     - paragraphs.paragraphs_type.d_p_side_embed
   module:
-    - d_p
+    - ala
     - field_group
     - text
 third_party_settings:
@@ -92,7 +92,7 @@ bundle: d_p_side_embed
 mode: default
 content:
   field_d_cta_link:
-    type: button_link_formatter
+    type: ala
     label: hidden
     settings:
       trim_length: '80'
@@ -100,6 +100,10 @@ content:
       url_plain: false
       rel: 0
       target: 0
+      ala_link_view_class: element
+      ala_link_view_icon: inside
+      ala_link_view_icon_position: left
+      ala_link_view_roles: hide
     third_party_settings: {  }
     weight: 3
     region: content

@@ -24,9 +24,9 @@ dependencies:
     - field.field.paragraph.d_p_text_paged.field_theme
     - paragraphs.paragraphs_type.d_p_text_paged
   module:
+    - ala
     - color_field
     - conditional_fields
-    - d_p
     - field_group
     - media_library
     - text
@@ -36,7 +36,6 @@ third_party_settings:
       children:
         - group_basic
         - group_settings
-        - group_original_settings
       label: Tabs
       region: content
       parent_name: ''
@@ -91,22 +90,6 @@ third_party_settings:
       format_settings:
         classes: ''
         id: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-    group_original_settings:
-      children:
-        - field_d_settings
-      label: 'Original settings'
-      region: content
-      parent_name: group_tabsd
-      weight: 12
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        label_as_html: false
         formatter: closed
         description: ''
         required_fields: true
@@ -170,20 +153,19 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_d_cta_link:
-    type: button_link_widget
+    type: ala_field_widget
     weight: 5
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
-      enabled_attributes:
-        id: true
-        name: true
-        target: true
-        rel: true
-        class: true
-        accesskey: true
-      widget_default_open: expandIfValuesSet
+      ala_link_class_settings: global
+      ala_link_class: ''
+      ala_link_icon: false
+      ala_link_roles: false
+      ala_link_color: false
+      ala_link_extra: true
+      ala_link_target: '1'
     third_party_settings: {  }
   field_d_long_text:
     type: text_textarea

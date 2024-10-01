@@ -59,7 +59,6 @@ third_party_settings:
         - field_background_theme_custom
         - field_text_theme_custom
         - field_heading_type
-        - field_d_settings
       label: Settings
       region: content
       parent_name: group_tabs
@@ -112,12 +111,14 @@ content:
       placeholder_url: ''
       placeholder_title: ''
       enabled_attributes:
-        id: false
-        name: false
         target: true
         rel: true
         class: true
+        id: false
+        name: false
         accesskey: false
+        aria-label: false
+        title: false
       widget_default_open: expandIfValuesSet
     third_party_settings: {  }
   field_d_long_text:

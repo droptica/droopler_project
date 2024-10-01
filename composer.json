@@ -25,6 +25,7 @@
     "require": {
         "composer/installers": "^2.2",
         "droptica/droopler": "dev-layout_builder-fields-paragraph-settings",
+        "drupal/ala": "^2.5",
         "drupal/better_exposed_filters": "^7.0",
         "drupal/color_field": "^3.0",
         "drupal/conditional_fields": "^4.0@alpha",

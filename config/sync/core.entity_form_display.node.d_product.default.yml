@@ -13,7 +13,7 @@ dependencies:
     - field.field.node.d_product.field_tags
     - node.type.d_product
   module:
-    - d_p
+    - ala
     - field_group
     - media_library
     - metatag
@@ -128,19 +128,19 @@ content:
       display_label: true
     third_party_settings: {  }
   field_d_product_link:
-    type: button_link_widget
+    type: ala_field_widget
     weight: 23
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
-      enabled_attributes:
-        id: false
-        name: false
-        target: true
-        rel: true
-        class: true
-        accesskey: false
+      ala_link_class_settings: global
+      ala_link_class: ''
+      ala_link_icon: false
+      ala_link_roles: false
+      ala_link_color: false
+      ala_link_extra: true
+      ala_link_target: '1'
     third_party_settings: {  }
   field_d_product_media:
     type: media_library_widget

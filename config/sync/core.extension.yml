@@ -3,6 +3,7 @@ _core:
 module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  ala: 0
   better_exposed_filters: 0
   block: 0
   block_content: 0
@@ -34,7 +35,6 @@ module:
   d_frontend_editing: 0
   d_lang_dropdown: 0
   d_media: 0
-  d_p: 0
   d_p_node: 0
   d_product: 0
   d_product_init: 0

@@ -20,9 +20,9 @@ dependencies:
     - field.field.paragraph.d_p_side_tiles.field_tiles_gallery_side
     - paragraphs.paragraphs_type.d_p_side_tiles
   module:
+    - ala
     - color_field
     - conditional_fields
-    - d_p
     - field_group
     - media_library
     - text
@@ -88,7 +88,6 @@ third_party_settings:
         - field_padding_top
         - field_padding_bottom
         - field_additional_classes
-        - field_d_settings
       label: Settings
       region: content
       parent_name: group_tabs
@@ -142,22 +141,19 @@ content:
             effect_options: {  }
             selector: ''
   field_d_cta_link:
-    type: button_link_widget
+    type: ala_field_widget
     weight: 4
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
-      enabled_attributes:
-        id: id
-        name: name
-        target: target
-        rel: rel
-        class: class
-        accesskey: 0
-        aria-label: 0
-        title: 0
-      widget_default_open: expandIfValuesSet
+      ala_link_class_settings: global
+      ala_link_class: ''
+      ala_link_icon: false
+      ala_link_roles: false
+      ala_link_color: false
+      ala_link_extra: true
+      ala_link_target: '1'
     third_party_settings: {  }
   field_d_long_text:
     type: text_textarea
