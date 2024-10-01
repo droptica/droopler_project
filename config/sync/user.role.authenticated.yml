@@ -2,7 +2,10 @@ uuid: aad6ff21-cb14-43d6-84e2-c927ee08fd66
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.webform_default
   module:
+    - filter
     - media
     - search
     - system
@@ -15,4 +18,5 @@ is_admin: false
 permissions:
   - 'access content'
   - 'search content'
+  - 'use text format webform_default'
   - 'view media'

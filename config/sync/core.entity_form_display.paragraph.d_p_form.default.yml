@@ -5,11 +5,11 @@ dependencies:
   config:
     - field.field.paragraph.d_p_form.field_additional_classes
     - field.field.paragraph.d_p_form.field_background_theme_custom
-    - field.field.paragraph.d_p_form.field_d_forms
     - field.field.paragraph.d_p_form.field_d_long_text
     - field.field.paragraph.d_p_form.field_d_main_title
     - field.field.paragraph.d_p_form.field_d_media_background
     - field.field.paragraph.d_p_form.field_d_media_icon
+    - field.field.paragraph.d_p_form.field_d_webform
     - field.field.paragraph.d_p_form.field_form_layout
     - field.field.paragraph.d_p_form.field_heading_type
     - field.field.paragraph.d_p_form.field_margin_bottom
@@ -25,6 +25,7 @@ dependencies:
     - field_group
     - media_library
     - text
+    - webform
 third_party_settings:
   field_group:
     group_tabs:
@@ -48,7 +49,7 @@ third_party_settings:
         - field_d_media_background
         - field_d_media_icon
         - field_d_long_text
-        - field_d_forms
+        - field_d_webform
       label: Basic
       region: content
       parent_name: group_tabs
@@ -67,13 +68,11 @@ third_party_settings:
         - field_text_theme_custom
         - field_heading_type
         - field_form_layout
-        - field_left_side_content
         - field_margin_top
         - field_margin_bottom
         - field_padding_top
         - field_padding_bottom
         - field_additional_classes
-        - field_d_settings
       label: Settings
       region: content
       parent_name: group_tabs
@@ -126,12 +125,6 @@ content:
             effect: show
             effect_options: {  }
             selector: ''
-  field_d_forms:
-    type: options_select
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_d_long_text:
     type: text_textarea
     weight: 4
@@ -161,6 +154,14 @@ content:
     region: content
     settings:
       media_types: {  }
+    third_party_settings: {  }
+  field_d_webform:
+    type: webform_entity_reference_select
+    weight: 5
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
     third_party_settings: {  }
   field_form_layout:
     type: options_select

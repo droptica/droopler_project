@@ -5,11 +5,11 @@ dependencies:
   config:
     - field.field.paragraph.d_p_form.field_additional_classes
     - field.field.paragraph.d_p_form.field_background_theme_custom
-    - field.field.paragraph.d_p_form.field_d_forms
     - field.field.paragraph.d_p_form.field_d_long_text
     - field.field.paragraph.d_p_form.field_d_main_title
     - field.field.paragraph.d_p_form.field_d_media_background
     - field.field.paragraph.d_p_form.field_d_media_icon
+    - field.field.paragraph.d_p_form.field_d_webform
     - field.field.paragraph.d_p_form.field_form_layout
     - field.field.paragraph.d_p_form.field_heading_type
     - field.field.paragraph.d_p_form.field_margin_bottom
@@ -20,9 +20,9 @@ dependencies:
     - field.field.paragraph.d_p_form.field_theme
     - paragraphs.paragraphs_type.d_p_form
   module:
-    - contact_formatter
     - field_group
     - text
+    - webform
 third_party_settings:
   field_group:
     group_d_form_background:
@@ -63,6 +63,7 @@ third_party_settings:
         speed: fast
     group_d_form_fields:
       children:
+        - field_d_webform
         - field_d_forms
       label: 'Form fields'
       parent_name: ''
@@ -106,13 +107,6 @@ targetEntityType: paragraph
 bundle: d_p_form
 mode: default
 content:
-  field_d_forms:
-    type: contact_field_formatter
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 5
-    region: content
   field_d_long_text:
     type: text_default
     label: visually_hidden
@@ -145,6 +139,15 @@ content:
       link: false
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_d_webform:
+    type: webform_entity_reference_entity_view
+    label: above
+    settings:
+      source_entity: true
+      lazy: false
+    third_party_settings: {  }
+    weight: 8
     region: content
 hidden:
   field_additional_classes: true
