@@ -7,6 +7,7 @@ module:
   better_exposed_filters: 0
   block: 0
   block_content: 0
+  block_field: 0
   bootstrap_layout_builder: 0
   bootstrap_styles: 0
   breakpoint: 0
@@ -22,28 +23,12 @@ module:
   contact_formatter: 0
   contextual: 0
   ctools: 0
-  d_block_field: 0
-  d_blog: 0
-  d_blog_init: 0
-  d_claro: 0
-  d_color: 0
-  d_content: 0
-  d_content_init: 0
-  d_demo: 0
-  d_documentation: 0
-  d_entity_reference_formatter: 0
   d_frontend_editing: 0
-  d_lang_dropdown: 0
-  d_media: 0
   d_product: 0
-  d_product_init: 0
-  d_search: 0
-  d_social_media: 0
-  d_twig_extensions: 0
-  d_update: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  emulsify_twig: 0
   entity_reference_display: 0
   entity_reference_revisions: 0
   facets: 0

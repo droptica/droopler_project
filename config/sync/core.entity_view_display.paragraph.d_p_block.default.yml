@@ -15,7 +15,7 @@ dependencies:
     - field.field.paragraph.d_p_block.field_theme
     - paragraphs.paragraphs_type.d_p_block
   module:
-    - d_block_field
+    - block_field
 _core:
   default_config_hash: FoQGHGqCxbYTTrXwcmQ2f29-NE6nljjK54IXv1MHRKg
 id: paragraph.d_p_block.default
@@ -24,7 +24,7 @@ bundle: d_p_block
 mode: default
 content:
   field_block:
-    type: d_block_field
+    type: block_field
     label: hidden
     settings: {  }
     third_party_settings: {  }

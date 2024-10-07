@@ -1,4 +1,4 @@
-uuid: bc9e395c-a46b-4b78-9594-ef43d4d748f2
+uuid: 6147ce44-eb35-4654-83cb-1f30f8e59e8c
 langcode: en
 status: true
 dependencies:
@@ -6,9 +6,7 @@ dependencies:
     - field.storage.paragraph.field_block
     - paragraphs.paragraphs_type.d_p_block
   module:
-    - d_block_field
-_core:
-  default_config_hash: 6WVI0Ow0-imPAP5tdhT4nkvUCBHZ-2ioApUyzNxOQnQ
+    - block_field
 id: paragraph.d_p_block.field_block
 field_name: field_block
 entity_type: paragraph
@@ -20,20 +18,7 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  plugin_categories:
-    'Chaos Tools': 'Chaos Tools'
-    Block: '0'
-    'Content block': '0'
-    core: '0'
-    'Droopler Social Media Block': '0'
-    Facets: '0'
-    Forms: '0'
-    Help: '0'
-    'Lists (Views)': '0'
-    Menus: '0'
-    Search: '0'
-    System: '0'
-    User: '0'
-    Views: '0'
-  plugin_categories_exclude: true
-field_type: d_block_field
+  selection: blocks
+  selection_settings:
+    plugin_ids: {  }
+field_type: block_field

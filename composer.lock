@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4cdeb60353296207bef5398167094035",
+    "content-hash": "dee2659d81110fbaaffa57fd555140f7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1526,6 +1526,70 @@
             }
         },
         {
+            "name": "drupal/block_field",
+            "version": "1.0.0-rc5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/block_field.git",
+                "reference": "8.x-1.0-rc5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/block_field-8.x-1.0-rc5.zip",
+                "reference": "8.x-1.0-rc5",
+                "shasum": "b87e43e9bbaaf6cff6d8946d5e45db492978cbb6"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-rc5",
+                    "datestamp": "1723550576",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "acbramley",
+                    "homepage": "https://www.drupal.org/user/1036766"
+                },
+                {
+                    "name": "berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "fenstrat",
+                    "homepage": "https://www.drupal.org/user/362649"
+                },
+                {
+                    "name": "jrockowitz",
+                    "homepage": "https://www.drupal.org/user/371407"
+                },
+                {
+                    "name": "michaellander",
+                    "homepage": "https://www.drupal.org/user/636494"
+                },
+                {
+                    "name": "paulocs",
+                    "homepage": "https://www.drupal.org/user/3640109"
+                }
+            ],
+            "description": "Provides a field that allows a content entity to create and configure custom block instances.",
+            "homepage": "https://www.drupal.org/project/block_field",
+            "support": {
+                "source": "https://git.drupalcode.org/project/block_field"
+            }
+        },
+        {
             "name": "drupal/bootstrap_layout_builder",
             "version": "2.2.1",
             "source": {
@@ -2474,6 +2538,78 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
+            }
+        },
+        {
+            "name": "drupal/emulsify_twig",
+            "version": "5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/emulsify_twig.git",
+                "reference": "5.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/emulsify_twig-5.0.0.zip",
+                "reference": "5.0.0",
+                "shasum": "382871d3dd5040f693fda03a246a9ca667225f8c"
+            },
+            "require": {
+                "drupal/core": "^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "5.0.0",
+                    "datestamp": "1714690018",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "amazingrando",
+                    "homepage": "https://www.drupal.org/user/609802"
+                },
+                {
+                    "name": "americkson",
+                    "homepage": "https://www.drupal.org/user/1460062"
+                },
+                {
+                    "name": "callinmullaney",
+                    "homepage": "https://www.drupal.org/user/2532054"
+                },
+                {
+                    "name": "ccjjmartin",
+                    "homepage": "https://www.drupal.org/user/3210801"
+                },
+                {
+                    "name": "codechefmarc",
+                    "homepage": "https://www.drupal.org/user/2952573"
+                },
+                {
+                    "name": "evanmwillhite",
+                    "homepage": "https://www.drupal.org/user/562168"
+                },
+                {
+                    "name": "fk_bender",
+                    "homepage": "https://www.drupal.org/user/3539842"
+                },
+                {
+                    "name": "generalredneck",
+                    "homepage": "https://www.drupal.org/user/368854"
+                }
+            ],
+            "description": "Provides Twig functions for use with Emulsify",
+            "homepage": "http://emulsify.info",
+            "support": {
+                "source": "https://git.drupalcode.org/project/emulsify_twig"
             }
         },
         {

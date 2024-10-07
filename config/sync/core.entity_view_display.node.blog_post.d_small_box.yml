@@ -12,8 +12,8 @@ dependencies:
     - image.style.small_box_image
     - node.type.blog_post
   module:
-    - d_media
     - field_group
+    - media
     - user
 third_party_settings:
   field_group:
@@ -44,11 +44,11 @@ bundle: blog_post
 mode: d_small_box
 content:
   field_blog_media_main_image:
-    type: d_media_single_media
+    type: media_thumbnail
     label: hidden
     settings:
-      image_style: small_box_image
       image_link: content
+      image_style: small_box_image
       image_loading:
         attribute: lazy
     third_party_settings: {  }

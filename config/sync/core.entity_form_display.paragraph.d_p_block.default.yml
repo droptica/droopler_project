@@ -15,9 +15,9 @@ dependencies:
     - field.field.paragraph.d_p_block.field_theme
     - paragraphs.paragraphs_type.d_p_block
   module:
+    - block_field
     - color_field
     - conditional_fields
-    - d_block_field
     - field_group
 third_party_settings:
   field_group:
@@ -39,6 +39,7 @@ third_party_settings:
     group_basic:
       children:
         - field_block
+        - field_block_reference
       label: Basic
       region: content
       parent_name: group_tabs
@@ -56,13 +57,11 @@ third_party_settings:
         - field_background_theme_custom
         - field_text_theme_custom
         - field_full_width
-        - field_heading_type
         - field_margin_top
         - field_margin_bottom
         - field_padding_top
         - field_padding_bottom
         - field_additional_classes
-        - field_d_settings
       label: Settings
       region: content
       parent_name: group_tabs
@@ -116,8 +115,8 @@ content:
             effect_options: {  }
             selector: ''
   field_block:
-    type: d_block_field_default
-    weight: 1
+    type: block_field_default
+    weight: 18
     region: content
     settings:
       plugin_id: ''

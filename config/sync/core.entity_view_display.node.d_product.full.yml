@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
-    - facets.facet.tags_taxonomy_term_name
     - field.field.node.d_product.body
     - field.field.node.d_product.field_d_ask_for_product
     - field.field.node.d_product.field_d_product_link
@@ -15,9 +14,6 @@ dependencies:
     - field.field.node.d_product.field_tags
     - node.type.d_product
   module:
-    - bootstrap_layout_builder
-    - d_entity_reference_formatter
-    - d_product
     - entity_reference_revisions
     - field_group
     - layout_builder
@@ -507,20 +503,18 @@ content:
     weight: 8
     region: content
   field_product_categories:
-    type: d_entity_reference_facet_link
+    type: entity_reference_label
     label: above
     settings:
-      facet: product_categories_taxonomy_term_name
-      raw_value_label: '1'
+      link: true
     third_party_settings: {  }
     weight: 6
     region: content
   field_tags:
-    type: d_entity_reference_facet_link
+    type: entity_reference_label
     label: above
     settings:
-      facet: tags_taxonomy_term_name
-      raw_value_label: '1'
+      link: true
     third_party_settings: {  }
     weight: 7
     region: content

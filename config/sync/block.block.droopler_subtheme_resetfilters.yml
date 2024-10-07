@@ -20,10 +20,10 @@ settings:
   provider: d_product
   button_text: 'Reset Filters'
   button_class: 'btn btn-outline-primary btn-sm btn-reset'
-  button_target: /products-0
+  button_target: /products
   button_icon_class: 'fas fa-times'
 visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /products-0
+    pages: /products

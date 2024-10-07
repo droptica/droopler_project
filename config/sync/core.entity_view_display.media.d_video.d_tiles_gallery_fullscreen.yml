@@ -7,7 +7,7 @@ dependencies:
     - field.field.media.d_video.field_media_oembed_video
     - media.type.d_video
   module:
-    - d_media
+    - media
 _core:
   default_config_hash: PeYImV6Ud6kfqvU1dEiFrHimfE8m78KK4ECjtPvkuMQ
 id: media.d_video.d_tiles_gallery_fullscreen
@@ -16,17 +16,13 @@ bundle: d_video
 mode: d_tiles_gallery_fullscreen
 content:
   field_media_oembed_video:
-    type: d_video_embed
+    type: oembed
     label: hidden
     settings:
-      player_settings:
-        controls: '1'
-        autoplay: 0
-        loop: 0
-        muted: 0
-      video_settings:
-        image_style: ''
-        cover: 0
+      max_width: 0
+      max_height: 0
+      loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content

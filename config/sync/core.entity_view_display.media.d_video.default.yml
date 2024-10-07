@@ -6,7 +6,7 @@ dependencies:
     - field.field.media.d_video.field_media_oembed_video
     - media.type.d_video
   module:
-    - d_media
+    - media
 _core:
   default_config_hash: l3Vy3pI3EFko77sf39CkDif5fF-zcajSdIJb2JLSHmE
 id: media.d_video.default
@@ -15,17 +15,13 @@ bundle: d_video
 mode: default
 content:
   field_media_oembed_video:
-    type: d_video_embed
+    type: oembed
     label: hidden
     settings:
-      player_settings:
-        controls: '1'
-        autoplay: 0
-        loop: 0
-        muted: 0
-      video_settings:
-        cover: '1'
-        image_style: ''
+      max_width: 0
+      max_height: 0
+      loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content

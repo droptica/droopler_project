@@ -1,7 +1,21 @@
 _core:
   default_config_hash: OcuKeb5QrDDhK3dNqjQfy6-Tc-Q7-3ZFY6JO0ls4kXI
+favicon:
+  use_default: true
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
 logo:
-  path: profiles/contrib/droopler/modules/custom/d_demo/assets/demo-logo.svg
+  path: profiles/contrib/droopler/themes/custom/droopler_theme/build/assets/images/demo-logo.svg
   use_default: false
 mobile_breakpoint: 540
 tablet_breakpoint: 992
+link_facebook: 'https://www.facebook.com/dropticacom/'
+link_twitter: 'https://twitter.com/droptica'
+link_youtube: 'https://www.youtube.com/channel/UCL_XD86NqAJppzw3w7QJqGw'
+link_instagram: 'https://www.instagram.com/droptica/'
+link_linkedin: 'https://www.linkedin.com/company/2947414'
+link_dribbble: ''
+search_page_link: /search

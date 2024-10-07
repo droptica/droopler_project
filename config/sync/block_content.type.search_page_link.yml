@@ -1,0 +1,8 @@
+uuid: c7e0b657-0303-49e7-a8d2-f6098e6a7ce6
+langcode: en
+status: true
+dependencies: {  }
+id: search_page_link
+label: 'Search page link'
+revision: false
+description: null

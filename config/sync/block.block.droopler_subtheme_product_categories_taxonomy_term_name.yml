@@ -1,6 +1,6 @@
 uuid: 9a38d255-542e-476f-91b0-1228459efc93
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.product_categories_taxonomy_term_name

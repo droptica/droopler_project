@@ -1,6 +1,6 @@
 uuid: 97b88591-356c-4beb-b174-aff4329d33a1
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - d_product
