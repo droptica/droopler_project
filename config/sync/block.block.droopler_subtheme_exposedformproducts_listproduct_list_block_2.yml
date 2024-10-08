@@ -12,7 +12,7 @@ dependencies:
 id: droopler_subtheme_exposedformproducts_listproduct_list_block_2
 theme: droopler_subtheme
 region: top_content
-weight: 0
+weight: -11
 provider: null
 plugin: 'views_exposed_filter_block:products_list-product_list_block'
 settings:

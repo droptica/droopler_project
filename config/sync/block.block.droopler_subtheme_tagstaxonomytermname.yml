@@ -12,7 +12,7 @@ dependencies:
 id: droopler_subtheme_tagstaxonomytermname
 theme: droopler_subtheme
 region: aside
-weight: -7
+weight: -9
 provider: null
 plugin: 'facet_block:tags_taxonomy_term_name_block'
 settings:

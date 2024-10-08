@@ -14,7 +14,7 @@ _core:
 id: droopler_subtheme_exposed_form_products_list_products_list
 theme: droopler_subtheme
 region: top_content
-weight: -11
+weight: -12
 provider: null
 plugin: 'views_exposed_filter_block:products_list-products_list'
 settings:

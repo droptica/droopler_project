@@ -14,9 +14,11 @@ dependencies:
     - field.field.node.d_product.field_tags
     - node.type.d_product
   module:
+    - bootstrap_layout_builder
     - entity_reference_revisions
     - field_group
     - layout_builder
+    - link
     - text
     - user
 third_party_settings:
@@ -219,7 +221,7 @@ third_party_settings:
           section_attributes: null
           regions_classes:
             blb_region_col_1: ''
-            blb_region_col_2: ''
+            blb_region_col_2: ' d-flex flex-column gap-4'
           regions_attributes:
             blb_region_col_1: null
             blb_region_col_2: null
@@ -239,25 +241,6 @@ third_party_settings:
           remove_gutters: '0'
           context_mapping: {  }
         components:
-          6d62656c-42ab-4db2-bf00-38c78e802edb:
-            uuid: 6d62656c-42ab-4db2-bf00-38c78e802edb
-            region: blb_region_col_1
-            configuration:
-              id: 'field_block:node:d_product:field_d_product_media'
-              label: 'Product images'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: d_product_gallery_formatter
-                label: hidden
-                settings:
-                  view_mode: d_product_gallery
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
           e69a9dcf-b960-43bc-971e-da905c5feddd:
             uuid: e69a9dcf-b960-43bc-971e-da905c5feddd
             region: blb_region_col_2
@@ -332,6 +315,25 @@ third_party_settings:
                   link_to_entity: false
                 third_party_settings: {  }
             weight: 0
+            additional: {  }
+          d97085e3-60b5-4e3a-9561-541885324486:
+            uuid: d97085e3-60b5-4e3a-9561-541885324486
+            region: blb_region_col_1
+            configuration:
+              id: 'field_block:node:d_product:field_d_product_media'
+              label: 'Product images'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: gallery_item
+                third_party_settings: {  }
+            weight: 1
             additional: {  }
         third_party_settings: {  }
       -
@@ -486,10 +488,11 @@ content:
     weight: 5
     region: content
   field_d_product_media:
-    type: d_product_gallery_formatter
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      enable_navigation: '1'
+      view_mode: gallery_item
+      link: false
     third_party_settings: {  }
     weight: 3
     region: content

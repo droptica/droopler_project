@@ -1,0 +1,11 @@
+uuid: 2e062d36-402e-4beb-83ae-1fb77c8425c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.reset_button
+id: block_content.reset_button
+target_entity_type_id: block_content
+target_bundle: reset_button
+default_langcode: site_default
+language_alterable: false

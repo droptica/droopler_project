@@ -12,7 +12,7 @@ dependencies:
 id: droopler_subtheme_productcategoriestaxonomytermname
 theme: droopler_subtheme
 region: aside
-weight: -8
+weight: -10
 provider: null
 plugin: 'facet_block:product_categories_taxonomy_term_name_block'
 settings:
