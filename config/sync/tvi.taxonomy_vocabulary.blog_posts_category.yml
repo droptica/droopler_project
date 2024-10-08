@@ -1,0 +1,7 @@
+_core:
+  default_config_hash: BfRjwNaZplnHZP2qZD9TXmSDDX1On0_rINq55ovTCPs
+enable_override: true
+view: blog_listing
+view_display: page_1
+inherit_settings: true
+pass_arguments: true

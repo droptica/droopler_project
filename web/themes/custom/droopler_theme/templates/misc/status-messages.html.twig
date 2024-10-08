@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Template for status messages.
+ */
+#}
+{% set types = {
+  status: 'success',
+  warning: 'warning',
+  error: 'danger',
+  info: 'info',
+} %}
+
+{% for type, messages in message_list %}
+  <div role="region" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label') }}>
+    {% embed '@radix/alert/alert.twig' with {
+      type: types[type],
+    } %}
+      {% block content %}
+        {% if status_headings[type] %}
+          <h2 class="visually-hidden">{{ status_headings[type] }}</h2>
+        {% endif %}
+        {% if messages|length > 1 %}
+          <ul>
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          {{ messages|first }}
+        {% endif %}
+      {% endblock %}
+    {% endembed %}
+  </div>
+{% endfor %}

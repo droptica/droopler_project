@@ -1,0 +1,24 @@
+uuid: bf958e34-0022-4a30-b21b-5e8b957a9a68
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_long_text
+    - paragraphs.paragraphs_type.d_p_side_image
+  module:
+    - text
+_core:
+  default_config_hash: LD2p8Ftspc_7qFPNav39yVH19rx_Z8nomMqRNjN3Le4
+id: paragraph.d_p_side_image.field_d_long_text
+field_name: field_d_long_text
+entity_type: paragraph
+bundle: d_p_side_image
+label: 'Long text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,21 @@
+uuid: 9a203eba-cb26-46b3-8200-a9bcdf4d8b83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_d_subtitle
+    - paragraphs.paragraphs_type.d_p_banner
+_core:
+  default_config_hash: V8XdLQ2omKsTH_cXbkZUncKj_o68gQQMZbGwR71TFd0
+id: paragraph.d_p_banner.field_d_subtitle
+field_name: field_d_subtitle
+entity_type: paragraph
+bundle: d_p_banner
+label: Subtitle
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

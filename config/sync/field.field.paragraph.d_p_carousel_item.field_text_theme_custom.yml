@@ -1,0 +1,25 @@
+uuid: 975e5143-cfdc-4327-bfe0-ad7169d5b0de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_theme_custom
+    - paragraphs.paragraphs_type.d_p_carousel_item
+  module:
+    - color_field
+id: paragraph.d_p_carousel_item.field_text_theme_custom
+field_name: field_text_theme_custom
+entity_type: paragraph
+bundle: d_p_carousel_item
+label: 'Text color'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    color: '#000000'
+    opacity: null
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

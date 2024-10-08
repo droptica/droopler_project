@@ -1,0 +1,6 @@
+_core:
+  default_config_hash: _8qLfinuxN0A8aO0zNCOmmOIxKNbzJ6NIQnQQxUhf4k
+disable_default_view: false
+enable_override: false
+view: taxonomy_term
+view_display: page_1

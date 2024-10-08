@@ -1,0 +1,16 @@
+uuid: 8c39555e-5d4d-40cf-948e-1d28212546d6
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: fwlCA2QxPCZEMTrGL_OgarR2eWFXIds1afP4kyiCisE
+id: d_image
+label: Image
+description: 'A simple image added from a file.'
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: name

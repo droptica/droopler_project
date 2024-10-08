@@ -1,0 +1,8 @@
+uuid: c626aea7-57af-4607-8d7a-f37d945f48a9
+langcode: en
+status: true
+dependencies: {  }
+id: mobile_filters_submit
+label: 'Mobile filters submit'
+revision: false
+description: null

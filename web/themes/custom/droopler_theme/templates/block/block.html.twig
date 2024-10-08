@@ -1,0 +1,8 @@
+{% embed "@droopler_theme/block/block.twig" with {
+  block_modifiers: ['exposed-filters'],
+  with_divider: TRUE
+}%}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}

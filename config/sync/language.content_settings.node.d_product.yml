@@ -1,0 +1,13 @@
+uuid: 5d0aaba9-fd6e-4585-ba56-26ea97de3eac
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.d_product
+_core:
+  default_config_hash: VLP3XAbng44iXfPXHlmfuga8ty_3za7iUNbwv7x859c
+id: node.d_product
+target_entity_type_id: node
+target_bundle: d_product
+default_langcode: site_default
+language_alterable: false

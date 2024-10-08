@@ -1,0 +1,23 @@
+uuid: 3802865a-62e3-4ad5-8ec2-05d9dd290115
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_type
+    - paragraphs.paragraphs_type.d_p_text_paged
+  module:
+    - options
+id: paragraph.d_p_text_paged.field_heading_type
+field_name: field_heading_type
+entity_type: paragraph
+bundle: d_p_text_paged
+label: 'Heading type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: h2
+default_value_callback: ''
+settings: {  }
+field_type: list_string

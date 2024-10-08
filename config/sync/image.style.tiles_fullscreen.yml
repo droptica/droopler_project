@@ -1,0 +1,17 @@
+uuid: 4844bedc-6f09-41da-916e-b6ffad748fcf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FMdkr8oa7V8ZdvY9pRsGEAsCfggpfyoP4fAv8AkCqN8
+name: tiles_fullscreen
+label: 'Tiles gallery fullscreen'
+effects:
+  2f75cec4-f25a-4ef4-863a-06daf8bb4305:
+    uuid: 2f75cec4-f25a-4ef4-863a-06daf8bb4305
+    id: image_scale
+    weight: 1
+    data:
+      width: 1024
+      height: 768
+      upscale: false

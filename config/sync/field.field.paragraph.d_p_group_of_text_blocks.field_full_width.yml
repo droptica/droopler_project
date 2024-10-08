@@ -1,0 +1,21 @@
+uuid: 2ff0a476-ce9b-47cd-a9ff-9bbfbe7364b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_full_width
+    - paragraphs.paragraphs_type.d_p_group_of_text_blocks
+id: paragraph.d_p_group_of_text_blocks.field_full_width
+field_name: field_full_width
+entity_type: paragraph
+bundle: d_p_group_of_text_blocks
+label: 'Full width'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
