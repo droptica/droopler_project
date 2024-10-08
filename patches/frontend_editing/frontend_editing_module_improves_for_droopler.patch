@@ -1,0 +1,76 @@
+diff --git a/frontend_editing.libraries.yml b/frontend_editing.libraries.yml
+index a825eda..504d820 100644
+--- a/frontend_editing.libraries.yml
++++ b/frontend_editing.libraries.yml
+@@ -53,3 +53,9 @@ ui_toggle:
+   dependencies:
+     - core/once
+     - core/drupal.ajax
++
++paragraph-add-page:
++  version: 1.6.0
++  css:
++    theme:
++      css/paragraph-add-page.css: {}
+diff --git a/frontend_editing.module b/frontend_editing.module
+index ab8d022..0b4c17d 100644
+--- a/frontend_editing.module
++++ b/frontend_editing.module
+@@ -438,6 +438,8 @@ function frontend_editing_entity_view_alter(&$build, EntityInterface $entity, En
+       ];
+     }
+   }
++
++  $build['#attached']['library'][] = 'frontend_editing/paragraph-add-page';
+ }
+ 
+ /**
+diff --git a/src/Controller/FrontendEditingController.php b/src/Controller/FrontendEditingController.php
+index 6e74d5c..9c7c1b0 100644
+--- a/src/Controller/FrontendEditingController.php
++++ b/src/Controller/FrontendEditingController.php
+@@ -616,7 +616,7 @@ class FrontendEditingController extends ControllerBase {
+       $items = array_replace(array_flip(array_keys($settings['handler_settings']['target_bundles_drag_drop'])), $items);
+       $items = array_values($items);
+     }
+-    return [
++    $build = [
+       '#theme' => 'item_list',
+       '#items' => $items,
+       '#attributes' => [
+@@ -626,9 +626,35 @@ class FrontendEditingController extends ControllerBase {
+         'library' => [
+           'paragraphs/drupal.paragraphs.modal',
+           'frontend_editing/forms_helper',
++          'frontend_editing/paragraph-add-page',
+         ],
+       ],
+     ];
++
++    $paragraph_type_storage = $this->entityTypeManager()->getStorage('paragraphs_type');
++
++    foreach ($build['#items'] as $key => $item) {
++      if (!isset($item['#attributes']['name'])) {
++        continue;
++      }
++
++      $paragraph_type_id = str_replace([$parent_field_name . '_', '_add_more'], '', $item['#attributes']['name']);
++
++      if ($paragraph_type = $paragraph_type_storage->load($paragraph_type_id)) {
++        /** @var \Drupal\paragraphs\ParagraphsTypeInterface $paragraph_type */
++        $icon_url = $paragraph_type->getIconUrl();
++      }
++
++      $build['#items'][$key] = [
++        'icon' => isset($icon_url) ? [
++          '#theme' => 'image',
++          '#uri' => $icon_url,
++        ] : [],
++        'link' => $item,
++      ];
++    }
++
++    return $build;
+   }
+ 
+ }
