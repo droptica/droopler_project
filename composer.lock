@@ -1235,12 +1235,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/droptica/droopler.git",
-                "reference": "8b854d38e145f28ef725d4919c0f19deffdfcc04"
+                "reference": "a6a3568e01ba0f3efd5ed117055d63419fb8df07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/droptica/droopler/zipball/8b854d38e145f28ef725d4919c0f19deffdfcc04",
-                "reference": "8b854d38e145f28ef725d4919c0f19deffdfcc04",
+                "url": "https://api.github.com/repos/droptica/droopler/zipball/a6a3568e01ba0f3efd5ed117055d63419fb8df07",
+                "reference": "a6a3568e01ba0f3efd5ed117055d63419fb8df07",
                 "shasum": ""
             },
             "require": {
@@ -1313,7 +1313,7 @@
                 "issues": "https://github.com/droptica/droopler/issues",
                 "source": "https://github.com/droptica/droopler/tree/layout_builder-fields-paragraph-settings"
             },
-            "time": "2024-10-07T13:06:23+00:00"
+            "time": "2024-10-08T11:16:14+00:00"
         },
         {
             "name": "drupal/admin_toolbar",
@@ -2614,26 +2614,26 @@
         },
         {
             "name": "drupal/entity_reference_display",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_reference_display.git",
-                "reference": "2.0.1"
+                "reference": "2.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_reference_display-2.0.1.zip",
-                "reference": "2.0.1",
-                "shasum": "dfe6b978cb2ba9d6f4642a42d784a4c4d7c81ee9"
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_display-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "5f5180dd5343a7ad747c9c4ba9002d1435a576ad"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10 || ^11"
+                "drupal/core": "^10.2 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.1",
-                    "datestamp": "1727811413",
+                    "version": "2.0.2",
+                    "datestamp": "1728359889",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4114,11 +4114,11 @@
             ],
             "authors": [
                 {
-                    "name": "Berdir",
+                    "name": "berdir",
                     "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
-                    "name": "Dave Reid",
+                    "name": "dave reid",
                     "homepage": "https://www.drupal.org/user/53892"
                 },
                 {
