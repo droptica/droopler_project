@@ -1,32 +1,97 @@
-diff --git a/frontend_editing.libraries.yml b/frontend_editing.libraries.yml
-index a825eda..504d820 100644
---- a/frontend_editing.libraries.yml
-+++ b/frontend_editing.libraries.yml
-@@ -53,3 +53,9 @@ ui_toggle:
-   dependencies:
-     - core/once
-     - core/drupal.ajax
-+
-+paragraph-add-page:
-+  version: 1.6.0
-+  css:
-+    theme:
-+      css/paragraph-add-page.css: {}
-diff --git a/frontend_editing.module b/frontend_editing.module
-index ab8d022..0b4c17d 100644
---- a/frontend_editing.module
-+++ b/frontend_editing.module
-@@ -438,6 +438,8 @@ function frontend_editing_entity_view_alter(&$build, EntityInterface $entity, En
-       ];
-     }
-   }
-+
-+  $build['#attached']['library'][] = 'frontend_editing/paragraph-add-page';
+diff --git a/css/forms_helper.css b/css/forms_helper.css
+index 5aef497..1085222 100644
+--- a/css/forms_helper.css
++++ b/css/forms_helper.css
+@@ -46,3 +46,53 @@ body.path-frontend-editing {
+ .path-frontend-editing .dialog-off-canvas-main-canvas {
+   padding-top: 80px;
  }
- 
- /**
++
++
++ul.paragraphs-add-dialog-list {
++  display: flex;
++  flex-wrap: wrap;
++  margin: 0;
++  justify-content: center;
++}
++
++ul.paragraphs-add-dialog-list li {
++  position: relative;
++  list-style: none;
++  height: 90px;
++  width: 100px;
++  display: flex;
++  flex-direction: column;
++  align-items: center;
++  margin: 5px;
++  border: 2px solid black;
++  overflow: hidden;
++  opacity: 1;
++  transition: opacity 0.3s;
++  padding: 5px;
++}
++
++ul.paragraphs-add-dialog-list li:hover {
++  opacity: 0.8;
++}
++
++ul.paragraphs-add-dialog-list li > img {
++  height: 50px;
++}
++
++ul.paragraphs-add-dialog-list li > .button.button--small {
++  display: block;
++  padding: 60px 5px 5px;
++  height: calc(100% - 65px);
++  width: calc(100% - 10px);
++  border-radius: 0;
++  background-color: transparent;
++  position: absolute;
++  top: 0;
++  left: 0;
++  text-align: center;
++}
++
++.editing-container {
++  background-color: #fff !important;
++}
++
+diff --git a/css/frontend_editing.css b/css/frontend_editing.css
+index 85d1716..31c977a 100644
+--- a/css/frontend_editing.css
++++ b/css/frontend_editing.css
+@@ -400,3 +400,29 @@ body:not(.frontend-editing--hidden) .frontend-editing:has(.add-paragraphs.hover-
+ .frontend-editing--hidden .frontend-editing .frontend-editing-actions {
+   display: none;
+ }
++
++button.editing-container__toggle,
++button.editing-container__close {
++  background-size: cover;
++  opacity: 1;
++}
++
++div.frontend-editing-actions {
++  top: 24px;
++  left: 10px;
++}
++
++div.frontend-editing-actions::before {
++  background-color: #e8e8e8;
++  color: color-mix(in HSL, white, black);
++  font-size: 1rem;
++  left: 0;
++  margin: 0;
++  padding: 0 2px;
++  width: fit-content;
++}
++
++div.frontend-editing-actions a,
++div.frontend-editing-actions .frontend-editing__action:last-child {
++  border: 1px solid color-mix(in HSL, black, white);
++}
 diff --git a/src/Controller/FrontendEditingController.php b/src/Controller/FrontendEditingController.php
-index 6e74d5c..9c7c1b0 100644
+index 6e74d5c..99bcfc4 100644
 --- a/src/Controller/FrontendEditingController.php
 +++ b/src/Controller/FrontendEditingController.php
 @@ -616,7 +616,7 @@ class FrontendEditingController extends ControllerBase {
@@ -38,11 +103,7 @@ index 6e74d5c..9c7c1b0 100644
        '#theme' => 'item_list',
        '#items' => $items,
        '#attributes' => [
-@@ -626,9 +626,35 @@ class FrontendEditingController extends ControllerBase {
-         'library' => [
-           'paragraphs/drupal.paragraphs.modal',
-           'frontend_editing/forms_helper',
-+          'frontend_editing/paragraph-add-page',
+@@ -629,6 +629,31 @@ class FrontendEditingController extends ControllerBase {
          ],
        ],
      ];

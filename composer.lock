@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dee2659d81110fbaaffa57fd555140f7",
+    "content-hash": "9b6c964c23b788a399d1ca14afe73175",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1235,12 +1235,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/droptica/droopler.git",
-                "reference": "a6a3568e01ba0f3efd5ed117055d63419fb8df07"
+                "reference": "93924fd77317d626d8e53f39b9454175992907de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/droptica/droopler/zipball/a6a3568e01ba0f3efd5ed117055d63419fb8df07",
-                "reference": "a6a3568e01ba0f3efd5ed117055d63419fb8df07",
+                "url": "https://api.github.com/repos/droptica/droopler/zipball/93924fd77317d626d8e53f39b9454175992907de",
+                "reference": "93924fd77317d626d8e53f39b9454175992907de",
                 "shasum": ""
             },
             "require": {
@@ -1297,7 +1297,7 @@
                         "Claro - paragraphs overflow": "https://www.drupal.org/files/issues/2023-01-25/3145188-37_0.patch"
                     },
                     "drupal/frontend_editing": {
-                        "Frontend Editing - layout builder moving paragraphs fix": "web/profiles/contrib/droopler/patches/frontend_editing/layout_builder_moving_paragraphs_fix.patch"
+                        "Frontend Editing - layout builder moving paragraphs fix": "https://www.drupal.org/files/issues/2024-09-23/layout_builder_moving_paragraphs_fix.patch"
                     }
                 }
             },
@@ -1313,7 +1313,7 @@
                 "issues": "https://github.com/droptica/droopler/issues",
                 "source": "https://github.com/droptica/droopler/tree/layout_builder-fields-paragraph-settings"
             },
-            "time": "2024-10-08T11:16:14+00:00"
+            "time": "2024-10-08T12:04:38+00:00"
         },
         {
             "name": "drupal/admin_toolbar",
