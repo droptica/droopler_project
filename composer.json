@@ -25,6 +25,7 @@
         "composer/installers": "^2.2",
         "cweagans/composer-patches": "^1.6",
         "drupal/admin_toolbar": "^3.0",
+        "drupal/ai": "^1.0@alpha",
         "drupal/ala": "^2.5",
         "drupal/better_exposed_filters": "^7.0",
         "drupal/block_field": "^1.0@RC",

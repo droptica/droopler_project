@@ -1,0 +1,7 @@
+ai_content_generator.content_generation_form:
+  path: '/admin/content/ai-generate'
+  defaults:
+    _form: '\Drupal\ai_content_generator\Form\ContentGenerationForm'
+    _title: 'Generate Content with AI'
+  requirements:
+    _permission: 'administer ai content generator'

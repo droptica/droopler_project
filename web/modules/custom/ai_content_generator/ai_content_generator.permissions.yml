@@ -1,0 +1,4 @@
+administer ai content generator:
+  title: 'Administer AI Content Generator'
+  description: 'Allow users to access the AI content generation form.'
+  restrict access: true

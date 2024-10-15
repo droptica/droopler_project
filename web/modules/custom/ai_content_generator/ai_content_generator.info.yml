@@ -1,0 +1,8 @@
+name: 'AI Content Generator'
+type: module
+description: 'Bulk generate content with AI'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - drupal:node
+  - ai:ai

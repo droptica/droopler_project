@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for ai_content_generator module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ai_content_generator_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.ai_content_generator':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The AI Content Generator module allows administrators to bulk generate content using AI.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function ai_content_generator_menu() {
+  $items['admin/content/ai-generate'] = [
+    'title' => 'Generate Content with AI',
+    'description' => 'Use AI to generate content in bulk.',
+    'route' => 'ai_content_generator.content_generation_form',
+    'weight' => 50,
+  ];
+
+  return $items;
+}
