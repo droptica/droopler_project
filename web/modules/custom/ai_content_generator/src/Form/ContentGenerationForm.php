@@ -14,8 +14,6 @@ use Drupal\ai\OperationType\Chat\ChatMessage;
 use Drupal\ai\Plugin\ProviderProxy;
 use Drupal\ai\Service\AiProviderFormHelper;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\Core\Entity\EntityFieldManagerInterface;
-use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
 
 /**
  * Provides a form to generate content using AI.
@@ -142,10 +140,8 @@ class ContentGenerationForm extends FormBase {
    */
   private function getFieldOptions($content_type) {
     $fields = [
-      '#type' => 'checkboxes',
-      '#title' => $this->t('Fields to generate'),
-      '#options' => [],
-      '#description' => $this->t('Select the fields you want to generate content for.'),
+      '#type' => 'container',
+      '#tree' => TRUE,
     ];
 
     $field_definitions = $this->entityFieldManager->getFieldDefinitions('node', $content_type);
@@ -153,19 +149,31 @@ class ContentGenerationForm extends FormBase {
     foreach ($field_definitions as $field_name => $field_definition) {
       if ($field_definition instanceof FieldConfig) {
         if ($field_definition->getType() == 'entity_reference_revisions' && $field_definition->getSetting('target_type') == 'paragraph') {
+          $fields[$field_name] = [
+            '#type' => 'details',
+            '#title' => $field_definition->getLabel(),
+            '#open' => FALSE,
+          ];
+
           $paragraph_bundles = $this->entityTypeBundleInfo->getBundleInfo('paragraph');
           $allowed_paragraph_types = $field_definition->getSetting('handler_settings')['target_bundles'];
 
           foreach ($allowed_paragraph_types as $paragraph_type) {
             $paragraph_fields = $this->entityFieldManager->getFieldDefinitions('paragraph', $paragraph_type);
             foreach ($paragraph_fields as $paragraph_field_name => $paragraph_field_definition) {
-              if ($this->isTextualField($paragraph_field_definition)) {
-                $fields['#options'][$field_name . '.' . $paragraph_type . '.' . $paragraph_field_name] = $field_definition->getLabel() . ' - ' . $paragraph_bundles[$paragraph_type]['label'] . ' - ' . $paragraph_field_definition->getLabel();
+              if ($this->isDesiredTextField($paragraph_field_definition)) {
+                $fields[$field_name][$field_name . '.' . $paragraph_type . '.' . $paragraph_field_name] = [
+                  '#type' => 'checkbox',
+                  '#title' => $paragraph_bundles[$paragraph_type]['label'] . ' - ' . $paragraph_field_definition->getLabel(),
+                ];
               }
             }
           }
-        } elseif ($this->isTextualField($field_definition)) {
-          $fields['#options'][$field_name] = $field_definition->getLabel();
+        } elseif ($this->isDesiredTextField($field_definition)) {
+          $fields[$field_name] = [
+            '#type' => 'checkbox',
+            '#title' => $field_definition->getLabel(),
+          ];
         }
       }
     }
@@ -174,11 +182,11 @@ class ContentGenerationForm extends FormBase {
   }
 
   /**
-   * Check if a field is textual (i.e., can contain generated text).
+   * Check if a field is a desired text field.
    */
-  private function isTextualField($field_definition) {
-    $textual_field_types = ['text', 'text_long', 'text_with_summary', 'string', 'string_long'];
-    return in_array($field_definition->getType(), $textual_field_types);
+  private function isDesiredTextField($field_definition) {
+    $desired_field_types = ['text_long', 'text_with_summary'];
+    return in_array($field_definition->getType(), $desired_field_types);
   }
 
   /**
@@ -190,7 +198,9 @@ class ContentGenerationForm extends FormBase {
     $topic = $form_state->getValue('topic');
     $count = $form_state->getValue('count');
     $model = $form_state->getValue('chat_ai_model');
-    $selected_fields = array_filter($form_state->getValue('fields'));
+
+    // Zbieramy wszystkie wybrane pola, włącznie z polami paragrafów
+    $selected_fields = $this->getSelectedFields($form_state->getValue('fields'));
 
     $batch = [
       'title' => $this->t('Generating content with AI'),
@@ -216,6 +226,25 @@ class ContentGenerationForm extends FormBase {
   }
 
   /**
+   * Helper method to get all selected fields, including paragraph fields.
+   */
+  private function getSelectedFields($fields) {
+    $selected_fields = [];
+    foreach ($fields as $field_name => $value) {
+      if (is_array($value)) {
+        foreach ($value as $subfield => $selected) {
+          if ($selected) {
+            $selected_fields[] = $subfield;
+          }
+        }
+      } elseif ($value) {
+        $selected_fields[] = $field_name;
+      }
+    }
+    return $selected_fields;
+  }
+
+  /**
    * Batch operation to generate a single content item.
    */
   public function generateContentBatchOperation($provider_id, $provider_config, $content_type, $topic, $model, $selected_fields, &$context) {
@@ -237,7 +266,7 @@ class ContentGenerationForm extends FormBase {
           'type' => $field_parts[1],
           $field_parts[2] => ['value' => $this->generateFieldContent($provider, $topic, $model, $field_key)],
         ];
-        
+
         $paragraph = $this->entityTypeManager->getStorage('paragraph')->create($paragraph_data);
         $paragraph->save();
 
@@ -336,7 +365,7 @@ class ContentGenerationForm extends FormBase {
     if ($success) {
       $generated = $results['generated'] ?? 0;
       $failed = $results['failed'] ?? 0;
-      
+
       if ($generated > 0) {
         $this->messenger()->addStatus($this->formatPlural(
           $generated,
@@ -344,7 +373,7 @@ class ContentGenerationForm extends FormBase {
           'Successfully generated @count content items.'
         ));
       }
-      
+
       if ($failed > 0) {
         $this->messenger()->addWarning($this->formatPlural(
           $failed,
