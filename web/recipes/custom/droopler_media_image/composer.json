@@ -1,0 +1,26 @@
+{
+    "name": "droptica/droopler_media_image",
+    "type": "drupal-recipe",
+    "description": "Droptica’s Drupal Recipes: SEO - Redirect",
+    "keywords": ["recipe", "Drupal recipes", "Drupal recipe"],
+    "license": "GPL-2.0-or-later",
+    "repositories": {
+        "asset": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    },
+    "require": {
+        "bower-asset/colorbox": "^1.6",
+        "drupal/colorbox": "^2.0",
+        "drupal/core": ">=10.3",
+        "drupal/field_group": "^3.0",
+        "drupal/svg_image": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "Droptica",
+            "role": "Company"
+        }
+    ]
+}

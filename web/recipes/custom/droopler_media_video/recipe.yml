@@ -1,0 +1,35 @@
+name: 'Droopler - Media - Video'
+type: 'Droptica’s Droopler Recipes'
+description: "Media video functionality"
+
+install:
+  - media_library
+config:
+  import:
+    #Contrib.
+    media_library:
+      - core.entity_view_mode.media.media_library
+      - core.entity_form_mode.media.media_library
+      - image.style.media_library
+      - views.view.media_library
+    media:
+      - core.entity_view_mode.media.full
+      - system.action.media_delete_action
+      - system.action.media_publish_action
+      - system.action.media_save_action
+      - system.action.media_unpublish_action
+      - views.view.media
+  actions:
+    # Set permissions for content editor role.
+    user.role.content_editor:
+      ensure_exists:
+        id: content_editor
+      grantPermissions:
+        - 'create d_video media'
+        - 'delete any d_video media'
+        - 'delete any d_video media revisions'
+        - 'delete own d_video media'
+        - 'edit any d_video media'
+        - 'edit own d_video media'
+        - 'revert any d_video media revisions'
+        - 'view any d_video media revisions'
