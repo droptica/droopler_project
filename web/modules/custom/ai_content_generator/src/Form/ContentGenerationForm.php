@@ -162,17 +162,49 @@ class ContentGenerationForm extends FormBase {
             $paragraph_fields = $this->entityFieldManager->getFieldDefinitions('paragraph', $paragraph_type);
             foreach ($paragraph_fields as $paragraph_field_name => $paragraph_field_definition) {
               if ($this->isDesiredTextField($paragraph_field_definition)) {
-                $fields[$field_name][$field_name . '.' . $paragraph_type . '.' . $paragraph_field_name] = [
-                  '#type' => 'checkbox',
-                  '#title' => $paragraph_bundles[$paragraph_type]['label'] . ' - ' . $paragraph_field_definition->getLabel(),
+                $field_key = $field_name . '.' . $paragraph_type . '.' . $paragraph_field_name;
+                $fields[$field_name][$field_key] = [
+                  '#type' => 'container',
+                  'enabled' => [
+                    '#type' => 'checkbox',
+                    '#title' => $paragraph_bundles[$paragraph_type]['label'] . ' - ' . $paragraph_field_definition->getLabel(),
+                  ],
+                  'max_length' => [
+                    '#type' => 'number',
+                    '#title' => $this->t('Max length'),
+                    '#min' => 1,
+                    '#max' => 10000,
+                    '#default_value' => 500,
+                    '#states' => [
+                      'visible' => [
+                        ':input[name="fields[' . $field_name . '][' . $field_key . '][enabled]"]' => ['checked' => TRUE],
+                      ],
+                    ],
+                  ],
                 ];
               }
             }
           }
-        } elseif ($this->isDesiredTextField($field_definition)) {
+        }
+        elseif ($this->isDesiredTextField($field_definition)) {
           $fields[$field_name] = [
-            '#type' => 'checkbox',
-            '#title' => $field_definition->getLabel(),
+            '#type' => 'container',
+            'enabled' => [
+              '#type' => 'checkbox',
+              '#title' => $field_definition->getLabel(),
+            ],
+            'max_length' => [
+              '#type' => 'number',
+              '#title' => $this->t('Max length'),
+              '#min' => 1,
+              '#max' => 10000,
+              '#default_value' => 500,
+              '#states' => [
+                'visible' => [
+                  ':input[name="fields[' . $field_name . '][enabled]"]' => ['checked' => TRUE],
+                ],
+              ],
+            ],
           ];
         }
       }
@@ -231,14 +263,18 @@ class ContentGenerationForm extends FormBase {
   private function getSelectedFields($fields) {
     $selected_fields = [];
     foreach ($fields as $field_name => $value) {
-      if (is_array($value)) {
-        foreach ($value as $subfield => $selected) {
-          if ($selected) {
-            $selected_fields[] = $subfield;
+      if (isset($value['enabled']) && $value['enabled']) {
+        $selected_fields[$field_name] = [
+          'max_length' => $value['max_length'],
+        ];
+      } elseif (is_array($value)) {
+        foreach ($value as $subfield => $subvalue) {
+          if (isset($subvalue['enabled']) && $subvalue['enabled']) {
+            $selected_fields[$subfield] = [
+              'max_length' => $subvalue['max_length'],
+            ];
           }
         }
-      } elseif ($value) {
-        $selected_fields[] = $field_name;
       }
     }
     return $selected_fields;
@@ -258,13 +294,13 @@ class ContentGenerationForm extends FormBase {
       'status' => 1,
     ];
 
-    foreach ($selected_fields as $field_key) {
+    foreach ($selected_fields as $field_key => $field_info) {
       $field_parts = explode('.', $field_key);
       if (count($field_parts) == 3) {
         // This is a paragraph field
         $paragraph_data = [
           'type' => $field_parts[1],
-          $field_parts[2] => ['value' => $this->generateFieldContent($provider, $topic, $model, $field_key)],
+          $field_parts[2] => ['value' => $this->generateFieldContent($provider, $topic, $model, $field_key, (int) $field_info['max_length'])],
         ];
 
         $paragraph = $this->entityTypeManager->getStorage('paragraph')->create($paragraph_data);
@@ -274,9 +310,10 @@ class ContentGenerationForm extends FormBase {
           'target_id' => $paragraph->id(),
           'target_revision_id' => $paragraph->getRevisionId(),
         ];
-      } else {
+      }
+      else {
         // This is a regular node field
-        $node_data[$field_key] = ['value' => $this->generateFieldContent($provider, $topic, $model, $field_key)];
+        $node_data[$field_key] = ['value' => $this->generateFieldContent($provider, $topic, $model, $field_key, (int) $field_info['max_length'])];
       }
     }
 
@@ -292,10 +329,10 @@ class ContentGenerationForm extends FormBase {
   /**
    * Generates content for a specific field.
    */
-  private function generateFieldContent(AiProviderInterface|ProviderProxy $provider, string $topic, string $model, string $field_key): string {
+  private function generateFieldContent(AiProviderInterface|ProviderProxy $provider, string $topic, string $model, string $field_key, int $max_length): string {
     $field_parts = explode('.', $field_key);
     $field_name = end($field_parts);
-    $prompt = "Generate 2 paragraphs of content for the field '$field_name' related to the topic: $topic. The content should be appropriate for the field type and context.";
+    $prompt = "Generate content for the field '$field_name' related to the topic: $topic. If the main topic can be divided into smaller separate topics, then create content related to these smaller topics. The content should be appropriate for the field type and context. The maximum length should be $max_length characters. Do not use emoticons.";
 
     $input = new ChatInput([
       new ChatMessage('user', $prompt),
@@ -303,7 +340,8 @@ class ContentGenerationForm extends FormBase {
 
     try {
       $response = $provider->chat($input, $model, ['ai_content_generator'])->getNormalized();
-      return $response->getText();
+      $content = $response->getText();
+      return substr($content, 0, $max_length);
     }
     catch (\Exception $e) {
       $this->messenger()->addError($this->t('Error generating content for field @field: @error', ['@field' => $field_name, '@error' => $e->getMessage()]));
