@@ -16,6 +16,10 @@
         "asset": {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        "unpack": {
+            "type": "vcs",
+            "url": "https://gitlab.ewdev.ca/yonas.legesse/drupal-recipe-unpack.git"
         }
     },
     "require": {
@@ -53,6 +57,7 @@
         "drupal/link_attributes": "^1.1 || ^2.1",
         "drupal/metatag": "^1.2 || ^2.0",
         "drupal/paragraphs": "^1.1",
+        "drupal/password_policy": "^4.0",
         "drupal/pathauto": "^1.0",
         "drupal/radix": "^5.0",
         "drupal/redirect": "^1.0-beta1",
@@ -65,6 +70,8 @@
         "drupal/twig_tweak": "^3.4",
         "drupal/webform": "^6.2",
         "drush/drush": "^13",
+        "ewcomposer/unpack": "dev-master",
+        "kanopi/password-policy-90-days": "^0.1.4",
         "npm-asset/countup": "^1.9",
         "npm-asset/in-viewport": "^3.6",
         "npm-asset/jquery-ui-touch-punch": "^0.2",
@@ -109,7 +116,8 @@
             "zaporylie/composer-drupal-optimizations": true,
             "phpstan/extension-installer": true,
             "php-http/discovery": true,
-            "tbachert/spi": true
+            "tbachert/spi": true,
+            "ewcomposer/unpack": true
         },
         "preferred-install": {
             "*": "dist"
@@ -122,7 +130,13 @@
                 "web-root": "web/"
             }
         },
-        "installer-types": ["bower-asset", "npm-asset"],
+        "installer-types": [
+            "bower-asset",
+            "npm-asset",
+            "drupal-library",
+            "quicksilver-script",
+            "drupal-recipe"
+        ],
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/libraries/{$name}": ["type:drupal-library", "type:git", "type:bower-asset", "type:npm-asset"],
@@ -130,12 +144,14 @@
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/Commands/contrib/{$name}": ["type:drupal-drush"],
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
-            "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "web/recipes/contrib/{$name}": ["type:drupal-recipe"]
         },
         "patches": {
             "drupal/core": {
                 "Claro - vertical tabs overflow": "https://git.drupalcode.org/project/drupal/-/merge_requests/5376.patch",
-                "Claro - paragraphs overflow": "https://www.drupal.org/files/issues/2023-01-25/3145188-37_0.patch"
+                "Claro - paragraphs overflow": "https://www.drupal.org/files/issues/2023-01-25/3145188-37_0.patch",
+                "Allow recipes to be applied": "https://git.drupalcode.org/project/distributions_recipes/-/raw/patch/recipe-10.3.x.patch"
             },
             "drupal/features": {
                 "[3375425] Deprecated function: Creation of dynamic property": "https://www.drupal.org/files/issues/2023-07-19/3375425-3.patch"

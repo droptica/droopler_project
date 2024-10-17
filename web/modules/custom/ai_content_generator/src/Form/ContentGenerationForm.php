@@ -102,8 +102,8 @@ class ContentGenerationForm extends FormBase {
 
     $form['topic'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Content Topic'),
-      '#description' => $this->t('Enter the topic or theme for the content to be generated.'),
+      '#title' => $this->t('Content Topics'),
+      '#description' => $this->t('Enter the topics or themes for the content to be generated. Separate multiple topics with a semicolon (;).'),
       '#required' => TRUE,
     ];
 
@@ -227,7 +227,8 @@ class ContentGenerationForm extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $provider = $this->aiProviderHelper->generateAiProviderFromFormSubmit($form, $form_state, 'chat', 'chat');
     $content_type = $form_state->getValue('content_type');
-    $topic = $form_state->getValue('topic');
+    $topics = explode(';', $form_state->getValue('topic'));
+    $topics = array_map('trim', $topics); // Usuwamy białe znaki z początku i końca każdego tematu
     $count = $form_state->getValue('count');
     $model = $form_state->getValue('chat_ai_model');
 
@@ -241,6 +242,7 @@ class ContentGenerationForm extends FormBase {
     ];
 
     for ($i = 0; $i < $count; $i++) {
+      $topic = $topics[$i % count($topics)]; // Wybieramy temat cyklicznie
       $batch['operations'][] = [
         [$this, 'generateContentBatchOperation'],
         [
@@ -332,7 +334,7 @@ class ContentGenerationForm extends FormBase {
   private function generateFieldContent(AiProviderInterface|ProviderProxy $provider, string $topic, string $model, string $field_key, int $max_length): string {
     $field_parts = explode('.', $field_key);
     $field_name = end($field_parts);
-    $prompt = "Generate content for the field '$field_name' related to the topic: $topic. If the main topic can be divided into smaller separate topics, then create content related to these smaller topics. The content should be appropriate for the field type and context. The maximum length should be $max_length characters. Do not use emoticons.";
+    $prompt = "Generate content for the field '$field_name' related to the topic: $topic. The content should be appropriate for the field type and context. The maximum length should be $max_length characters. Do not use emoticons.";
 
     $input = new ChatInput([
       new ChatMessage('user', $prompt),
@@ -368,7 +370,7 @@ class ContentGenerationForm extends FormBase {
    * Generates a title using AI.
    */
   private function generateTitle(AiProviderInterface|ProviderProxy $provider, string $topic, string $model): string {
-    $prompt = "Generate a catchy, engaging and informative title for an article about: $topic. This need to be one simple sentence. Title should not exceeding 60 characters if possible.";
+    $prompt = "Generate a catchy, engaging and informative title for an article about: $topic. This needs to be one simple sentence. Title should not exceed 60 characters if possible.";
 
     $input = new ChatInput([
       new ChatMessage('user', $prompt),

@@ -10,6 +10,7 @@
 !/web/profiles/custom
 /web/libraries/
 console/
+/web/recipes
 
 # Ignore sensitive information
 /web/sites/*/settings.local.php

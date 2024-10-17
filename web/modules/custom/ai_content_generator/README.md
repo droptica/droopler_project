@@ -32,14 +32,44 @@ The module defines one permission:
 - `administer ai content generator`: Allows access to the AI content generation form.
 
 ## How it works
-1. The module presents a form where users can select content type, fields, and generation parameters.
-2. When the form is submitted, it creates a batch process for content generation.
-3. For each content item:
-  - It generates a title using AI.
-  - It generates content for each selected field, respecting the specified maximum length.
-  - For paragraph fields, it creates new paragraph entities with generated content.
-  - It creates a new node with the generated content.
-4. After the batch process completes, it displays a summary of generated and failed content items.
+
+1. User Interface:
+  - The module provides a form at `/admin/content/ai-generate`.
+  - Users can select a content type, choose fields to populate, and set maximum lengths for each field.
+  - Multiple topics can be entered, separated by semicolons (;).
+  - Users specify the number of content items to generate and select an AI provider and model.
+
+2. Content Generation Process:
+  - When the form is submitted, it creates a batch process for content generation.
+  - Topics are cycled through if more content items are requested than topics provided.
+  - For each content item:
+    a. It generates a title using AI based on the current topic.
+    b. It generates content for each selected field, respecting the specified maximum length.
+    c. For paragraph fields, it creates new paragraph entities with generated content.
+    d. It creates a new node with the generated title and field content.
+
+3. AI Integration:
+  - The module uses the AI module to interact with various AI providers.
+  - For each field, including the title, a specific prompt is sent to the AI model.
+  - The AI-generated content is then processed and trimmed to fit within the specified length limits.
+
+4. Paragraph Handling:
+  - The module can generate content for fields within paragraph entities.
+  - It creates new paragraph entities for each content item and populates their fields as specified.
+
+5. Batch Processing:
+  - Content generation is done in a batch process to handle large numbers of items efficiently.
+  - This prevents timeouts and provides progress feedback to the user.
+
+6. Error Handling:
+  - If content generation for a specific item fails, it's logged and the process continues with the next item.
+  - After completion, a summary is displayed showing successful and failed generations.
+
+7. Customization:
+  - The module allows for easy customization of prompts sent to the AI model.
+  - Field types that can be populated are configurable within the code.
+
+This process allows for efficient, AI-driven bulk content generation while providing flexibility in terms of content structure and topics.
 
 ## File Structure
 - `ai_content_generator.info.yml`: Module definition file.
