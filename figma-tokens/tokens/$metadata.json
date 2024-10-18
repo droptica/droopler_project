@@ -1,0 +1,10 @@
+{
+  "tokenSetOrder": [
+    "core/color",
+    "core/size",
+    "core/typography",
+    "mode/light",
+    "mode/dark",
+    "device/desktop"
+  ]
+}

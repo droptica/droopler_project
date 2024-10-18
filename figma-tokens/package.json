@@ -1,0 +1,10 @@
+{
+  "name": "figma_tokens_transformer",
+  "description": "A transformer of the figma tokens for Droopler Subtheme.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@tokens-studio/sd-transforms": "^1.2.5"
+  }
+}

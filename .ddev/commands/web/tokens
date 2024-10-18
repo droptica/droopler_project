@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+cd ${TOKENS_DIR}
+
+# Install the dependencies and transform tokens.
+npm install
+node sd-transform.js
+
+# Go back and copy result file to the theme.
+cd -
+cp -r ${TOKENS_DIR}/build/* web/themes/custom/${THEME_NAME}/src/scss/base/tokens
