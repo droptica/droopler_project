@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Step 1: Install project dependencies using Composer via DDEV
+echo "Installing project dependencies..."
+ddev composer install
+
+# Step 2: Install the Drupal site with the minimal profile
+echo "Installing Drupal with the minimal profile..."
+ddev drush site-install minimal -y
+
+# Step 3: Apply the Droopler recipe to configure the site
+echo "Applying the Droopler recipe..."
+ddev drush recipe recipes/custom/droopler
+
+# Step 4: Generate a one-time login link to access the site
+echo "Generating a one-time login link..."
+ddev drush uli

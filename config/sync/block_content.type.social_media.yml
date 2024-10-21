@@ -1,8 +1,0 @@
-uuid: 9889a22a-9630-4f16-9ddb-8e8345ed067a
-langcode: en
-status: true
-dependencies: {  }
-id: social_media
-label: 'Social media'
-revision: false
-description: null

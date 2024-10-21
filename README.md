@@ -42,23 +42,6 @@ Fork this repository and clone the newly created to your local machine.
 
 This section provides instructions for running the `Droopler` distribution locally.
 
-### Using custom development environment
-
-1. Run `composer create-project droptica/droopler-project:^4.0-alpha <path>` to install the project and its dependencies.
-2. Run npm to download the theme dependencies and compile assets.<br /><br />
-Droopler uses the npm stack to speed up the development of new sites. It compiles SCSS to CSS, allows Autoprefixer to handle browser compatibility, and minimizes all JavaScript files. [Install Node v18 and npm](https://nodejs.org/en/download/) on your computer and run the following commands in the root directory of your project:
-
-```sh
-$ cd web/profiles/contrib/droopler/themes/custom/droopler_theme
-$ npm install
-
-$ cd web/themes/custom/droopler_subtheme
-$ npm install
-$ npm run dev
-```
-3. Run Drupal installation.<br />
-Go to http://yourserver.local/install.php and follow the steps of configuration.
-
 ### Using DDEV
 
 1. [Install ddev](https://ddev.readthedocs.io/en/stable/#installation).
@@ -66,14 +49,13 @@ Go to http://yourserver.local/install.php and follow the steps of configuration.
 3. Run `ddev start` to start the project.
 4. Run `ddev composer install` to download the project dependencies.
 5. If you notice problems with accessing to the repository, run `ddev auth ssh` to add the keys from your `~/.ssh` directory to the web container and run `ddev composer install` command once again.
-6. Run `ddev theme` to install the theme dependencies and compile assets. By default, production assets are compiled. You can run `ddev theme dev` to compile assets for development. You can also run `ddev theme watch` to watch for changes in SCSS and JS and process them on the fly.
-7. Go to the URL provided by ddev and finish installing the website. You can also run `ddev build-profile` to build the Droopler profile from the CLI (you will get a fully featured version, with blog, products and demo content).
+6. Run `ddev droopler-install` to install Droopler with the theme, all necessary configuration, and default content.
 
 ### Using Lando
 1. [Install lando](https://docs.lando.dev/getting-started/installation.html).
 2. Run `lando start` to start the project.
-3. Run `lando prepare` to build the project's code. Alternatively, you can run `lando composer install` to download the project dependencies, and then `lando theme-production` and `lando subtheme-production` to compile assets.
-4. Go to the URL provided by `lando info` and finish installing the website. You can also build the Droopler profile from the CLI. Run `lando build-full-profile` for the fully-featured version, or `lando build-full-profile` for the minimal one.
+3. Run `lando prepare` to build the project's code. Alternatively, you can run `lando composer install` to download the project dependencies, and then `lando theme-production` to compile assets, and then `lando droopler-install` to install Droopler with the theme, all necessary configuration, and default content..
+4. Go to the URL provided by `lando info` and finish installing the website.
 
 ### Using DDEV connected to a database instance on an active Platform.sh environment
 This is instructions for running the template locally, connected to a live database instance on an active Platform.sh environment.

@@ -13,7 +13,8 @@ database:
     version: "10.11"
 use_dns_when_possible: true
 composer_version: "2.6"
-web_environment: []
+web_environment:
+    - THEME_NAME=droopler_theme
 corepack_enable: false
 
 # Key features of DDEV's config.yaml:

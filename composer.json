@@ -46,7 +46,7 @@
         "drupal/features": "5.0.x-dev@dev",
         "drupal/field_group": "^3.0",
         "drupal/field_validation": "^1.1",
-        "drupal/frontend_editing": "^1.2",
+        "drupal/frontend_editing": "1.7.3",
         "drupal/google_analytics": "^4.0",
         "drupal/google_tag": "^2.0",
         "drupal/link_attributes": "^1.1 || ^2.1",

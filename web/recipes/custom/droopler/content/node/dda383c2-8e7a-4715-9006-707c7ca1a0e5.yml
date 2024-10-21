@@ -1,0 +1,124 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: dda383c2-8e7a-4715-9006-707c7ca1a0e5
+  bundle: content_page
+  default_langcode: en
+  depends:
+    762d9414-03aa-4934-868f-2945798aecc1: media
+    8910a5a2-26bd-47ad-9dc5-ec68af9aac7b: media
+    9d2aa1c5-8894-4f01-a368-f38bd45f5fcd: media
+    b1247d6e-03c3-4888-843c-9578f7e006f5: media
+    ea8ea609-a779-4a1f-865a-5a27241bd268: media
+    c238b088-a136-40e0-8065-c3f2f9462b5b: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'video gallery item'
+  created:
+    -
+      value: 1728368159
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'video gallery item | test'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://ddevappname.ddev.site/video-gallery-item'
+  path:
+    -
+      alias: /video-gallery-item
+      langcode: en
+      pathauto: 1
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_page_section:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: b1821949-c0cc-4ba1-b0dc-2fa349829a78
+          bundle: d_p_gallery
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1728368679
+          behavior_settings:
+            -
+              value: {  }
+          content_translation_source:
+            -
+              value: und
+          content_translation_outdated:
+            -
+              value: false
+          field_background_theme_custom:
+            -
+              color: '#FFFFFF'
+              opacity: 0.0
+          field_d_main_title:
+            -
+              value: 'Test video Gallery item '
+          field_d_media_image:
+            -
+              entity: 762d9414-03aa-4934-868f-2945798aecc1
+            -
+              entity: 8910a5a2-26bd-47ad-9dc5-ec68af9aac7b
+            -
+              entity: 9d2aa1c5-8894-4f01-a368-f38bd45f5fcd
+            -
+              entity: b1247d6e-03c3-4888-843c-9578f7e006f5
+            -
+              entity: ea8ea609-a779-4a1f-865a-5a27241bd268
+            -
+              entity: c238b088-a136-40e0-8065-c3f2f9462b5b
+          field_heading_type:
+            -
+              value: h2
+          field_margin_bottom:
+            -
+              value: margin_bottom_none
+          field_margin_top:
+            -
+              value: margin_top_none
+          field_padding_bottom:
+            -
+              value: padding_bottom_medium
+          field_padding_top:
+            -
+              value: padding_top_medium
+          field_text_theme_custom:
+            -
+              color: '#000000'
+              opacity: 0.0
+          field_theme:
+            -
+              value: theme-light

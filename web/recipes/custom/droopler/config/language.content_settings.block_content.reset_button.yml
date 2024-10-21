@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.reset_button
+id: block_content.reset_button
+target_entity_type_id: block_content
+target_bundle: reset_button
+default_langcode: site_default
+language_alterable: false

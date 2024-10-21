@@ -1,0 +1,197 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 9b4397ba-34ea-4e63-abd5-1813f0b158bc
+  bundle: content_page
+  default_langcode: en
+  depends:
+    e54168ea-b8aa-473e-a6e7-fd27f71a31f5: node
+    000f7cba-60d5-4e2d-9e09-6c9255fadc21: node
+    2664fb87-6848-491a-b6a2-dea392a37e94: node
+    61462581-ceb7-4417-a63f-8aaa36d022ea: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: ' Reference content'
+  created:
+    -
+      value: 1727276165
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Reference content | test'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://ddevappname.ddev.site/reference-content'
+  path:
+    -
+      alias: /reference-content
+      langcode: en
+      pathauto: 1
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_page_section:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: e4c35bc0-c723-42bf-996a-3afb42be4fea
+          bundle: d_p_reference_content
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1727276172
+          behavior_settings:
+            -
+              value: {  }
+          content_translation_source:
+            -
+              value: und
+          content_translation_outdated:
+            -
+              value: false
+          field_background_theme_custom:
+            -
+              color: '#000000'
+              opacity: 0.0
+          field_d_cta_link:
+            -
+              uri: 'https://google.com'
+              title: Google
+              options:
+                attributes:
+                  target: ''
+                  id: ''
+                  name: ''
+                  rel: ''
+                  custom_classes: ''
+                  accesskey: ''
+                class: 'btn btn-warning'
+          field_d_main_title:
+            -
+              value: 'Test  Reference content'
+          field_d_p_reference_content:
+            -
+              entity: e54168ea-b8aa-473e-a6e7-fd27f71a31f5
+            -
+              entity: 000f7cba-60d5-4e2d-9e09-6c9255fadc21
+            -
+              entity: 2664fb87-6848-491a-b6a2-dea392a37e94
+            -
+              entity: 61462581-ceb7-4417-a63f-8aaa36d022ea
+          field_heading_type:
+            -
+              value: h2
+          field_margin_bottom:
+            -
+              value: margin_bottom_small
+          field_margin_top:
+            -
+              value: margin_top_small
+          field_padding_bottom:
+            -
+              value: padding_bottom_medium
+          field_padding_top:
+            -
+              value: padding_top_medium
+          field_text_theme_custom:
+            -
+              color: '#000000'
+              opacity: 0.0
+          field_theme:
+            -
+              value: theme-dark
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: b4c70c19-902f-49db-bdec-d1f8708ce191
+          bundle: d_p_reference_content
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1727677070
+          behavior_settings:
+            -
+              value: {  }
+          content_translation_source:
+            -
+              value: und
+          content_translation_outdated:
+            -
+              value: false
+          field_background_theme_custom:
+            -
+              color: '#FFFFFF'
+              opacity: 0.0
+          field_d_cta_link:
+            -
+              uri: 'https://google.com'
+              title: test
+              options:
+                attributes:
+                  target: ''
+                  id: ''
+                  name: ''
+                  rel: ''
+                  custom_classes: ''
+                  accesskey: ''
+                class: 'btn btn-link'
+          field_d_main_title:
+            -
+              value: test
+          field_heading_type:
+            -
+              value: h2
+          field_margin_bottom:
+            -
+              value: margin_bottom_none
+          field_margin_top:
+            -
+              value: margin_top_none
+          field_padding_bottom:
+            -
+              value: padding_bottom_medium
+          field_padding_top:
+            -
+              value: padding_top_medium
+          field_text_theme_custom:
+            -
+              color: '#000000'
+              opacity: 0.0
+          field_theme:
+            -
+              value: theme-light

@@ -1,0 +1,263 @@
+name: 'Droopler config.'
+description: 'Provides Droopler Config.'
+type: 'Droopler'
+
+install:
+  - claro
+  - droopler_theme
+  - admin_toolbar
+  - admin_toolbar_tools
+  - ala
+  - better_exposed_filters
+  - block
+  - block_content
+  - block_field
+  - bootstrap_layout_builder
+  - bootstrap_styles
+  - breakpoint
+  - checklistapi
+  - ckeditor5
+  - color_field
+  - colorbox
+  - components
+  - conditional_fields
+  - config
+  - config_update
+  - contact
+  - contact_formatter
+  - contextual
+  - ctools
+  - dblog
+  - default_content
+  - dynamic_page_cache
+  - editor
+  - emulsify_twig
+  - entity_reference_display
+  - entity_reference_revisions
+  - facets
+  - field
+  - field_group
+  - field_ui
+  - filter
+  - frontend_editing
+  - help
+  - history
+  - image
+  - language
+  - layout_builder
+  - layout_discovery
+  - link
+  - link_attributes
+  - locale
+  - media_library
+  - media_library_form_element
+  - menu_link_content
+  - menu_ui
+  - metatag
+  - metatag_open_graph
+  - mysql
+  - node
+  - options
+  - page_cache
+  - paragraphs_edit
+  - path
+  - path_alias
+  - redirect
+  - responsive_image
+  - search
+  - search_api
+  - search_api_db
+  - shortcut
+  - simple_sitemap
+  - svg_image
+  - svg_image_responsive
+  - system
+  - taxonomy
+  - token
+  - toolbar
+  - twig_tweak
+  - update
+  - user
+  - views_ui
+  - webform
+  - pathauto
+  - content_translation
+  - views
+  - paragraphs
+  - tvi
+
+config:
+  import:
+    admin_toolbar: "*"
+    admin_toolbar_tools: "*"
+    bootstrap_styles: "*"
+    bootstrap_layout_builder: "*"
+    colorbox: "*"
+    layout_builder: "*"
+    media_library: "*"
+    metatag: "*"
+    metatag_open_graph: "*"
+    filter: "*"
+    pathauto: "*"
+    views: "*"
+    webform: "*"
+    file: "*"
+    taxonomy: "*"
+    text: "*"
+    redirect: "*"
+    language: "*"
+    paragraphs: "*"
+    dblog: "*"
+    shortcut: "*"
+    user:
+      - core.entity_form_mode.user.register
+      - core.entity_view_mode.user.compact
+      - core.entity_view_mode.user.full
+      - system.action.user_block_user_action
+      - system.action.user_cancel_user_action
+      - system.action.user_unblock_user_action
+      - user.flood
+      - user.mail
+      - search.page.user_search
+      - views.view.user_admin_people
+      - views.view.who_s_new
+      - views.view.who_s_online
+
+  actions:
+    # Configure system.mail
+    system.mail:
+      simple_config_update:
+        interface:
+          default: php_mail
+          webform: webform_php_mail
+        mailer_dsn:
+          scheme: sendmail
+          host: default
+          user: null
+          password: null
+          port: null
+          options: {}
+
+    # Configure system.theme
+    system.theme:
+      simple_config_update:
+        admin: claro
+        default: droopler_theme
+
+    # Configure anonymous user role
+    user.role.anonymous:
+      simple_config_update:
+        langcode: en
+        status: true
+        dependencies:
+          module:
+            - media
+            - search
+            - system
+        id: anonymous
+        label: 'Anonymous user'
+        weight: 0
+        is_admin: false
+        permissions:
+          - 'access content'
+          - 'search content'
+          - 'view media'
+
+    # Configure authenticated user role
+    user.role.authenticated:
+      simple_config_update:
+        langcode: en
+        status: true
+        dependencies:
+          config:
+            - filter.format.webform_default
+          module:
+            - filter
+            - media
+            - search
+            - system
+        id: authenticated
+        label: 'Authenticated user'
+        weight: 1
+        is_admin: false
+        permissions:
+          - 'access content'
+          - 'search content'
+          - 'use text format webform_default'
+          - 'view media'
+
+    # Configure user settings
+    user.settings:
+      simple_config_update:
+        langcode: en
+        anonymous: Anonymous
+        verify_mail: true
+        notify:
+          cancel_confirm: true
+          password_reset: true
+          status_activated: true
+          status_blocked: false
+          status_canceled: false
+          register_admin_created: true
+          register_no_approval_required: true
+          register_pending_approval: true
+        register: visitors
+        cancel_method: user_cancel_block
+        password_reset_timeout: 86400
+        password_strength: true
+
+    # Disable default blocks for droopler_theme after installation
+    block.block.droopler_theme_branding:
+      simple_config_update:
+        status: false
+
+    block.block.droopler_theme_messages:
+      simple_config_update:
+        status: false
+
+    block.block.droopler_theme_tools:
+      simple_config_update:
+        status: false
+
+    block.block.droopler_theme_admin:
+      simple_config_update:
+        status: false
+
+    block.block.droopler_theme_page_title:
+      simple_config_update:
+        status: false
+
+    block.block.droopler_theme_local_tasks:
+      simple_config_update:
+        status: false
+
+    block.block.droopler_theme_local_actions:
+      simple_config_update:
+        status: false
+
+    # Disable default blocks for claro theme after installation
+    block.block.claro_branding:
+      simple_config_update:
+        status: false
+
+    block.block.claro_tools:
+      simple_config_update:
+        status: false
+
+    block.block.claro_admin:
+      simple_config_update:
+        status: false
+
+    block.block.claro_page_title:
+      simple_config_update:
+        status: false
+
+    block.block.claro_local_tasks:
+      simple_config_update:
+        status: false
+
+    # Set default front page to "/home-page"
+    system.site:
+      simple_config_update:
+        page:
+          front: '/home-page'

@@ -1,8 +1,0 @@
-uuid: 475b7aa9-6d40-4987-987a-f8072920f613
-langcode: en
-status: true
-dependencies: {  }
-id: mobile_filters
-label: 'Mobile Filters'
-revision: false
-description: null

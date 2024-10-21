@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-# Composer install with styles.
-ddev composer install
-ddev drush sql-drop -y
-ddev drush site-install droopler install_configure_form.enable_update_status_module=TRUE install_configure_form.enable_update_status_emails=NULL --account-name=admin --account-pass=123 --site-name=droopler -y --locale=en droopler_additional_modules_form.module_d_blog=1 droopler_additional_modules_form.module_d_product=1 droopler_additional_modules_form.init_content=1 droopler_additional_modules_form.documentation=1
-ddev theme
-ddev drush cr
-ddev drush uli

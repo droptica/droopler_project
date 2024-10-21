@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.d_product_gallery
+    - field.field.media.d_image.field_media_image
+    - image.style.gallery_fullscreen
+    - image.style.product_main_image
+    - media.type.d_image
+  module:
+    - colorbox
+id: media.d_image.d_product_gallery
+targetEntityType: media
+bundle: d_image
+mode: d_product_gallery
+content:
+  field_media_image:
+    type: colorbox
+    label: hidden
+    settings:
+      colorbox_node_style: product_main_image
+      colorbox_node_style_first: ''
+      colorbox_image_style: gallery_fullscreen
+      colorbox_gallery: page
+      colorbox_gallery_custom: ''
+      colorbox_caption: alt
+      colorbox_caption_custom: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
