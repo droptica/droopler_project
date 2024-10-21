@@ -109,15 +109,15 @@ There are several comands that help you to work with the subtheme. You can run t
 ### Using lando
 There are several comands that help you to work with the subtheme. You can run them from the root directory of your project.
 
-- `lando theme-watch` or `lando subtheme-watch` - watches for changes in SCSS and JS and processes them on the fly
-- `lando theme-dev` or `lando subtheme-dev` - cleans derivative files and compiles all SCSS/JS in the theme for DEV environment
-- `lando theme-production` or `lando subtheme-production` - cleans derivative files and compiles all SCSS/JS in the theme for PROD environment
+- `lando theme-watch` - watches for changes in SCSS and JS and processes them on the fly
+- `lando theme-dev` - cleans derivative files and compiles all SCSS/JS in the theme for DEV environment
+- `lando theme-production` - cleans derivative files and compiles all SCSS/JS in the theme for PROD environment
 
 ### Running npm on your own
-First run <strong>npm run watch</strong> in your subtheme's directory. It will track all the changes in theme source files and compile assets in the fly.
+First run <strong>npm run watch</strong> in your theme's directory. It will track all the changes in theme source files and compile assets in the fly.
 
 ```sh
-$ cd web/themes/custom/droopler_subtheme
+$ cd web/themes/custom/droopler_theme
 $ npm run watch
 ```
 
