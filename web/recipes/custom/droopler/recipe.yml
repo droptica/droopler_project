@@ -3,8 +3,6 @@ description: 'Provides Droopler Config.'
 type: 'Droopler'
 
 install:
-  - claro
-  - droopler_theme
   - admin_toolbar
   - admin_toolbar_tools
   - ala
@@ -17,6 +15,7 @@ install:
   - breakpoint
   - checklistapi
   - ckeditor5
+  - claro
   - color_field
   - colorbox
   - components
@@ -26,6 +25,7 @@ install:
   - contact
   - contact_formatter
   - contextual
+  - content_translation
   - ctools
   - dblog
   - default_content
@@ -59,9 +59,11 @@ install:
   - node
   - options
   - page_cache
+  - paragraphs
   - paragraphs_edit
   - path
   - path_alias
+  - pathauto
   - redirect
   - responsive_image
   - search
@@ -75,40 +77,45 @@ install:
   - taxonomy
   - token
   - toolbar
+  - tvi
   - twig_tweak
   - update
   - user
+  - views
   - views_ui
   - webform
-  - pathauto
-  - content_translation
-  - views
-  - paragraphs
-  - tvi
 
 config:
   import:
     admin_toolbar: "*"
     admin_toolbar_tools: "*"
-    bootstrap_styles: "*"
+    block_content: "*"
     bootstrap_layout_builder: "*"
+    bootstrap_styles: "*"
     colorbox: "*"
+    dblog: "*"
+    field_ui: "*"
+    filter: "*"
+    help: "*"
+    image: "*"
+    language: "*"
     layout_builder: "*"
+    media: "*"
     media_library: "*"
     metatag: "*"
     metatag_open_graph: "*"
-    filter: "*"
+    node: "*"
+    paragraphs: "*"
     pathauto: "*"
-    views: "*"
-    webform: "*"
-    file: "*"
+    redirect: "*"
+    search: "*"
+    search_api:
+      - search_api.settings
+    search_api_db: "*"
+    shortcut: "*"
+    simple_sitemap: "*"
     taxonomy: "*"
     text: "*"
-    redirect: "*"
-    language: "*"
-    paragraphs: "*"
-    dblog: "*"
-    shortcut: "*"
     user:
       - core.entity_form_mode.user.register
       - core.entity_view_mode.user.compact
@@ -122,6 +129,8 @@ config:
       - views.view.user_admin_people
       - views.view.who_s_new
       - views.view.who_s_online
+    views: "*"
+    webform: "*"
 
   actions:
     # Configure system.mail

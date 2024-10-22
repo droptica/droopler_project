@@ -6,33 +6,34 @@
 
 ## About
 
-Droopler is a Drupal 10 profile designed to kickstart a new webpage in a few minutes. It's based on the latest frontend technologies, including Bootstrap 5. The maintainer of Droopler is [Droptica](https://droptica.com).
-
+Droopler is a set of configurations (recipe) and a theme for Drupal 10, designed to kickstart a new website in just a few minutes. It is based on the latest frontend technologies, including Bootstrap 5. Droopler is maintained by Droptica.
 * **Official website**: [droptica.com/droopler](https://www.droptica.com/droopler)
 * **Tutorials**: [droptica.com/droopler/tutorials](https://www.droptica.com/droopler/tutorials/)
 * **Demo**: [droopler-demo.droptica.com](https://droopler-demo.droptica.com)
-* **Profile repository**: [github.com/droptica/droopler](https://github.com/droptica/droopler)
-* **Drupal.org project**: [drupal.org/project/droopler](https://www.drupal.org/project/droopler)
-* **Issue queue**: [drupal.org/project/issues/droopler](https://www.drupal.org/project/issues/droopler)
 
 For the latest news, follow us on [Facebook](https://www.facebook.com/Droopler/) and [Twitter](https://twitter.com/DrooplerCMS).
 
 ### What is this Droopler template? ##
-It's a skeleton, a boilerplate for new projects based on Droopler. If you wish to use Droopler - fork (or download) this repository. It contains a minimal set of code to start your new site. Threat it the same way as [drupal/recommended-project](https://github.com/drupal/recommended-project) or [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project).
+It’s a skeleton, a boilerplate for new projects based on Droopler. If you want to use Droopler, clone (or download) this repository. It contains the minimal set of code required to start a new site. Treat it the same way as you would treat drupal/recommended-project or drupal-composer/drupal-project.
 
 This repository includes:
 
 - **composer.json** with all dependencies required to run Droopler.
 - **.gitignore** adjusted to use GIT with Drupal.
-- Boilerplate subtheme with minimal required CSS/SCSS and Javascript. It contains gulpfile.js to speed up development of Drupal's frontend.
+- Boilerplate theme with the required CSS/SCSS and JavaScript files. It includes a webpack setup to speed up frontend development for Drupal.
 
-## Deploy on Platform.sh
+[//]: # (TODO: Add information about the Droopler template for Platform.sh)
+[//]: # (## Deploy on Platform.sh)
 
-You can deploy and host your Droopler installation on [Platform.sh](https://platform.sh/).
+[//]: # ()
+[//]: # (You can deploy and host your Droopler installation on [Platform.sh]&#40;https://platform.sh/&#41;.)
 
-<a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/droptica/droopler_project/4.0.x/.platform.template.yml">
-    <img src="https://platform.sh/images/deploy/lg-blue.svg" alt="Deploy Droopler on Platform.sh" width="180px" />
-</a>
+[//]: # ()
+[//]: # (<a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/droptica/droopler_project/4.0.x/.platform.template.yml">)
+
+[//]: # (    <img src="https://platform.sh/images/deploy/lg-blue.svg" alt="Deploy Droopler on Platform.sh" width="180px" />)
+
+[//]: # (</a>)
 
 ## Quick start
 
@@ -103,7 +104,7 @@ In general, the steps are as follows:
 There are several comands that help you to work with the subtheme. You can run them from the root directory of your project.
 
 - `ddev theme watch` - watches for changes in SCSS and JS and processes them on the fly
-- `ddev theme dev` - cleans derivative files and compiles all SCSS/JS in the subtheme for DEV environment
+- `ddev theme dev` - cleans derivative files and compiles all SCSS/JS in the theme for DEV environment
 - `ddev theme production` - cleans derivative files and compiles all SCSS/JS in the subtheme for PROD environment
 
 ### Using lando
@@ -131,10 +132,8 @@ There are also other npm commands for theme developers, here's the full referenc
 
 ## SCSS structure
 
-- **src/scss/main.style.scss** - combines all SCSS code from base theme and subtheme
-- **src/components** - directory where you can keep all your components, see [components/README.md](web/themes/custom/droopler_subtheme/src/components/README.md)
-
-You can use any SCSS structure you like. We recommend dividing files into **layout/** and **components/** directories. Just remember to include your files in **main.style.scss**.
+- **src/scss/main.style.scss** - combines all SCSS code from the theme
+- **src/components** - directory where you can keep all your components, see [components/README.md](web/themes/custom/droopler_theme/src/components/README.md)
 
 ## SCSS Configuration
 
