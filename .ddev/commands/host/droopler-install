@@ -12,6 +12,13 @@ ddev drush site-install minimal -y
 echo "Applying the Droopler recipe..."
 ddev drush recipe recipes/custom/droopler
 
-# Step 4: Generate a one-time login link to access the site
+# Step 4: Index content.
+echo "Index the Droopler content"
+ddev drush sapi-i
+
+# Step 5: Generate a one-time login link to access the site
 echo "Generating a one-time login link..."
 ddev drush uli
+
+# Step 5: Generate a one-time login link to access the site
+ddev drush cr

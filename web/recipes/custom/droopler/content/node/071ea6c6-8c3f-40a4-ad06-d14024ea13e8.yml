@@ -12,13 +12,13 @@ _meta:
 default:
   revision_uid:
     -
-      target_id: 0
+      target_id: 1
   status:
     -
       value: true
   uid:
     -
-      target_id: 0
+      target_id: 1
   title:
     -
       value: 'CloudCruiser 55 Advance'
