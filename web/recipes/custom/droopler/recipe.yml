@@ -29,6 +29,7 @@ install:
   - ctools
   - dblog
   - default_content
+  - droopler_theme
   - dynamic_page_cache
   - editor
   - emulsify_twig
@@ -133,6 +134,11 @@ config:
     webform: "*"
 
   actions:
+    #configure node.settings
+    node.settings:
+      simple_config_update:
+        use_admin_theme: true
+
     # Configure system.mail
     system.mail:
       simple_config_update:
