@@ -136,6 +136,9 @@
             "drupal/frontend_editing": {
                 "Frontend Editing - layout builder moving paragraphs fix": "https://www.drupal.org/files/issues/2024-09-23/layout_builder_moving_paragraphs_fix.patch",
                 "Frontend Editing module improves for Droopler": "patches/frontend_editing/frontend_editing_module_improves_for_droopler.patch"
+            },
+            "drupal/paragraphs": {
+                "The 'paragraph' entity type did not specify a translation handler.": "https://www.drupal.org/files/issues/2021-01-22/paragraph-entity-type-did-not-specify-translation-halder-3031598-45.patch"
             }
         }
     },
