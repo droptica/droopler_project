@@ -1,7 +1,7 @@
 {
   "color": {
     "bg": {
-      "button": {
+      "interactive": {
         "primary": {
           "default": {
             "value": "{color.blue.100}",
@@ -55,21 +55,35 @@
         "value": "{color.gray.600}",
         "type": "color"
       },
-      "divider": {
-        "primary": {
-          "value": "{color.blue.200}",
-          "type": "color"
-        }
+      "overlay-primary": {
+        "value": "{color.transparent-white.72}",
+        "type": "color"
       },
-      "banner": {
-        "primary": {
-          "value": "{color.gray.900}",
-          "type": "color"
+      "overlay-secondary": {
+        "value": "{color.transparent-white.64}",
+        "type": "color"
+      },
+      "overlay-tertiary": {
+        "value": "{color.transparent-white.48}",
+        "type": "color"
+      },
+      "overlay-quaternary": {
+        "value": "{color.transparent-white.24}",
+        "type": "color"
+      },
+      "accent": {
+        "strong": {
+          "blue-primary": {
+            "primary": {
+              "value": "{color.blue.200}",
+              "type": "color"
+            }
+          }
         }
       }
     },
     "fg": {
-      "button": {
+      "interactive": {
         "primary": {
           "default": {
             "value": "{color.blue.500}",
@@ -158,30 +172,10 @@
       "quaternary": {
         "value": "{color.gray.300}",
         "type": "color"
-      },
-      "text": {
-        "header": {
-          "primary": {
-            "value": "{color.white.900}",
-            "type": "color"
-          }
-        },
-        "subtitle": {
-          "tertiary": {
-            "value": "{color.gray.300}",
-            "type": "color"
-          }
-        },
-        "body": {
-          "primary": {
-            "value": "{color.white.900}",
-            "type": "color"
-          }
-        }
       }
     },
     "border": {
-      "button": {
+      "interactive": {
         "outline": {
           "default": {
             "value": "{color.blue.200}",
@@ -199,6 +193,172 @@
             "value": "{color.gray.500}",
             "type": "color"
           }
+        }
+      }
+    }
+  },
+  "button": {
+    "bg-color": {
+      "primary": {
+        "default": {
+          "value": "{color.bg.interactive.primary.default}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{color.bg.interactive.primary.hover}",
+          "type": "color"
+        },
+        "active": {
+          "value": "{color.bg.interactive.primary.active}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{color.bg.interactive.primary.disabled}",
+          "type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "value": "{color.bg.interactive.secondary.default}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{color.bg.interactive.secondary.hover}",
+          "type": "color"
+        },
+        "active": {
+          "value": "{color.bg.interactive.secondary.active}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{color.bg.interactive.secondary.disabled}",
+          "type": "color"
+        }
+      }
+    },
+    "label-color": {
+      "primary": {
+        "default": {
+          "value": "{color.fg.interactive.primary.default}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{color.fg.interactive.primary.hover}",
+          "type": "color"
+        },
+        "active": {
+          "value": "{color.fg.interactive.primary.active}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{color.fg.interactive.primary.disabled}",
+          "type": "color"
+        }
+      },
+      "secondary": {
+        "default": {
+          "value": "{color.fg.interactive.secondary.default}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{color.fg.interactive.secondary.hover}",
+          "type": "color"
+        },
+        "active": {
+          "value": "{color.fg.interactive.secondary.active}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{color.fg.interactive.secondary.disabled}",
+          "type": "color"
+        }
+      },
+      "outline": {
+        "default": {
+          "value": "{color.fg.interactive.outline.default}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{color.fg.interactive.outline.hover}",
+          "type": "color"
+        },
+        "active": {
+          "value": "{color.fg.interactive.outline.active}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{color.fg.interactive.outline.disabled}",
+          "type": "color"
+        }
+      },
+      "link": {
+        "default": {
+          "value": "{color.fg.interactive.link.default}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{color.fg.interactive.link.hover}",
+          "type": "color"
+        },
+        "active": {
+          "value": "{color.fg.interactive.link.active}",
+          "type": "color"
+        },
+        "disabled": {
+          "value": "{color.fg.interactive.link.disabled}",
+          "type": "color"
+        }
+      }
+    },
+    "outline-color": {
+      "default": {
+        "value": "{color.border.interactive.outline.default}",
+        "type": "color"
+      },
+      "hover": {
+        "value": "{color.border.interactive.outline.hover}",
+        "type": "color"
+      },
+      "active": {
+        "value": "{color.border.interactive.outline.active}",
+        "type": "color"
+      },
+      "disabled": {
+        "value": "{color.border.interactive.outline.disabled}",
+        "type": "color"
+      }
+    }
+  },
+  "banner": {
+    "bg": {
+      "color": {
+        "value": "{color.bg.primary}",
+        "type": "color"
+      }
+    },
+    "heading": {
+      "color": {
+        "value": "{color.fg.primary}",
+        "type": "color"
+      }
+    },
+    "subheading": {
+      "color": {
+        "value": "{color.fg.tertiary}",
+        "type": "color"
+      }
+    },
+    "description": {
+      "color": {
+        "value": "{color.fg.secondary}",
+        "type": "color"
+      }
+    },
+    "divider": {
+      "bg": {
+        "color": {
+          "value": "{color.bg.accent.strong.blue-primary.primary}",
+          "type": "color"
         }
       }
     }

@@ -1,0 +1,6 @@
+services:
+  web:
+    volumes:
+      - ../figma-tokens:/var/www/figma-tokens
+    environment:
+      - TOKENS_DIR=/var/www/figma-tokens

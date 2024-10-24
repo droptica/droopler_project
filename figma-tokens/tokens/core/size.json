@@ -120,6 +120,14 @@
       "value": "512",
       "type": "dimension"
     },
+    "640": {
+      "value": "640",
+      "type": "dimension"
+    },
+    "720": {
+      "value": "720",
+      "type": "dimension"
+    },
     "999": {
       "value": "999",
       "type": "dimension"

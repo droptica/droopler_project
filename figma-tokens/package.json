@@ -4,6 +4,13 @@
   "private": true,
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "backup-tokens": "node src/utils/backupTokens.js",
+    "restore-tokens": "node src/utils/restoreTokens.js",
+    "prepare-tokens": "node src/core/prepareTokens.js",
+    "generate-scss": "node src/generateScss.js",
+    "full-build": "npm run backup-tokens && npm run prepare-tokens && npm run generate-scss && npm run restore-tokens"
+  },
   "dependencies": {
     "@tokens-studio/sd-transforms": "^1.2.5"
   }

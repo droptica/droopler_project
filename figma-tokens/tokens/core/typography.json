@@ -136,5 +136,295 @@
       "value": "-1",
       "type": "letterSpacing"
     }
+  },
+  "banner": {
+    "heading": {
+      "font-family": {
+        "value": "{font-family.primary}",
+        "type": "fontFamilies"
+      }
+    },
+    "subheading": {
+      "font-family": {
+        "value": "{font-family.primary}",
+        "type": "fontFamilies"
+      }
+    },
+    "description": {
+      "font-family": {
+        "value": "{font-family.primary}",
+        "type": "fontFamilies"
+      }
+    }
+  },
+  "text": {
+    "h1": {
+      "semibold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "regular": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "medium": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "bold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      }
+    },
+    "h2": {
+      "semibold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "regular": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "medium": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "bold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      }
+    },
+    "h3": {
+      "semibold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "regular": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "medium": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "bold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      }
+    },
+    "h4": {
+      "semibold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "regular": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "medium": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "bold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      }
+    },
+    "h5": {
+      "semibold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "regular": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "medium": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "bold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      }
+    },
+    "h6": {
+      "semibold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "regular": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "medium": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "bold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      }
+    },
+    "xl": {
+      "regular": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "medium": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "semibold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "bold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      }
+    },
+    "lg": {
+      "regular": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "medium": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "semibold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "bold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      }
+    },
+    "md": {
+      "regular": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "medium": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "semibold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "bold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      }
+    },
+    "sm": {
+      "regular": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "medium": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "semibold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      },
+      "bold": {
+        "font-family": {
+          "value": "{font-family.primary}",
+          "type": "fontFamilies"
+        }
+      }
+    }
+  },
+  "button": {
+    "label": {
+      "font-family": {
+        "value": "{font-family.primary}",
+        "type": "fontFamilies"
+      }
+    }
   }
 }
