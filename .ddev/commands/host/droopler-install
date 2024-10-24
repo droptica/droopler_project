@@ -22,3 +22,4 @@ ddev drush uli
 
 # Step 5: Generate a one-time login link to access the site
 ddev drush cr
+ddev drush cr

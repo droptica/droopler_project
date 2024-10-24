@@ -84,6 +84,7 @@ function droopler_theme_preprocess_field(&$variables) {
     }
   }
 
+
   if ($field_name === 'field_d_product_media') {
     $single_items = [];
     $navigation_items = [];
@@ -91,11 +92,16 @@ function droopler_theme_preprocess_field(&$variables) {
     $items = Element::getVisibleChildren($variables['element']);
     foreach ($items as $key => $delta) {
       $item = $variables['element'][$delta];
-      $item['#view_mode'] = 'd_product_gallery';
-      $single_items[] = $item;
 
-      $item['#view_mode'] = 'd_product_gallery_navigation_item';
-      $navigation_items[] = $item;
+      $item_single = $item;
+      $item_single['#view_mode'] = 'd_product_gallery';
+      $item_single['#cache']['keys'] = ['field_d_product_media_single', $delta];
+      $single_items[] = $item_single;
+
+      $item_navigation = $item;
+      $item_navigation['#view_mode'] = 'd_product_gallery_navigation_item';
+      $item_navigation['#cache']['keys'] = ['field_d_product_media_navigation', $delta];
+      $navigation_items[] = $item_navigation;
     }
 
     $variables['single_items_list'] = $single_items;

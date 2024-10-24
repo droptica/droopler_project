@@ -1,23 +1,3 @@
-.facets-result-item {
-  display: flex;
-  align-items: center;
-}
-.facets-result-item__status {
-  display: flex;
-}
-.facets-result-item__status::before {
-  content: "";
-  background-image: url("../../assets/icons/x.svg");
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-}
-.facets-result-item__count {
-  margin-left: auto;
-}
-.facets-result-item__value {
-  text-transform: capitalize;
-  letter-spacing: 1px;
-}
+.facets-result-item{align-items:center;display:flex}.facets-result-item__status{display:flex}.facets-result-item__status:before{background-image:url(../../assets/icons/x.svg);content:"";display:inline-block;height:20px;width:20px}.facets-result-item__count{margin-left:auto}.facets-result-item__value{letter-spacing:1px;text-transform:capitalize}
 
 /*# sourceMappingURL=facets-result-item.css.map*/
