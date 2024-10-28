@@ -6,33 +6,34 @@
 
 ## About
 
-Droopler is a Drupal 10 profile designed to kickstart a new webpage in a few minutes. It's based on the latest frontend technologies, including Bootstrap 5. The maintainer of Droopler is [Droptica](https://droptica.com).
-
+Droopler is a set of configurations (recipe) and a theme for Drupal 10, designed to kickstart a new website in just a few minutes. It is based on the latest frontend technologies, including Bootstrap 5. Droopler is maintained by Droptica.
 * **Official website**: [droptica.com/droopler](https://www.droptica.com/droopler)
 * **Tutorials**: [droptica.com/droopler/tutorials](https://www.droptica.com/droopler/tutorials/)
 * **Demo**: [droopler-demo.droptica.com](https://droopler-demo.droptica.com)
-* **Profile repository**: [github.com/droptica/droopler](https://github.com/droptica/droopler)
-* **Drupal.org project**: [drupal.org/project/droopler](https://www.drupal.org/project/droopler)
-* **Issue queue**: [drupal.org/project/issues/droopler](https://www.drupal.org/project/issues/droopler)
 
 For the latest news, follow us on [Facebook](https://www.facebook.com/Droopler/) and [Twitter](https://twitter.com/DrooplerCMS).
 
 ### What is this Droopler template? ##
-It's a skeleton, a boilerplate for new projects based on Droopler. If you wish to use Droopler - fork (or download) this repository. It contains a minimal set of code to start your new site. Threat it the same way as [drupal/recommended-project](https://github.com/drupal/recommended-project) or [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project).
+It’s a skeleton, a boilerplate for new projects based on Droopler. If you want to use Droopler, clone (or download) this repository. It contains the minimal set of code required to start a new site. Treat it the same way as you would treat drupal/recommended-project or drupal-composer/drupal-project.
 
 This repository includes:
 
 - **composer.json** with all dependencies required to run Droopler.
 - **.gitignore** adjusted to use GIT with Drupal.
-- Boilerplate subtheme with minimal required CSS/SCSS and Javascript. It contains gulpfile.js to speed up development of Drupal's frontend.
+- Boilerplate theme with the required CSS/SCSS and JavaScript files. It includes a webpack setup to speed up frontend development for Drupal.
 
-## Deploy on Platform.sh
+[//]: # (TODO: Add information about the Droopler template for Platform.sh)
+[//]: # (## Deploy on Platform.sh)
 
-You can deploy and host your Droopler installation on [Platform.sh](https://platform.sh/).
+[//]: # ()
+[//]: # (You can deploy and host your Droopler installation on [Platform.sh]&#40;https://platform.sh/&#41;.)
 
-<a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/droptica/droopler_project/4.0.x/.platform.template.yml">
-    <img src="https://platform.sh/images/deploy/lg-blue.svg" alt="Deploy Droopler on Platform.sh" width="180px" />
-</a>
+[//]: # ()
+[//]: # (<a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/droptica/droopler_project/4.0.x/.platform.template.yml">)
+
+[//]: # (    <img src="https://platform.sh/images/deploy/lg-blue.svg" alt="Deploy Droopler on Platform.sh" width="180px" />)
+
+[//]: # (</a>)
 
 ## Quick start
 
@@ -42,23 +43,6 @@ Fork this repository and clone the newly created to your local machine.
 
 This section provides instructions for running the `Droopler` distribution locally.
 
-### Using custom development environment
-
-1. Run `composer create-project droptica/droopler-project:^4.0-alpha <path>` to install the project and its dependencies.
-2. Run npm to download the theme dependencies and compile assets.<br /><br />
-Droopler uses the npm stack to speed up the development of new sites. It compiles SCSS to CSS, allows Autoprefixer to handle browser compatibility, and minimizes all JavaScript files. [Install Node v18 and npm](https://nodejs.org/en/download/) on your computer and run the following commands in the root directory of your project:
-
-```sh
-$ cd web/profiles/contrib/droopler/themes/custom/droopler_theme
-$ npm install
-
-$ cd web/themes/custom/droopler_subtheme
-$ npm install
-$ npm run dev
-```
-3. Run Drupal installation.<br />
-Go to http://yourserver.local/install.php and follow the steps of configuration.
-
 ### Using DDEV
 
 1. [Install ddev](https://ddev.readthedocs.io/en/stable/#installation).
@@ -66,14 +50,13 @@ Go to http://yourserver.local/install.php and follow the steps of configuration.
 3. Run `ddev start` to start the project.
 4. Run `ddev composer install` to download the project dependencies.
 5. If you notice problems with accessing to the repository, run `ddev auth ssh` to add the keys from your `~/.ssh` directory to the web container and run `ddev composer install` command once again.
-6. Run `ddev theme` to install the theme dependencies and compile assets. By default, production assets are compiled. You can run `ddev theme dev` to compile assets for development. You can also run `ddev theme watch` to watch for changes in SCSS and JS and process them on the fly.
-7. Go to the URL provided by ddev and finish installing the website. You can also run `ddev build-profile` to build the Droopler profile from the CLI (you will get a fully featured version, with blog, products and demo content).
+6. Run `ddev droopler-install` to install Droopler with the theme, all necessary configuration, and default content.
 
 ### Using Lando
 1. [Install lando](https://docs.lando.dev/getting-started/installation.html).
 2. Run `lando start` to start the project.
-3. Run `lando prepare` to build the project's code. Alternatively, you can run `lando composer install` to download the project dependencies, and then `lando theme-production` and `lando subtheme-production` to compile assets.
-4. Go to the URL provided by `lando info` and finish installing the website. You can also build the Droopler profile from the CLI. Run `lando build-full-profile` for the fully-featured version, or `lando build-full-profile` for the minimal one.
+3. Run `lando prepare` to build the project's code. Alternatively, you can run `lando composer install` to download the project dependencies, and then `lando theme-production` to compile assets, and then `lando droopler-install` to install Droopler with the theme, all necessary configuration, and default content..
+4. Go to the URL provided by `lando info` and finish installing the website.
 
 ### Using DDEV connected to a database instance on an active Platform.sh environment
 This is instructions for running the template locally, connected to a live database instance on an active Platform.sh environment.
@@ -121,21 +104,21 @@ In general, the steps are as follows:
 There are several comands that help you to work with the subtheme. You can run them from the root directory of your project.
 
 - `ddev theme watch` - watches for changes in SCSS and JS and processes them on the fly
-- `ddev theme dev` - cleans derivative files and compiles all SCSS/JS in the subtheme for DEV environment
+- `ddev theme dev` - cleans derivative files and compiles all SCSS/JS in the theme for DEV environment
 - `ddev theme production` - cleans derivative files and compiles all SCSS/JS in the subtheme for PROD environment
 
 ### Using lando
 There are several comands that help you to work with the subtheme. You can run them from the root directory of your project.
 
-- `lando theme-watch` or `lando subtheme-watch` - watches for changes in SCSS and JS and processes them on the fly
-- `lando theme-dev` or `lando subtheme-dev` - cleans derivative files and compiles all SCSS/JS in the theme for DEV environment
-- `lando theme-production` or `lando subtheme-production` - cleans derivative files and compiles all SCSS/JS in the theme for PROD environment
+- `lando theme-watch` - watches for changes in SCSS and JS and processes them on the fly
+- `lando theme-dev` - cleans derivative files and compiles all SCSS/JS in the theme for DEV environment
+- `lando theme-production` - cleans derivative files and compiles all SCSS/JS in the theme for PROD environment
 
 ### Running npm on your own
-First run <strong>npm run watch</strong> in your subtheme's directory. It will track all the changes in theme source files and compile assets in the fly.
+First run <strong>npm run watch</strong> in your theme's directory. It will track all the changes in theme source files and compile assets in the fly.
 
 ```sh
-$ cd web/themes/custom/droopler_subtheme
+$ cd web/themes/custom/droopler_theme
 $ npm run watch
 ```
 
@@ -149,10 +132,8 @@ There are also other npm commands for theme developers, here's the full referenc
 
 ## SCSS structure
 
-- **src/scss/main.style.scss** - combines all SCSS code from base theme and subtheme
-- **src/components** - directory where you can keep all your components, see [components/README.md](web/themes/custom/droopler_subtheme/src/components/README.md)
-
-You can use any SCSS structure you like. We recommend dividing files into **layout/** and **components/** directories. Just remember to include your files in **main.style.scss**.
+- **src/scss/main.style.scss** - combines all SCSS code from the theme
+- **src/components** - directory where you can keep all your components, see [components/README.md](web/themes/custom/droopler_theme/src/components/README.md)
 
 ## SCSS Configuration
 

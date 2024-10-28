@@ -1,0 +1,54 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 9d209be8-07b4-4eb7-aa93-a7a21371cffd
+  bundle: content_page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'test  Subscribe for file'
+  created:
+    -
+      value: 1727276224
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'test Subscribe for file | test'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://ddevappname.ddev.site/test-subscribe-file'
+  path:
+    -
+      alias: /test-subscribe-file
+      langcode: en
+      pathauto: 1
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_page_section:
+    -
+      target_id: 422
+      target_revision_id: 640

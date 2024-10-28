@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.social_media
+id: block_content.social_media
+target_entity_type_id: block_content
+target_bundle: social_media
+default_langcode: site_default
+language_alterable: false

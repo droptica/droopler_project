@@ -22,7 +22,7 @@ services:
     # To enable VNC access for traditional VNC clients like macOS "Screen Sharing",
     # uncomment the following two lines.
     ports:
-      - "5900:5900"
+      - "5901:5901"
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
       com.ddev.approot: $DDEV_APPROOT

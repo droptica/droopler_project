@@ -1,0 +1,147 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 92057c0a-3fc8-4320-a357-fad377d7d19b
+  bundle: content_page
+  default_langcode: en
+  depends:
+    9d2aa1c5-8894-4f01-a368-f38bd45f5fcd: media
+    b1247d6e-03c3-4888-843c-9578f7e006f5: media
+    ea8ea609-a779-4a1f-865a-5a27241bd268: media
+    c238b088-a136-40e0-8065-c3f2f9462b5b: media
+    26f4dfca-209f-4413-910c-1ad11f74aff5: media
+    7e44aaa9-425f-43a3-b060-77dd60ca8752: media
+    91054e21-de2c-4ebb-9035-5e7b6954fc7f: media
+    1b9c942e-1127-4b61-b6c6-902a7e4ac26f: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Test gallery'
+  created:
+    -
+      value: 1727275379
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Test gallery | test'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://ddevappname.ddev.site/test-gallery'
+  path:
+    -
+      alias: /test-gallery
+      langcode: en
+      pathauto: 1
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_page_section:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 8eb56f47-500d-4996-b8c5-c64bd552b7e6
+          bundle: d_p_gallery
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1727275389
+          behavior_settings:
+            -
+              value: {  }
+          content_translation_source:
+            -
+              value: und
+          content_translation_outdated:
+            -
+              value: false
+          field_background_theme_custom:
+            -
+              color: '#000000'
+              opacity: 0.0
+          field_d_cta_link:
+            -
+              uri: 'https://google.com'
+              title: google.com
+              options:
+                attributes:
+                  target: ''
+                  id: ''
+                  name: ''
+                  rel: ''
+                  custom_classes: ''
+                  accesskey: ''
+                class: 'btn btn-primary'
+          field_d_long_text:
+            -
+              value: '<p>Test gallery description</p>'
+              format: full_html
+          field_d_main_title:
+            -
+              value: 'Test gallery'
+          field_d_media_image:
+            -
+              entity: 9d2aa1c5-8894-4f01-a368-f38bd45f5fcd
+            -
+              entity: b1247d6e-03c3-4888-843c-9578f7e006f5
+            -
+              entity: ea8ea609-a779-4a1f-865a-5a27241bd268
+            -
+              entity: c238b088-a136-40e0-8065-c3f2f9462b5b
+            -
+              entity: 26f4dfca-209f-4413-910c-1ad11f74aff5
+            -
+              entity: 7e44aaa9-425f-43a3-b060-77dd60ca8752
+            -
+              entity: 91054e21-de2c-4ebb-9035-5e7b6954fc7f
+            -
+              entity: 1b9c942e-1127-4b61-b6c6-902a7e4ac26f
+          field_heading_type:
+            -
+              value: h2
+          field_margin_bottom:
+            -
+              value: margin_bottom_none
+          field_margin_top:
+            -
+              value: margin_top_none
+          field_padding_bottom:
+            -
+              value: padding_bottom_medium
+          field_padding_top:
+            -
+              value: padding_top_medium
+          field_text_theme_custom:
+            -
+              color: '#000000'
+              opacity: 0.0
+          field_theme:
+            -
+              value: theme-light

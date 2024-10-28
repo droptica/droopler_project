@@ -1,0 +1,439 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: faa9042d-3f77-4244-bee6-9a0e169768c6
+  bundle: content_page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Test carousel'
+  created:
+    -
+      value: 1727267874
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Test carousel | test'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://ddevappname.ddev.site/test-carousel'
+  path:
+    -
+      alias: /test-carousel
+      langcode: en
+      pathauto: 1
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_page_section:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 484ebbb6-65cc-486e-98f8-726e9c7d561c
+          bundle: d_p_carousel
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1727275175
+          behavior_settings:
+            -
+              value: {  }
+          content_translation_source:
+            -
+              value: und
+          content_translation_outdated:
+            -
+              value: false
+          field_add_dividers:
+            -
+              value: false
+          field_background_theme_custom:
+            -
+              color: '#000000'
+              opacity: 0.0
+          field_column_count_desktop:
+            -
+              value: 3
+          field_column_count_mobile:
+            -
+              value: 1
+          field_column_count_tablet:
+            -
+              value: 2
+          field_d_long_text:
+            -
+              value: '<p>Test carousel long text</p>'
+              format: full_html
+          field_d_main_title:
+            -
+              value: 'Test carousel'
+          field_d_p_cs_item_reference:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 9c808885-b730-4c19-b678-0e089a0a75d1
+                  bundle: d_p_carousel_item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1727275175
+                  behavior_settings:
+                    -
+                      value: {  }
+                  content_translation_source:
+                    -
+                      value: und
+                  content_translation_outdated:
+                    -
+                      value: false
+                  field_background_theme_custom:
+                    -
+                      color: '#000000'
+                      opacity: 0.0
+                  field_d_long_text:
+                    -
+                      value: '<p>Test item long text</p>'
+                      format: full_html
+                  field_d_main_title:
+                    -
+                      value: 'Test item'
+                  field_heading_type:
+                    -
+                      value: h2
+                  field_text_theme_custom:
+                    -
+                      color: '#000000'
+                      opacity: 0.0
+                  field_theme:
+                    -
+                      value: theme-light
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 2054e385-7afc-428b-b7ba-3887e4b0978e
+                  bundle: d_p_carousel_item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1727275339
+                  behavior_settings:
+                    -
+                      value: {  }
+                  content_translation_source:
+                    -
+                      value: und
+                  content_translation_outdated:
+                    -
+                      value: false
+                  field_background_theme_custom:
+                    -
+                      color: '#000000'
+                      opacity: 0.0
+                  field_d_long_text:
+                    -
+                      value: '<p>Test item 2 long text</p>'
+                      format: full_html
+                  field_d_main_title:
+                    -
+                      value: 'Test item 2'
+                  field_heading_type:
+                    -
+                      value: h2
+                  field_text_theme_custom:
+                    -
+                      color: '#000000'
+                      opacity: 0.0
+                  field_theme:
+                    -
+                      value: theme-light
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 41e6a3c1-69de-4c5f-b877-50fa0e599a1e
+                  bundle: d_p_carousel_item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1727435914
+                  behavior_settings:
+                    -
+                      value: {  }
+                  content_translation_source:
+                    -
+                      value: und
+                  content_translation_outdated:
+                    -
+                      value: false
+                  field_background_theme_custom:
+                    -
+                      color: '#FFFFFF'
+                      opacity: 0.0
+                  field_d_long_text:
+                    -
+                      value: '<p>test 3</p>'
+                      format: full_html
+                  field_d_main_title:
+                    -
+                      value: test3
+                  field_heading_type:
+                    -
+                      value: h2
+                  field_text_theme_custom:
+                    -
+                      color: '#000000'
+                      opacity: 0.0
+                  field_theme:
+                    -
+                      value: theme-light
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 1ca6ff6d-fc52-46f5-a4b5-3ec28fa0441b
+                  bundle: d_p_carousel_item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1727435927
+                  behavior_settings:
+                    -
+                      value: {  }
+                  content_translation_source:
+                    -
+                      value: und
+                  content_translation_outdated:
+                    -
+                      value: false
+                  field_background_theme_custom:
+                    -
+                      color: '#FFFFFF'
+                      opacity: 0.0
+                  field_d_long_text:
+                    -
+                      value: '<p>test 4</p>'
+                      format: full_html
+                  field_d_main_title:
+                    -
+                      value: 'test 4'
+                  field_heading_type:
+                    -
+                      value: h2
+                  field_text_theme_custom:
+                    -
+                      color: '#000000'
+                      opacity: 0.0
+                  field_theme:
+                    -
+                      value: theme-light
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 435d570c-1756-407e-a0c7-4103afc469e8
+                  bundle: d_p_carousel_item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1727435940
+                  behavior_settings:
+                    -
+                      value: {  }
+                  content_translation_source:
+                    -
+                      value: und
+                  content_translation_outdated:
+                    -
+                      value: false
+                  field_background_theme_custom:
+                    -
+                      color: '#FFFFFF'
+                      opacity: 0.0
+                  field_d_long_text:
+                    -
+                      value: '<p>test 5</p>'
+                      format: full_html
+                  field_d_main_title:
+                    -
+                      value: 'test 5'
+                  field_heading_type:
+                    -
+                      value: h2
+                  field_text_theme_custom:
+                    -
+                      color: '#000000'
+                      opacity: 0.0
+                  field_theme:
+                    -
+                      value: theme-light
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 8d660539-059c-42cb-8138-bee6f9adb049
+                  bundle: d_p_carousel_item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1727435950
+                  behavior_settings:
+                    -
+                      value: {  }
+                  content_translation_source:
+                    -
+                      value: und
+                  content_translation_outdated:
+                    -
+                      value: false
+                  field_background_theme_custom:
+                    -
+                      color: '#FFFFFF'
+                      opacity: 0.0
+                  field_d_long_text:
+                    -
+                      value: '<p>test 6</p>'
+                      format: full_html
+                  field_d_main_title:
+                    -
+                      value: 'test 6'
+                  field_heading_type:
+                    -
+                      value: h2
+                  field_text_theme_custom:
+                    -
+                      color: '#000000'
+                      opacity: 0.0
+                  field_theme:
+                    -
+                      value: theme-light
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: b76b767d-4f01-4b9e-b172-e2dea0b3f868
+                  bundle: d_p_carousel_item
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1727435961
+                  behavior_settings:
+                    -
+                      value: {  }
+                  content_translation_source:
+                    -
+                      value: und
+                  content_translation_outdated:
+                    -
+                      value: false
+                  field_background_theme_custom:
+                    -
+                      color: '#FFFFFF'
+                      opacity: 0.0
+                  field_d_long_text:
+                    -
+                      value: '<p>test 7</p>'
+                      format: full_html
+                  field_d_main_title:
+                    -
+                      value: 'test 7'
+                  field_heading_type:
+                    -
+                      value: h2
+                  field_text_theme_custom:
+                    -
+                      color: '#000000'
+                      opacity: 0.0
+                  field_theme:
+                    -
+                      value: theme-light
+          field_full_width:
+            -
+              value: false
+          field_heading_type:
+            -
+              value: h2
+          field_margin_bottom:
+            -
+              value: margin_bottom_none
+          field_margin_top:
+            -
+              value: margin_top_none
+          field_padding_bottom:
+            -
+              value: padding_bottom_medium
+          field_padding_top:
+            -
+              value: padding_top_medium
+          field_text_theme_custom:
+            -
+              color: '#000000'
+              opacity: 0.0
+          field_theme:
+            -
+              value: theme-light

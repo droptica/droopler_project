@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.mobile_filters
+id: block_content.mobile_filters
+target_entity_type_id: block_content
+target_bundle: mobile_filters
+default_langcode: site_default
+language_alterable: false

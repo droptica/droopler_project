@@ -1,0 +1,320 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: f9742884-4c19-471d-b158-3b11b3e5217e
+  bundle: content_page
+  default_langcode: en
+  depends:
+    ba90118d-52a5-43a5-95b7-65c2050cd03c: node
+    4236a3a1-dadd-4bf2-af7f-8154d7509b83: node
+    7b4528a3-7a88-4755-91f8-d8937264ae10: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Test Group of text blocks'
+  created:
+    -
+      value: 1727275440
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  metatag:
+    -
+      tag: meta
+      attributes:
+        name: title
+        content: 'Test Group of text blocks | test'
+    -
+      tag: link
+      attributes:
+        rel: canonical
+        href: 'https://ddevappname.ddev.site/test-group-text-blocks'
+  path:
+    -
+      alias: /test-group-text-blocks
+      langcode: en
+      pathauto: 1
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  field_page_section:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: 47e74031-d033-4fd3-813f-5773c8d780ff
+          bundle: d_p_group_of_text_blocks
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1727703277
+          behavior_settings:
+            -
+              value: {  }
+          content_translation_source:
+            -
+              value: und
+          content_translation_outdated:
+            -
+              value: false
+          field_background_theme_custom:
+            -
+              color: '#FFFFFF'
+              opacity: 0.0
+          field_column_count_desktop:
+            -
+              value: 4
+          field_column_count_mobile:
+            -
+              value: 1
+          field_column_count_tablet:
+            -
+              value: 4
+          field_d_main_title:
+            -
+              value: 'Main Title'
+          field_d_p_tb_block_reference:
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 48dd5a2f-215a-452f-a7dd-ee70836aa6aa
+                  bundle: d_p_single_text_block
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1727703317
+                  behavior_settings:
+                    -
+                      value: {  }
+                  content_translation_source:
+                    -
+                      value: und
+                  content_translation_outdated:
+                    -
+                      value: false
+                  field_background_theme_custom:
+                    -
+                      color: '#FFFFFF'
+                      opacity: 0.0
+                  field_d_cta_link:
+                    -
+                      uri: 'https://google.com'
+                      title: google
+                      options:
+                        attributes:
+                          target: ''
+                          id: ''
+                          name: ''
+                          rel: ''
+                          custom_classes: ''
+                          accesskey: ''
+                        class: 'btn btn-primary'
+                  field_d_long_text:
+                    -
+                      value: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam cursus tristique dui dignissim gravida.</p>'
+                      format: full_html
+                  field_d_main_title:
+                    -
+                      value: 'Box Main Title'
+                  field_enable_price:
+                    -
+                      value: false
+                  field_heading_type:
+                    -
+                      value: h2
+                  field_price_in_sidebar:
+                    -
+                      value: false
+                  field_text_theme_custom:
+                    -
+                      color: '#000000'
+                      opacity: 0.0
+                  field_theme:
+                    -
+                      value: theme-light
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 0d59fc01-e158-4f22-a671-7f0d6d2af7f8
+                  bundle: d_p_node
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1728290522
+                  behavior_settings:
+                    -
+                      value: {  }
+                  content_translation_source:
+                    -
+                      value: und
+                  content_translation_outdated:
+                    -
+                      value: false
+                  field_background_theme_custom:
+                    -
+                      color: '#FFFFFF'
+                      opacity: 0.0
+                  field_d_display_mode:
+                    -
+                      value: d_small_box
+                  field_d_node_reference:
+                    -
+                      entity: ba90118d-52a5-43a5-95b7-65c2050cd03c
+                  field_text_theme_custom:
+                    -
+                      color: '#000000'
+                      opacity: 0.0
+                  field_theme:
+                    -
+                      value: theme-light
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 8e8055f3-ea8c-41cf-8085-b7cbbbbd5a9a
+                  bundle: d_p_node
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1728290742
+                  behavior_settings:
+                    -
+                      value: {  }
+                  content_translation_source:
+                    -
+                      value: und
+                  content_translation_outdated:
+                    -
+                      value: false
+                  field_background_theme_custom:
+                    -
+                      color: '#FFFFFF'
+                      opacity: 0.0
+                  field_d_display_mode:
+                    -
+                      value: d_small_box
+                  field_d_node_reference:
+                    -
+                      entity: 4236a3a1-dadd-4bf2-af7f-8154d7509b83
+                  field_text_theme_custom:
+                    -
+                      color: '#000000'
+                      opacity: 0.0
+                  field_theme:
+                    -
+                      value: theme-light
+            -
+              entity:
+                _meta:
+                  version: '1.0'
+                  entity_type: paragraph
+                  uuid: 2be7c091-22ca-42b1-8592-d258e6287e7a
+                  bundle: d_p_node
+                  default_langcode: en
+                default:
+                  status:
+                    -
+                      value: true
+                  created:
+                    -
+                      value: 1728290856
+                  behavior_settings:
+                    -
+                      value: {  }
+                  revision_translation_affected:
+                    -
+                      value: true
+                  content_translation_source:
+                    -
+                      value: und
+                  content_translation_outdated:
+                    -
+                      value: false
+                  field_background_theme_custom:
+                    -
+                      color: '#FFFFFF'
+                      opacity: 0.0
+                  field_d_display_mode:
+                    -
+                      value: d_small_box
+                  field_d_node_reference:
+                    -
+                      entity: 7b4528a3-7a88-4755-91f8-d8937264ae10
+                  field_text_theme_custom:
+                    -
+                      color: '#000000'
+                      opacity: 0.0
+                  field_theme:
+                    -
+                      value: theme-light
+          field_enable_grid:
+            -
+              value: false
+          field_enable_tiles:
+            -
+              value: false
+          field_full_width:
+            -
+              value: false
+          field_heading_type:
+            -
+              value: h2
+          field_margin_bottom:
+            -
+              value: margin_bottom_none
+          field_margin_top:
+            -
+              value: margin_top_none
+          field_padding_bottom:
+            -
+              value: padding_bottom_medium
+          field_padding_top:
+            -
+              value: padding_top_medium
+          field_text_theme_custom:
+            -
+              color: '#000000'
+              opacity: 0.0
+          field_theme:
+            -
+              value: theme-light
+          field_two_col_header:
+            -
+              value: false
