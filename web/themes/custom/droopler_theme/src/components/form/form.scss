@@ -5,6 +5,10 @@
     --dp-bs-body-color: var(--form-input-color);
   }
 
+  textarea.form-textarea {
+    min-height: 150px;
+  }
+
   .form-check {
     .form-checkbox {
       float: none;
