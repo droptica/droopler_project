@@ -230,7 +230,7 @@ function _set_paragraph_theme_settings(array &$variables, array &$attributes): v
       : NULL;
 
     if ($background_color) {
-      $attributes['style'][] = $paragraph->hasField('field_d_media_background	') && !$paragraph->get('field_d_media_background')->isEmpty()
+      $attributes['style'][] = $paragraph->hasField('field_d_media_background') && !$paragraph->get('field_d_media_background')->isEmpty()
         ? sprintf('--overlay-background-color: %s;', $background_color)
         : 'background-color: ' . $background_color . ';';
     }
