@@ -96,11 +96,6 @@ function droopler_theme_preprocess_paragraph(array &$variables): void {
     ? (bool) $paragraph->get('field_add_dividers')->getString()
     : NULL;
 
-  // Left side content.
-  $variables['paragraph']->leftSideContent = $paragraph->hasField('field_left_side_content') && !$paragraph->get('field_left_side_content')->isEmpty()
-    ? (bool) $paragraph->get('field_left_side_content')->getString()
-    : NULL;
-
   // Enable price.
   $variables['paragraph']->enabledPrice = $paragraph->hasField('field_enable_price') && !$paragraph->get('field_enable_price')->isEmpty()
     ? (bool) $paragraph->get('field_enable_price')->getString()
@@ -235,7 +230,10 @@ function _set_paragraph_theme_settings(array &$variables, array &$attributes): v
       : NULL;
 
     if ($background_color) {
-      $attributes['style'][] = 'background-color: ' . $background_color . ';';
+      $paragraph_type = $paragraph->bundle();
+      $attributes['style'][] = $paragraph_type === 'd_p_banner' 
+        ? sprintf('--overlay-background-color: %s;', $background_color)
+        : 'background-color: ' . $background_color . ';';
     }
 
     $text_color = $paragraph->hasField('field_text_theme_custom') && !$paragraph->get('field_text_theme_custom')->isEmpty()
