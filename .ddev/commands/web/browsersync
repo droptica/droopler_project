@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#ddev-generated
+## Description: Run browser-sync in the web container
+## Usage: browsersync
+## Example: "ddev browsersync"
+## ExecRaw: true
+
+echo "Proxying browsersync on ${DDEV_PRIMARY_URL}:3000"
+browser-sync start -c /var/www/html/.ddev/browser-sync.js  | grep -v "Access URLs\|--------------------\|Local: http\|External: http"

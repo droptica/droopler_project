@@ -1,0 +1,6 @@
+#ddev-generated
+web_extra_exposed_ports:
+  - name: browsersync
+    container_port: 3000
+    http_port: 3001
+    https_port: 3000
