@@ -110,9 +110,6 @@ default:
           field_heading_type:
             -
               value: h3
-          field_left_side_content:
-            -
-              value: true
           field_margin_bottom:
             -
               value: margin_bottom_medium
@@ -169,9 +166,7 @@ default:
           field_heading_type:
             -
               value: h2
-          field_left_side_content:
-            -
-              value: true
+
           field_margin_bottom:
             -
               value: margin_bottom_medium
@@ -228,9 +223,7 @@ default:
           field_heading_type:
             -
               value: h2
-          field_left_side_content:
-            -
-              value: false
+
           field_margin_bottom:
             -
               value: margin_bottom_medium

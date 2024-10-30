@@ -118,9 +118,6 @@ default:
           field_heading_type:
             -
               value: h1
-          field_left_side_content:
-            -
-              value: false
           field_margin_bottom:
             -
               value: margin_bottom_none
