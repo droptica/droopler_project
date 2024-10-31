@@ -11,14 +11,19 @@
   {{ title_prefix }}
   {{ title_suffix }}
 
-  {% set container_classes = ['container', 'first-child-no-spacer'] %}
+  {% set container_classes = ['container'] %}
   {% set items_classes = not is_full_width ? container_classes : [] %}
   {% set has_heading = block('heading')|render|striptags('<img>')|trim is not empty %}
+  {% set has_subheading = block('subheading')|render|trim is not empty %}
+  {% set has_header = has_heading or has_subheading %}
+  {% set has_carousel = block('content')|render|trim is not empty %}
+  {% set has_footer = block('cta')|render|trim is not empty %}
 
-  <div {{ bem('content', [], base_class) }}>
-    <div {{ bem('header', [], base_class, container_classes) }}>
+  <div {{ bem('content', [], base_class, ['first-child-no-spacer']) }}>
+    {% if has_header %}
+      <div {{ bem('header', [], base_class, container_classes) }}>
       <div {{ bem('header-wrapper', [], base_class, ['row']) }}>
-        <div {{ bem('header-column', [], base_class, ['col-12']) }}>
+        <div {{ bem('header-column', [], base_class, ['col-12', 'first-child-no-spacer']) }}>
 
           {% if has_heading %}
             {% block heading %}
@@ -31,8 +36,10 @@
         </div>
       </div>
     </div>
+    {% endif %}
 
-    <div {{ bem('carousel', [], base_class, [is_full_width ? 'container-fluid' : 'container']) }}>
+    {% if has_carousel %}
+      <div {{ bem('carousel', [], base_class, [is_full_width ? 'container-fluid' : 'container']) }}>
       <div {{ bem('carousel-wrapper', [], base_class, ['row']) }}>
         <div {{ bem('carousel-column', [], base_class, ['col-12']) }}>
           <div
@@ -46,14 +53,17 @@
         </div>
       </div>
     </div>
+    {% endif %}
 
-    <div {{ bem('footer', [], base_class, container_classes) }}>
-      <div {{ bem('footer-wrapper', [], base_class, ['row']) }}>
-        <div {{ bem('footer-column', [], base_class, ['col-12']) }}>
-          {% block cta %}
-          {% endblock %}
+    {% if has_footer %}
+      <div {{ bem('footer', [], base_class, container_classes) }}>
+        <div {{ bem('footer-wrapper', [], base_class, ['row']) }}>
+          <div {{ bem('footer-column', [], base_class, ['col-12']) }}>
+            {% block cta %}
+            {% endblock %}
+          </div>
         </div>
       </div>
-    </div>
+    {% endif %}
   </div>
 </section>
