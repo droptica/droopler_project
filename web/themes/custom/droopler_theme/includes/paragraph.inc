@@ -230,8 +230,7 @@ function _set_paragraph_theme_settings(array &$variables, array &$attributes): v
       : NULL;
 
     if ($background_color) {
-      $paragraph_type = $paragraph->bundle();
-      $attributes['style'][] = $paragraph_type === 'd_p_banner' 
+      $attributes['style'][] = $paragraph->hasField('field_d_media_background') && !$paragraph->get('field_d_media_background')->isEmpty()
         ? sprintf('--overlay-background-color: %s;', $background_color)
         : 'background-color: ' . $background_color . ';';
     }
@@ -241,7 +240,7 @@ function _set_paragraph_theme_settings(array &$variables, array &$attributes): v
       : NULL;
 
     if ($text_color) {
-      $attributes['style'][] = 'color: ' . $text_color . ';';
+      $attributes['style'][] = sprintf('color: %s;', $text_color);;
     }
   }
 }

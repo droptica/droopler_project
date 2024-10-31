@@ -29,7 +29,7 @@
     {% if block('header')|spaceless %}
       <div {{ bem('header', [], base_class) }}>
         <div {{ bem('header-wrapper', [], base_class, ['row']) }}>
-          <div {{ bem('header-column', [], base_class, ['col-12']) }}>
+          <div {{ bem('header-column', [], base_class, ['col-12', 'first-child-no-spacer']) }}>
             {% block header %}
             {% endblock %}
 
