@@ -1,5 +1,7 @@
 @import "../../scss/init";
 
+$image-wide-offset: 160px;
+
 .d-p-side-image {
   --media-width: 100%;
   --media-height: 100%;
@@ -14,6 +16,20 @@
       position: absolute;
       top: 0;
       left: 0;
+    }
+
+    &--image-wide {
+      @include media-breakpoint-up(md) {
+        width: calc(50% + #{$image-wide-offset});
+      }
+    }
+  }
+
+  &__content-column {
+    &--image-wide {
+      @include media-breakpoint-up(md) {
+        width: calc(41.66666667% - #{$image-wide-offset});
+      }
     }
   }
 
