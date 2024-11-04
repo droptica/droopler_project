@@ -9,6 +9,8 @@ npm install
 # Check if user wants instant-update.
 if [ "$1" == "watch" ]; then
   npm run watch
+elif [ "$1" == "lint" ]; then
+  npm run stylint
 elif [ "$1" == "dev" ]; then
   echo "Compiling DEV version."
   npm run dev

@@ -76,7 +76,9 @@
         position: relative;
         display: inline-block;
         flex-grow: 1;
-        padding: var(--navigation-mobile-item-indentation-vertical) var(--navigation-mobile-item-indentation-horizontal);
+        padding:
+          var(--navigation-mobile-item-indentation-vertical)
+          var(--navigation-mobile-item-indentation-horizontal);
         font-size: 1.25rem;
         line-height: 2rem;
         text-transform: uppercase;
@@ -114,7 +116,9 @@
       }
 
       &__link {
-        padding: var(--navigation-mobile-item-indentation-vertical) var(--navigation-mobile-item-indentation-horizontal);
+        padding:
+          var(--navigation-mobile-item-indentation-vertical)
+          var(--navigation-mobile-item-indentation-horizontal);
         color: var(--navigation-mobile-submenu-link-color);
 
         &:hover {
