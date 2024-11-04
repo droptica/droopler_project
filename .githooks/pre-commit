@@ -4,4 +4,4 @@
 ./.githooks/precommit/phpcs.sh &&
 ./.githooks/precommit/phpstan.sh &&
 ./.githooks/precommit/build-css.sh &&
-./.githooks/precommit/scss-lint.sh &&
+./.githooks/precommit/scss-lint.sh
