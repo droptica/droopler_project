@@ -10,3 +10,4 @@ if [ $? -ne 0 ]; then
 fi
 
 echo "Linting passed. Proceeding with commit."
+exit 0
