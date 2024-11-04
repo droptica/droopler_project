@@ -8,9 +8,8 @@ dependencies:
     - field.field.paragraph.d_p_single_text_block.field_d_main_title
     - field.field.paragraph.d_p_single_text_block.field_d_media_background
     - field.field.paragraph.d_p_single_text_block.field_d_media_icon
-    - field.field.paragraph.d_p_single_text_block.field_enable_price
     - field.field.paragraph.d_p_single_text_block.field_heading_type
-    - field.field.paragraph.d_p_single_text_block.field_price_in_sidebar
+    - field.field.paragraph.d_p_single_text_block.field_text_align
     - field.field.paragraph.d_p_single_text_block.field_text_theme_custom
     - field.field.paragraph.d_p_single_text_block.field_theme
     - paragraphs.paragraphs_type.d_p_single_text_block
@@ -92,7 +91,7 @@ content:
       format: hex
       opacity: true
     third_party_settings: {  }
-    weight: 8
+    weight: 5
     region: content
   field_d_cta_link:
     type: ala
@@ -143,32 +142,19 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_enable_price:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 10
-    region: content
   field_heading_type:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 9
+    weight: 6
     region: content
-  field_price_in_sidebar:
-    type: boolean
+  field_text_align:
+    type: list_default
     label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
+    settings: {  }
     third_party_settings: {  }
-    weight: 11
+    weight: 7
     region: content
   field_text_theme_custom:
     type: color_field_formatter_text
@@ -177,14 +163,14 @@ content:
       format: hex
       opacity: true
     third_party_settings: {  }
-    weight: 7
+    weight: 4
     region: content
   field_theme:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 6
+    weight: 3
     region: content
 hidden:
   search_api_excerpt: true

@@ -8,9 +8,8 @@ dependencies:
     - field.field.paragraph.d_p_single_text_block.field_d_main_title
     - field.field.paragraph.d_p_single_text_block.field_d_media_background
     - field.field.paragraph.d_p_single_text_block.field_d_media_icon
-    - field.field.paragraph.d_p_single_text_block.field_enable_price
     - field.field.paragraph.d_p_single_text_block.field_heading_type
-    - field.field.paragraph.d_p_single_text_block.field_price_in_sidebar
+    - field.field.paragraph.d_p_single_text_block.field_text_align
     - field.field.paragraph.d_p_single_text_block.field_text_theme_custom
     - field.field.paragraph.d_p_single_text_block.field_theme
     - paragraphs.paragraphs_type.d_p_single_text_block
@@ -63,8 +62,7 @@ third_party_settings:
         - field_background_theme_custom
         - field_text_theme_custom
         - field_heading_type
-        - field_enable_price
-        - field_price_in_sidebar
+        - field_text_align
       label: Settings
       region: content
       parent_name: group_tabs
@@ -152,25 +150,17 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_enable_price:
-    type: boolean_checkbox
-    weight: 5
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_heading_type:
     type: options_select
     weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_price_in_sidebar:
-    type: boolean_checkbox
-    weight: 6
+  field_text_align:
+    type: options_select
+    weight: 5
     region: content
-    settings:
-      display_label: true
+    settings: {  }
     third_party_settings: {  }
   field_text_theme_custom:
     type: color_field_widget_html5

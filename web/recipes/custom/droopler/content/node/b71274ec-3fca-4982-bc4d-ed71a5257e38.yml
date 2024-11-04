@@ -322,15 +322,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: ffb090bf-e319-4e85-afac-7cae8783dc59
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -389,15 +385,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 19c5a479-a1eb-45a9-9968-4d66254af530
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -456,15 +448,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 26aefc36-55a4-4255-82a3-1db3725d5eb1
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -523,15 +511,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: ffb090bf-e319-4e85-afac-7cae8783dc59
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -590,15 +574,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 19c5a479-a1eb-45a9-9968-4d66254af530
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -657,15 +637,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 26aefc36-55a4-4255-82a3-1db3725d5eb1
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -674,9 +650,6 @@ default:
                     -
                       value: theme-light
           field_enable_grid:
-            -
-              value: false
-          field_enable_tiles:
             -
               value: false
           field_full_width:
@@ -704,9 +677,6 @@ default:
           field_theme:
             -
               value: theme-light
-          field_two_col_header:
-            -
-              value: false
     -
       entity:
         _meta:
@@ -855,15 +825,11 @@ default:
                   field_d_main_title:
                     -
                       value: 'Box Main Title'
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -909,15 +875,11 @@ default:
                   field_d_main_title:
                     -
                       value: 'Box Main Title'
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -963,15 +925,11 @@ default:
                   field_d_main_title:
                     -
                       value: 'Box Main Title'
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -1017,15 +975,11 @@ default:
                   field_d_main_title:
                     -
                       value: 'Box Main Title'
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -1034,9 +988,6 @@ default:
                     -
                       value: theme-light
           field_enable_grid:
-            -
-              value: false
-          field_enable_tiles:
             -
               value: false
           field_full_width:
@@ -1064,9 +1015,6 @@ default:
           field_theme:
             -
               value: theme-light
-          field_two_col_header:
-            -
-              value: false
     -
       entity:
         _meta:
@@ -1219,15 +1167,11 @@ default:
                   field_d_main_title:
                     -
                       value: 'Box Main Title'
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -1273,15 +1217,11 @@ default:
                   field_d_main_title:
                     -
                       value: 'Box Main Title'
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -1327,15 +1267,11 @@ default:
                   field_d_main_title:
                     -
                       value: 'Box Main Title'
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -1381,15 +1317,11 @@ default:
                   field_d_main_title:
                     -
                       value: 'Box Main Title'
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -1398,9 +1330,6 @@ default:
                     -
                       value: theme-primary
           field_enable_grid:
-            -
-              value: false
-          field_enable_tiles:
             -
               value: false
           field_full_width:
@@ -1428,9 +1357,6 @@ default:
           field_theme:
             -
               value: theme-primary
-          field_two_col_header:
-            -
-              value: false
     -
       entity:
         _meta:
@@ -1684,9 +1610,6 @@ default:
           field_enable_grid:
             -
               value: true
-          field_enable_tiles:
-            -
-              value: false
           field_full_width:
             -
               value: true
@@ -1712,78 +1635,6 @@ default:
           field_theme:
             -
               value: theme-light
-          field_two_col_header:
-            -
-              value: false
-    -
-      entity:
-        _meta:
-          version: '1.0'
-          entity_type: paragraph
-          uuid: a3d1580d-03c0-44e6-b2be-f495e56e898a
-          bundle: d_p_text_paged
-          default_langcode: en
-        default:
-          status:
-            -
-              value: true
-          created:
-            -
-              value: 1727080283
-          behavior_settings:
-            -
-              value: {  }
-          content_translation_source:
-            -
-              value: und
-          content_translation_outdated:
-            -
-              value: false
-          field_background_theme_custom:
-            -
-              color: '#000000'
-              opacity: 0.0
-          field_column_count_desktop:
-            -
-              value: 12
-          field_column_count_mobile:
-            -
-              value: 12
-          field_column_count_tablet:
-            -
-              value: 12
-          field_d_long_text:
-            -
-              value: '<p>You can convert all paragraph items to clickable tiles with an image background. In this example, we enabled the "Paragraph header in two columns" option.</p>'
-              format: full_html
-          field_d_main_title:
-            -
-              value: 'Tiles Example'
-          field_heading_type:
-            -
-              value: h2
-          field_margin_bottom:
-            -
-              value: margin_bottom_none
-          field_margin_top:
-            -
-              value: margin_top_none
-          field_padding_bottom:
-            -
-              value: padding_bottom_medium
-          field_padding_top:
-            -
-              value: padding_top_medium
-          field_text_align:
-            -
-              value: center
-          field_text_theme_custom:
-            -
-              color: '#000000'
-              opacity: 0.0
-          field_theme:
-            -
-              value: theme-secondary
     -
       entity:
         _meta:
@@ -1866,24 +1717,25 @@ default:
                       title: 'For boat manufacturers'
                       options:
                         attributes:
-                          class:
-                            - ''
-                        type: primary
+                          target: ''
+                          id: ''
+                          name: ''
+                          rel: ''
+                          custom_classes: ''
+                          accesskey: ''
+                        class: 'btn btn-primary'
                   field_d_main_title:
                     -
                       value: 'Box Main Title'
                   field_d_media_background:
                     -
                       entity: 36f74a3f-2355-4c28-9f55-b58f51dba53e
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
+                  field_text_align:
                     -
-                      value: false
+                      value: center
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -1928,24 +1780,25 @@ default:
                       title: 'For airplane manufacturers'
                       options:
                         attributes:
-                          class:
-                            - ''
-                        type: primary
+                          target: ''
+                          id: ''
+                          name: ''
+                          rel: ''
+                          custom_classes: ''
+                          accesskey: ''
+                        class: 'btn btn-primary'
                   field_d_main_title:
                     -
                       value: 'Box Main Title'
                   field_d_media_background:
                     -
                       entity: 71093dc9-85f6-4dbf-8088-d0740a3f7c73
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
+                  field_text_align:
                     -
-                      value: false
+                      value: center
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -1990,24 +1843,25 @@ default:
                       title: 'For car manufacturers'
                       options:
                         attributes:
-                          class:
-                            - ''
-                        type: primary
+                          target: ''
+                          id: ''
+                          name: ''
+                          rel: ''
+                          custom_classes: ''
+                          accesskey: ''
+                        class: 'btn btn-primary'
                   field_d_main_title:
                     -
                       value: 'Box Main Title'
                   field_d_media_background:
                     -
                       entity: aeddfeb0-e1fa-407b-9821-b8efc725716b
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
+                  field_text_align:
                     -
-                      value: false
+                      value: center
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -2052,24 +1906,25 @@ default:
                       title: 'For spaceship manufacturers'
                       options:
                         attributes:
-                          class:
-                            - ''
-                        type: primary
+                          target: ''
+                          id: ''
+                          name: ''
+                          rel: ''
+                          custom_classes: ''
+                          accesskey: ''
+                        class: 'btn btn-primary'
                   field_d_main_title:
                     -
                       value: 'Box Main Title'
                   field_d_media_background:
                     -
                       entity: 50682773-a368-42e0-9826-2c76c53f763d
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
+                  field_text_align:
                     -
-                      value: false
+                      value: center
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -2080,9 +1935,6 @@ default:
           field_enable_grid:
             -
               value: false
-          field_enable_tiles:
-            -
-              value: true
           field_full_width:
             -
               value: true
@@ -2108,9 +1960,6 @@ default:
           field_theme:
             -
               value: theme-light
-          field_two_col_header:
-            -
-              value: true
   field_teaser_media_image:
     -
       entity: 5028f7ff-9811-4097-886b-d31b727c54a3
