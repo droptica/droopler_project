@@ -14,6 +14,7 @@
   columns['column_count_desktop'] ? 'col-lg-' ~ columns['column_count_desktop'],
   columns['column_count_tablet'] ? 'col-sm-' ~ columns['column_count_tablet'],
   columns['column_count_mobile'] ? 'col-' ~ columns['column_count_mobile'],
+  'first-child-no-spacer',
 ] %}
 
 <section {{ bem(base_class, modifiers, '', additional_classes, component_attributes) }}>

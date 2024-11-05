@@ -205,10 +205,7 @@ function _set_paragraph_theme_settings(array &$variables, array &$attributes): v
       : NULL;
 
     if ($background_color) {
-      $paragraph_type = $paragraph->bundle();
-      $attributes['style'][] = $paragraph_type === 'd_p_banner' 
-        ? sprintf('--overlay-background-color: %s;', $background_color)
-        : 'background-color: ' . $background_color . ';';
+      $attributes['style'][] = sprintf('background-color: %s; --overlay-background-color: %s;', $background_color, $background_color);
     }
 
     $text_color = $paragraph->hasField('field_text_theme_custom') && !$paragraph->get('field_text_theme_custom')->isEmpty()
@@ -216,7 +213,7 @@ function _set_paragraph_theme_settings(array &$variables, array &$attributes): v
       : NULL;
 
     if ($text_color) {
-      $attributes['style'][] = 'color: ' . $text_color . ';';
+      $attributes['style'][] = sprintf('color: %s;', $text_color);
     }
   }
 }

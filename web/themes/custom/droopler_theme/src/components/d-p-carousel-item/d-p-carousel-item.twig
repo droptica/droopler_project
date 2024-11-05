@@ -8,7 +8,7 @@
   {{ title_prefix }}
   {{ title_suffix }}
 
-  <div {{ bem('content', [], base_class) }}>
+  <div {{ bem('content', [], base_class, ['first-child-no-spacer']) }}>
     {% block content %}
     {% endblock %}
 

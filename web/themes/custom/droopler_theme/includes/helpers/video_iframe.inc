@@ -2,16 +2,39 @@
 
 /**
  * @file
+ * Helper functions for embedding responsive video with different view modes and settings.
  */
 
 declare(strict_types = 1);
 
 use Drupal\media\Entity\Media;
 
+/**
+ * Calculates the aspect ratio of a video based on its dimensions.
+ *
+ * @param int $height
+ *   The height of the video.
+ * @param int $width
+ *   The width of the video.
+ *
+ * @return float
+ *   The calculated aspect ratio as a float.
+ */
 function _calculate_aspect_ratio(int $height, int $width): float {
   return $height / $width;
 }
 
+/**
+ * Generates the full video source URL with player settings based on view mode.
+ *
+ * @param Media $media
+ *   The media entity representing the video.
+ * @param string $view_mode
+ *   The view mode to determine player settings.
+ *
+ * @return string
+ *   The full URL of the embedded video or an empty string if parameters are missing.
+ */
 function _get_video_src(Media $media, string $view_mode): string {
   $provider = _get_video_provider($media);
   if (!$provider) {
@@ -32,6 +55,15 @@ function _get_video_src(Media $media, string $view_mode): string {
   return $video_base_url . $video_id . '?' . $player_settings;
 }
 
+/**
+ * Extracts the video ID from the oEmbed URL for YouTube or Vimeo.
+ *
+ * @param Media $media
+ *   The media entity representing the video.
+ *
+ * @return string|null
+ *   The extracted video ID, or NULL if not found or if the media type isn't a video.
+ */
 function _get_video_id(Media $media): string|null {
   if ($media->bundle() !== 'd_video') {
     return NULL;
@@ -45,6 +77,7 @@ function _get_video_id(Media $media): string|null {
     return NULL;
   }
 
+  // Match and return the video ID based on the video provider (YouTube or Vimeo).
   return match (true) {
     str_contains($oembed_url, 'youtube.com') =>
       (preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $oembed_url, $matches) && !empty($matches[1]))
@@ -60,9 +93,17 @@ function _get_video_id(Media $media): string|null {
         : NULL,
     default => NULL,
   };
-
 }
 
+/**
+ * Determines the video provider (YouTube or Vimeo) based on the oEmbed URL.
+ *
+ * @param Media $media
+ *   The media entity representing the video.
+ *
+ * @return string|null
+ *   The video provider ('youtube' or 'vimeo') or NULL if not recognized.
+ */
 function _get_video_provider(Media $media): string|null {
   $oembed_url = $media->hasField('field_media_oembed_video') && !$media->get('field_media_oembed_video')->isEmpty()
     ? $media->get('field_media_oembed_video')->value
@@ -72,6 +113,7 @@ function _get_video_provider(Media $media): string|null {
     return NULL;
   }
 
+  // Determine provider based on URL structure.
   return match (true) {
     str_contains($oembed_url, 'youtube.com'), str_contains($oembed_url, 'youtu.be') => 'youtube',
     str_contains($oembed_url, 'vimeo.com') => 'vimeo',
@@ -79,6 +121,15 @@ function _get_video_provider(Media $media): string|null {
   };
 }
 
+/**
+ * Provides the base URL for embedding based on the video provider.
+ *
+ * @param string $provider
+ *   The video provider ('youtube' or 'vimeo').
+ *
+ * @return string|null
+ *   The base URL for embedding the video or NULL if provider is unrecognized.
+ */
 function _get_video_base_url(string $provider): string|null {
   return match($provider) {
     'youtube' => 'https://www.youtube.com/embed/',
@@ -87,6 +138,19 @@ function _get_video_base_url(string $provider): string|null {
   };
 }
 
+/**
+ * Configures player settings based on the view mode and video provider.
+ *
+ * @param string $view_mode
+ *   The view mode used for display.
+ * @param string $video_id
+ *   The ID of the video.
+ * @param string $provider
+ *   The video provider ('youtube' or 'vimeo').
+ *
+ * @return array
+ *   An associative array of player settings.
+ */
 function _get_player_settings(string $view_mode, string $video_id, string $provider): array {
   $settings = [
     'autoplay' => 0,
@@ -96,6 +160,7 @@ function _get_player_settings(string $view_mode, string $video_id, string $provi
     'mute' => 0,
   ];
 
+  // Adjust settings based on the view mode.
   switch ($view_mode) {
     case 'gallery_item':
     case 'd_tiles_gallery_fullscreen':
@@ -116,6 +181,7 @@ function _get_player_settings(string $view_mode, string $video_id, string $provi
       break;
   }
 
+  // Specific settings for Vimeo videos.
   if ($provider === 'vimeo') {
     unset(
       $settings['autoplay'],
@@ -128,12 +194,25 @@ function _get_player_settings(string $view_mode, string $video_id, string $provi
   return $settings;
 }
 
+/**
+ * Assigns CSS classes to the video based on the view mode.
+ *
+ * @param string $view_mode
+ *   The view mode for the video display.
+ *
+ * @return array
+ *   An array of CSS class names.
+ */
 function _get_video_classes(string $view_mode): array {
- $classes = ['video-embed'];
+  $classes = ['video-embed'];
 
+  // Add specific classes based on the view mode.
   switch ($view_mode) {
     case 'd_tiles_gallery_fullscreen':
     case 'tiles_gallery_fullscreen_featured':
+      break;
+    case 'd_blog_image':
+      $classes[] = 'video-embed--blog';
       break;
     default:
       $classes[] = 'video-embed--cover';
