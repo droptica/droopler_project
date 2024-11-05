@@ -272,15 +272,11 @@ default:
                   field_d_media_background:
                     -
                       entity: 762d9414-03aa-4934-868f-2945798aecc1
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -329,15 +325,11 @@ default:
                   field_d_media_background:
                     -
                       entity: 8910a5a2-26bd-47ad-9dc5-ec68af9aac7b
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -346,9 +338,6 @@ default:
                     -
                       value: theme-light
           field_enable_grid:
-            -
-              value: false
-          field_enable_tiles:
             -
               value: false
           field_full_width:
@@ -376,9 +365,6 @@ default:
           field_theme:
             -
               value: theme-light
-          field_two_col_header:
-            -
-              value: false
     -
       entity:
         _meta:

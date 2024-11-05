@@ -13,7 +13,6 @@ dependencies:
     - field.field.paragraph.d_p_group_of_text_blocks.field_d_media_icon
     - field.field.paragraph.d_p_group_of_text_blocks.field_d_p_tb_block_reference
     - field.field.paragraph.d_p_group_of_text_blocks.field_enable_grid
-    - field.field.paragraph.d_p_group_of_text_blocks.field_enable_tiles
     - field.field.paragraph.d_p_group_of_text_blocks.field_full_width
     - field.field.paragraph.d_p_group_of_text_blocks.field_heading_type
     - field.field.paragraph.d_p_group_of_text_blocks.field_margin_bottom
@@ -22,7 +21,6 @@ dependencies:
     - field.field.paragraph.d_p_group_of_text_blocks.field_padding_top
     - field.field.paragraph.d_p_group_of_text_blocks.field_text_theme_custom
     - field.field.paragraph.d_p_group_of_text_blocks.field_theme
-    - field.field.paragraph.d_p_group_of_text_blocks.field_two_col_header
     - paragraphs.paragraphs_type.d_p_group_of_text_blocks
   module:
     - ala
@@ -59,8 +57,6 @@ third_party_settings:
         - field_heading_type
         - field_full_width
         - field_enable_grid
-        - field_enable_tiles
-        - field_two_col_header
         - field_column_count_desktop
         - field_column_count_tablet
         - field_column_count_mobile
@@ -241,13 +237,6 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  field_enable_tiles:
-    type: boolean_checkbox
-    weight: 7
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   field_full_width:
     type: boolean_checkbox
     weight: 5
@@ -316,13 +305,6 @@ content:
     weight: 1
     region: content
     settings: {  }
-    third_party_settings: {  }
-  field_two_col_header:
-    type: boolean_checkbox
-    weight: 8
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   translation:
     weight: 5
