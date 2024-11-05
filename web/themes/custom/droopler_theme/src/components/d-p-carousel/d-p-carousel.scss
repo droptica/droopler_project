@@ -3,15 +3,20 @@
 .d-p-carousel {
   --divider-last-child-display: inline-block;
 
-  &[data-has-dividers] .d-p-carousel-item:not(:first-child, [aria-hidden="true"]+[aria-hidden="false"], [aria-hidden="false"]+[aria-hidden="true"]) {
-    &::before {
-      content: "";
-      position: absolute;
-      background-color: var(--carousel-item-divider-color);
-      left: 0;
-      top: 0;
-      width: 1px;
-      height: 100%;
+  &[data-has-dividers] {
+    .d-p-carousel-item:not(
+    :first-child,
+    [aria-hidden="true"] + [aria-hidden="false"],
+    [aria-hidden="false"] + [aria-hidden="true"]) {
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: var(--carousel-item-divider-color);
+        left: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+      }
     }
   }
 
