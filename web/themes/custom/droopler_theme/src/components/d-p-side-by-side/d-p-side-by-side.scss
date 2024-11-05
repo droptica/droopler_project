@@ -17,9 +17,12 @@
     }
   }
 
+  &__content-wrapper {
+    margin-top: var(--content-spacer-m);
+  }
+
   &__content-row {
     display: flex;
-    margin-top: var(--content-spacer-m);
   }
 
   &--with-grid {

@@ -345,15 +345,11 @@ default:
                     -
                       value: '<p>&nbsp;</p><ul><li>Parts and engine lease</li><li>Repair Management</li><li>Spare Parts Supply</li></ul><p>&nbsp;</p>'
                       format: full_html
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h3
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -396,15 +392,11 @@ default:
                     -
                       value: '<p>&nbsp;</p><ul><li>Basic servicing</li><li>Full annual servicing</li><li>Oil and filter changes</li></ul><p>&nbsp;</p>'
                       format: full_html
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h3
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -415,9 +407,6 @@ default:
           field_enable_grid:
             -
               value: false
-          field_enable_tiles:
-            -
-              value: true
           field_full_width:
             -
               value: false
@@ -443,9 +432,6 @@ default:
           field_theme:
             -
               value: theme-primary
-          field_two_col_header:
-            -
-              value: false
     -
       entity:
         _meta:
@@ -626,9 +612,6 @@ default:
           field_enable_grid:
             -
               value: true
-          field_enable_tiles:
-            -
-              value: false
           field_full_width:
             -
               value: true
@@ -654,9 +637,6 @@ default:
           field_theme:
             -
               value: theme-light
-          field_two_col_header:
-            -
-              value: false
     -
       entity:
         _meta:

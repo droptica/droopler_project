@@ -29,3 +29,9 @@ h5,
 h6 {
   color: var(--heading-color);
 }
+
+@each $justify in start, center, end {
+  .justify-items-#{$justify} {
+    justify-items: #{$justify};
+  }
+}

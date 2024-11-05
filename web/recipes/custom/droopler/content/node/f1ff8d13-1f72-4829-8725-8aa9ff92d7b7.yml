@@ -236,15 +236,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 8e7b91bc-9e47-489c-a767-f23980b858f7
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -306,15 +302,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 4a83806d-cb60-4a31-a784-a6266db9698d
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -376,15 +368,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 8184de1d-8edc-41a9-ba32-2d3f3afcd054
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -446,15 +434,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 13e3576f-2840-4704-b4d1-aaa2ff36bf21
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -516,15 +500,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 922f8ae7-20f9-4b36-a140-e051217aa964
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -586,15 +566,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 3d492178-96f5-4bb3-9b75-e7b88bd10f53
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -656,15 +632,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: ab4fd14f-d495-4815-b1a3-0c1ee694f39f
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -726,15 +698,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 9fd186e9-078d-4617-a39b-ccad9137bfa4
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -796,15 +764,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: bab79460-67bc-4561-b6f7-568a359466ee
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -866,15 +830,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 26f4dd0c-ef27-4904-bb2c-a1e384f64df6
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -936,15 +896,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 2d026598-7f3c-4120-adcf-2153106b3a97
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -1006,15 +962,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: dd65e86a-ea09-4acd-b236-fb4afba6b6a4
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -1076,15 +1028,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 5a0e154d-9843-4aaa-864b-87a4a3044519
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -1146,15 +1094,11 @@ default:
                   field_d_media_icon:
                     -
                       entity: 6a208f98-e0fd-46cc-b8c8-c82b71852f83
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -1163,9 +1107,6 @@ default:
                     -
                       value: theme-light
           field_enable_grid:
-            -
-              value: false
-          field_enable_tiles:
             -
               value: false
           field_full_width:
@@ -1193,9 +1134,6 @@ default:
           field_theme:
             -
               value: theme-light
-          field_two_col_header:
-            -
-              value: false
   field_teaser_media_image:
     -
       entity: 5028f7ff-9811-4097-886b-d31b727c54a3

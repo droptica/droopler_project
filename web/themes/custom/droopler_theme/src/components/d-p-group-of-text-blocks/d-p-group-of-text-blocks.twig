@@ -7,10 +7,6 @@
   {% set modifiers = modifiers|merge(['with-grid']) %}
 {% endif %}
 
-{% if with_tiles %}
-  {% set modifiers = modifiers|merge(['with-tiles']) %}
-{% endif %}
-
 {% set items_classes = [
   'row',
   columns.column_count_desktop ? 'row-cols-lg-' ~ columns.column_count_desktop,
@@ -19,31 +15,30 @@
 ] %}
 
 {% set has_header = block('header')|render|striptags|trim is not empty %}
-{% set header_column_classes = [header_into_columns ? 'col-md-6' : 'col-12'] %}
+{% set has_body_content = block('body_content')|render|striptags|trim is not empty %}
 
 <section {{ bem(base_class, (modifiers)) }}>
   {{ title_prefix }}
   {{ title_suffix }}
 
-  <div {{ bem('content', [], base_class) }}>
-    <div {{ bem('header', [], base_class, ['container']) }}>
-      <div {{ bem('header-wrapper', [header_into_columns ? 'columns' : 'single'], base_class, ['row']) }}>
-        {% if has_header %}
-          <div {{ bem('header-column', [], base_class, header_column_classes) }}>
+  <div {{ bem('content', [], base_class, ['first-child-no-spacer']) }}>
+    {% if has_header or has_body_content %}
+      <div {{ bem('header', [], base_class, ['container']) }}>
+        <div {{ bem('header-wrapper', ['single'], base_class, ['row']) }}>
+          <div {{ bem('header-column', [], base_class, ['col-12', 'first-child-no-spacer']) }}>
             {% block header %}
             {% endblock %}
 
-            {% include "@droopler_theme/base/divider/divider.twig" %}
-          </div>
-        {% endif %}
-        <div {{ bem('header-column', [], base_class, header_column_classes) }}>
-          <div {{ bem('body-content', [], base_class) }}>
+            {% if has_header %}
+              {% include "@droopler_theme/base/divider/divider.twig" %}
+            {% endif %}
+
             {% block body_content %}
             {% endblock %}
           </div>
         </div>
       </div>
-    </div>
+    {% endif %}
 
     <div {{ bem('items', [], base_class, [is_full_width ? 'container-fluid' : 'container']) }}>
       <div {{ bem('items-wrapper', [], base_class, items_classes) }}>

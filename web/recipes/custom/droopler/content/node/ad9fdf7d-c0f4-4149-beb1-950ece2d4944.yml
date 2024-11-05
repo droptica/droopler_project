@@ -219,24 +219,24 @@ default:
                       title: 'For boat manufacturers'
                       options:
                         attributes:
-                          class:
-                            - ''
-                        type: primary
+                          target: ''
+                          id: ''
+                          name: ''
+                          rel: ''
+                          custom_classes: ''
+                          accesskey: ''
+                        class: 'btn btn-primary'
                   field_d_main_title:
                     -
                       value: 'For boat manufacturers'
                   field_d_media_background:
                     -
                       entity: 36f74a3f-2355-4c28-9f55-b58f51dba53e
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h3
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: center
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -281,24 +281,24 @@ default:
                       title: 'For airplane manufacturers'
                       options:
                         attributes:
-                          class:
-                            - ''
-                        type: primary
+                          target: ''
+                          id: ''
+                          name: ''
+                          rel: ''
+                          custom_classes: ''
+                          accesskey: ''
+                        class: 'btn btn-primary'
                   field_d_main_title:
                     -
                       value: 'For airplane manufacturers'
                   field_d_media_background:
                     -
                       entity: 71093dc9-85f6-4dbf-8088-d0740a3f7c73
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h3
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -343,24 +343,24 @@ default:
                       title: 'For car manufacturers'
                       options:
                         attributes:
-                          class:
-                            - ''
-                        type: primary
+                          target: ''
+                          id: ''
+                          name: ''
+                          rel: ''
+                          custom_classes: ''
+                          accesskey: ''
+                        class: 'btn btn-primary'
                   field_d_main_title:
                     -
                       value: 'For car manufacturers'
                   field_d_media_background:
                     -
                       entity: aeddfeb0-e1fa-407b-9821-b8efc725716b
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h3
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: center
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -405,24 +405,24 @@ default:
                       title: 'For spaceship manufacturers'
                       options:
                         attributes:
-                          class:
-                            - ''
-                        type: primary
+                          target: ''
+                          id: ''
+                          name: ''
+                          rel: ''
+                          custom_classes: ''
+                          accesskey: ''
+                        class: 'btn btn-primary'
                   field_d_main_title:
                     -
                       value: 'For spaceship manufacturers'
                   field_d_media_background:
                     -
                       entity: 50682773-a368-42e0-9826-2c76c53f763d
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h3
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: center
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -433,9 +433,6 @@ default:
           field_enable_grid:
             -
               value: false
-          field_enable_tiles:
-            -
-              value: true
           field_full_width:
             -
               value: true
@@ -461,9 +458,6 @@ default:
           field_theme:
             -
               value: theme-secondary
-          field_two_col_header:
-            -
-              value: true
     -
       entity:
         _meta:

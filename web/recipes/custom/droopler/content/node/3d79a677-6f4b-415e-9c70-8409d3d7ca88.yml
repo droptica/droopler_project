@@ -303,15 +303,11 @@ default:
                   field_d_media_background:
                     -
                       entity: 5d51bdce-fd43-4215-9796-981070dcfaad
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -503,15 +499,11 @@ default:
                   field_d_main_title:
                     -
                       value: 'Main Title'
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -756,15 +748,11 @@ default:
                   field_d_media_background:
                     -
                       entity: d21f6509-7b9c-4c85-8913-760d7a918235
-                  field_enable_price:
-                    -
-                      value: true
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: true
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'
@@ -819,15 +807,11 @@ default:
                   field_d_media_background:
                     -
                       entity: 32ab47c8-c3bc-450a-9781-ace0076962df
-                  field_enable_price:
-                    -
-                      value: false
                   field_heading_type:
                     -
                       value: h2
-                  field_price_in_sidebar:
-                    -
-                      value: false
+                  field_text_align:
+                    - value: start
                   field_text_theme_custom:
                     -
                       color: '#000000'

@@ -81,29 +81,9 @@ function droopler_theme_preprocess_paragraph(array &$variables): void {
     ? (bool) $paragraph->get('field_enable_grid')->getString()
     : NULL;
 
-  // Enable tiles.
-  $variables['paragraph']->enabledTiles = $paragraph->hasField('field_enable_tiles') && !$paragraph->get('field_enable_tiles')->isEmpty()
-    ? (bool) $paragraph->get('field_enable_tiles')->getString()
-    : NULL;
-
-  // Paragraph header in two columns.
-  $variables['paragraph']->headerIntoColumns = $paragraph->hasField('field_two_col_header') && !$paragraph->get('field_two_col_header')->isEmpty()
-    ? (bool) $paragraph->get('field_two_col_header')->getString()
-    : NULL;
-
   // Add Dividers.
   $variables['paragraph']->hasDividers = $paragraph->hasField('field_add_dividers') && !$paragraph->get('field_add_dividers')->isEmpty()
     ? (bool) $paragraph->get('field_add_dividers')->getString()
-    : NULL;
-
-  // Enable price.
-  $variables['paragraph']->enabledPrice = $paragraph->hasField('field_enable_price') && !$paragraph->get('field_enable_price')->isEmpty()
-    ? (bool) $paragraph->get('field_enable_price')->getString()
-    : NULL;
-
-  // Show the price in the sidebar	.
-  $variables['paragraph']->priceInSidebar = $paragraph->hasField('field_price_in_sidebar') && !$paragraph->get('field_price_in_sidebar')->isEmpty()
-    ? (bool) $paragraph->get('field_price_in_sidebar')->getString()
     : NULL;
 
   // Media background.
@@ -121,11 +101,6 @@ function droopler_theme_preprocess_paragraph(array &$variables): void {
     // Parent enabled grid.
     $variables['paragraph']->parentEnabledGrid = $parent->hasField('field_enable_grid') && !$parent->get('field_enable_grid')->isEmpty()
       ? (bool) $parent->get('field_enable_grid')->getString()
-      : NULL;
-
-    // Parent enabled tiles.
-    $variables['paragraph']->parentEnabledTiles = $parent->hasField('field_enable_tiles') && !$parent->get('field_enable_tiles')->isEmpty()
-      ? (bool) $parent->get('field_enable_tiles')->getString()
       : NULL;
 
     // parentColumnSettings.
