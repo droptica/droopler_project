@@ -6,6 +6,7 @@
 
     margin: var(--content-spacer-l) var(--content-spacer-none);
   }
+
   &:has(.layout-builder__layout) {
     overflow: hidden;
   }

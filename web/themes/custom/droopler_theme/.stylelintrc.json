@@ -85,6 +85,13 @@
     "selector-attribute-brackets-space-inside": "never",
     "selector-attribute-operator-space-after": "never",
     "selector-attribute-operator-space-before": "never",
+    "selector-class-pattern": [
+      "^[a-z0-9_-]+$",
+      {
+        "resolveNestedSelectors": true,
+        "message": "Expected class selector to use only lowercase letters, numbers, hyphens, and underscores."
+      }
+    ],
     "selector-combinator-space-after": "always",
     "selector-combinator-space-before": "always",
     "selector-descendant-combinator-no-non-space": true,

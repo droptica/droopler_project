@@ -28,7 +28,7 @@ $image-wide-offset: 160px;
   &__content-column {
     &--image-wide {
       @include media-breakpoint-up(md) {
-        width: calc(41.66666667% - #{$image-wide-offset});
+        width: calc(41.6667% - #{$image-wide-offset});
       }
     }
   }
