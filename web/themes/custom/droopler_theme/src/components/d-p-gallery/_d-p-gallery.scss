@@ -20,6 +20,14 @@
     display: grid;
     grid-gap: var(--content-spacer-l) var(--content-spacer-l);
 
+    /* There is a bug in colorbox, where the modal content is not hidden when the modal is closed.
+       and using display: none; will break functionality of rendering the big image. */
+    .modal-content.hidden {
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+    }
+
     @include media-breakpoint-up(xs) {
       grid-template-columns: repeat(2, 1fr);
     }
