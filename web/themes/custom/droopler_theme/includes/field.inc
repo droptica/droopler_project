@@ -38,7 +38,12 @@ function droopler_theme_preprocess_field(&$variables) {
         $width = $variables['items'][0]['content']['#attributes']['width'] ?? NULL;
         $height = $variables['items'][0]['content']['#attributes']['height'] ?? NULL;
         if ($width && $height) {
-          $variables['items'][$delta]['content']['#attributes']['data-aspect-ratio'] = _calculate_aspect_ratio($height, $width);
+          $aspect_ratio = _calculate_aspect_ratio($height, $width);
+          $variables['items'][$delta]['content']['#attributes']['data-aspect-ratio'] = $aspect_ratio;
+
+          if ($view_mode === 'd_blog_image') {
+            $variables['items'][$delta]['content']['#attributes']['style'] = "aspect-ratio: 1/$aspect_ratio;";
+          }
         }
 
         $variables['items'][$delta]['content']['#attributes']['src'] = _get_video_src($entity, $view_mode);
