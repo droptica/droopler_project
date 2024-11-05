@@ -21,7 +21,7 @@
 
   {{ title_suffix }}
 
-  <div {{ bem('content', [], base_class) }}>
+  <div {{ bem('content', [id], base_class) }}>
     {% block content %}
     {% endblock %}
   </div>
