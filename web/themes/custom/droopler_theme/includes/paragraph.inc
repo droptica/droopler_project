@@ -238,7 +238,7 @@ function _set_paragraph_theme_settings(array &$variables, array &$attributes): v
       : NULL;
 
     if ($text_color) {
-      $attributes['style'][] = sprintf('color: %s;', $text_color);;
+      $attributes['style'][] = sprintf('color: %s;', $text_color);
     }
   }
 }

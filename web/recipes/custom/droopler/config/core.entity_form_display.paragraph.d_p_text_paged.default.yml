@@ -50,10 +50,10 @@ third_party_settings:
       children:
         - field_d_main_title
         - field_d_subtitle
+        - field_d_media_background_image
         - field_d_media_icon
         - field_d_long_text
         - field_d_cta_link
-        - field_d_media_background_image
         - translation
       label: Basic
       region: content
@@ -151,7 +151,7 @@ content:
     third_party_settings: {  }
   field_d_cta_link:
     type: ala_field_widget
-    weight: 5
+    weight: 6
     region: content
     settings:
       placeholder_url: ''
@@ -166,7 +166,7 @@ content:
     third_party_settings: {  }
   field_d_long_text:
     type: text_textarea
-    weight: 4
+    weight: 5
     region: content
     settings:
       rows: 5
@@ -182,14 +182,14 @@ content:
     third_party_settings: {  }
   field_d_media_background_image:
     type: media_library_widget
-    weight: 6
+    weight: 3
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_d_media_icon:
     type: media_library_widget
-    weight: 3
+    weight: 4
     region: content
     settings:
       media_types: {  }
