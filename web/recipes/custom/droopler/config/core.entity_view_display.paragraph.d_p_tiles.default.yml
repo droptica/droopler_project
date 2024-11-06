@@ -1,7 +1,10 @@
+uuid: b50a7fa5-71bc-497d-863f-3e772a2c7b19
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.d_tiles_gallery_fullscreen
+    - core.entity_view_mode.media.tiles_fullscreen
     - field.field.paragraph.d_p_tiles.field_additional_classes
     - field.field.paragraph.d_p_tiles.field_background_theme_custom
     - field.field.paragraph.d_p_tiles.field_d_cta_link
@@ -20,6 +23,7 @@ dependencies:
     - paragraphs.paragraphs_type.d_p_tiles
   module:
     - ala
+    - colorbox
     - field_group
     - text
 third_party_settings:
@@ -99,6 +103,8 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+_core:
+  default_config_hash: ouKWvwS0YfHd6kXbY0xPdeMFonvxmeyb5l1hBBtpecI
 id: paragraph.d_p_tiles.default
 targetEntityType: paragraph
 bundle: d_p_tiles
@@ -145,11 +151,13 @@ content:
     weight: 1
     region: content
   field_d_media_image:
-    type: entity_reference_entity_view
+    type: colorbox_view_modes
     label: hidden
     settings:
-      view_mode: d_tiles_gallery_fullscreen
-      link: false
+      colorbox_view_mode: d_tiles_gallery_fullscreen
+      colorbox_modal_view_mode: tiles_fullscreen
+      colorbox_gallery: field_post
+      colorbox_gallery_custom: ''
     third_party_settings: {  }
     weight: 4
     region: content

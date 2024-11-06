@@ -57,21 +57,55 @@
 
     this.initMasonry();
     this.prepareTilesCaptions();
+    this.handleIframes();
   }
+
+  TilesGallery.prototype.handleIframes = function () {
+    const self = this;
+    const $iframes = this.$wrapper.find('.video-embed:not(.video-embed--cover)');
+    
+    $iframes.each(function() {
+      $(this).css('pointer-events', 'none');
+      
+      if (this.complete) {
+        self.$masonry.masonry('layout');
+      } else {
+        this.onload = function() {
+          self.$masonry.masonry('layout');
+        };
+      }
+    });
+
+    $(document).on('cbox_complete', function() {
+      $('.video-embed--cover').css('pointer-events', 'auto');
+    });
+  };
 
   /**
    * Init masonry.
    */
   TilesGallery.prototype.initMasonry = function () {
-    this.$masonry = this.$wrapper.masonry({
-      itemSelector: this.settings.itemSelector,
-      columnWidth: this.settings.sizerSelector,
+    const self = this;
+    
+    this.$wrapper.masonry({
+      itemSelector: self.settings.itemSelector,
+      columnWidth: self.settings.sizerSelector,
       percentPosition: true,
+      initLayout: false
+    });
+    
+    this.$masonry = this.$wrapper;
+    
+    this.$wrapper.imagesLoaded({ background: true }, function() {
+      self.resizeVideos();
+      self.$masonry.masonry('layout');
+      self.bindMasonryEvents();
     });
 
-    this.bindMasonryEvents();
-
-    this.$masonry.masonry('layout');
+    $(window).on('resize', function() {
+      self.resizeVideos();
+      self.$masonry.masonry('layout');
+    });
   };
 
   /**
@@ -82,8 +116,6 @@
 
     this.$masonry.on('layoutComplete', function () {
       self.$parent.css('min-height', self.$wrapper.height());
-
-      self.resizeVideos();
     });
   };
 
@@ -91,11 +123,15 @@
    * Resize videos.
    */
   TilesGallery.prototype.resizeVideos = function () {
+    const DESIRED_RATIO = 0.65848452508;
     const $videos = this.$wrapper.find(this.settings.videoSelector);
-    const imageHeight = this.$wrapper.find(this.settings.standardImageSelector).height();
-
+    
     $videos.each(function () {
-      $(this).css('height', imageHeight + 'px');
+      const $video = $(this);
+      const width = $video.width();
+      const finalHeight = width * DESIRED_RATIO + 1;
+      
+      $video.css('height', finalHeight + 'px');
     });
   };
 

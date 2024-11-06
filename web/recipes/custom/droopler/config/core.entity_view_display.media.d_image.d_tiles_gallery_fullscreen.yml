@@ -1,30 +1,33 @@
+uuid: 93445e30-3f8b-4742-8772-975c391f9f9c
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.d_tiles_gallery_fullscreen
     - field.field.media.d_image.field_media_image
-    - image.style.tiles_fullscreen
     - image.style.tiles_thumbnail
     - media.type.d_image
   module:
-    - colorbox
+    - svg_image
+_core:
+  default_config_hash: 9-xxOKexjBrilK-1Ct_HwIF_L7Ld3skzXlPx511bswA
 id: media.d_image.d_tiles_gallery_fullscreen
 targetEntityType: media
 bundle: d_image
 mode: d_tiles_gallery_fullscreen
 content:
   field_media_image:
-    type: colorbox
+    type: image
     label: hidden
     settings:
-      colorbox_node_style: tiles_thumbnail
-      colorbox_node_style_first: ''
-      colorbox_image_style: tiles_fullscreen
-      colorbox_gallery: page
-      colorbox_gallery_custom: ''
-      colorbox_caption: auto
-      colorbox_caption_custom: ''
+      image_link: ''
+      image_style: tiles_thumbnail
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
     third_party_settings: {  }
     weight: 0
     region: content

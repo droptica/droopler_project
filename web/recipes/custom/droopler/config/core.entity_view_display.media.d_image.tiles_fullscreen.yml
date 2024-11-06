@@ -1,27 +1,32 @@
-uuid: f768dacd-e98a-41ea-8548-084e15d14dd1
+uuid: a8806a0d-a030-4249-92b6-6cdf58dace9e
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.gallery_item
+    - core.entity_view_mode.media.tiles_fullscreen
     - field.field.media.d_image.field_media_image
-    - image.style.gallery_thumbnail
+    - image.style.tiles_fullscreen
     - media.type.d_image
   module:
+    - layout_builder
     - svg_image
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 _core:
-  default_config_hash: 5vJOyP76WnI6EIRJwsaJ16oMBmQ6uTs_SOUPLskU75Y
-id: media.d_image.gallery_item
+  default_config_hash: uJ_-TTdFf42wJVzKnTfv-Iq7B8-VJ9IEVsl-714S_kE
+id: media.d_image.tiles_fullscreen
 targetEntityType: media
 bundle: d_image
-mode: gallery_item
+mode: tiles_fullscreen
 content:
   field_media_image:
     type: image
     label: hidden
     settings:
       image_link: ''
-      image_style: gallery_thumbnail
+      image_style: tiles_fullscreen
       image_loading:
         attribute: lazy
       svg_attributes:
