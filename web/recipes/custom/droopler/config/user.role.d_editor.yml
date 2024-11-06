@@ -3,13 +3,25 @@ status: true
 dependencies:
   config:
     - filter.format.full_html
+    - media.type.d_document
+    - media.type.d_image
+    - media.type.d_video
+    - node.type.blog_post
     - node.type.content_page
+    - node.type.d_product
+    - taxonomy.vocabulary.blog_posts_category
+    - taxonomy.vocabulary.d_product_categories
+    - taxonomy.vocabulary.tags
   module:
     - content_translation
     - contextual
     - filter
+    - frontend_editing
+    - layout_builder
+    - media
     - node
     - paragraphs
+    - path
     - system
     - taxonomy
     - toolbar
@@ -18,29 +30,93 @@ label: Editor
 weight: 3
 is_admin: null
 permissions:
+  - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
+  - 'access frontend editing'
+  - 'access media overview'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'add paragraphs'
   - 'administer nodes'
   - 'bypass node access'
+  - 'create and edit custom blocks'
+  - 'create blog_post content'
   - 'create content translations'
   - 'create content_page content'
+  - 'create d_document media'
+  - 'create d_image media'
+  - 'create d_product content'
+  - 'create d_video media'
+  - 'create terms in blog_posts_category'
+  - 'create terms in d_product_categories'
+  - 'create terms in tags'
+  - 'create url aliases'
   - 'delete all revisions'
+  - 'delete any blog_post content'
   - 'delete any content_page content'
+  - 'delete any d_document media'
+  - 'delete any d_image media'
+  - 'delete any d_product content'
+  - 'delete any d_video media'
+  - 'delete blog_post revisions'
   - 'delete content translations'
   - 'delete content_page revisions'
+  - 'delete d_product revisions'
+  - 'delete own blog_post content'
   - 'delete own content_page content'
+  - 'delete own d_document media'
+  - 'delete own d_image media'
+  - 'delete own d_product content'
+  - 'delete own d_video media'
+  - 'delete term revisions in blog_posts_category'
+  - 'delete term revisions in d_product_categories'
+  - 'delete term revisions in tags'
+  - 'delete terms in blog_posts_category'
+  - 'delete terms in d_product_categories'
+  - 'delete terms in tags'
+  - 'edit any blog_post content'
   - 'edit any content_page content'
+  - 'edit any d_document media'
+  - 'edit any d_image media'
+  - 'edit any d_product content'
+  - 'edit any d_video media'
+  - 'edit behavior plugin settings'
+  - 'edit own blog_post content'
   - 'edit own content_page content'
+  - 'edit own d_document media'
+  - 'edit own d_image media'
+  - 'edit own d_product content'
+  - 'edit own d_video media'
+  - 'edit terms in blog_posts_category'
+  - 'edit terms in d_product_categories'
+  - 'edit terms in tags'
+  - 'move paragraphs'
   - 'revert all revisions'
+  - 'revert blog_post revisions'
   - 'revert content_page revisions'
+  - 'revert d_product revisions'
+  - 'revert term revisions in blog_posts_category'
+  - 'revert term revisions in d_product_categories'
+  - 'revert term revisions in tags'
   - 'translate any entity'
+  - 'translate blog_post node'
+  - 'translate blog_posts_category taxonomy_term'
   - 'translate content_page node'
+  - 'translate editable entities'
   - 'translate paragraph'
   - 'update content translations'
   - 'use text format full_html'
   - 'view all revisions'
+  - 'view any d_document media revisions'
+  - 'view any d_image media revisions'
+  - 'view any d_video media revisions'
+  - 'view blog_post revisions'
   - 'view content_page revisions'
+  - 'view d_product revisions'
   - 'view own unpublished content'
+  - 'view term revisions in blog_posts_category'
+  - 'view term revisions in d_product_categories'
+  - 'view term revisions in tags'
   - 'view the administration theme'
+  - 'view unpublished paragraphs'

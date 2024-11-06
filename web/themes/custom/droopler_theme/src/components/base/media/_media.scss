@@ -38,7 +38,8 @@
   }
 
   &--background {
-    *:not(.contextual) {
+    picture,
+    video {
       width: 100%;
       height: 100%;
     }
