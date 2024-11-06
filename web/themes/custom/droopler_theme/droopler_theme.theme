@@ -86,3 +86,49 @@ function droopler_theme_form_system_theme_settings_alter(&$form, FormStateInterf
     '#default_value' => theme_get_setting("search_page_link"),
   ];
 }
+
+
+/**
+ * Implements hook_token_info().
+ */
+function droopler_theme_token_info() {
+  $info = [];
+  dd('here');
+
+  $info['tokens']['taxonomy_term']['term_name'] = [
+    'name' => t('Term Name'),
+    'description' => t('Displays the name of the taxonomy term on the current page.'),
+  ];
+  return $info;
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function droopler_theme_tokens($type, $tokens, array $data, array $options, \Drupal\Core\Render\BubbleableMetadata $bubbleable_metadata) {
+  $replacements = [];
+
+  // Sprawdzamy, czy token jest związany z terminem taksonomii
+  if ($type === 'taxonomy_term' && !empty($data['term'])) {
+    $term = $data['term'];
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'term_name':
+          // Pobieramy nazwę terminu
+          $replacements[$original] = $term->label();
+          break;
+      }
+    }
+  }
+
+  return $replacements;
+}
+
+/**
+ * Implements hook_entity_view_alter().
+ * Potrzebne, aby tokeny miały dostęp do informacji o terminie na stronach taksonomii.
+ */
+function droopler_theme_entity_view_alter(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+  dd('here');
+
+}

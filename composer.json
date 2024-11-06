@@ -60,7 +60,6 @@
         "drupal/simple_sitemap": "^4.1",
         "drupal/smtp": "^1.0@beta",
         "drupal/svg_image": "^3.0",
-        "drupal/tvi": "2.0.x-dev@dev",
         "drupal/twig_tweak": "^3.4",
         "drupal/webform": "^6.2",
         "drush/drush": "^13",
