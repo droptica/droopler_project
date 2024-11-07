@@ -30,7 +30,6 @@ $image-wide-offset: 160px;
 
       @include media-breakpoint-down(md) {
         aspect-ratio: 16/9;
-        height: auto !important;
       }
     }
   }
