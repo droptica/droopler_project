@@ -35,14 +35,17 @@ function droopler_theme_preprocess_field(&$variables) {
 
       $iframe_src = $variables['items'][$delta]['content']['#attributes']['src'] ?? NULL;
       if ($iframe_src) {
-        $width = $variables['items'][0]['content']['#attributes']['width'] ?? NULL;
-        $height = $variables['items'][0]['content']['#attributes']['height'] ?? NULL;
-        if ($width && $height) {
-          $aspect_ratio = _calculate_aspect_ratio($height, $width);
-          $variables['items'][$delta]['content']['#attributes']['data-aspect-ratio'] = $aspect_ratio;
+        if ($view_mode !== 'side_image') {
+          $width = $variables['items'][0]['content']['#attributes']['width'] ?? NULL;
+          $height = $variables['items'][0]['content']['#attributes']['height'] ?? NULL;
 
-          if ($view_mode === 'd_blog_image') {
-            $variables['items'][$delta]['content']['#attributes']['style'] = "aspect-ratio: 1/$aspect_ratio;";
+          if ($width && $height) {
+            $aspect_ratio = _calculate_aspect_ratio($height, $width);
+            $variables['items'][$delta]['content']['#attributes']['data-aspect-ratio'] = $aspect_ratio;
+
+            if ($view_mode === 'd_blog_image') {
+              $variables['items'][$delta]['content']['#attributes']['style'] = "aspect-ratio: 1/$aspect_ratio;";
+            }
           }
         }
 

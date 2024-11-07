@@ -214,6 +214,9 @@ function _get_video_classes(string $view_mode): array {
     case 'd_blog_image':
       $classes[] = 'video-embed--blog';
       break;
+    case 'side_image':
+      $classes[] = 'img-fluid';
+      break;
     default:
       $classes[] = 'video-embed--cover';
       break;
