@@ -1,61 +1,43 @@
 _meta:
   version: '1.0'
-  entity_type: node
-  uuid: dc7ca986-4da5-44c5-afe9-375a655caff5
-  bundle: content_page
+  entity_type: block_content
+  uuid: ca5c14ca-afab-4c38-9600-ad8702a290d8
+  bundle: d_paragraph_block
   default_langcode: en
+  depends:
+    cac1779b-c3e9-4d54-a962-2ce0d8757d87: media
 default:
-  revision_uid:
-    -
-      target_id: 1
   status:
     -
       value: true
-  uid:
+  info:
     -
-      target_id: 1
-  title:
-    -
-      value: 'Test document from CKeditor (Drupal Media)'
-  created:
-    -
-      value: 1728292981
-  promote:
+      value: 'Blog term header'
+  reusable:
     -
       value: true
-  sticky:
+  revision_translation_affected:
     -
-      value: false
+      value: true
   metatag:
     -
       tag: meta
       attributes:
         name: title
-        content: 'Test document from CKeditor (Drupal Media) | test'
+        content: '| test'
     -
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/test-document-ckeditor-drupal-media'
-  path:
-    -
-      alias: /test-document-ckeditor-drupal-media
-      langcode: en
-      pathauto: 1
-  content_translation_source:
-    -
-      value: und
-  content_translation_outdated:
-    -
-      value: false
-  field_page_section:
+        href: 'https://ddevappname.ddev.site/home-page'
+  field_paragraphs:
     -
       entity:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: b8c62ce1-3598-456b-81ce-f5c211719260
-          bundle: d_p_text_paged
+          uuid: 94d05a6b-c1e7-469a-bc19-42b05ec3fb27
+          bundle: d_p_side_image
           default_langcode: en
         default:
           status:
@@ -63,10 +45,13 @@ default:
               value: true
           created:
             -
-              value: 1728292988
+              value: 1730895158
           behavior_settings:
             -
               value: {  }
+          revision_translation_affected:
+            -
+              value: true
           content_translation_source:
             -
               value: und
@@ -77,22 +62,21 @@ default:
             -
               color: '#FFFFFF'
               opacity: 0.0
-          field_column_count_desktop:
+          field_d_main_title:
             -
-              value: 12
-          field_column_count_mobile:
+              value: '[term:name]'
+          field_d_media_background:
             -
-              value: 12
-          field_column_count_tablet:
-            -
-              value: 12
-          field_d_long_text:
-            -
-              value: '<drupal-media data-entity-type="media" data-entity-uuid="c5951b3b-63b9-4dd2-8ec3-b323fe2fad63">&nbsp;</drupal-media>'
-              format: full_html
+              entity: cac1779b-c3e9-4d54-a962-2ce0d8757d87
           field_heading_type:
             -
               value: h2
+          field_image_side:
+            -
+              value: left
+          field_image_width:
+            -
+              value: normal
           field_margin_bottom:
             -
               value: margin_bottom_none
@@ -105,13 +89,10 @@ default:
           field_padding_top:
             -
               value: padding_top_medium
-          field_text_align:
-            -
-              value: center
           field_text_theme_custom:
             -
               color: '#000000'
               opacity: 0.0
           field_theme:
             -
-              value: theme-light
+              value: theme-primary

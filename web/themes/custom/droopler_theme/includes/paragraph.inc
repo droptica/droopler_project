@@ -11,6 +11,7 @@ use Drupal\Component\Serialization\Json;
 use Drupal\Core\Template\Attribute;
 use Drupal\link\Plugin\Field\FieldType\LinkItem;
 use Drupal\paragraphs\ParagraphInterface;
+use Drupal\taxonomy\TermInterface;
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -108,6 +109,28 @@ function droopler_theme_preprocess_paragraph(array &$variables): void {
   }
 
   $variables['attributes'] = new Attribute($attributes);
+
+  _override_taxonomy_term_name_token($variables);
+}
+
+/**
+ * Override taxonomy term name token.
+ *
+ * @param array $variables
+ *  Variables.
+ */
+function _override_taxonomy_term_name_token(array &$variables): void {
+  if (!isset($variables['content']['field_d_main_title'][0]['#context']['value'])) {
+    return;
+  }
+
+  $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+  if (!$term instanceof TermInterface) {
+    return;
+  }
+
+  $term_name = &$variables['content']['field_d_main_title'][0]['#context']['value'];
+  $term_name = str_replace('[term:name]', $term->getName(), $term_name);
 }
 
 /**
