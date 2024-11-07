@@ -103,8 +103,6 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
-_core:
-  default_config_hash: ouKWvwS0YfHd6kXbY0xPdeMFonvxmeyb5l1hBBtpecI
 id: paragraph.d_p_tiles.default
 targetEntityType: paragraph
 bundle: d_p_tiles
