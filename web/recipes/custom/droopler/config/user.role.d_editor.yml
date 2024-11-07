@@ -81,6 +81,7 @@ permissions:
   - 'create terms in tags'
   - 'create url aliases'
   - 'create webform'
+  - 'customize shortcut links'
   - 'delete all revisions'
   - 'delete any blog_post content'
   - 'delete any content_block block content'
