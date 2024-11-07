@@ -1,4 +1,3 @@
-uuid: 8506e12e-14ff-41e6-8559-74e14e657119
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
     - node
     - taxonomy
     - user
-_core:
-  default_config_hash: KejdxDJQmx8SaO-t83OVekLw6ar4ldjmsJMGcotGxnQ
 id: taxonomy_term
 label: 'Taxonomy term'
 module: taxonomy
