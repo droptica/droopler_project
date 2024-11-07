@@ -76,7 +76,6 @@ install:
   - taxonomy
   - token
   - toolbar
-  - tvi
   - twig_tweak
   - update
   - user

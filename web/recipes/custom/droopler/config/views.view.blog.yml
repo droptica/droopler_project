@@ -449,6 +449,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: blog-full
       header: {  }
       footer: {  }
       display_extenders: {  }

@@ -67,7 +67,7 @@ function droopler_theme_preprocess_field(&$variables) {
       $featured_images = empty($featured_images) ? [] : explode(',', (string)$featured_images);
       $featured_images = array_map('intval', $featured_images);
       foreach ($featured_images as $image_number) {
-        if ($image_number > 0 && !empty($variables['items'][$image_number - 1])) {
+        if ($image_number > 0 && !empty($variables['items'][$image_number - 1]['content']['#content'])) {
           $variables['items'][$image_number - 1]['content']['#content']['#view_mode'] = 'tiles_gallery_fullscreen_featured';
         }
       }

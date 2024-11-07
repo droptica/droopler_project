@@ -26,6 +26,20 @@
     }
   }
 
+  &__image {
+    .media {
+      width: var(--media-img-width);
+      height: var(--media-img-height);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
   .heading {
     @include heading(5);
 
@@ -34,5 +48,9 @@
 
   .body-text {
     --body-text-color: var(--reference-content-text-color);
+  }
+
+  .cta-links {
+    margin-top: auto;
   }
 }
