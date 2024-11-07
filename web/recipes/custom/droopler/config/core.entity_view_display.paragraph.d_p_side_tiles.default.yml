@@ -136,7 +136,7 @@ content:
     settings:
       colorbox_view_mode: d_tiles_gallery_fullscreen
       colorbox_modal_view_mode: tiles_fullscreen
-      colorbox_gallery: field_post
+      colorbox_gallery: post
       colorbox_gallery_custom: ''
     third_party_settings: {  }
     weight: 6
