@@ -44,7 +44,7 @@ masonry:
   version: VERSION
   js:
     /libraries/masonry/dist/masonry.pkgd.min.js: {}
-    /libraries/imagesloaded/imagesloaded.min.js: {}
+    /libraries/imagesloaded/imagesloaded.pkgd.min.js: {}
 
 tiles-gallery:
   dependencies:
