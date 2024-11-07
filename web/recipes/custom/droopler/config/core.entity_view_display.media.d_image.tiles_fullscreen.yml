@@ -14,8 +14,6 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-_core:
-  default_config_hash: uJ_-TTdFf42wJVzKnTfv-Iq7B8-VJ9IEVsl-714S_kE
 id: media.d_image.tiles_fullscreen
 targetEntityType: media
 bundle: d_image

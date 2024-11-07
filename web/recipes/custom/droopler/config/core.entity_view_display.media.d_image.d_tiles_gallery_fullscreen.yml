@@ -9,8 +9,6 @@ dependencies:
     - media.type.d_image
   module:
     - svg_image
-_core:
-  default_config_hash: 9-xxOKexjBrilK-1Ct_HwIF_L7Ld3skzXlPx511bswA
 id: media.d_image.d_tiles_gallery_fullscreen
 targetEntityType: media
 bundle: d_image

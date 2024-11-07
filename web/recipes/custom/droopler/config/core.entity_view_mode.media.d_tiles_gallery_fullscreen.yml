@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - media
-_core:
-  default_config_hash: baV378yd7q7yfzuW6KQPlQ2bcrSyyBfLcXu_I9P7EwE
 id: media.d_tiles_gallery_fullscreen
 label: 'Tiles gallery fullscreen'
 description: ''

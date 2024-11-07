@@ -8,8 +8,6 @@ dependencies:
     - media.type.d_video
   module:
     - media
-_core:
-  default_config_hash: loYDW3CN5D_Lg4nJKKMUW4AIpH_MRyZdMnEKmikSJbk
 id: media.d_video.d_tiles_gallery_fullscreen
 targetEntityType: media
 bundle: d_video
