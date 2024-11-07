@@ -96,10 +96,12 @@
     
     this.$masonry = this.$wrapper;
     
-    this.$wrapper.imagesLoaded({ background: true }, function() {
+    this.$wrapper.imagesLoaded(function () {
       self.resizeVideos();
       self.$masonry.masonry('layout');
       self.bindMasonryEvents();
+    }).done(function () {
+      $(window).trigger('resize');
     });
 
     $(window).on('resize', function() {
