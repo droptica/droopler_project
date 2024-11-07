@@ -1,5 +1,7 @@
 @import "../../scss/init";
 
+$items-gap: var(--content-spacer-xs) / 2 ;
+
 .d-p-reference-content {
   --media-img-width: 100%;
 
@@ -19,21 +21,21 @@
   }
 
   &__items-wrapper {
-    justify-content: center;
+    justify-content: space-between;
 
     & > article {
       padding: 0 var(--content-spacer-none) var(--content-spacer-xs);
     }
 
-    @include media-breakpoint-up(lg) {
-      & > article:not(:last-child) {
-        padding-right: var(--content-spacer-xs);
+    @include media-breakpoint-up(sm) {
+      & > article {
+        width: calc(50% - ($items-gap));
       }
     }
 
-    @include media-breakpoint-up(sm) {
-      & > article:nth-child(2n+1) {
-        padding-right: var(--content-spacer-xs);
+    @include media-breakpoint-up(lg) {
+      & > article {
+        width: calc(25% - ($items-gap));
       }
     }
   }
