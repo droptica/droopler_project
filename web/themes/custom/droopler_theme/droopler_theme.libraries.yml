@@ -43,7 +43,8 @@ block-mobile-filters:
 masonry:
   version: VERSION
   js:
-    /libraries/masonry/dist/masonry.pkgd.min.js: {}
+    /libraries/masonry/dist/masonry.pkgd.min.js: { external: true, minified: true }
+    /libraries/imagesloaded/imagesloaded.pkgd.min.js: { external: true, minified: true }
 
 tiles-gallery:
   dependencies:

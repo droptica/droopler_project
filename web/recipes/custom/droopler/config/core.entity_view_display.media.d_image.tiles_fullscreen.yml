@@ -2,23 +2,28 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.tiles_gallery_fullscreen_featured
+    - core.entity_view_mode.media.tiles_fullscreen
     - field.field.media.d_image.field_media_image
-    - image.style.tiles_thumbnail_2x2
+    - image.style.tiles_fullscreen
     - media.type.d_image
   module:
+    - layout_builder
     - svg_image
-id: media.d_image.tiles_gallery_fullscreen_featured
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: media.d_image.tiles_fullscreen
 targetEntityType: media
 bundle: d_image
-mode: tiles_gallery_fullscreen_featured
+mode: tiles_fullscreen
 content:
   field_media_image:
     type: image
     label: hidden
     settings:
       image_link: ''
-      image_style: tiles_thumbnail_2x2
+      image_style: tiles_fullscreen
       image_loading:
         attribute: lazy
       svg_attributes:

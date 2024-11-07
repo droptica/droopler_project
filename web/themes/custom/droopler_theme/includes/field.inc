@@ -67,8 +67,8 @@ function droopler_theme_preprocess_field(&$variables) {
       $featured_images = empty($featured_images) ? [] : explode(',', (string)$featured_images);
       $featured_images = array_map('intval', $featured_images);
       foreach ($featured_images as $image_number) {
-        if ($image_number > 0 && !empty($variables['items'][$image_number - 1])) {
-          $variables['items'][$image_number - 1]['content']['#view_mode'] = 'tiles_gallery_fullscreen_featured';
+        if ($image_number > 0 && !empty($variables['items'][$image_number - 1]['content']['#content'])) {
+          $variables['items'][$image_number - 1]['content']['#content']['#view_mode'] = 'tiles_gallery_fullscreen_featured';
         }
       }
     }
@@ -111,5 +111,15 @@ function droopler_theme_preprocess_field(&$variables) {
 
     $variables['single_items_list'] = $single_items;
     $variables['navigation_items_list'] = $navigation_items;
+  }
+
+  if ($field_name === 'field_media_oembed_video') {
+    foreach ($variables['items'] as $delta => $item) {
+      if (!empty($variables['items'][$delta]['content']['#attributes'])) {
+        $variables['items'][$delta]['content']['#attributes']['width'] = '936px';
+        $variables['items'][$delta]['content']['#attributes']['height'] = '617px';
+        $variables['items'][$delta]['content']['#attributes']['class'][] = 'img-fluid';
+      }
+    }
   }
 }

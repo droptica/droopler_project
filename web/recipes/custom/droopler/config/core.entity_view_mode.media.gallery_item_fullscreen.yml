@@ -1,11 +1,11 @@
-uuid: 52f627d2-b111-4a06-8d32-5d7db4fa5d38
+uuid: 7b44cfa6-e018-42ff-8e3c-83c58d034a47
 langcode: en
 status: true
 dependencies:
   module:
     - media
-id: media.d_tiles_gallery_fullscreen
-label: 'Tiles gallery fullscreen'
+id: media.gallery_item_fullscreen
+label: 'Gallery item fullscreen'
 description: ''
 targetEntityType: media
 cache: true

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "51f176fbd2198f857c8bbc4653d5b542",
+    "content-hash": "642c5cb0630f2994e2b9691b8729f40e",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5640,6 +5640,33 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/inorganik/countUp.js/zipball/497c3cd44a7c29480e22b1d51ff773f20a0d03b4",
                 "reference": "497c3cd44a7c29480e22b1d51ff773f20a0d03b4"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "npm-asset/ev-emitter",
+            "version": "2.1.2",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/ev-emitter/-/ev-emitter-2.1.2.tgz"
+            },
+            "type": "npm-asset",
+            "license": [
+                "MIT"
+            ]
+        },
+        {
+            "name": "npm-asset/imagesloaded",
+            "version": "5.0.0",
+            "dist": {
+                "type": "tar",
+                "url": "https://registry.npmjs.org/imagesloaded/-/imagesloaded-5.0.0.tgz"
+            },
+            "require": {
+                "npm-asset/ev-emitter": ">=2.1.2,<3.0.0"
             },
             "type": "npm-asset",
             "license": [
@@ -16495,8 +16522,7 @@
         "drupal/config_update": 20,
         "drupal/default_content": 15,
         "drupal/features": 20,
-        "drupal/smtp": 10,
-        "drupal/tvi": 20
+        "drupal/smtp": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
