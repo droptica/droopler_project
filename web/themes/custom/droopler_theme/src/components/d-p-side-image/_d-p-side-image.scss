@@ -23,6 +23,16 @@ $image-wide-offset: 160px;
         width: calc(50% + #{$image-wide-offset});
       }
     }
+
+    iframe {
+      position: static;
+      transform: unset;
+
+      @include media-breakpoint-down(md) {
+        aspect-ratio: 16/9;
+        height: auto !important;
+      }
+    }
   }
 
   &__content-column {
