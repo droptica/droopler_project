@@ -76,9 +76,6 @@ default:
       value: 'Innovative engine with state-of-the-art technology for optimal power output.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: ea8ea609-a779-4a1f-865a-5a27241bd268

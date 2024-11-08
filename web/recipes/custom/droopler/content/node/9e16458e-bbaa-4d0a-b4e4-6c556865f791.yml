@@ -76,9 +76,6 @@ default:
       value: 'Modern engine with top-tier safety features and eco-friendly design.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: 4b98744e-771b-4a43-a8a4-a2ce0f585c00

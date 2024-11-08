@@ -1,10 +1,10 @@
+uuid: 0298438f-9229-453e-bdb3-73feaf30c6ec
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.d_product.body
-    - field.field.node.d_product.field_d_ask_for_product
     - field.field.node.d_product.field_d_product_link
     - field.field.node.d_product.field_d_product_media
     - field.field.node.d_product.field_meta_tags
@@ -460,6 +460,8 @@ third_party_settings:
             weight: 0
             additional: {  }
         third_party_settings: {  }
+_core:
+  default_config_hash: 9v3gssFc4pkta12OWenSOMFIvQ9BhVAJG8wWio8p3YU
 id: node.d_product.full
 targetEntityType: node
 bundle: d_product
@@ -519,7 +521,6 @@ content:
     weight: 7
     region: content
 hidden:
-  field_d_ask_for_product: true
   field_meta_tags: true
   langcode: true
   layout_builder__layout: true

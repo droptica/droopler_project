@@ -1,10 +1,10 @@
+uuid: ba5588a8-9fb4-474c-9549-fd480c63b14c
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.d_small_box
     - field.field.node.d_product.body
-    - field.field.node.d_product.field_d_ask_for_product
     - field.field.node.d_product.field_d_product_link
     - field.field.node.d_product.field_d_product_media
     - field.field.node.d_product.field_meta_tags
@@ -38,6 +38,8 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+_core:
+  default_config_hash: eJt6WvIou7uIwuhFa2rFo8ec-W2JAgCEhigpiXEwuVE
 id: node.d_product.d_small_box
 targetEntityType: node
 bundle: d_product
@@ -56,7 +58,6 @@ content:
     region: content
 hidden:
   body: true
-  field_d_ask_for_product: true
   field_d_product_link: true
   field_meta_tags: true
   field_page_section: true

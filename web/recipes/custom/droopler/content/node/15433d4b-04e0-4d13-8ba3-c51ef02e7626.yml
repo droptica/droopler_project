@@ -76,9 +76,6 @@ default:
       value: 'Turbocharged engine designed for those seeking thrilling performance.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: c238b088-a136-40e0-8065-c3f2f9462b5b

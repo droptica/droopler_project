@@ -79,9 +79,6 @@ default:
       value: 'New engine for cars developed by top engineers and industry specialists. Ideal for city and off-road cars.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: ba361bd1-3613-478c-8181-03482ff2c2ae

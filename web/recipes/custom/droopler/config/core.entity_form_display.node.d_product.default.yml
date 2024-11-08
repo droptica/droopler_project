@@ -1,9 +1,9 @@
+uuid: b7b63d3e-5db7-438b-bf18-c17644436e81
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.d_product.body
-    - field.field.node.d_product.field_d_ask_for_product
     - field.field.node.d_product.field_d_product_link
     - field.field.node.d_product.field_d_product_media
     - field.field.node.d_product.field_meta_tags
@@ -87,7 +87,6 @@ third_party_settings:
         required_fields: true
     group_content:
       children:
-        - field_d_ask_for_product
         - field_d_product_link
         - body
       label: Content
@@ -102,6 +101,8 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
+_core:
+  default_config_hash: tO8_fQUiKr9ZQbqfQIZswoJnvb_31Yq22FWr0HTUTbE
 id: node.d_product.default
 targetEntityType: node
 bundle: d_product
@@ -116,13 +117,6 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings: {  }
-  field_d_ask_for_product:
-    type: boolean_checkbox
-    weight: 22
-    region: content
-    settings:
-      display_label: true
     third_party_settings: {  }
   field_d_product_link:
     type: ala_field_widget
