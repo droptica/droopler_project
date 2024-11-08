@@ -1,4 +1,4 @@
-name: DrooplerFresh
+name: DrooplerRecipes
 type: drupal10
 docroot: web
 php_version: "8.3"
@@ -16,6 +16,7 @@ composer_version: "2.6"
 web_environment:
     - THEME_NAME=droopler_theme
 corepack_enable: false
+nodejs_version: "20"
 
 # Key features of DDEV's config.yaml:
 
