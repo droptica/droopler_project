@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - field.field.node.d_product.body
-    - field.field.node.d_product.field_d_ask_for_product
     - field.field.node.d_product.field_d_product_media
     - field.field.node.d_product.field_meta_tags
     - field.field.node.d_product.field_page_section
@@ -73,6 +72,5 @@ content:
     weight: 0
     region: content
 hidden:
-  field_d_ask_for_product: true
   langcode: true
   search_api_excerpt: true
