@@ -76,9 +76,6 @@ default:
       value: 'Advanced engine offering high fuel efficiency and reduced noise.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: 9d2aa1c5-8894-4f01-a368-f38bd45f5fcd

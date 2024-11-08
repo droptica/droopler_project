@@ -78,9 +78,6 @@ default:
       value: 'Engine for small motor boats. Mounted outside the boat. 40 horsepower ensures excellent performance and low fuel consumption.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: 89000a5c-0141-43c7-bd87-065f90df02fb

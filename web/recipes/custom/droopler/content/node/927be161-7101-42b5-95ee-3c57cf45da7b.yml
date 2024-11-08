@@ -76,9 +76,6 @@ default:
       value: 'Compact engine design, ideal for tight spaces without compromising on power.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: 9b4b905d-a487-4c3e-afba-e4203f3110e8

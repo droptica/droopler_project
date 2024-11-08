@@ -79,9 +79,6 @@ default:
       value: 'Modern automotive engine for sports vehicles. Excellent performance with moderate fuel consumption.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: d687bc75-8783-49cb-bcc0-8e0e91f1e6f8

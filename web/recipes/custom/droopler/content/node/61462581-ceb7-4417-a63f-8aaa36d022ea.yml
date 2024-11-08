@@ -76,9 +76,6 @@ default:
       value: 'Performance-driven engine with enhanced airflow and combustion efficiency.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: 0ffdd5a9-3b4f-4ec7-bf61-a2fba698b91a

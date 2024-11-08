@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.field.node.d_product.body
     - field.field.node.d_product.field_d_ask_for_product
-    - field.field.node.d_product.field_d_product_link
     - field.field.node.d_product.field_d_product_media
     - field.field.node.d_product.field_meta_tags
     - field.field.node.d_product.field_page_section
@@ -12,7 +11,6 @@ dependencies:
     - field.field.node.d_product.field_tags
     - node.type.d_product
   module:
-    - ala
     - field_group
     - media_library
     - metatag
@@ -88,7 +86,6 @@ third_party_settings:
     group_content:
       children:
         - field_d_ask_for_product
-        - field_d_product_link
         - body
       label: Content
       region: content
@@ -123,21 +120,6 @@ content:
     region: content
     settings:
       display_label: true
-    third_party_settings: {  }
-  field_d_product_link:
-    type: ala_field_widget
-    weight: 23
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-      ala_link_class_settings: global
-      ala_link_class: ''
-      ala_link_icon: false
-      ala_link_roles: false
-      ala_link_color: false
-      ala_link_extra: true
-      ala_link_target: '1'
     third_party_settings: {  }
   field_d_product_media:
     type: media_library_widget

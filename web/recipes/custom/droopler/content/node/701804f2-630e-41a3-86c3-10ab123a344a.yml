@@ -76,9 +76,6 @@ default:
       value: 'Precision-engineered for maximum torque and horsepower.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: 7e44aaa9-425f-43a3-b060-77dd60ca8752

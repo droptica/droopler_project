@@ -76,9 +76,6 @@ default:
       value: 'Sleek engine design with noise-reduction technology for a quieter ride.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: b1247d6e-03c3-4888-843c-9578f7e006f5

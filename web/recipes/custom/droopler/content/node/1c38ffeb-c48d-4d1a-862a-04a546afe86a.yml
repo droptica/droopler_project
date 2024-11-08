@@ -79,9 +79,6 @@ default:
       value: 'Jet engine for medium aircrafts. For many years appreciated by dozens of airlines from around the world. The engine is made of the most modern parts.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: 6e84451f-9889-4f06-9d9e-d89e486818e0

@@ -1,11 +1,10 @@
+uuid: 57982ec1-3975-4565-84b9-dc9678c0988e
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.d_product.body
-    - field.field.node.d_product.field_d_ask_for_product
-    - field.field.node.d_product.field_d_product_link
     - field.field.node.d_product.field_d_product_media
     - field.field.node.d_product.field_meta_tags
     - field.field.node.d_product.field_page_section
@@ -17,7 +16,6 @@ dependencies:
     - entity_reference_revisions
     - field_group
     - layout_builder
-    - link
     - text
     - user
 third_party_settings:
@@ -87,25 +85,6 @@ third_party_settings:
       parent_name: ''
       region: content
       weight: 3
-      format_type: html_element
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        element: '<none>'
-        show_label: false
-        label_element: h3
-        label_element_classes: ''
-        attributes: ''
-        effect: none
-        speed: fast
-    group_product_link:
-      children:
-        - field_d_product_link
-      label: 'Product link'
-      parent_name: ''
-      region: content
-      weight: 4
       format_type: html_element
       format_settings:
         classes: ''
@@ -460,6 +439,8 @@ third_party_settings:
             weight: 0
             additional: {  }
         third_party_settings: {  }
+_core:
+  default_config_hash: 9v3gssFc4pkta12OWenSOMFIvQ9BhVAJG8wWio8p3YU
 id: node.d_product.full
 targetEntityType: node
 bundle: d_product
@@ -471,18 +452,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 6
-    region: content
-  field_d_product_link:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 5
     region: content
   field_d_product_media:
     type: entity_reference_entity_view
@@ -519,7 +488,6 @@ content:
     weight: 7
     region: content
 hidden:
-  field_d_ask_for_product: true
   field_meta_tags: true
   langcode: true
   layout_builder__layout: true

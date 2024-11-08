@@ -79,9 +79,6 @@ default:
       value: 'Car engine for small cars. Manufactured for the first time in 2010. Since then, several versions with different powers have been created.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: 29a22332-f76c-4ff6-8b71-93d911365dd8

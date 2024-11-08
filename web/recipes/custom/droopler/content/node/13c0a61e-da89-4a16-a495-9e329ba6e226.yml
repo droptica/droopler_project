@@ -76,9 +76,6 @@ default:
       value: 'Robust engine built for long-lasting durability and consistent performance.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: 315ff1dc-c95e-4e5b-91b8-963b433f2640

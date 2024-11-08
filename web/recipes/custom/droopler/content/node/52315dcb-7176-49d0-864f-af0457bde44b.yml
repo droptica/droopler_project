@@ -76,9 +76,6 @@ default:
       value: 'Versatile engine suitable for both on-road and off-road activities.'
       format: full_html
       summary: ''
-  field_d_ask_for_product:
-    -
-      value: true
   field_d_product_media:
     -
       entity: 91054e21-de2c-4ebb-9035-5e7b6954fc7f
