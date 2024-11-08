@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: taxonomy_term.blog_posts_category
 target_entity_type_id: taxonomy_term
 target_bundle: blog_posts_category
