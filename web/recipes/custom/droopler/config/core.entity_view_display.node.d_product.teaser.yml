@@ -1,11 +1,10 @@
-uuid: 0eb3ec8d-9350-4282-87dd-c4ce1fdb7cbf
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.d_product.body
-    - field.field.node.d_product.field_d_product_link
+    - field.field.node.d_product.field_d_ask_for_product
     - field.field.node.d_product.field_d_product_media
     - field.field.node.d_product.field_meta_tags
     - field.field.node.d_product.field_page_section
@@ -14,8 +13,6 @@ dependencies:
     - node.type.d_product
   module:
     - user
-_core:
-  default_config_hash: azgr-AcjhcbkziREj1zxGH5bkrG5c4_NnAEbwKcw5c4
 id: node.d_product.teaser
 targetEntityType: node
 bundle: d_product
@@ -40,7 +37,7 @@ content:
     region: content
 hidden:
   body: true
-  field_d_product_link: true
+  field_d_ask_for_product: true
   field_meta_tags: true
   field_page_section: true
   field_tags: true

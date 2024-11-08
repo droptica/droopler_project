@@ -1,10 +1,9 @@
-uuid: ef1e7ad4-61b7-47ab-87c5-8405ebcace71
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.d_product.body
-    - field.field.node.d_product.field_d_product_link
+    - field.field.node.d_product.field_d_ask_for_product
     - field.field.node.d_product.field_d_product_media
     - field.field.node.d_product.field_meta_tags
     - field.field.node.d_product.field_page_section
@@ -13,12 +12,9 @@ dependencies:
     - node.type.d_product
   module:
     - entity_reference_revisions
-    - link
     - metatag
     - text
     - user
-_core:
-  default_config_hash: 8jfYKOy3N1AxXgwtFtlgtG18Y3AuEjIBdo0JNJtuDwg
 id: node.d_product.default
 targetEntityType: node
 bundle: d_product
@@ -30,18 +26,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 2
-    region: content
-  field_d_product_link:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 5
     region: content
   field_d_product_media:
     type: entity_reference_label
@@ -89,5 +73,6 @@ content:
     weight: 0
     region: content
 hidden:
+  field_d_ask_for_product: true
   langcode: true
   search_api_excerpt: true

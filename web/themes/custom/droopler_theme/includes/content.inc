@@ -58,11 +58,6 @@ function droopler_theme_preprocess_node(&$variables) {
           $variables['category'] = $variables['content']['field_product_categories'];
           unset($variables['content']['field_product_categories']);
         }
-
-        if (isset($variables['content']['field_d_product_link'])) {
-          $variables['link'] = $variables['content']['field_d_product_link'];
-          unset($variables['content']['field_d_product_link']);
-        }
       }
     }
   }
