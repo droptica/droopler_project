@@ -82,6 +82,7 @@ install:
   - views
   - views_ui
   - webform
+  - webform_ui
 
 config:
   import:
