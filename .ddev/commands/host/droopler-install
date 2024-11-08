@@ -27,3 +27,4 @@ ddev drush uli
 # Step 7: Cache rebuild.
 echo "Rebuilding cache..."
 ddev drush cr
+ddev drush cr
