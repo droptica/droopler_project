@@ -11,7 +11,7 @@ bundle: reset_button
 label: 'Button icon class'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 'fas fa-times'

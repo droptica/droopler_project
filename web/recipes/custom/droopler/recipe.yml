@@ -21,6 +21,7 @@ install:
   - components
   - conditional_fields
   - config
+  - config_translation
   - config_update
   - contextual
   - content_translation

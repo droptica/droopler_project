@@ -8,6 +8,8 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
 id: node.blog_post
 target_entity_type_id: node
 target_bundle: blog_post
