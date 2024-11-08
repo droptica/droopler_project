@@ -11,7 +11,7 @@ bundle: mobile_filters
 label: 'Button text'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: Filters

@@ -16,10 +16,15 @@ ddev drush recipe recipes/custom/droopler
 echo "Index the Droopler content"
 ddev drush sapi-i
 
-# Step 5: Generate a one-time login link to access the site
+# Step 5: Run cron.
+echo "Running cron..."
+ddev drush cron
+
+# Step 6: Generate a one-time login link to access the site
 echo "Generating a one-time login link..."
 ddev drush uli
 
-# Step 6: Cache rebuild.
+# Step 7: Cache rebuild.
+echo "Rebuilding cache..."
 ddev drush cr
 ddev drush cr

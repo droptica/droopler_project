@@ -13,7 +13,7 @@ bundle: d_p_single_text_block
 label: 'Background image'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
