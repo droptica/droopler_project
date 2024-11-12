@@ -38,7 +38,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Car engines | test'
+        content: 'Car engines | Droopler'
     -
       tag: meta
       attributes:
@@ -48,7 +48,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/car-engines'
+        href: 'https://droopler.ddev.site/car-engines'
     -
       tag: meta
       attributes:
@@ -58,7 +58,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_engine_testing_services_1.jpg?itok=uXveSfHH'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_engine_testing_services_1.jpg?itok=uXveSfHH'
   path:
     -
       alias: /car-engines

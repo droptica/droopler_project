@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'JetStream 26 X 100 | test'
+        content: 'JetStream 26 X 100 | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/jetstream-26-x-100'
+        href: 'https://droopler.ddev.site/products/jetstream-26-x-100'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/planeasset3.png?itok=VY8DFYDf'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/planeasset3.png?itok=VY8DFYDf'
   path:
     -
       alias: /products/jetstream-26-x-100

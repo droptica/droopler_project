@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'UrbanZ 17 Sport | test'
+        content: 'UrbanZ 17 Sport | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/urbanz-17-sport'
+        href: 'https://droopler.ddev.site/products/urbanz-17-sport'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset12.png?itok=Ae3ecW7h'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset12.png?itok=Ae3ecW7h'
   path:
     -
       alias: /products/urbanz-17-sport

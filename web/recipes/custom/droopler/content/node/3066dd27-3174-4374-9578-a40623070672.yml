@@ -38,7 +38,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Boat Engines | test'
+        content: 'Boat Engines | Droopler'
     -
       tag: meta
       attributes:
@@ -48,7 +48,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/boat-engines'
+        href: 'https://droopler.ddev.site/boat-engines'
     -
       tag: meta
       attributes:
@@ -58,7 +58,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_engine_boat_1.jpg?itok=ACvL8Tee'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_engine_boat_1.jpg?itok=ACvL8Tee'
   path:
     -
       alias: /boat-engines

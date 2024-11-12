@@ -34,7 +34,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Careers | test'
+        content: 'Careers | Droopler'
     -
       tag: meta
       attributes:
@@ -44,7 +44,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/careers'
+        href: 'https://droopler.ddev.site/careers'
     -
       tag: meta
       attributes:
@@ -54,7 +54,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/demo_educational_4.jpg?itok=Fs74ERNI'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/demo_educational_4.jpg?itok=Fs74ERNI'
   path:
     -
       alias: /careers
@@ -229,13 +229,13 @@ default:
               opacity: 0.0
           field_column_count_desktop:
             -
-              value: 12
+              value: 4
           field_column_count_mobile:
             -
-              value: 12
+              value: 2
           field_column_count_tablet:
             -
-              value: 12
+              value: 1
           field_d_counter_reference:
             -
               entity:
@@ -357,6 +357,7 @@ default:
                   field_d_number:
                     -
                       value: 15000
+
           field_d_main_title:
             -
               value: 'Our company in numbers'

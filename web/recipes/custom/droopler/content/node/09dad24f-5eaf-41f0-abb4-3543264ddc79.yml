@@ -37,7 +37,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Banner Paragraph | test'
+        content: 'Banner Paragraph | Droopler'
     -
       tag: meta
       attributes:
@@ -47,7 +47,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/documentation/banner-paragraph'
+        href: 'https://droopler.ddev.site/documentation/banner-paragraph'
     -
       tag: meta
       attributes:
@@ -57,7 +57,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/demo-logo.svg?itok=0N6-Bu1F'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/demo-logo.svg?itok=0N6-Bu1F'
   path:
     -
       alias: /documentation/banner-paragraph

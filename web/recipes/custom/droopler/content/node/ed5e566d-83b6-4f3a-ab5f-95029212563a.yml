@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'UrbanZ 42 Blast | test'
+        content: 'UrbanZ 42 Blast | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/urbanz-42-blast'
+        href: 'https://droopler.ddev.site/products/urbanz-42-blast'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset7.png?itok=felg_PxK'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset7.png?itok=felg_PxK'
   path:
     -
       alias: /products/urbanz-42-blast

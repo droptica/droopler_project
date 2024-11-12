@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'SeaWave 13 Pro | test'
+        content: 'SeaWave 13 Pro | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/seawave-13-pro'
+        href: 'https://droopler.ddev.site/products/seawave-13-pro'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/boatasset1.jpg?itok=QMWwfj-N'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/boatasset1.jpg?itok=QMWwfj-N'
   path:
     -
       alias: /products/seawave-13-pro

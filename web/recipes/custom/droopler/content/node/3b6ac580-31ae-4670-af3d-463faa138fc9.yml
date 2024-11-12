@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'UrbanZ 7 NXT | test'
+        content: 'UrbanZ 7 NXT | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/urbanz-7-nxt'
+        href: 'https://droopler.ddev.site/products/urbanz-7-nxt'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset6.png?itok=fruSHpgM'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset6.png?itok=fruSHpgM'
   path:
     -
       alias: /products/urbanz-7-nxt

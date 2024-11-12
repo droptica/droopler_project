@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'AeroPower 34 Zen | test'
+        content: 'AeroPower 34 Zen | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/aeropower-34-zen'
+        href: 'https://droopler.ddev.site/products/aeropower-34-zen'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/planeasset3.png?itok=VY8DFYDf'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/planeasset3.png?itok=VY8DFYDf'
   path:
     -
       alias: /products/aeropower-34-zen

@@ -6,6 +6,7 @@ _meta:
   default_langcode: en
   depends:
     b2241dee-0307-49c8-9ff7-2c2da6c48fca: media
+    9f409211-680c-4fbe-8fce-29a959cc88e5: media
 default:
   revision_uid:
     -
@@ -33,12 +34,12 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Blog posts | test'
+        content: 'Blog posts | Droopler'
     -
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/blog-posts'
+        href: 'https://droopler.ddev.site/blog-posts'
   path:
     -
       alias: /blog-posts
@@ -173,3 +174,6 @@ default:
           field_theme:
             -
               value: theme-light
+  field_teaser_media_image:
+    -
+      entity: 9f409211-680c-4fbe-8fce-29a959cc88e5

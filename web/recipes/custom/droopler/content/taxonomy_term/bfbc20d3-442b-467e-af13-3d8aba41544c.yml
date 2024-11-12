@@ -25,12 +25,12 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Engines | test'
+        content: 'Engines | Droopler'
     -
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/taxonomy/term/2'
+        href: 'https://droopler.ddev.site/taxonomy/term/2'
   path:
     -
       alias: ''

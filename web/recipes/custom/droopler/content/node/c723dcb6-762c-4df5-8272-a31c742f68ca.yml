@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'CloudCruiser 15 Elite | test'
+        content: 'CloudCruiser 15 Elite | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/cloudcruiser-15-elite'
+        href: 'https://droopler.ddev.site/products/cloudcruiser-15-elite'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/planeasset3.png?itok=VY8DFYDf'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/planeasset3.png?itok=VY8DFYDf'
   path:
     -
       alias: /products/cloudcruiser-15-elite

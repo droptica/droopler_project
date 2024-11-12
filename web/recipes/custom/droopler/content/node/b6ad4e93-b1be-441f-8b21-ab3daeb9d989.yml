@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'CloudCruiser 57 Sport | test'
+        content: 'CloudCruiser 57 Sport | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/cloudcruiser-57-sport'
+        href: 'https://droopler.ddev.site/products/cloudcruiser-57-sport'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/planeasset2.png?itok=6PVL5z_y'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/planeasset2.png?itok=6PVL5z_y'
   path:
     -
       alias: /products/cloudcruiser-57-sport

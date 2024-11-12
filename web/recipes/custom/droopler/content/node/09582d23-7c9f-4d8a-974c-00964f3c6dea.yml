@@ -57,7 +57,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Tiles Paragraphs | test'
+        content: 'Tiles Paragraphs | Droopler'
     -
       tag: meta
       attributes:
@@ -67,7 +67,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/documentation/tiles-paragraphs'
+        href: 'https://droopler.ddev.site/documentation/tiles-paragraphs'
     -
       tag: meta
       attributes:
@@ -77,7 +77,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/demo-logo.svg?itok=0N6-Bu1F'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/demo-logo.svg?itok=0N6-Bu1F'
   path:
     -
       alias: /documentation/tiles-paragraphs

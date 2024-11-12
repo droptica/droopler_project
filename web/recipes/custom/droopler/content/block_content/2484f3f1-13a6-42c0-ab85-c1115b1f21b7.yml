@@ -29,12 +29,12 @@ default:
       tag: meta
       attributes:
         name: title
-        content: '| test'
+        content: '| Droopler'
     -
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/home-page'
+        href: 'https://droopler.ddev.site/home-page'
   field_paragraphs:
     -
       entity:

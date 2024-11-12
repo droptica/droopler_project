@@ -52,7 +52,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Home Page | test'
+        content: 'Home Page | Droopler'
     -
       tag: meta
       attributes:
@@ -62,7 +62,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/home-page'
+        href: 'https://droopler.ddev.site/home-page'
     -
       tag: meta
       attributes:
@@ -72,7 +72,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/demo-logo.svg?itok=0N6-Bu1F'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/demo-logo.svg?itok=0N6-Bu1F'
   path:
     -
       alias: /home-page

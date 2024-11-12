@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'TurboX 74 Blast | test'
+        content: 'TurboX 74 Blast | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/turbox-74-blast'
+        href: 'https://droopler.ddev.site/products/turbox-74-blast'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset10.jpg?itok=wdeG32jx'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset10.jpg?itok=wdeG32jx'
   path:
     -
       alias: /products/turbox-74-blast

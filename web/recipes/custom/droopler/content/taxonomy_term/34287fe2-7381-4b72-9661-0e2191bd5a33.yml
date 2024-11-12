@@ -25,12 +25,12 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Sample category | test'
+        content: 'Sample category | Droopler'
     -
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/taxonomy/term/15'
+        href: 'https://droopler.ddev.site/taxonomy/term/15'
   path:
     -
       alias: ''

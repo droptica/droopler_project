@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'TurboX 75 Evo | test'
+        content: 'TurboX 75 Evo | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/turbox-75-evo'
+        href: 'https://droopler.ddev.site/products/turbox-75-evo'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset11.png?itok=Wb3pjM0I'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset11.png?itok=Wb3pjM0I'
   path:
     -
       alias: /products/turbox-75-evo
