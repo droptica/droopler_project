@@ -25,12 +25,12 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Car | test'
+        content: 'Car | Droopler'
     -
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/taxonomy/term/7'
+        href: 'https://droopler.ddev.site/taxonomy/term/7'
   path:
     -
       alias: ''

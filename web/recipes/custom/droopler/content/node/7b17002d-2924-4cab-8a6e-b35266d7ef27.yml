@@ -33,7 +33,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Terms of Service | test'
+        content: 'Terms of Service | Droopler'
     -
       tag: meta
       attributes:
@@ -43,7 +43,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/terms-of-service'
+        href: 'https://droopler.ddev.site/terms-of-service'
     -
       tag: meta
       attributes:
@@ -53,7 +53,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/demo-logo.svg?itok=0N6-Bu1F'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/demo-logo.svg?itok=0N6-Bu1F'
   path:
     -
       alias: /terms-of-service

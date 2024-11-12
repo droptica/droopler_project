@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'SeaWave 65 X 500 | test'
+        content: 'SeaWave 65 X 500 | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/seawave-65-x-500'
+        href: 'https://droopler.ddev.site/products/seawave-65-x-500'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/boatasset2.png?itok=jv_snlsT'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/boatasset2.png?itok=jv_snlsT'
   path:
     -
       alias: /products/seawave-65-x-500

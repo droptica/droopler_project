@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'UrbanZ 19 Elite | test'
+        content: 'UrbanZ 19 Elite | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/urbanz-19-elite'
+        href: 'https://droopler.ddev.site/products/urbanz-19-elite'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset8.png?itok=xfBann25'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset8.png?itok=xfBann25'
   path:
     -
       alias: /products/urbanz-19-elite

@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'SkyMaster 73 S 4000 | test'
+        content: 'SkyMaster 73 S 4000 | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/skymaster-73-s-4000'
+        href: 'https://droopler.ddev.site/products/skymaster-73-s-4000'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/planeasset1.png?itok=UjgM2xiz'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/planeasset1.png?itok=UjgM2xiz'
   path:
     -
       alias: /products/skymaster-73-s-4000

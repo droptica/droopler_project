@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'MarineForce 45 Rush | test'
+        content: 'MarineForce 45 Rush | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/marineforce-45-rush'
+        href: 'https://droopler.ddev.site/products/marineforce-45-rush'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/boatasset1.jpg?itok=QMWwfj-N'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/boatasset1.jpg?itok=QMWwfj-N'
   path:
     -
       alias: /products/marineforce-45-rush

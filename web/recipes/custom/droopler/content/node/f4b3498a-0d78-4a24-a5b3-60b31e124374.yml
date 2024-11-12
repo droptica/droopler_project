@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'HighwayStar 54 Pro | test'
+        content: 'HighwayStar 54 Pro | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/highwaystar-54-pro'
+        href: 'https://droopler.ddev.site/products/highwaystar-54-pro'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset6.png?itok=fruSHpgM'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset6.png?itok=fruSHpgM'
   path:
     -
       alias: /products/highwaystar-54-pro

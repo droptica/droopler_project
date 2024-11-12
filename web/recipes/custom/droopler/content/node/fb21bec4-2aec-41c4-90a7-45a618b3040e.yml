@@ -38,7 +38,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'ABC Automotive bought 10 000 engines from DrooplerEngines | test'
+        content: 'ABC Automotive bought 10 000 engines from DrooplerEngines | Droopler'
     -
       tag: meta
       attributes:
@@ -48,7 +48,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/blog/abc-automotive-bought-10-000-engines-drooplerengines'
+        href: 'https://droopler.ddev.site/blog/abc-automotive-bought-10-000-engines-drooplerengines'
     -
       tag: meta
       attributes:
@@ -58,7 +58,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_new_cars.jpg?itok=QeiHX_iv'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_new_cars.jpg?itok=QeiHX_iv'
   path:
     -
       alias: /blog/abc-automotive-bought-10-000-engines-drooplerengines

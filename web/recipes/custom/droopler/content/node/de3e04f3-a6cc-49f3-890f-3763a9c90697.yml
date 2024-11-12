@@ -35,7 +35,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'New factory location | test'
+        content: 'New factory location | Droopler'
     -
       tag: meta
       attributes:
@@ -45,7 +45,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/blog/new-factory-location'
+        href: 'https://droopler.ddev.site/blog/new-factory-location'
     -
       tag: meta
       attributes:
@@ -55,7 +55,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_factory.jpg?itok=AKD0Ka06'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_factory.jpg?itok=AKD0Ka06'
   path:
     -
       alias: /blog/new-factory-location

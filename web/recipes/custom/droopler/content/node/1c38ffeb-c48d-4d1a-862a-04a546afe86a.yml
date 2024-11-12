@@ -42,7 +42,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'JetSpeed 600 | test'
+        content: 'JetSpeed 600 | Droopler'
     -
       tag: meta
       attributes:
@@ -52,7 +52,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/jetspeed-600'
+        href: 'https://droopler.ddev.site/products/jetspeed-600'
     -
       tag: meta
       attributes:
@@ -62,7 +62,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_product_init_jetspeed-600-1.jpg?itok=mvcxbc_d'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_product_init_jetspeed-600-1.jpg?itok=mvcxbc_d'
   path:
     -
       alias: /products/jetspeed-600

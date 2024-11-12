@@ -38,7 +38,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Gasoline Engines | test'
+        content: 'Gasoline Engines | Droopler'
     -
       tag: meta
       attributes:
@@ -48,7 +48,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/gasoline-engines'
+        href: 'https://droopler.ddev.site/gasoline-engines'
     -
       tag: meta
       attributes:
@@ -58,7 +58,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_engine_car_engine_gasoline.jpg?itok=Ziol13iz'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_engine_car_engine_gasoline.jpg?itok=Ziol13iz'
   path:
     -
       alias: /gasoline-engines

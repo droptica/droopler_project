@@ -36,17 +36,17 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Products | test'
+        content: 'Products | Droopler'
     -
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products'
+        href: 'https://droopler.ddev.site/products'
     -
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_product_init_jetspeed-600-3.jpg?itok=fsBq8Qj9'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_product_init_jetspeed-600-3.jpg?itok=fsBq8Qj9'
   path:
     -
       alias: /products

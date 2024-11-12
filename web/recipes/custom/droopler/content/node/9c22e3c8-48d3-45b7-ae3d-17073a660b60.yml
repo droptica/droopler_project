@@ -41,7 +41,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Marine-XT 550 | test'
+        content: 'Marine-XT 550 | Droopler'
     -
       tag: meta
       attributes:
@@ -51,7 +51,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/marine-xt-550'
+        href: 'https://droopler.ddev.site/products/marine-xt-550'
     -
       tag: meta
       attributes:
@@ -61,7 +61,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_product_init_machine-xt-550-1.jpg?itok=fMtYG52W'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_product_init_machine-xt-550-1.jpg?itok=fMtYG52W'
   path:
     -
       alias: /products/marine-xt-550

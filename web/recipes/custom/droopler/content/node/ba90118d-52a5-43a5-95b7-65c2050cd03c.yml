@@ -38,7 +38,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Centurion V750 is the fastest airplane engine on the planet | test'
+        content: 'Centurion V750 is the fastest airplane engine on the planet | Droopler'
     -
       tag: meta
       attributes:
@@ -48,7 +48,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/blog/centurion-v750-fastest-airplane-engine-planet'
+        href: 'https://droopler.ddev.site/blog/centurion-v750-fastest-airplane-engine-planet'
     -
       tag: meta
       attributes:
@@ -58,7 +58,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_mechanism.jpg?itok=58OOfOyj'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_mechanism.jpg?itok=58OOfOyj'
   path:
     -
       alias: /blog/centurion-v750-fastest-airplane-engine-planet

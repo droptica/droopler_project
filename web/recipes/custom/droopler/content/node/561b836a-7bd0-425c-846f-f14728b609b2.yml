@@ -39,7 +39,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'HighwayStar 82 Force | test'
+        content: 'HighwayStar 82 Force | Droopler'
     -
       tag: meta
       attributes:
@@ -49,7 +49,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/highwaystar-82-force'
+        href: 'https://droopler.ddev.site/products/highwaystar-82-force'
     -
       tag: meta
       attributes:
@@ -59,7 +59,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset5.png?itok=D158G28Y'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/asset5.png?itok=D158G28Y'
   path:
     -
       alias: /products/highwaystar-82-force

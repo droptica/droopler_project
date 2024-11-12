@@ -43,7 +43,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'For aircrafts | test'
+        content: 'For aircrafts | Droopler'
     -
       tag: meta
       attributes:
@@ -53,7 +53,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/aircrafts'
+        href: 'https://droopler.ddev.site/aircrafts'
     -
       tag: meta
       attributes:
@@ -63,7 +63,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_engine_car_5.jpg?itok=6g2LoTgI'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_engine_car_5.jpg?itok=6g2LoTgI'
   path:
     -
       alias: /aircrafts
@@ -108,7 +108,14 @@ default:
               uri: 'internal:/contact'
               title: 'Contact us'
               options:
-                type: primary
+                attributes:
+                  target: ''
+                  id: ''
+                  name: ''
+                  rel: ''
+                  custom_classes: ''
+                  accesskey: ''
+                class: 'btn btn-primary'
           field_d_long_text:
             -
               value: '<p>We offer a wide range of services to our customers who have bought our aircraft engines. Our experienced team of mechanics and specialists will provide high quality of service. Contact our company to arrange a service date and time.</p>'
@@ -254,6 +261,12 @@ default:
           field_d_main_title:
             -
               value: 'Our services for aircraft engines'
+          field_column_count_desktop:
+            - value: 3
+          field_column_count_mobile:
+            - value: 3
+          field_column_count_tablet:
+            - value: 1
           field_d_p_tb_block_reference:
             -
               entity:
@@ -287,7 +300,14 @@ default:
                       uri: 'internal:/ad-hoc-engine-repairs'
                       title: 'Ad-hoc engine repairs'
                       options:
-                        type: primary
+                        attributes:
+                          target: ''
+                          id: ''
+                          name: ''
+                          rel: ''
+                          custom_classes: ''
+                          accesskey: ''
+                        class: 'btn btn-primary'
                   field_d_main_title:
                     -
                       value: 'Ad-hoc engine repairs'
@@ -326,7 +346,14 @@ default:
                       uri: 'internal:/engine-overhaul'
                       title: 'Engine overhaul'
                       options:
-                        type: primary
+                        attributes:
+                          target: ''
+                          id: ''
+                          name: ''
+                          rel: ''
+                          custom_classes: ''
+                          accesskey: ''
+                        class: 'btn btn-primary'
                   field_d_main_title:
                     -
                       value: 'Engine overhaul'
@@ -365,7 +392,14 @@ default:
                       uri: 'internal:/monitoring-and-assessment'
                       title: 'Monitoring and assessment'
                       options:
-                        type: primary
+                        attributes:
+                          target: ''
+                          id: ''
+                          name: ''
+                          rel: ''
+                          custom_classes: ''
+                          accesskey: ''
+                        class: 'btn btn-primary'
                   field_d_main_title:
                     -
                       value: 'Monitoring and assessment'
@@ -572,6 +606,14 @@ default:
           field_d_main_title:
             -
               value: 'Integrated Quality Management'
+          field_margin_bottom:
+            - value: margin_bottom_none
+          field_margin_top:
+            - value: margin_top_none
+          field_padding_bottom:
+            - value: padding_bottom_medium
+          field_padding_top:
+            - value: padding_top_medium
   field_teaser_media_image:
     -
       entity: 12ded80b-808c-4ca5-bb3a-0c5bf43c7dc2

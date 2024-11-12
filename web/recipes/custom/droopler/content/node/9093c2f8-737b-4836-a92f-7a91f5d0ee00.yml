@@ -35,7 +35,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Engine repair and overhaul | test'
+        content: 'Engine repair and overhaul | Droopler'
     -
       tag: meta
       attributes:
@@ -45,7 +45,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/engine-repair-and-overhaul'
+        href: 'https://droopler.ddev.site/engine-repair-and-overhaul'
     -
       tag: meta
       attributes:
@@ -55,7 +55,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_engine_car_5.jpg?itok=6g2LoTgI'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_engine_car_5.jpg?itok=6g2LoTgI'
   path:
     -
       alias: /engine-repair-and-overhaul

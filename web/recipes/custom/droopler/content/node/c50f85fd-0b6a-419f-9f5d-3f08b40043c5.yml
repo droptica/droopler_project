@@ -38,7 +38,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'DrooplerEngines at Automotive Expo 2019 | test'
+        content: 'DrooplerEngines at Automotive Expo 2019 | Droopler'
     -
       tag: meta
       attributes:
@@ -48,7 +48,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/blog/drooplerengines-automotive-expo-2019'
+        href: 'https://droopler.ddev.site/blog/drooplerengines-automotive-expo-2019'
     -
       tag: meta
       attributes:
@@ -58,7 +58,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_future_car.jpg?itok=XXhZ0YUp'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_demo_future_car.jpg?itok=XXhZ0YUp'
   path:
     -
       alias: /blog/drooplerengines-automotive-expo-2019

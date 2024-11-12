@@ -42,7 +42,7 @@ default:
       tag: meta
       attributes:
         name: title
-        content: 'Super Charged Engine v12 | test'
+        content: 'Super Charged Engine v12 | Droopler'
     -
       tag: meta
       attributes:
@@ -52,7 +52,7 @@ default:
       tag: link
       attributes:
         rel: canonical
-        href: 'https://ddevappname.ddev.site/products/super-charged-engine-v12'
+        href: 'https://droopler.ddev.site/products/super-charged-engine-v12'
     -
       tag: meta
       attributes:
@@ -62,7 +62,7 @@ default:
       tag: meta
       attributes:
         property: 'og:image'
-        content: 'https://ddevappname.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_product_init_super-charged-engine-1.jpg?itok=nW36qOXW'
+        content: 'https://droopler.ddev.site/sites/default/files/styles/responsive_image_2000/public/demo/d_product_init_super-charged-engine-1.jpg?itok=nW36qOXW'
   path:
     -
       alias: /products/super-charged-engine-v12
