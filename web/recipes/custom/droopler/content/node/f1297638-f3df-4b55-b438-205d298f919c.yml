@@ -367,6 +367,6 @@ default:
   field_teaser_media_image:
     -
       entity: b8ed3918-a45c-481e-9e32-3bf5e9b1daf6
-  field_teaser_text:
+  body:
     -
       value: 'At DrooplEngines we have over 20 years of experience in the production of high-class engines. We not only deliver products but also provide full technical support.'

@@ -779,6 +779,6 @@ default:
   field_teaser_media_image:
     -
       entity: cc25c5ba-0530-4ba0-b7cc-efb1a93e757a
-  field_teaser_text:
+  body:
     -
       value: 'We are experts in car engines. We produce a wide range of car engines for both: diesel and gasoline.'

@@ -776,6 +776,6 @@ default:
   field_teaser_media_image:
     -
       entity: ed050a85-990f-4e13-9160-df329591d4b7
-  field_teaser_text:
+  body:
     -
       value: 'We are experts in boat engines. We manufacture modern engines for boats and ships.'

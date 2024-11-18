@@ -729,6 +729,6 @@ default:
   field_teaser_media_image:
     -
       entity: 12ded80b-808c-4ca5-bb3a-0c5bf43c7dc2
-  field_teaser_text:
+  body:
     -
       value: 'We provide a lot of services related to engines. Check our services dedicated to your industry.'

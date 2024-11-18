@@ -779,6 +779,6 @@ default:
   field_teaser_media_image:
     -
       entity: e52b453d-ea2f-4ec2-85ca-61aa27f915ee
-  field_teaser_text:
+  body:
     -
       value: 'Our high quality diesel car engines. We produce next-gen diesel engines for modern cars.'
