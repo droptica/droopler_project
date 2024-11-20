@@ -1,16 +1,18 @@
+
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.reference_content
+    - field.field.node.content_page.body
     - field.field.node.content_page.field_meta_tags
     - field.field.node.content_page.field_page_section
     - field.field.node.content_page.field_teaser_media_image
-    - field.field.node.content_page.field_teaser_text
     - node.type.content_page
   module:
     - field_group
     - layout_builder
+    - text
     - user
 third_party_settings:
   layout_builder:
@@ -39,7 +41,7 @@ third_party_settings:
         speed: fast
     group_content:
       children:
-        - field_teaser_text
+        - body
       label: Content
       parent_name: ''
       region: content
@@ -62,6 +64,14 @@ targetEntityType: node
 bundle: content_page
 mode: reference_content
 content:
+  body:
+    type: text_trimmed
+    label: hidden
+    settings:
+      trim_length: 450
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_teaser_media_image:
     type: entity_reference_entity_view
     label: hidden
@@ -70,13 +80,6 @@ content:
       link: false
     third_party_settings: {  }
     weight: 5
-    region: content
-  field_teaser_text:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 6
     region: content
 hidden:
   field_meta_tags: true

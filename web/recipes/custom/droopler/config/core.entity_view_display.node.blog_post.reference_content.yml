@@ -70,9 +70,10 @@ content:
     weight: 2
     region: content
   field_blog_teaser:
-    type: text_default
+    type: text_trimmed
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 450
     third_party_settings: {  }
     weight: 3
     region: content

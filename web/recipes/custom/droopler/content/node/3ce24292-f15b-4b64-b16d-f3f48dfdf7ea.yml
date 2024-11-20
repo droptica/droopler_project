@@ -343,6 +343,6 @@ default:
   field_teaser_media_image:
     -
       entity: a3b99936-39cb-4f92-99bd-a033e6ba6a3e
-  field_teaser_text:
+  body:
     -
       value: 'This section contains information useful for our investors. On this page we publish the current price for shares, calendar and events.'

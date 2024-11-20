@@ -1,0 +1,26 @@
+uuid: 8ed1fa61-cf1d-48a7-be78-57de71ab0e93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - filter.format.full_html
+    - node.type.content_page
+  module:
+    - text
+id: node.content_page.body
+field_name: body
+entity_type: node
+bundle: content_page
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary
