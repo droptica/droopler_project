@@ -17,6 +17,7 @@ install:
   - claro
   - color_field
   - colorbox
+  - colorbox_media_video
   - components
   - conditional_fields
   - config

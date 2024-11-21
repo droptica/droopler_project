@@ -27,7 +27,8 @@ select2-library:
   css:
     base:
       /libraries/select2/dist/css/select2.css: { minified: true }
-
+  dependencies:
+    - core/jquery
 select2:
   dependencies:
     - core/jquery
@@ -45,6 +46,8 @@ masonry:
   js:
     /libraries/masonry/dist/masonry.pkgd.min.js: { external: true, minified: true }
     /libraries/imagesloaded/imagesloaded.pkgd.min.js: { external: true, minified: true }
+  dependencies:
+    - core/jquery
 
 tiles-gallery:
   dependencies:
@@ -62,6 +65,8 @@ slick:
   css:
     component:
       /libraries/slick-carousel/slick/slick.css: { }
+  dependencies:
+    - core/jquery
 
 countup:
   remote: http://github.com/inorganik/countUp.js

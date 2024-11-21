@@ -21,7 +21,7 @@ $items-gap: var(--content-spacer-xs) / 2 ;
   }
 
   &__items-wrapper {
-    justify-content: space-between;
+    justify-content: center;
 
     & > article {
       padding: 0 var(--content-spacer-none) var(--content-spacer-xs);

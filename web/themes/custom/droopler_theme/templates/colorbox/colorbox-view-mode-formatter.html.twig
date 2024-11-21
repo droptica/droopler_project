@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Display entity references in a colorbox using view modes.
+ *
+ * Available variables:
+ * - url: The URL of the reference entity.
+ * - attributes: The link attributes.
+ * - item: A entity object.
+ * - content: A rendered entity view mode to display in the content.
+ * - modal: A rendered entity view mode to display in the colorbox modal
+ * - item_attributes: An optional associative array of html attributes to be
+ *   placed on the colorbox anchor.
+ * - entity: An entity object.
+ * - settings: Formatter settings array.
+ *
+ * @see template_preprocess_colorbox_formatter()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<a href="{{ url }}"{{ attributes }}>
+  {{ content }}
+  <span class="modal-content visually-hidden">{{ modal }}</span>
+</a>

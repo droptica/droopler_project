@@ -1,2 +1,2 @@
-!function(a,c){"use strict";c.behaviors.d_p_carousel={attach:function(c){a("[data-slick]",c).each((function(c,s){var i=a(s),e=i.children().length,l=i.data("slick");e>=2&&(i.slick(),l.slidesToShow>=e&&i.addClass("carousel-fixed"))}))}}}(jQuery,Drupal);
+!function(a,s){"use strict";s.behaviors.d_p_carousel={attach:function(s){a("[data-slick]",s).each((function(s,e){var i=a(e),r=i.children().length,t=i.data("slick");r>=2&&(i.slick(),t.slidesToShow>=r&&i.addClass("carousel-fixed"),1===t.slidesToShow&&i.on("beforeChange",(function(s,e,i){var r=a(e.$slides[i]).find('iframe[src*="youtube"]');if(r.length){var t=r.attr("src");r.attr("src",t)}})))}))}}}(jQuery,Drupal);
 //# sourceMappingURL=carousel.js.map

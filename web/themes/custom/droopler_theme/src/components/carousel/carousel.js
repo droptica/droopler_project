@@ -19,6 +19,18 @@
           if (slickData.slidesToShow >= carouselItems) {
             $carouselElement.addClass('carousel-fixed');
           }
+
+          if (slickData.slidesToShow === 1) {
+            $carouselElement.on('beforeChange', function(event, slick, currentSlide) {
+              const $currentSlide = $(slick.$slides[currentSlide]);
+              const $iframe = $currentSlide.find('iframe[src*="youtube"]');
+              
+              if ($iframe.length) {
+                const iframeSrc = $iframe.attr('src');
+                $iframe.attr('src', iframeSrc);
+              }
+            });
+          }
         }
       });
     },

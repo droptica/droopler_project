@@ -47,6 +47,11 @@
       &-slide {
         margin-left: calc(#{var(--content-spacer-xs)} / 2);
         margin-right: calc(#{var(--content-spacer-xs)} / 2);
+
+        iframe {
+          pointer-events: none;
+          max-width: 100%;
+        }
       }
 
       &-track {

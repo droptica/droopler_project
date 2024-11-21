@@ -1,0 +1,1 @@
+{"version":3,"file":"components/video-embed/video-embed.css","mappings":"AAGE,yBAEE,YADA,cADJ,C","sources":["webpack://Droopler_theme/./src/components/video-embed/video-embed.scss"],"sourcesContent":["@import \"../../scss/init\";\n\n.video-embed {\n  &--fullscreen {\n    max-width: 100%;\n    height: auto;\n  }\n}\n"],"names":[],"sourceRoot":""}

@@ -10,8 +10,6 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '0'
-_core:
-  default_config_hash: ZVjCHW2HZZvjd9EibAx09QsM28k93M6BT_G26hCoIug
 id: block_content.mobile_filters_submit
 target_entity_type_id: block_content
 target_bundle: mobile_filters_submit

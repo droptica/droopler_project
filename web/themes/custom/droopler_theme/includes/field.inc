@@ -43,9 +43,7 @@ function droopler_theme_preprocess_field(&$variables) {
             $aspect_ratio = _calculate_aspect_ratio($height, $width);
             $variables['items'][$delta]['content']['#attributes']['data-aspect-ratio'] = $aspect_ratio;
 
-            if ($view_mode === 'd_blog_image') {
-              $variables['items'][$delta]['content']['#attributes']['style'] = "aspect-ratio: 1/$aspect_ratio;";
-            }
+            $variables['items'][$delta]['content']['#attributes']['style'] = "aspect-ratio: 1/$aspect_ratio;";
           }
         }
 
@@ -119,9 +117,21 @@ function droopler_theme_preprocess_field(&$variables) {
   if ($field_name === 'field_media_oembed_video') {
     foreach ($variables['items'] as $delta => $item) {
       if (!empty($variables['items'][$delta]['content']['#attributes'])) {
-        $variables['items'][$delta]['content']['#attributes']['width'] = '936px';
-        $variables['items'][$delta]['content']['#attributes']['height'] = '617px';
-        $variables['items'][$delta]['content']['#attributes']['class'][] = 'img-fluid';
+        switch ($view_mode) {
+          case 'gallery_item_fullscreen':
+          case 'tiles_fullscreen':
+            $variables['items'][$delta]['content']['#attributes']['width'] = '1280px';
+            $variables['items'][$delta]['content']['#attributes']['height'] = '720px';
+            break;
+          case 'd_product_gallery':
+            $variables['items'][$delta]['content']['#attributes']['width'] = '618px';
+            $variables['items'][$delta]['content']['#attributes']['height'] = '350px';
+            break;
+          case 'd_product_image':
+            $variables['items'][$delta]['content']['#attributes']['width'] = '275px';
+            $variables['items'][$delta]['content']['#attributes']['height'] = '135px';
+            break;
+        }
       }
     }
   }
