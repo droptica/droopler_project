@@ -6,14 +6,6 @@
   margin: calc(#{var(--tiles-gallery-item-padding)} / -2) 0;
   background: var(--tiles-gallery-background-color);
 
-  /* There is a bug in colorbox, where the modal content is not hidden when the modal is closed.
-  and using display: none; will break functionality of rendering the big image. */
-  .modal-content.hidden {
-    opacity: 0;
-    visibility: hidden;
-    height: 0;
-  }
-
   &--half-width-sizer {
     --tiles-gallery-sizer-width: 50%;
     --tiles-gallery-item-standard-width-desktop: 50%;
