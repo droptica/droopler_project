@@ -211,6 +211,8 @@ function _get_video_classes(string $view_mode): array {
     case 'd_tiles_gallery_fullscreen':
     case 'tiles_gallery_fullscreen_featured':
       break;
+    case 'gallery_item_fullscreen':
+      $classes[] = 'video-embed--fullscreen';
     case 'd_blog_image':
       $classes[] = 'video-embed--blog';
       break;

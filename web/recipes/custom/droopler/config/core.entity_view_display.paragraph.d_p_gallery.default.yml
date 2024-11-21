@@ -2,6 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.gallery_item
+    - core.entity_view_mode.media.gallery_item_fullscreen
     - field.field.paragraph.d_p_gallery.field_additional_classes
     - field.field.paragraph.d_p_gallery.field_background_theme_custom
     - field.field.paragraph.d_p_gallery.field_d_cta_link
@@ -19,6 +21,7 @@ dependencies:
     - paragraphs.paragraphs_type.d_p_gallery
   module:
     - ala
+    - colorbox
     - field_group
     - text
 third_party_settings:
@@ -144,11 +147,13 @@ content:
     weight: 2
     region: content
   field_d_media_image:
-    type: entity_reference_entity_view
+    type: colorbox_view_modes
     label: hidden
     settings:
-      view_mode: gallery_item
-      link: false
+      colorbox_view_mode: gallery_item
+      colorbox_modal_view_mode: gallery_item_fullscreen
+      colorbox_gallery: field_post
+      colorbox_gallery_custom: ''
     third_party_settings: {  }
     weight: 3
     region: content

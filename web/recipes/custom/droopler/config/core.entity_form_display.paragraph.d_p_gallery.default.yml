@@ -95,6 +95,7 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
+  default_config_hash: oUehvmthWZVLWSRxrYaqTvgDFW47pGG69Ii62qyxQxM
 id: paragraph.d_p_gallery.default
 targetEntityType: paragraph
 bundle: d_p_gallery
@@ -238,6 +239,11 @@ content:
   field_theme:
     type: options_select
     weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

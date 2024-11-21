@@ -1,4 +1,3 @@
-uuid: 57982ec1-3975-4565-84b9-dc9678c0988e
 langcode: en
 status: true
 dependencies:
@@ -439,8 +438,6 @@ third_party_settings:
             weight: 0
             additional: {  }
         third_party_settings: {  }
-_core:
-  default_config_hash: 9v3gssFc4pkta12OWenSOMFIvQ9BhVAJG8wWio8p3YU
 id: node.d_product.full
 targetEntityType: node
 bundle: d_product

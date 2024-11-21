@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "642c5cb0630f2994e2b9691b8729f40e",
+    "content-hash": "33c41266bf42a555aa04b0418260637a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1622,70 +1622,6 @@
             }
         },
         {
-            "name": "drupal/checklistapi",
-            "version": "2.1.6",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/checklistapi.git",
-                "reference": "2.1.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/checklistapi-2.1.6.zip",
-                "reference": "2.1.6",
-                "shasum": "64f439b7dd09336c4b32480edf1796cbc911d9b4"
-            },
-            "require": {
-                "drupal/core": "^9.3 || ^10 || ^11",
-                "php": ">=7.3.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.1.6",
-                    "datestamp": "1713801912",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^10"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Travis Carden",
-                    "homepage": "https://www.drupal.org/user/3550392",
-                    "email": "travis.carden@gmail.com"
-                },
-                {
-                    "name": "rajeshreeputra",
-                    "homepage": "https://www.drupal.org/user/3418561"
-                },
-                {
-                    "name": "traviscarden",
-                    "homepage": "https://www.drupal.org/user/236758"
-                },
-                {
-                    "name": "vladimiraus",
-                    "homepage": "https://www.drupal.org/user/673120"
-                }
-            ],
-            "description": "Provides an API for creating fillable, persistent checklists.",
-            "homepage": "http://drupal.org/project/checklistapi",
-            "support": {
-                "source": "https://git.drupalcode.org/project/checklistapi",
-                "issues": "https://www.drupal.org/project/issues/checklistapi"
-            }
-        },
-        {
             "name": "drupal/color_field",
             "version": "3.0.1",
             "source": {
@@ -1811,6 +1747,52 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/colorbox",
                 "issues": "https://www.drupal.org/project/issues/colorbox"
+            }
+        },
+        {
+            "name": "drupal/colorbox_media_video",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/colorbox_media_video.git",
+                "reference": "2.0.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/colorbox_media_video-2.0.2.zip",
+                "reference": "2.0.2",
+                "shasum": "09b07364dae9411f49431b3f5fccca3031b741f5"
+            },
+            "require": {
+                "drupal/colorbox": "*",
+                "drupal/core": "^9.3 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.2",
+                    "datestamp": "1682335834",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "tamerzg",
+                    "homepage": "https://www.drupal.org/user/464564"
+                }
+            ],
+            "description": "The Colorbox Media Video module adds Colorbox support to Media Video and Remote Video types.",
+            "homepage": "https://drupal.org/project/colorbox_media_video",
+            "support": {
+                "source": "https://git.drupalcode.org/project/colorbox_media_video",
+                "issues": "https://drupal.org/project/issues/colorbox_media_video"
             }
         },
         {
@@ -1956,107 +1938,6 @@
             "homepage": "https://www.drupal.org/project/conditional_fields",
             "support": {
                 "source": "https://git.drupalcode.org/project/conditional_fields"
-            }
-        },
-        {
-            "name": "drupal/config_update",
-            "version": "dev-2.0.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/config_update.git",
-                "reference": "7a7b69dddef56871ccdf4d98722ab63241393011"
-            },
-            "require": {
-                "drupal/core": "^9.4 || ^10 || ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.0.x": "2.0.x-dev"
-                },
-                "drupal": {
-                    "version": "2.0.0-alpha3+3-dev",
-                    "datestamp": "1723568343",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "codebymikey",
-                    "homepage": "https://www.drupal.org/user/3573206"
-                },
-                {
-                    "name": "pasqualle",
-                    "homepage": "https://www.drupal.org/user/80733"
-                },
-                {
-                    "name": "vishalkhode",
-                    "homepage": "https://www.drupal.org/user/2439156"
-                }
-            ],
-            "description": "Provides basic revert and update functionality for other modules.",
-            "homepage": "https://www.drupal.org/project/config_update",
-            "support": {
-                "source": "https://git.drupalcode.org/project/config_update"
-            }
-        },
-        {
-            "name": "drupal/contact_formatter",
-            "version": "2.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/contact_formatter.git",
-                "reference": "2.0.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/contact_formatter-2.0.4.zip",
-                "reference": "2.0.4",
-                "shasum": "04b5e4abba7535c969930500d6912dc5e0a0ad99"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10 || ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.0.4",
-                    "datestamp": "1713450260",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "albertski",
-                    "homepage": "https://www.drupal.org/user/1327432"
-                },
-                {
-                    "name": "thejimbirch",
-                    "homepage": "https://www.drupal.org/user/2507260"
-                }
-            ],
-            "description": "Field Formatter for Contact Forms",
-            "homepage": "https://www.drupal.org/project/contact_formatter",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/contact_formatter",
-                "issues": "https://www.drupal.org/project/issues/contact_formatter"
             }
         },
         {
@@ -2799,104 +2680,21 @@
             }
         },
         {
-            "name": "drupal/features",
-            "version": "dev-5.0.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/features.git",
-                "reference": "417606624688899d32f4c743b9aad3b259fa9e10"
-            },
-            "require": {
-                "drupal/config_update": "^1.4 || ^2",
-                "drupal/core": "^9.4 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-5.0.x": "5.0.x-dev"
-                },
-                "drupal": {
-                    "version": "5.0.0-alpha1+1-dev",
-                    "datestamp": "1686073145",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9 || ^10"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Dave Reid",
-                    "homepage": "https://www.drupal.org/user/53892"
-                },
-                {
-                    "name": "dawehner",
-                    "homepage": "https://www.drupal.org/user/99340"
-                },
-                {
-                    "name": "donquixote",
-                    "homepage": "https://www.drupal.org/user/459338"
-                },
-                {
-                    "name": "e2thex",
-                    "homepage": "https://www.drupal.org/user/189123"
-                },
-                {
-                    "name": "febbraro",
-                    "homepage": "https://www.drupal.org/user/43670"
-                },
-                {
-                    "name": "flocondetoile",
-                    "homepage": "https://www.drupal.org/user/2006064"
-                },
-                {
-                    "name": "jmiccolis",
-                    "homepage": "https://www.drupal.org/user/31731"
-                },
-                {
-                    "name": "joseph.olstad",
-                    "homepage": "https://www.drupal.org/user/1321830"
-                },
-                {
-                    "name": "matthand",
-                    "homepage": "https://www.drupal.org/user/171527"
-                },
-                {
-                    "name": "mpotter",
-                    "homepage": "https://www.drupal.org/user/616192"
-                }
-            ],
-            "description": "Enables administrators to package configuration into modules",
-            "homepage": "https://www.drupal.org/project/features",
-            "support": {
-                "source": "https://git.drupalcode.org/project/features"
-            }
-        },
-        {
             "name": "drupal/field_group",
-            "version": "3.6.0",
+            "version": "4.0.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/field_group.git",
-                "reference": "8.x-3.6"
+                "reference": "4.0.0-alpha1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/field_group-8.x-3.6.zip",
-                "reference": "8.x-3.6",
-                "shasum": "427c0a65dc1936e69e60c120776056cfe5b43e86"
+                "url": "https://ftp.drupal.org/files/projects/field_group-4.0.0-alpha1.zip",
+                "reference": "4.0.0-alpha1",
+                "shasum": "0f1fbc8043a654af5b055f1b95ad9597c474ce83"
             },
             "require": {
-                "drupal/core": "^9.2 || ^10 || ^11"
+                "drupal/core": "^10.3 || ^11"
             },
             "require-dev": {
                 "drupal/jquery_ui_accordion": "*"
@@ -2904,11 +2702,11 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.6",
-                    "datestamp": "1722672510",
+                    "version": "4.0.0-alpha1",
+                    "datestamp": "1725972443",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -2955,54 +2753,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/field_group",
                 "issues": "https://www.drupal.org/project/issues/field_group"
-            }
-        },
-        {
-            "name": "drupal/field_validation",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/field_validation.git",
-                "reference": "8.x-1.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/field_validation-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "c9998e29523373aac43095632b2b2b0992bc497b"
-            },
-            "require": {
-                "drupal/core": "^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1690428219",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "g089h515r806",
-                    "homepage": "https://www.drupal.org/user/174740"
-                },
-                {
-                    "name": "manuel.adan",
-                    "homepage": "https://www.drupal.org/user/516420"
-                }
-            ],
-            "description": "Provides customizable field validation rules.",
-            "homepage": "https://www.drupal.org/project/field_validation",
-            "support": {
-                "source": "https://git.drupalcode.org/project/field_validation"
             }
         },
         {
@@ -3074,149 +2824,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/frontend_editing",
                 "issues": "http://drupal.org/project/issues/frontend_editing"
-            }
-        },
-        {
-            "name": "drupal/google_analytics",
-            "version": "4.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/google_analytics.git",
-                "reference": "4.0.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/google_analytics-4.0.2.zip",
-                "reference": "4.0.2",
-                "shasum": "6deec511373e4659e42ff494c8729434728e37d7"
-            },
-            "require": {
-                "drupal/core": "^9.3 || ^10"
-            },
-            "require-dev": {
-                "drupal/token": "^1.7"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "4.0.2",
-                    "datestamp": "1662768595",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "branch-alias": {
-                    "dev-4.x": "4.x-dev"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "See contributors",
-                    "homepage": "https://www.drupal.org/node/49388/committers"
-                },
-                {
-                    "name": "budda",
-                    "homepage": "https://www.drupal.org/user/13164"
-                },
-                {
-                    "name": "ixismark",
-                    "homepage": "https://www.drupal.org/user/3632333"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "roberto.rivera.ixis",
-                    "homepage": "https://www.drupal.org/user/3632325"
-                }
-            ],
-            "description": "Allows your site to be tracked by Google Analytics by adding a Javascript tracking code to every page.",
-            "homepage": "https://www.drupal.org/project/google_analytics",
-            "support": {
-                "source": "https://git.drupalcode.org/project/google_analytics",
-                "issues": "https://www.drupal.org/project/issues/google_analytics"
-            }
-        },
-        {
-            "name": "drupal/google_tag",
-            "version": "2.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/google_tag.git",
-                "reference": "2.0.6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/google_tag-2.0.6.zip",
-                "reference": "2.0.6",
-                "shasum": "c8f2895a81a7898ac909bdc693fcd25ffe6f62be"
-            },
-            "require": {
-                "drupal/core": "^9.5 || ^10 || ^11"
-            },
-            "require-dev": {
-                "drupal/commerce": "^2.0",
-                "drupal/commerce_wishlist": "^3.0@beta",
-                "drupal/csp": "^1.0",
-                "drupal/google_analytics": "^4.0",
-                "drupal/search_api": "^1.28.0",
-                "drupal/token": "^1.11.0",
-                "drupal/webform": "^6.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.0.6",
-                    "datestamp": "1721948116",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
-                "branch-alias": {
-                    "dev-main": "2.x-dev"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "acquia",
-                    "homepage": "https://www.drupal.org/user/1231722"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "kaynen",
-                    "homepage": "https://www.drupal.org/user/733308"
-                },
-                {
-                    "name": "mglaman",
-                    "homepage": "https://www.drupal.org/user/2416470"
-                },
-                {
-                    "name": "solotandem",
-                    "homepage": "https://www.drupal.org/user/240748"
-                }
-            ],
-            "description": "Provides support for Google Tag and Google Tag Manager in Drupal.",
-            "homepage": "https://www.drupal.org/project/google_tag",
-            "support": {
-                "source": "https://git.drupalcode.org/project/google_tag"
             }
         },
         {
@@ -3787,72 +3394,6 @@
             }
         },
         {
-            "name": "drupal/redis",
-            "version": "1.8.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/redis.git",
-                "reference": "8.x-1.8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/redis-8.x-1.8.zip",
-                "reference": "8.x-1.8",
-                "shasum": "6de73086d29de3b041594bae97c74401cbf05c3d"
-            },
-            "require": {
-                "drupal/core": "^9.3 || ^10 || ^11"
-            },
-            "suggest": {
-                "ext-redis": "Required to use the PhpRedis as redis driver (^4.0|^5.0).",
-                "ext-relay": "Required to use the Relay as Redis driver (^0.5|^1.0).",
-                "predis/predis": "Required to use the Predis as redis driver (^1.1|^2.0)."
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.8",
-                    "datestamp": "1723934771",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Drupal\\redis\\": "src"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
-                    "name": "greg.1.anderson",
-                    "homepage": "https://www.drupal.org/user/438598"
-                },
-                {
-                    "name": "kporras07",
-                    "homepage": "https://www.drupal.org/user/1349780"
-                },
-                {
-                    "name": "pounard",
-                    "homepage": "https://www.drupal.org/user/240164"
-                }
-            ],
-            "description": "Integration of Drupal with the Redis key-value store.",
-            "homepage": "https://www.drupal.org/project/redis",
-            "support": {
-                "source": "https://git.drupalcode.org/project/redis"
-            }
-        },
-        {
             "name": "drupal/search_api",
             "version": "1.35.0",
             "source": {
@@ -4190,68 +3731,6 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
-            }
-        },
-        {
-            "name": "drupal/tvi",
-            "version": "dev-2.0.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/tvi.git",
-                "reference": "d5349cf21299dca972bf95147609c7e4fbe9612b"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9 || ^10 || ^11"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.0.x": "2.0.x-dev"
-                },
-                "drupal": {
-                    "version": "2.0.0-alpha2+6-dev",
-                    "datestamp": "1727102416",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Kevin Quillen (kevinquillen)",
-                    "homepage": "https://www.drupal.org/u/kevinquillen",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "duaelfr",
-                    "homepage": "https://www.drupal.org/user/931394"
-                },
-                {
-                    "name": "kevinquillen",
-                    "homepage": "https://www.drupal.org/user/317279"
-                },
-                {
-                    "name": "mikeohara",
-                    "homepage": "https://www.drupal.org/user/1118796"
-                },
-                {
-                    "name": "richgerdes",
-                    "homepage": "https://www.drupal.org/user/3437973"
-                }
-            ],
-            "description": "Enables you to change the presentation of taxonomy term pages with Views, allowing you to create multiple Views on the same path with different output.",
-            "homepage": "http://drupal.org/project/tvi",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "http://cgit.drupalcode.org/tvi",
-                "issues": "http://drupal.org/project/issues/tvi"
             }
         },
         {
@@ -11196,188 +10675,6 @@
             "time": "2023-01-05T11:28:13+00:00"
         },
         {
-            "name": "doctrine/common",
-            "version": "3.4.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/common.git",
-                "reference": "6c8fef961f67b8bc802ce3e32e3ebd1022907286"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/6c8fef961f67b8bc802ce3e32e3ebd1022907286",
-                "reference": "6c8fef961f67b8bc802ce3e32e3ebd1022907286",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/persistence": "^2.0 || ^3.0",
-                "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^9.0 || ^10.0",
-                "doctrine/collections": "^1",
-                "phpstan/phpstan": "^1.4.1",
-                "phpstan/phpstan-phpunit": "^1",
-                "phpunit/phpunit": "^7.5.20 || ^8.5 || ^9.0",
-                "squizlabs/php_codesniffer": "^3.0",
-                "symfony/phpunit-bridge": "^6.1",
-                "vimeo/psalm": "^4.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                },
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com"
-                }
-            ],
-            "description": "PHP Doctrine Common project is a library that provides additional functionality that other Doctrine projects depend on such as better reflection support, proxies and much more.",
-            "homepage": "https://www.doctrine-project.org/projects/common.html",
-            "keywords": [
-                "common",
-                "doctrine",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/common/issues",
-                "source": "https://github.com/doctrine/common/tree/3.4.5"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcommon",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-10-08T15:53:43+00:00"
-        },
-        {
-            "name": "doctrine/event-manager",
-            "version": "2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/event-manager.git",
-                "reference": "b680156fa328f1dfd874fd48c7026c41570b9c6e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/event-manager/zipball/b680156fa328f1dfd874fd48c7026c41570b9c6e",
-                "reference": "b680156fa328f1dfd874fd48c7026c41570b9c6e",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.1"
-            },
-            "conflict": {
-                "doctrine/common": "<2.9"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^12",
-                "phpstan/phpstan": "^1.8.8",
-                "phpunit/phpunit": "^10.5",
-                "vimeo/psalm": "^5.24"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Common\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                },
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com"
-                }
-            ],
-            "description": "The Doctrine Event Manager is a simple PHP event system that was built to be used with the various Doctrine projects.",
-            "homepage": "https://www.doctrine-project.org/projects/event-manager.html",
-            "keywords": [
-                "event",
-                "event dispatcher",
-                "event manager",
-                "event system",
-                "events"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/event-manager/issues",
-                "source": "https://github.com/doctrine/event-manager/tree/2.0.1"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fevent-manager",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-05-22T20:47:39+00:00"
-        },
-        {
             "name": "doctrine/instantiator",
             "version": "2.0.0",
             "source": {
@@ -11446,103 +10743,6 @@
                 }
             ],
             "time": "2022-12-30T00:23:10+00:00"
-        },
-        {
-            "name": "doctrine/persistence",
-            "version": "3.3.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/persistence.git",
-                "reference": "b337726451f5d530df338fc7f68dee8781b49779"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/b337726451f5d530df338fc7f68dee8781b49779",
-                "reference": "b337726451f5d530df338fc7f68dee8781b49779",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/event-manager": "^1 || ^2",
-                "php": "^7.2 || ^8.0",
-                "psr/cache": "^1.0 || ^2.0 || ^3.0"
-            },
-            "conflict": {
-                "doctrine/common": "<2.10"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^12",
-                "doctrine/common": "^3.0",
-                "phpstan/phpstan": "1.11.1",
-                "phpstan/phpstan-phpunit": "^1",
-                "phpstan/phpstan-strict-rules": "^1.1",
-                "phpunit/phpunit": "^8.5 || ^9.5",
-                "symfony/cache": "^4.4 || ^5.4 || ^6.0",
-                "vimeo/psalm": "4.30.0 || 5.24.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Persistence\\": "src/Persistence"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                },
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com"
-                }
-            ],
-            "description": "The Doctrine Persistence project is a set of shared interfaces and functionality that the different Doctrine object mappers share.",
-            "homepage": "https://www.doctrine-project.org/projects/persistence.html",
-            "keywords": [
-                "mapper",
-                "object",
-                "odm",
-                "orm",
-                "persistence"
-            ],
-            "support": {
-                "issues": "https://github.com/doctrine/persistence/issues",
-                "source": "https://github.com/doctrine/persistence/tree/3.3.3"
-            },
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fpersistence",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-06-20T10:14:30+00:00"
         },
         {
             "name": "droptica/codeception-package",
@@ -11685,68 +10885,6 @@
                 "source": "https://github.com/drupal/core-dev/tree/10.3.6"
             },
             "time": "2024-07-04T10:19:29+00:00"
-        },
-        {
-            "name": "drupal/devel",
-            "version": "5.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/devel.git",
-                "reference": "5.3.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/devel-5.3.1.zip",
-                "reference": "5.3.1",
-                "shasum": "6a5f13bdf93dc5f7f194b6af847589ae15e37b63"
-            },
-            "require": {
-                "doctrine/common": "^2.7 || ^3.4",
-                "drupal/core": "^10.3 || ^11 || ^12",
-                "php": ">=8.1",
-                "symfony/var-dumper": "^4 || ^5 || ^6 || ^7"
-            },
-            "conflict": {
-                "drupal/core": "<10.3",
-                "drush/drush": "<12.5.1",
-                "kint-php/kint": "<3"
-            },
-            "require-dev": {
-                "drush/drush": "^13",
-                "firephp/firephp-core": "^0.5.3",
-                "kint-php/kint": "^5.1"
-            },
-            "suggest": {
-                "kint-php/kint": "Kint provides an informative display of arrays/objects. Useful for debugging and developing."
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "5.3.1",
-                    "datestamp": "1723258446",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "moshe weitzman",
-                    "homepage": "https://www.drupal.org/user/23"
-                }
-            ],
-            "description": "Various blocks, pages, and functions for developers.",
-            "homepage": "https://www.drupal.org/project/devel",
-            "support": {
-                "source": "https://gitlab.com/drupalspoons/devel",
-                "issues": "https://gitlab.com/drupalspoons/devel/-/issues",
-                "slack": "https://drupal.slack.com/archives/C012WAW1MH6"
-            }
         },
         {
             "name": "ericmartel/codeception-email",
@@ -16519,9 +15657,8 @@
     "stability-flags": {
         "drupal/block_field": 5,
         "drupal/conditional_fields": 20,
-        "drupal/config_update": 20,
         "drupal/default_content": 15,
-        "drupal/features": 20,
+        "drupal/field_group": 15,
         "drupal/smtp": 10
     },
     "prefer-stable": true,

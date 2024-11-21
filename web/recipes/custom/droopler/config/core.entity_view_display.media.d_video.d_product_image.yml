@@ -2,23 +2,28 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.gallery_item
-    - field.field.media.d_image.field_media_image
-    - image.style.gallery_thumbnail
-    - media.type.d_image
+    - core.entity_view_mode.media.d_product_image
+    - field.field.media.d_video.field_media_oembed_video
+    - image.style.product_navigation_image
+    - media.type.d_video
   module:
+    - layout_builder
     - svg_image
-id: media.d_image.gallery_item
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: media.d_video.d_product_image
 targetEntityType: media
-bundle: d_image
-mode: gallery_item
+bundle: d_video
+mode: d_product_image
 content:
-  field_media_image:
+  thumbnail:
     type: image
     label: hidden
     settings:
       image_link: ''
-      image_style: gallery_thumbnail
+      image_style: product_navigation_image
       image_loading:
         attribute: lazy
       svg_attributes:
@@ -30,8 +35,8 @@ content:
     region: content
 hidden:
   created: true
+  field_media_oembed_video: true
   langcode: true
   name: true
   search_api_excerpt: true
-  thumbnail: true
   uid: true
