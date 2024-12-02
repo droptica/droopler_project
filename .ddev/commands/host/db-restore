@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Check if database snpashot  exists.
+if [ -f ".ddev/db_dumps/db.sql.gz" ]; then
+  # Add info about page restoring.
+  printf "[%s] Restoring the database...\n" "${DDEV_SITENAME}"
+
+  # Restore db from local dump.
+  ddev import-db --target-db=db --src=.ddev/db_dumps/db.sql.gz
+fi

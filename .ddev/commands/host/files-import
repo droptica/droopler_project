@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+
+# Check if files dir exists.
+if [ -f "${DDEV_APPROOT}/.ddev/file_dumps/files.tar.gz" ]; then
+  # Add info about page restoring.
+  printf "[%s] Importing  the files...\n" "${DDEV_SITENAME}"
+
+  # Remove all current files.
+  rm -rf ${DDEV_APPROOT}/app/web/sites/default/files/*
+
+  # Extra new ones.
+  tar -xf  ${DDEV_APPROOT}/.ddev/file_dumps/files.tar.gz -C ${DDEV_APPROOT}/app/web/sites/default
+
+  # Check if drush is successfully installed (if not this should be first build).
+  if [ -f " ${DDEV_APPROOT}/app/vendor/bin/drush" ]; then
+    # Clear drupal cache after our little modification.
+    ddev drush cr
+  fi
+fi

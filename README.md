@@ -51,6 +51,16 @@ $ gulp compile
 
 Go to http://yourserver.local/install.php and follow the steps of configuration.
 
+### Using DDEV
+
+1. [Install ddev](https://ddev.readthedocs.io/en/stable/#installation).
+2. Run `ddev config` to configure the project.
+3. Run `ddev start` to start the project.
+4. Run `ddev composer install` to download the project dependencies.
+5. If you notice problems with accessing to the repository, run `ddev auth ssh` to add the keys from your `~/.ssh` directory to the web container and run `ddev composer install` command once again.
+6. Run `ddev theme` to install the theme dependencies and compile assets. By default, production assets are compiled. You can run `ddev theme dev` to compile assets for development. You can also run `ddev theme watch` to watch for changes in SCSS and JS and process them on the fly.
+7. Go to the URL provided by ddev and finish installing the website. You can also run `ddev build-profile` to build the Droopler profile from the CLI (you will get a fully featured version, with blog, products and demo content).
+
 ## How to work with the subtheme? ##
 
 First run **gulp watch** in your subtheme's directory (remember to compile `droopler_theme` first). It will track all the changes in theme source files and compile assets in the fly.
@@ -67,6 +77,13 @@ There are also other Gulp commands for theme developers, here's the full referen
  - **gulp dist** - cleans derivative files and compiles all SCSS/JS in the subtheme for PROD environment
  - **gulp clean** - cleans derivative files
  - **gulp debug** - prints Gulp debug information, this comes in handy when something's not working
+
+### Using DDEV
+There are several comands that help you to work with the subtheme. You can run them from the root directory of your project.
+
+- `ddev theme watch` - watches for changes in SCSS and JS and processes them on the fly
+- `ddev theme dev` - cleans derivative files and compiles all SCSS/JS in the subtheme for DEV environment
+- `ddev theme production` - cleans derivative files and compiles all SCSS/JS in the subtheme for PROD environment
 
 ## SCSS structure ##
 
