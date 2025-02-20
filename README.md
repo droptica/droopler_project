@@ -125,6 +125,10 @@ When you save this config file, **gulp watch** will recompile all SCSS with your
 
 See the [UPDATE.md](https://github.com/droptica/droopler/blob/master/UPDATE.md) file from the Droopler profile.
 
+### Switching from 8.3.x.x to 3.x.x tags
+When using this Droopler 3.x repository, you should now rely on tags in the 3.x.x format (for example, 3.3.x) instead of the old 8.3.x.x tags. More details on how to switch can be found here:
+https://www.drupal.org/docs/getting-started/drupal-distributions/droopler
+
 ## How to install Google Fonts? ##
 
 By default Droopler uses free [Lato](http://www.latofonts.com/) webfont. If you wish to install your own fonts from Google - put their definitions into **droopler_subtheme.libraries.yml** like this:
