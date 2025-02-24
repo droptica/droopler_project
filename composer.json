@@ -8,28 +8,48 @@
         "docs": "https://www.droopler.com/developers",
         "issues": "https://www.drupal.org/project/issues/droopler?categories=All"
     },
-    "repositories": {
-        "drupal": {
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal/features",
+                "version": "3.13.0",
+                "type": "drupal-module",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://git.drupalcode.org/issue/features-3447460/-/archive/2a8638e7215154e35854836c16ef6697d868e6c4/features-3447460-2a8638e7215154e35854836c16ef6697d868e6c4.zip"
+                },
+                "source": {
+                    "type": "git",
+                    "url": "https://git.drupalcode.org/issue/features-3447460.git",
+                    "reference": "2a8638e7215154e35854836c16ef6697d868e6c4"
+                },
+                "require": {
+                    "drupal/core": "^9.4 || ^10 || ^11"
+                }
+            }
+        },
+        {
+            "type": "path",
+            "url": "./web/profiles/contrib/droopler"
+        },
+        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        "asset": {
+        {
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
-    },
+    ],
     "require": {
         "composer/installers": "^1.2",
-        "droptica/droopler": "8.3.3.0",
-        "drupal/core-composer-scaffold": "^10.0",
-        "drupal/core-recommended": "^10.0",
-        "drush/drush": "^12.0",
+        "droptica/droopler": "@dev",
+        "drupal/core-composer-scaffold": "^11.1",
+        "drupal/core-recommended": "^11.1",
+        "drush/drush": "^13.3",
         "oomphinc/composer-installers-extender": "^2.0",
         "zaporylie/composer-drupal-optimizations": "^1.1"
-    },
-    "require-dev": {
-        "drupal/core-dev": "^10.0",
-        "drupal/devel": "^5.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -39,15 +59,16 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true,
             "composer/installers": true,
             "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/console-extend-plugin": true,
             "drupal/core-composer-scaffold": true,
             "oomphinc/composer-installers-extender": true,
-            "zaporylie/composer-drupal-optimizations": true,
+            "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "php-http/discovery": true
+            "tbachert/spi": true,
+            "zaporylie/composer-drupal-optimizations": true
         },
         "preferred-install": {
             "droptica/droopler": "source",
@@ -72,5 +93,9 @@
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         }
+    },
+    "require-dev": {
+        "drupal/core-dev": "^11.1",
+        "drupal/devel": "^5.3"
     }
 }
