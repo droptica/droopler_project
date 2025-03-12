@@ -9,27 +9,25 @@
         "issues": "https://www.drupal.org/project/issues/droopler?categories=All"
     },
     "repositories": {
-        "drupal": {
+        "composer": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
-        "asset": {
+        "asset-packagist": {
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
-    },
+      },
     "require": {
         "composer/installers": "^1.2",
-        "droptica/droopler": "8.3.3.0",
-        "drupal/core-composer-scaffold": "^10.0",
-        "drupal/core-recommended": "^10.0",
-        "drush/drush": "^12.0",
+        "droptica/droopler": "^3.5.3",
+        "drupal/core": "^11.1",
+        "drupal/core-composer-scaffold": "^11.1",
+        "drupal/core-recommended": "^11.1",
+        "drush/drush": "^13.3",
+        "mglaman/composer-drupal-lenient": "^1.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "zaporylie/composer-drupal-optimizations": "^1.1"
-    },
-    "require-dev": {
-        "drupal/core-dev": "^10.0",
-        "drupal/devel": "^5.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -39,15 +37,17 @@
     "config": {
         "sort-packages": true,
         "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true,
             "composer/installers": true,
+            "mglaman/composer-drupal-lenient": true,
             "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal/console-extend-plugin": true,
             "drupal/core-composer-scaffold": true,
             "oomphinc/composer-installers-extender": true,
-            "zaporylie/composer-drupal-optimizations": true,
+            "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "php-http/discovery": true
+            "tbachert/spi": true,
+            "zaporylie/composer-drupal-optimizations": true
         },
         "preferred-install": {
             "droptica/droopler": "source",
@@ -55,6 +55,9 @@
         }
     },
     "extra": {
+        "drupal-lenient": {
+            "allowed-list": ["drupal/features", "drupal/features"]
+        },
         "enable-patching": true,
         "drupal-scaffold": {
             "locations": {
@@ -72,5 +75,9 @@
             "web/modules/custom/{$name}": ["type:drupal-custom-module"],
             "web/themes/custom/{$name}": ["type:drupal-custom-theme"]
         }
+    },
+    "require-dev": {
+        "drupal/core-dev": "^11.1",
+        "drupal/devel": "^5.3"
     }
 }
