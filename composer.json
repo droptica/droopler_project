@@ -50,13 +50,12 @@
             "zaporylie/composer-drupal-optimizations": true
         },
         "preferred-install": {
-            "droptica/droopler": "source",
             "*": "dist"
         }
     },
     "extra": {
         "drupal-lenient": {
-            "allowed-list": ["drupal/features", "drupal/features"]
+            "allowed-list": ["drupal/features"]
         },
         "enable-patching": true,
         "drupal-scaffold": {
