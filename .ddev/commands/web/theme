@@ -1,23 +1,30 @@
 #!/usr/bin/env bash
 
+set -e
+
 THEME_DIR="/var/www/html/web/profiles/contrib/droopler/themes/custom/droopler_theme"
 SUBTHEME_DIR="/var/www/html/web/themes/custom/droopler_subtheme"
 
-# Install droopler_theme npm packages.
-cd  ${THEME_DIR}
+# droopler_theme: install + build (dist = minified CSS/JS from Sass).
+cd "${THEME_DIR}"
 npm install
 
-# Install droopler_subtheme npm packages.
-cd  ${SUBTHEME_DIR}
-npm install
-
-# Check if user wants instant-update.
 if [ "$1" == "watch" ]; then
+  cd "${SUBTHEME_DIR}"
+  npm install
   gulp watch
 elif [ "$1" == "dev" ]; then
-  echo "Compiling DEV version."
+  echo "Compiling DEV version (droopler_theme)."
+  gulp compile
+  cd "${SUBTHEME_DIR}"
+  npm install
+  echo "Compiling DEV version (droopler_subtheme)."
   gulp compile
 else
-  echo "Compiling PRODUCTION, minified version."
+  echo "Compiling PRODUCTION, minified version (droopler_theme)."
+  gulp dist
+  cd "${SUBTHEME_DIR}"
+  npm install
+  echo "Compiling PRODUCTION, minified version (droopler_subtheme)."
   gulp dist
 fi

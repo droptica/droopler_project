@@ -17,13 +17,14 @@
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
-      },
+    },
     "require": {
         "composer/installers": "^1.2",
-        "droptica/droopler": "^3.5.3",
-        "drupal/core": "^11.1",
-        "drupal/core-composer-scaffold": "^11.1",
-        "drupal/core-recommended": "^11.1",
+        "droptica/droopler": "^3.5",
+        "drupal/commerce": "^2 || ^3",
+        "drupal/core": "^11.3 || ^12",
+        "drupal/core-composer-scaffold": "^11.3 || ^12",
+        "drupal/core-recommended": "^11.3 || ^12",
         "drush/drush": "^13.3",
         "mglaman/composer-drupal-lenient": "^1.0",
         "oomphinc/composer-installers-extender": "^2.0",
@@ -76,7 +77,7 @@
         }
     },
     "require-dev": {
-        "drupal/core-dev": "^11.1",
+        "drupal/core-dev": "^11.3 || ^12",
         "drupal/devel": "^5.3"
     }
 }
