@@ -19,8 +19,8 @@
         }
     },
     "require": {
-        "composer/installers": "^1.2",
-        "droptica/droopler": "^3.5",
+        "composer/installers": "^2.3",
+        "droptica/droopler": "^3.6",
         "drupal/commerce": "^2 || ^3",
         "drupal/core": "^11.3 || ^12",
         "drupal/core-composer-scaffold": "^11.3 || ^12",
@@ -47,6 +47,7 @@
             "oomphinc/composer-installers-extender": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
+            "symfony/runtime": true,
             "tbachert/spi": true,
             "zaporylie/composer-drupal-optimizations": true
         },
